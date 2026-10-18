@@ -8,7 +8,7 @@
 set -u
 cd ~/voloridge-13f
 export EDGAR_RATE=${EDGAR_RATE:-8} EDGAR_WORKERS=${EDGAR_WORKERS:-4}
-UA="${SEC_CONTACT:?set SEC_CONTACT to 'your name your@email' (SEC requires a contact)}"
+UA="Luke Freyman lukefreyman@gmail.com"
 NOTES_BASE="https://www.sec.gov/files/dera/data/financial-statement-notes-data-sets"
 QUARTERS=(2010Q2 2010Q3 2010Q4 2011Q1 2011Q2 2011Q3 2011Q4 2012Q1 2012Q2 2012Q3 2012Q4 2013Q1 2013Q2 2013Q3 2014Q1 2014Q2 2014Q3 2014Q4)
 MAP_2013Q4_MD5=5bc4bc3172eb514bbe2edda81b7a9205      # data/pilot_2013Q4_cusip_cik_map.csv, 2026-10-15
