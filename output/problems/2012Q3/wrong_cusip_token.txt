@@ -1,0 +1,23 @@
+2012Q3: wrong-CUSIP-token rows (status invalid_9/ambiguous/unconfirmed_short but a valid 13(f)-list CUSIP sits in the text): 2,843 rows in 147 filings (0.190% of 1,497,296 rows); shares>0 on 1,359 of them; by parse method {'text': 2843}
+candidate rows checked 6,933 by status {'invalid_9': 4347, 'unconfirmed_short': 2070, 'ambiguous': 516}
+filings with most such rows:
+                      rows        value                            manager method    checksum  n_rows
+accession                                                                                            
+0001007280-12-000009   280   15897191.0  PUBLIC EMPLOYEES RETIREMENT SY...   text   fail_both    1359
+0000947871-12-000712   171        171.0     DekaBank Deutsche Girozentrale   text  fail_value    2078
+0000019617-12-000323   131        864.0                JPMORGAN CHASE & CO   text  fail_value   26618
+0001081019-12-000017   115          0.0  CALIFORNIA STATE TEACHERS RETI...   text  fail_value    2976
+0001085146-12-001478   105    4435265.0                           GLG INC.   text  fail_value     632
+0000898417-12-000057   102        165.0                     PRUDENTIAL PLC   text  fail_value     543
+0000932471-12-005634    88        102.0                 VANGUARD GROUP INC   text  fail_value   10138
+0000902219-12-000604    87  452201486.0       WELLINGTON MANAGEMENT CO LLP   text  fail_value    4414
+0000902219-12-000605    87  452201486.0       WELLINGTON MANAGEMENT CO LLP   text  fail_value    4434
+0000072971-12-000657    75       1300.0           WELLS FARGO & COMPANY/MN   text        pass   17206
+sample rows:
+           accession             name_of_issuer             title_of_class cusip_raw cusip_in_text  value  shares
+0001085146-12-001433 ALLEGHENY TECHNOLOGIES INC COM 01741R102 343210760... 107600000     01741R102    0.0       0
+0001085146-12-001433            GENERAL MTRS CO COM 37045V100 538477000... 847700000     37045V100    0.0       0
+0001140361-12-043953            AMERICAN EQUITY         CONV 025676AE7 431 434000PRN     025676AE7    0.0       0
+0001140361-12-043953    ALPHA NATURAL RESOURCES         CONV 02076XAA0 175 198000PRN     02076XAA0    0.0       0
+0001140361-12-043953          BOSTON PROPERTIES         CONV 10112RAG9 793 690000PRN     10112RAG9    0.0       0
+0001140361-12-043953           DFC GLOBAL GROUP         CONV 256664AC7 722 646000PRN     256664AC7    0.0       0

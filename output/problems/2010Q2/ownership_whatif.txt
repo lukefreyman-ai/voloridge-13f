@@ -1,0 +1,33 @@
+2010Q2: what-if on the over-100% stop condition (read-only; output unchanged)
+debt-pattern CUSIPs filed as SH: 6,204 rows, 4,436 CUSIPs, $117.7bn; 13(f) list descriptions of those: {'(not i': 3967, 'NOTE  ': 383, 'DBCV  ': 40, 'SDCV  ': 21, 'FRNT  ': 15, 'DEB   ': 5}
+13(f) list description of ALL output CUSIPs (distinct), top: {'(not': 11850, 'COM': 4540, 'NOTE': 385, 'CL': 302, 'SPONSORED': 160, 'SHS': 127, '*W': 80, 'SPON': 78, 'UNIT': 72, 'SH': 63}
+ADR/ADS CUSIPs in output: 367 on 232 companies, $458.0bn
+amendments duplicating the original (>= 90% identical rows): 0 ({}), rows 0
+
+S0 as produced                                               all: over 100%   190 / 1,706 = 11.1% | median  74.1 | top-500:  48 / 407 = 11.8%
+S1 drop debt-pattern CUSIPs                                  all: over 100%   113 / 1,706 =  6.6% | median  73.2 | top-500:  19 / 407 =  4.7%
+S2 + collapse duplicate amendments                           all: over 100%   113 / 1,706 =  6.6% | median  73.2 | top-500:  19 / 407 =  4.7%
+S3 + drop ADR/ADS securities                                 all: over 100%   113 / 1,704 =  6.6% | median  73.2 | top-500:  19 / 407 =  4.7%
+
+remaining top-500 companies over 100% under S3: 19
+                                      name       held           so      pct  value_bn  n_cusips     so_date                      so_source
+company_cik                                                                                                                               
+1067983.0           BERKSHIRE HATHAWAY INC  539999140     976414.0  55304.3      63.8         4  2010-07-31      10-Q 0001157523-10-004882
+1101215.0       ALLIANCE DATA SYSTEMS CORP   73057219   52632878.0    138.8       4.5         1  2010-07-31      10-Q 0001193125-10-182534
+29534.0                DOLLAR GENERAL CORP  420183080  340816996.0    123.3      11.6         1  2010-03-22  regex 10-K 0001047469-10-0...
+1101239.0                      EQUINIX INC   54537201   45589839.0    119.6       4.5         1  2010-06-30      10-Q 0001193125-10-176872
+873364.0                      CEPHALON INC   88939677   75197933.0    118.3       5.3         1  2010-07-31      10-Q 0001104659-10-039997
+1034054.0          SBA COMMUNICATIONS CORP  127255379  114634391.0    111.0       4.6         1  2010-07-31      10-Q 0001193125-10-176715
+1110803.0                     ILLUMINA INC  135652487  124285833.0    109.1       5.9         1  2010-06-30      10-Q 0000950123-10-072624
+1255474.0           WHITING PETROLEUM CORP   54662077   50998477.0    107.2       4.6         4  2010-06-30      10-Q 0001255474-10-000014
+930184.0     VALEANT PHARMACEUTICALS IN...   80543881   75921797.0    106.1       5.6         1  2010-07-31      10-Q 0000950123-10-071784
+1040971.0             SL GREEN REALTY CORP   82385334   78215826.0    105.3       4.5         3  2010-07-31      10-Q 0001104659-10-043119
+916076.0     MARTIN MARIETTA MATERIALS INC   47858782   45523432.0    105.1       4.1         2  2010-07-31      10-Q 0000950123-10-071734
+69499.0                         MYLAN INC.  323611487  309360933.0    104.6       7.8         2  2010-07-31      10-Q 0000950123-10-069798
+915912.0         AVALONBAY COMMUNITIES INC   88702824   85162865.0    104.2       8.3         2  2010-07-31      10-Q 0000950123-10-074264
+912242.0                       MACERICH CO  135260279  130103762.0    104.0       5.0         1  2010-07-31      10-Q 0001047469-10-007238
+874716.0        IDEXX LABORATORIES INC /DE   59417545   57705856.0    103.0       3.6         1  2010-07-31      10-Q 0001144204-10-039150
+827054.0          MICROCHIP TECHNOLOGY INC  191030669  185932883.0    102.7       5.4         1  2010-06-30      10-Q 0000827054-10-000218
+1361658.0           WYNDHAM WORLDWIDE CORP  181053065  178633042.0    101.4       3.7         1  2010-06-30      10-Q 0000950123-10-070354
+1424454.0                        Rovi Corp  104530340  103152700.0    101.3       4.0         2  2010-07-31      10-Q 0001424454-10-000026
+740260.0                        VENTAS INC  157868756  157080577.0    100.5       7.4         2  2010-07-31      10-Q 0000950123-10-070521

@@ -1,0 +1,132 @@
+2011Q4: CUSIP->CIK resolution v2 (decisions 2026-10-11), quarter end 2011-12-31, 13(f) list 2011q4
+valid 9-char CUSIPs with a subject CIK: 6,075 (placeholder 000000000 dropped from 1 filings)
+conflicts, raw definition (>1 subject CIK): 215 = 3.54%  -> all flagged conflict_flag=1
+conflicts, TWO-SIDED definition (>=2 filings on each of >=2 CIKs): 24 = 0.40%   [stop condition 2%: not hit]
+1-vs-1 ties among raw conflicts: 48; two-sided or tie resolved by 10-K/10-Q closeness: 50; with no 10-K/10-Q in reach (majority kept): 17
+CUSIPs where the 10-K/10-Q rule chose a CIK other than the majority: 6
+two-sided conflicts (all, by filing count):
+    cusip  subject_cik                       company_name  n_links  tenk_date  tenk_gap  chosen
+029263100      1305168          American Reprographics CO        2 2011-11-07      54.0    True
+029263100       887211     LOMBARDIA CAPITAL PARTNERS LLC        2        NaT       NaN   False
+038222105         6951          APPLIED MATERIALS INC /DE        4 2011-12-06      25.0    True
+038222105      1437107     Discovery Communications, Inc.        2 2012-02-17      48.0   False
+038222105      1430602 Scripps Networks Interactive, Inc.        1 2011-11-09      52.0   False
+038222105         9651             BANK OF TOKYO LTD/ADR/        1        NaT       NaN   False
+05564E106      1011174            BRE PROPERTIES INC /MD/        4 2012-02-17      48.0    True
+05564E106         9677                 BRE PROPERTIES INC        3        NaT       NaN   False
+05969A105      1295401                      Bancorp, Inc.        4 2011-11-09      52.0    True
+05969A105      1258754                        BANCORP INC        3        NaT       NaN   False
+080555105      1423296    Zuckerman Investment Group, LLC        6        NaT       NaN   False
+080555105       356080                          BELO CORP        5 2011-11-03      58.0   False
+080555105       780571                     ITRON INC /WA/        2 2012-02-17      48.0    True
+080555105      1100682 CHARLES RIVER LABORATORIES INTE...        2 2012-02-27      58.0   False
+227443108      1373485       CROSS BORDER RESOURCES, INC.        5 2011-11-14      47.0   False
+227443108      1477961           Latitude Solutions, Inc.        3 2011-11-21      40.0    True
+253868103      1297996         Digital Realty Trust, Inc.       10 2011-11-07      54.0    True
+253868103      1494877         Digital Realty Trust, L.P.        2 2011-11-07      54.0   False
+256603101        18169                   DOLE FOOD CO INC        4 2011-11-17      44.0    True
+256603101       802555          SCOTT & STRINGFELLOW, LLC        2        NaT       NaN   False
+26483E100      1115222           DUN & BRADSTREET CORP/NW        4 2011-11-04      57.0   False
+26483E100      1407739     DUPONT FABROS TECHNOLOGY, INC.        2 2012-02-23      54.0    True
+35137T108      1359111              Fox Chase Bancorp Inc        3 2010-05-17     593.0   False
+35137T108      1485176              Fox Chase Bancorp Inc        2 2011-11-07      54.0    True
+357023100      1320854           FreightCar America, Inc.        4 2011-11-02      59.0    True
+357023100      1311810           FreightCar America, Inc.        4        NaT       NaN   False
+367905106      1040829       GAYLORD ENTERTAINMENT CO /DE        5 2012-02-24      55.0    True
+367905106       878658           GAYLORD ENTERTAINMENT CO        2        NaT       NaN   False
+37947B103      1094348                   Mattersight Corp        2 2011-11-10      51.0    True
+37947B103      1344907       GLOBAL TRAFFIC NETWORK, INC.        2 2011-09-13     109.0   False
+44044K101      1302707                Horizon Lines, Inc.        3 2011-11-04      57.0    True
+44044K101      1299064        Horizon Lines Holding Corp.        2        NaT       NaN   False
+440543106      1131227 HORNBECK OFFSHORE SERVICES INC /LA        6 2011-11-07      54.0    True
+440543106       354359     HORNBECK OFFSHORE SERVICES INC        2        NaT       NaN   False
+45103T107      1060955                    ICON PLC  /ADR/        3        NaT       NaN    True
+45103T107      1060373                 ICON PUBLIC LTD CO        2        NaT       NaN   False
+457660108       802724                  INSITE VISION INC        3 2011-11-02      59.0   False
+457660108         1961                         WORLDS INC        2 2011-11-14      47.0    True
+460146103        51434       INTERNATIONAL PAPER CO /NEW/        2 2011-11-07      54.0    True
+460146103      1283246             INTERNATIONAL PAPER CO        2        NaT       NaN   False
+464287432      1159508   DEUTSCHE BANK AKTIENGESELLSCHAFT        4        NaT       NaN    True
+464287432       312070            BARCLAYS BANK PLC /ENG/        2        NaT       NaN   False
+464287432      1100663                      iSHARES TRUST        2        NaT       NaN   False
+480838101       920033      BANK JOS A CLOTHIERS INC /DE/        3 2011-11-30      31.0    True
+480838101       814675           JOS A BANK CLOTHIERS INC        2        NaT       NaN   False
+58471A105      1453814           Medidata Solutions, Inc.        5 2011-11-08      53.0   False
+58471A105      1047166   UNITED RENTALS NORTH AMERICA INC        2 2012-01-25      25.0   False
+58471A105      1201792      AMERICAN PUBLIC EDUCATION INC        2 2011-11-08      53.0   False
+58471A105         1750                           AAR CORP        1 2011-12-22       9.0    True
+58471A105      1160958                         INPHI Corp        1 2011-11-04      57.0   False
+68633D103      1483195             Oritani Financial Corp        3 2012-02-09      40.0    True
+68633D103      1374756            Oritani Financial Corp.        2 2010-05-10     600.0   False
+90333L201      1073429                    US CONCRETE INC        6 2011-11-14      47.0    True
+90333L201      1307784                U.S. Concrete, Inc.        2        NaT       NaN   False
+969203108      1449732          Willbros Group, Inc.\NEW\        2 2011-11-08      53.0    True
+969203108       895450                 WILLBROS GROUP INC        2        NaT       NaN   False
+
+name match validation on issuers mapped by 13G/13D with a 13(f) list name: exact unique matches 3,529 / 5,759; agreement with the 13G/13D CIK 3,512 / 3,529 = 99.5%
+disagreements (sample 15):
+cusip6  cik_13g  cik_name                  list_name                       name_13g                   name_match
+00162Q  1137360   1414040                ALPS ETF TR       MARKET VECTORS ETF TRUST               ALPS ETF Trust
+00817R   768411    908598                AETRIUM INC               CYBEROPTICS CORP                  AETRIUM INC
+06741L  1505713    312070            BARCLAYS BK PLC                            NaN      BARCLAYS BANK PLC /ENG/
+080555   780571    356080                  BELO CORP                 ITRON INC /WA/                    BELO CORP
+209115    23632   1047862    CONSOLIDATED EDISON INC CONSOLIDATED EDISON CO OF N...      CONSOLIDATED EDISON INC
+26441C    30371   1326160       DUKE ENERGY CORP NEW     Duke Energy Carolinas, LLC             Duke Energy CORP
+31429Y  1434708    789868             FEIHE INTL INC                            NaN      Feihe International Inc
+37947B  1094348   1344907 GLOBAL TRAFFIC NETWORK INC               Mattersight Corp GLOBAL TRAFFIC NETWORK, INC.
+58471A     1750   1453814     MEDIDATA SOLUTIONS INC                       AAR CORP     Medidata Solutions, Inc.
+61745P    93284    895421             MORGAN STANLEY MORGAN STANLEY INCOME SECUR...               MORGAN STANLEY
+651639    71824   1164727        NEWMONT MINING CORP                            NaN     NEWMONT MINING CORP /DE/
+680194  1102256    740971        OLD POINT FINL CORP                            NaN     OLD POINT FINANCIAL CORP
+76547T   871294   1023996         RICHMONT MINES INC                            NaN           RICHMONT MINES INC
+78464A  1168164   1064642          SPDR SERIES TRUST SPDR INDEX SHARES FUNDS (Fo...            SPDR SERIES TRUST
+81369Y    19481   1064641      SELECT SECTOR SPDR TR                            NaN     SELECT SECTOR SPDR TRUST
+
+unmapped 13F issuers (6-char): 10,276 carrying $3,004.7bn; with a 13(f) list name: 1,228 ($2,627.2bn)
+exact unique name matches added: 644 issuers = $1,717.0bn; of these fund CIKs (excluded later): 41 = $179.0bn
+review file (ambiguous + fuzzy, NOT used): 280 rows = $772.0bn -> data/2011Q4_name_match_review.csv; by reason: {'fuzzy (token Jaccard >= 0.5)': 259, 'ambiguous: 2 CIKs': 18, 'ambiguous: 3 CIKs': 3}
+coverage of 13F value, all issuers: 13G/13D map 85.5% -> with name matches 93.8%
+largest name-match additions:
+cusip6  company_cik                             company_name  is_fund  value_bn                                 evidence
+191216        21344                             COCA COLA CO    False    287.79 13(f) list 'COCA COLA CO' == EDGAR 'C...
+06739F       312070                  BARCLAYS BANK PLC /ENG/    False    178.93 13(f) list 'BARCLAYS BK PLC' == EDGAR...
+060505        70858                BANK OF AMERICA CORP /DE/    False    160.88 13(f) list 'BANK OF AMERICA CORPORATI...
+931422       104207                              WALGREEN CO    False    153.41 13(f) list 'WALGREEN CO' == EDGAR 'WA...
+78462F       884394                   SPDR S&P 500 ETF TRUST     True    106.44 13(f) list 'SPDR S&P 500 ETF TR' == E...
+713448        77476                              PEPSICO INC    False     89.65 13(f) list 'PEPSICO INC' == EDGAR 'PE...
+054937        92230                                BB&T CORP    False     65.95 13(f) list 'BB&T CORP' == EDGAR 'BB A...
+78463V      1222333                          SPDR GOLD TRUST     True     49.60 13(f) list 'SPDR GOLD TRUST' == EDGAR...
+404280      1089113                        HSBC HOLDINGS PLC    False     43.27 13(f) list 'HSBC HLDGS PLC' == EDGAR ...
+035710      1043219            ANNALY CAPITAL MANAGEMENT INC    False     43.18 13(f) list 'ANNALY CAP MGMT INC' == E...
+61166W      1110783                        MONSANTO CO /NEW/    False     33.54 13(f) list 'MONSANTO CO NEW' == EDGAR...
+91912E       917851                                Vale S.A.    False     24.23    13(f) list 'VALE S A' == EDGAR 'VALE'
+881624       818686       TEVA PHARMACEUTICAL INDUSTRIES LTD    False     18.39 13(f) list 'TEVA PHARMACEUTICAL INDS ...
+15135U      1475260                      CENOVUS ENERGY INC.    False     17.64 13(f) list 'CENOVUS ENERGY INC' == ED...
+92857W       839923             VODAFONE GROUP PUBLIC LTD CO    False     17.42 13(f) list 'VODAFONE GROUP PLC NEW' =...
+05534B       718940                                  BCE INC    False     16.85      13(f) list 'BCE INC' == EDGAR 'BCE'
+969457       107263                   WILLIAMS COMPANIES INC    False     16.80 13(f) list 'WILLIAMS COS INC DEL' == ...
+055622       313807                                   BP PLC    False     16.32        13(f) list 'BP PLC' == EDGAR 'BP'
+66987V      1114448                              NOVARTIS AG    False     15.63 13(f) list 'NOVARTIS A G' == EDGAR 'N...
+871829        96021                               SYSCO CORP    False     14.75 13(f) list 'SYSCO CORP' == EDGAR 'SYSCO'
+874039      1046179 TAIWAN SEMICONDUCTOR MANUFACTURING CO...    False     13.75 13(f) list 'TAIWAN SEMICONDUCTOR MFG ...
+465562      1132597               Itau Unibanco Holding S.A.    False     12.98 13(f) list 'ITAU UNIBANCO HLDG SA' ==...
+775109       733099                ROGERS COMMUNICATIONS INC    False     12.89 13(f) list 'ROGERS COMMUNICATIONS INC...
+37733W      1131399                      GLAXOSMITHKLINE PLC    False     12.52 13(f) list 'GLAXOSMITHKLINE PLC' == E...
+84265V      1001838                    SOUTHERN COPPER CORP/    False     12.06 13(f) list 'SOUTHERN COPPER CORP' == ...
+largest review-file rows (not used):
+cusip6                    list_name                       reason                                       candidates      value_k
+714236         PERMIAN BASIN RTY TR fuzzy (token Jaccard >= 0.5)          0.60 PERMIAN BASIN ROYALTY TR -> 319654 1.896519e+08
+659310    NORTH EUROPEAN OIL RTY TR fuzzy (token Jaccard >= 0.5)      0.67 NORTH EUROPEAN OIL ROYALTY TR -> 72633 1.866000e+08
+055630        BP PRUDHOE BAY RTY TR fuzzy (token Jaccard >= 0.5)         0.67 BP PRUDHOE BAY ROYALTY TR -> 850033 1.619964e+08
+064149     BANK NOVA SCOTIA HALIFAX fuzzy (token Jaccard >= 0.5)                   0.60 BK OF NOVA SCOTIA -> 9631 3.144479e+07
+922042 VANGUARD INTL EQUITY INDEX F fuzzy (token Jaccard >= 0.5)  0.67 VANGUARD INTL EQUITY INDEX FUNDS -> 857489 2.752526e+07
+726503  PLAINS ALL AMERN PIPELINE L fuzzy (token Jaccard >= 0.5)        0.80 PLAINS ALL AMERN PIPELINE -> 1070423 2.465775e+07
+063671            BANK MONTREAL QUE fuzzy (token Jaccard >= 0.5)                    0.50 BK OF MONTREAL -> 927971 1.843234e+07
+293792  ENTERPRISE PRODS PARTNERS L fuzzy (token Jaccard >= 0.5)        0.75 ENTERPRISE PRODS PARTNERS -> 1061219 1.033227e+07
+73935A        POWERSHARES QQQ TRUST fuzzy (token Jaccard >= 0.5)      0.60 POWERSHARES QQQ TR SERIES 1 -> 1067839 9.993910e+06
+904784                 UNILEVER N V            ambiguous: 2 CIKs          110390:UNILEVER N V|217410:UNILEVER PLC 8.978116e+06
+D18190             DEUTSCHE BANK AG fuzzy (token Jaccard >= 0.5)   0.67 DEUTSCHE BK AKTIENGESELLSCHAFT -> 1159508 7.826420e+06
+25271C DIAMOND OFFSHORE DRILLING IN fuzzy (token Jaccard >= 0.5)         0.75 DIAMOND OFFSHORE DRILLING -> 949039 7.647903e+06
+088606             BHP BILLITON LTD            ambiguous: 2 CIKs 811809:BHP BILLITON LTD|1171264:BHP BILLITON PLC 5.971930e+06
+92204A           VANGUARD WORLD FDS fuzzy (token Jaccard >= 0.5)                0.50 VANGUARD WORLD FUND -> 52848 5.280289e+06
+40049J            GRUPO TELEVISA SA fuzzy (token Jaccard >= 0.5)                0.67 GRUPO TELEVISA SAB -> 912892 5.119010e+06

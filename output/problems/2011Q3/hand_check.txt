@@ -1,0 +1,511 @@
+2011Q3: hand check of the 20 largest companies by 13F value (every input shown)
+
+==============================================================================================================
+APPLE INC   CIK 320193   13F value $241.0bn   map_source name_exact   conflict 0/0
+  CUSIPs held (counted):
+           managers  filings       shares       value_k desc  class_shares_out  class_pct   class_match  median_px
+cusip                                                                                                             
+037833100      1554     1554  614084534.0  2.407701e+08  COM       929409000.0  66.072583  single-class     381.31
+037833902         1        1     288054.0  1.098410e+05            929409000.0   0.030993  single-class     381.32
+037833951         1        1     371100.0  1.415080e+05            929409000.0   0.039929  single-class     381.32
+  shares held total 614,743,688  managers 1554  filings 1554  multi_filing rows 0
+  shares outstanding facts (XBRL, all rows for the CIK):
+class_axis      shares form                 adsh shares_outstanding_date      filed  gap_days  gap_flag
+           929409000.0 10-K 0001193125-11-282113              2011-09-30 2011-10-26         0     False
+  USED: shares_outstanding 929,409,000  source 10-K 0001193125-11-282113  as-of 2011-09-30  multi_class False
+  ==> institutional_ownership_pct = 614,743,688 / 929,409,000 = 66.14%
+  top 5 holders:
+                        manager_name  manager_cik  shares_held form_13f_accession_number     form    filed
+                             FMR LLC       315066   51500993.0      0000315066-11-004295   13F-HR 20111114
+                  VANGUARD GROUP INC       102909   36569629.0      0000932471-11-003929 13F-HR/A 20111115
+                   STATE STREET CORP        93751   34363487.0      0001193125-11-296468   13F-HR 20111104
+    PRICE T ROWE ASSOCIATES INC /MD/        80255   23468691.0      0000080255-11-000647   13F-HR 20111114
+BlackRock Institutional Trust Com...       913414   23118847.0      0001086364-11-006176   13F-HR 20111103
+==============================================================================================================
+INTERNATIONAL BUSINESS MACHINES CORP   CIK 51143   13F value $174.1bn   map_source name_exact   conflict 0/0
+  CUSIPs held (counted):
+           managers  filings       shares       value_k desc  class_shares_out  class_pct   class_match  median_px
+cusip                                                                                                             
+459200101      1514     1514  688572345.0  1.740101e+08  COM      1.178618e+09  58.422003  single-class     174.87
+459200903         1        1     309100.0  5.405200e+04           1.178618e+09   0.026226  single-class     174.87
+459200952         1        1     172400.0  3.014800e+04           1.178618e+09   0.014627  single-class     174.87
+  CUSIPs EXCLUDED from the figure:
+                                             managers    shares
+cusip     excluded_from_ownership list_desc                    
+459200AG6 debt_cusip                                1   50000.0
+459200AL5 debt_cusip                                1  115000.0
+459200AM3 debt_cusip                                1   25000.0
+459200AS0 debt_cusip                                1   51000.0
+  shares held total 689,053,845  managers 1514  filings 1514  multi_filing rows 0
+  shares outstanding facts (XBRL, all rows for the CIK):
+class_axis       shares form                 adsh shares_outstanding_date      filed  gap_days  gap_flag
+           1178618168.0 10-Q 0001104659-11-057630              2011-09-30 2011-10-25         0     False
+  USED: shares_outstanding 1,178,618,168  source 10-Q 0001104659-11-057630  as-of 2011-09-30  multi_class False
+  ==> institutional_ownership_pct = 689,053,845 / 1,178,618,168 = 58.46%
+  top 5 holders:
+                        manager_name  manager_cik  shares_held form_13f_accession_number     form    filed
+                   STATE STREET CORP        93751   64854033.0      0001193125-11-296468   13F-HR 20111104
+              BERKSHIRE HATHAWAY INC      1067983   57348984.0      0001193125-11-312418 13F-HR/A 20111115
+                  VANGUARD GROUP INC       102909   49779085.0      0000932471-11-003929 13F-HR/A 20111115
+BlackRock Institutional Trust Com...       913414   29213149.0      0001086364-11-006176   13F-HR 20111103
+STATE FARM MUTUAL AUTOMOBILE INSU...       315032   16651892.0      0000729056-11-000011   13F-HR 20111114
+==============================================================================================================
+EXXON MOBIL CORP   CIK 34088   13F value $166.4bn   map_source name_exact   conflict 0/0
+  CUSIPs held (counted):
+           managers  filings        shares       value_k desc  class_shares_out  class_pct   class_match  median_px
+cusip                                                                                                              
+30231G102      1620     1620  2.235827e+09  1.662601e+08  COM      4.793208e+09  46.645736  single-class      72.63
+30231G904         1        1  1.544000e+06  1.121410e+05           4.793208e+09   0.032212  single-class      72.63
+30231G953         1        1  6.236000e+05  4.529200e+04           4.793208e+09   0.013010  single-class      72.63
+  shares held total 2,237,994,599  managers 1620  filings 1620  multi_filing rows 0
+  shares outstanding facts (XBRL, all rows for the CIK):
+class_axis       shares form                 adsh shares_outstanding_date      filed  gap_days  gap_flag
+           4793207715.0 10-Q 0001193125-11-294424              2011-09-30 2011-11-03         0     False
+  USED: shares_outstanding 4,793,207,715  source 10-Q 0001193125-11-294424  as-of 2011-09-30  multi_class False
+  ==> institutional_ownership_pct = 2,237,994,599 / 4,793,207,715 = 46.69%
+  top 5 holders:
+                        manager_name  manager_cik  shares_held form_13f_accession_number     form    filed
+                  VANGUARD GROUP INC       102909  199636019.0      0000932471-11-003929 13F-HR/A 20111115
+                   STATE STREET CORP        93751  187489479.0      0001193125-11-296468   13F-HR 20111104
+BlackRock Institutional Trust Com...       913414  121536818.0      0001086364-11-006176   13F-HR 20111103
+        Bank of New York Mellon CORP      1390777   72750734.0      0001390777-11-000150   13F-HR 20111019
+                             FMR LLC       315066   70860256.0      0000315066-11-004295   13F-HR 20111114
+==============================================================================================================
+CHEVRON CORP   CIK 93410   13F value $142.0bn   map_source name_exact   conflict 0/0
+  CUSIPs held (counted):
+           managers  filings        shares       value_k desc  class_shares_out  class_pct   class_match  median_px
+cusip                                                                                                              
+166764100      1462     1462  1.226675e+09  1.419078e+08  COM      1.991484e+09  61.595989  single-class      92.59
+166764902         1        1  5.557000e+05  5.145200e+04           1.991484e+09   0.027904  single-class      92.59
+166764951         1        1  6.833000e+05  6.326700e+04           1.991484e+09   0.034311  single-class      92.59
+  shares held total 1,227,913,512  managers 1462  filings 1462  multi_filing rows 0
+  shares outstanding facts (XBRL, all rows for the CIK):
+class_axis       shares form                 adsh shares_outstanding_date      filed  gap_days  gap_flag
+           1991484388.0 10-Q 0001193125-11-294378              2011-09-30 2011-11-03         0     False
+  USED: shares_outstanding 1,991,484,388  source 10-Q 0001193125-11-294378  as-of 2011-09-30  multi_class False
+  ==> institutional_ownership_pct = 1,227,913,512 / 1,991,484,388 = 61.66%
+  top 5 holders:
+                        manager_name  manager_cik  shares_held form_13f_accession_number     form    filed
+                   STATE STREET CORP        93751  100651365.0      0001193125-11-296468   13F-HR 20111104
+                  VANGUARD GROUP INC       102909   84116222.0      0000932471-11-003929 13F-HR/A 20111115
+             Capital World Investors      1422849   60886443.0      0000732812-11-000038   13F-HR 20111114
+BlackRock Institutional Trust Com...       913414   49737375.0      0001086364-11-006176   13F-HR 20111103
+                             FMR LLC       315066   45811629.0      0000315066-11-004295   13F-HR 20111114
+==============================================================================================================
+WELLS FARGO & CO/MN   CIK 72971   13F value $137.4bn   map_source name_exact   conflict 0/0
+  CUSIPs held (counted):
+           managers  filings        shares       value_k              desc  class_shares_out     class_pct   class_match  median_px
+cusip                                                                                                                              
+949746101      1167     1167  3.616037e+09  1.337012e+08               COM      5.273526e+09  6.856963e+01  single-class      24.12
+949746119        37       37  2.280232e+07  2.930200e+05  *W EXP 10/28/201      5.273526e+09  4.323923e-01  single-class       7.70
+949746804       104      104  3.285976e+06  3.049330e+06    PERP PFD CNV A      5.273526e+09  6.231080e-02  single-class    1032.00
+949746879        25       25  5.851143e+06  1.613717e+05                        5.273526e+09  1.109532e-01  single-class      27.57
+949746887         1        1  2.900000e+01           NaN                        5.273526e+09  5.499167e-07  single-class        NaN
+949746903         1        1  4.467000e+06  1.077440e+05                        5.273526e+09  8.470614e-02  single-class      24.12
+949746952         1        1  4.386400e+06  1.058000e+05                        5.273526e+09  8.317775e-02  single-class      24.12
+  CUSIPs EXCLUDED from the figure:
+                                             managers    shares
+cusip     excluded_from_ownership list_desc                    
+949746CL3 debt_cusip                                1   12000.0
+949746CR0 debt_cusip                                1   50000.0
+949746FJ5 debt_cusip                                1   25000.0
+949746JE2 debt_cusip                                1   60000.0
+949746NW7 debt_cusip                                1   50000.0
+949746NY3 debt_cusip                                1  100000.0
+  shares held total 3,656,829,992  managers 1201  filings 1201  multi_filing rows 0
+  shares outstanding facts (XBRL, all rows for the CIK):
+class_axis       shares form                 adsh shares_outstanding_date      filed  gap_days  gap_flag
+           5273525555.0 10-Q 0001193125-11-301024              2011-10-31 2011-11-08        31     False
+  USED: shares_outstanding 5,273,525,555  source 10-Q 0001193125-11-301024  as-of 2011-10-31  multi_class False
+  ==> institutional_ownership_pct = 3,656,829,992 / 5,273,525,555 = 69.34%
+  top 5 holders:
+                manager_name  manager_cik  shares_held form_13f_accession_number     form    filed
+                     FMR LLC       315066  201048567.0      0000315066-11-004295   13F-HR 20111114
+          VANGUARD GROUP INC       102909  196175972.0      0000932471-11-003929 13F-HR/A 20111115
+           STATE STREET CORP        93751  192187130.0      0001193125-11-296468   13F-HR 20111104
+     Capital World Investors      1422849  150586174.0      0000732812-11-000038   13F-HR 20111114
+WELLINGTON MANAGEMENT CO LLP       902219  147121008.0      0000902219-11-001064   13F-HR 20111114
+==============================================================================================================
+MICROSOFT CORP   CIK 789019   13F value $125.7bn   map_source name_exact   conflict 0/0
+  CUSIPs held (counted):
+           managers  filings        shares       value_k desc  class_shares_out  class_pct   class_match  median_px
+cusip                                                                                                              
+594918104      1640     1640  4.933851e+09  1.255781e+08  COM      8.412182e+09  58.651259  single-class      24.89
+594918906         1        1  3.029400e+06  7.540200e+04           8.412182e+09   0.036012  single-class      24.89
+594918955         1        1  1.373400e+06  3.418400e+04           8.412182e+09   0.016326  single-class      24.89
+  CUSIPs EXCLUDED from the figure:
+                                             managers      shares
+cusip     excluded_from_ownership list_desc                      
+594918AB0 debt_cusip                                1    275000.0
+594918AC8 debt_cusip                                1    150000.0
+594918AE4 debt_cusip                                1  38150000.0
+594918AH7 debt_cusip                                1     50000.0
+  shares held total 4,938,253,632  managers 1640  filings 1640  multi_filing rows 0
+  shares outstanding facts (XBRL, all rows for the CIK):
+class_axis       shares form                 adsh shares_outstanding_date      filed  gap_days  gap_flag
+           8412182277.0 10-Q 0001193125-11-276022              2011-10-31 2011-10-20        31     False
+  USED: shares_outstanding 8,412,182,277  source 10-Q 0001193125-11-276022  as-of 2011-10-31  multi_class False
+  ==> institutional_ownership_pct = 4,938,253,632 / 8,412,182,277 = 58.70%
+  top 5 holders:
+                        manager_name  manager_cik  shares_held form_13f_accession_number     form    filed
+                  VANGUARD GROUP INC       102909  301111558.0      0000932471-11-003929 13F-HR/A 20111115
+   Capital Research Global Investors      1422848  295622857.0      0000732812-11-000045   13F-HR 20111114
+BlackRock Institutional Trust Com...       913414  185305765.0      0001086364-11-006176   13F-HR 20111103
+                        Invesco Ltd.       914208  146535641.0      0000914208-11-000513   13F-HR 20111114
+                             FMR LLC       315066  131427088.0      0000315066-11-004295   13F-HR 20111114
+==============================================================================================================
+JOHNSON & JOHNSON   CIK 200406   13F value $125.0bn   map_source name_exact   conflict 0/0
+  CUSIPs held (counted):
+           managers  filings        shares       value_k desc  class_shares_out  class_pct   class_match  median_px
+cusip                                                                                                              
+478160104      1577     1577  1.656416e+09  1.248181e+08  COM      2.730849e+09  60.655718  single-class      63.69
+478160906         1        1  1.642300e+06  1.045990e+05           2.730849e+09   0.060139  single-class      63.69
+478160955         1        1  1.096900e+06  6.986200e+04           2.730849e+09   0.040167  single-class      63.69
+  shares held total 1,659,155,278  managers 1577  filings 1577  multi_filing rows 0
+  shares outstanding facts (XBRL, all rows for the CIK):
+class_axis       shares form                 adsh shares_outstanding_date      filed  gap_days  gap_flag
+           2730849018.0 10-Q 0000950123-11-096471              2011-10-31 2011-11-08        31     False
+  USED: shares_outstanding 2,730,849,018  source 10-Q 0000950123-11-096471  as-of 2011-10-31  multi_class False
+  ==> institutional_ownership_pct = 1,659,155,278 / 2,730,849,018 = 60.76%
+  top 5 holders:
+                        manager_name  manager_cik  shares_held form_13f_accession_number     form    filed
+                   STATE STREET CORP        93751  139355603.0      0001193125-11-296468   13F-HR 20111104
+                  VANGUARD GROUP INC       102909  106426119.0      0000932471-11-003929 13F-HR/A 20111115
+BlackRock Institutional Trust Com...       913414   67253352.0      0001086364-11-006176   13F-HR 20111103
+        Bank of New York Mellon CORP      1390777   43268315.0      0001390777-11-000150   13F-HR 20111019
+STATE FARM MUTUAL AUTOMOBILE INSU...       315032   37878592.0      0000729056-11-000011   13F-HR 20111114
+==============================================================================================================
+ORACLE CORP   CIK 1341439   13F value $113.8bn   map_source name_exact   conflict 0/0
+  CUSIPs held (counted):
+           managers  filings        shares       value_k desc  class_shares_out  class_pct   class_match  median_px
+cusip                                                                                                              
+68389X105      1246     1246  2.884382e+09  1.138061e+08  COM      5.025837e+09  57.391083  single-class      28.74
+68389X907         1        1  5.297000e+05  1.522400e+04           5.025837e+09   0.010540  single-class      28.74
+68389X956         1        1  2.748000e+05  7.898000e+03           5.025837e+09   0.005468  single-class      28.74
+  shares held total 2,885,186,791  managers 1246  filings 1246  multi_filing rows 0
+  shares outstanding facts (XBRL, all rows for the CIK):
+class_axis       shares form                 adsh shares_outstanding_date      filed  gap_days  gap_flag
+           5025837000.0 10-Q 0001193125-11-351954              2011-12-31 2011-12-23        92     False
+  USED: shares_outstanding 5,025,837,000  source 10-Q 0001193125-11-351954  as-of 2011-12-31  multi_class False
+  ==> institutional_ownership_pct = 2,885,186,791 / 5,025,837,000 = 57.41%
+  top 5 holders:
+                        manager_name  manager_cik  shares_held form_13f_accession_number     form    filed
+                  VANGUARD GROUP INC       102909  158151804.0      0000932471-11-003929 13F-HR/A 20111115
+   Capital Research Global Investors      1422848  140026000.0      0000732812-11-000045   13F-HR 20111114
+                             FMR LLC       315066  123974072.0      0000315066-11-004295   13F-HR 20111114
+             Capital World Investors      1422849  110906137.0      0000732812-11-000038   13F-HR 20111114
+BlackRock Institutional Trust Com...       913414   94414245.0      0001086364-11-006176   13F-HR 20111103
+==============================================================================================================
+JPMORGAN CHASE & CO   CIK 19617   13F value $113.5bn   map_source name_exact   conflict 0/0
+  CUSIPs held (counted):
+           managers  filings        shares       value_k              desc  class_shares_out  class_pct   class_match  median_px
+cusip                                                                                                                           
+46625H100      1379     1379  2.692737e+09  1.129284e+08               COM      3.799766e+09  70.865877  single-class      30.12
+46625H621        25       25  1.269888e+06  3.499085e+04                        3.799766e+09   0.033420  single-class      27.56
+46634E114        51       51  6.056581e+07  5.657023e+05  *W EXP 10/28/201      3.799766e+09   1.593935  single-class       9.31
+46634X823         1        1  1.430000e+04  6.120000e+02     DBL SHRT 10YR      3.799766e+09   0.000376  single-class      42.80
+  CUSIPs EXCLUDED from the figure:
+                                             managers    shares
+cusip     excluded_from_ownership list_desc                    
+46625HAT7 debt_cusip                                1  107000.0
+46625HBJ8 debt_cusip                                1   20000.0
+46625HBV1 debt_cusip                                1   33000.0
+46625HCE8 debt_cusip                                1   86000.0
+46625HGN4 debt_cusip                                1   65000.0
+46625HGT1 debt_cusip                                1  100000.0
+46625HGY0 debt_cusip                                1   36000.0
+46625HHA1 debt_cusip                                3  136000.0
+46625HHB9 debt_cusip                                1   75000.0
+46625HHN3 debt_cusip                                1   50000.0
+46625HHP8 debt_cusip                                1   90000.0
+46625HHQ6 debt_cusip                                1  100000.0
+46625HHR4 debt_cusip                                1   20000.0
+46625HHS2 debt_cusip                                1   90000.0
+46625HHU7 debt_cusip                                1   50000.0
+46625HHW3 debt_cusip                                1   75000.0
+46625HHX1 debt_cusip                                1   16000.0
+46625HJA9 debt_cusip                                1   60000.0
+  shares held total 2,754,587,276  managers 1397  filings 1397  multi_filing rows 0
+  shares outstanding facts (XBRL, all rows for the CIK):
+class_axis       shares form                 adsh shares_outstanding_date      filed  gap_days  gap_flag
+           3799765675.0 10-Q 0000019617-11-000264              2011-10-31 2011-11-04        31     False
+  USED: shares_outstanding 3,799,765,675  source 10-Q 0000019617-11-000264  as-of 2011-10-31  multi_class False
+  ==> institutional_ownership_pct = 2,754,587,276 / 3,799,765,675 = 72.49%
+  top 5 holders:
+                        manager_name  manager_cik  shares_held form_13f_accession_number     form    filed
+                   STATE STREET CORP        93751  155008429.0      0001193125-11-296468   13F-HR 20111104
+                  VANGUARD GROUP INC       102909  150566676.0      0000932471-11-003929 13F-HR/A 20111115
+BlackRock Institutional Trust Com...       913414  101965380.0      0001086364-11-006176   13F-HR 20111103
+        WELLINGTON MANAGEMENT CO LLP       902219   91767040.0      0000902219-11-001064   13F-HR 20111114
+                             FMR LLC       315066   89824104.0      0000315066-11-004295   13F-HR 20111114
+==============================================================================================================
+PFIZER INC   CIK 78003   13F value $112.0bn   map_source name_exact   conflict 0/0
+  CUSIPs held (counted):
+           managers  filings        shares       value_k desc  class_shares_out  class_pct   class_match  median_px
+cusip                                                                                                              
+717081103      1437     1437  5.191455e+09  1.116881e+08  COM      7.686967e+09  67.535806  single-class      17.68
+717081905         1        1  1.202790e+07  2.126540e+05           7.686967e+09   0.156471  single-class      17.68
+717081954         1        1  7.268000e+06  1.284990e+05           7.686967e+09   0.094550  single-class      17.68
+  CUSIPs EXCLUDED from the figure:
+                                             managers   shares
+cusip     excluded_from_ownership list_desc                   
+717081AR4 debt_cusip                                1  75000.0
+717081DA8 debt_cusip                                1  25000.0
+717081DB6 debt_cusip                                1  50000.0
+  shares held total 5,210,750,852  managers 1437  filings 1437  multi_filing rows 0
+  shares outstanding facts (XBRL, all rows for the CIK):
+class_axis       shares form                 adsh shares_outstanding_date      filed  gap_days  gap_flag
+           7686966786.0 10-Q 0001157523-11-006714              2011-10-31 2011-11-10        31     False
+  USED: shares_outstanding 7,686,966,786  source 10-Q 0001157523-11-006714  as-of 2011-10-31  multi_class False
+  ==> institutional_ownership_pct = 5,210,750,852 / 7,686,966,786 = 67.79%
+  top 5 holders:
+                        manager_name  manager_cik  shares_held form_13f_accession_number     form    filed
+                   STATE STREET CORP        93751  311478210.0      0001193125-11-296468   13F-HR 20111104
+                  VANGUARD GROUP INC       102909  306268813.0      0000932471-11-003929 13F-HR/A 20111115
+BlackRock Institutional Trust Com...       913414  194208577.0      0001086364-11-006176   13F-HR 20111103
+        WELLINGTON MANAGEMENT CO LLP       902219  183075746.0      0000902219-11-001064   13F-HR 20111114
+              FRANKLIN RESOURCES INC        38777  149102398.0      0000038777-11-000209   13F-HR 20111114
+==============================================================================================================
+Google Inc.   CIK 1288776   13F value $109.0bn   map_source name_exact   conflict 0/0
+  CUSIPs held (counted):
+           managers  filings       shares       value_k  desc  class_shares_out  class_pct class_match  median_px
+cusip                                                                                                            
+38259P508      1247     1247  197777465.0  1.089053e+08  CL A       256000559.0  77.256654     matched     515.03
+38259P904         1        1      99315.0  5.115100e+04                     NaN        NaN   unmatched     515.03
+38259P953         1        1      98200.0  5.057700e+04                     NaN        NaN   unmatched     515.04
+  shares held total 197,974,980  managers 1247  filings 1247  multi_filing rows 0
+  shares outstanding facts (XBRL, all rows for the CIK):
+                class_axis      shares form                 adsh shares_outstanding_date      filed  gap_days  gap_flag
+ClassOfStock=CommonClassA; 256000559.0 10-Q 0001193125-11-282235              2011-10-31 2011-10-26        31     False
+ClassOfStock=CommonClassB;  67886932.0 10-Q 0001193125-11-282235              2011-10-31 2011-10-26        31     False
+  USED: shares_outstanding NULL
+  ==> institutional_ownership_pct = NULL
+  top 5 holders:
+                    manager_name  manager_cik  shares_held form_13f_accession_number     form    filed
+                         FMR LLC       315066   17379087.0      0000315066-11-004295   13F-HR 20111114
+PRICE T ROWE ASSOCIATES INC /MD/        80255   10078082.0      0000080255-11-000647   13F-HR 20111114
+              VANGUARD GROUP INC       102909    9936460.0      0000932471-11-003929 13F-HR/A 20111115
+               STATE STREET CORP        93751    9017223.0      0001193125-11-296468   13F-HR 20111104
+         Capital World Investors      1422849    7405116.0      0000732812-11-000038   13F-HR 20111114
+==============================================================================================================
+PROCTER & GAMBLE CO   CIK 80424   13F value $105.0bn   map_source SC 13G   conflict 0/0
+  CUSIPs held (counted):
+           managers  filings        shares       value_k desc  class_shares_out  class_pct   class_match  median_px
+cusip                                                                                                              
+742718109      1469     1469  1.467844e+09  1.048697e+08  COM      2.751320e+09  53.350531  single-class      63.18
+742718901         1        1  1.587000e+06  1.002670e+05           2.751320e+09   0.057681  single-class      63.18
+742718950         1        1  1.101800e+06  6.961200e+04           2.751320e+09   0.040046  single-class      63.19
+  CUSIPs EXCLUDED from the figure:
+                                             managers    shares
+cusip     excluded_from_ownership list_desc                    
+742718DM8 debt_cusip                                1   50000.0
+742718DN6 debt_cusip                                1   25000.0
+742718DR7 debt_cusip                                1  150000.0
+  shares held total 1,470,532,695  managers 1469  filings 1469  multi_filing rows 0
+  shares outstanding facts (XBRL, all rows for the CIK):
+class_axis       shares form                 adsh shares_outstanding_date      filed  gap_days  gap_flag
+           2751320136.0 10-Q 0000080424-11-000043              2011-09-30 2011-10-27         0     False
+  USED: shares_outstanding 2,751,320,136  source 10-Q 0000080424-11-000043  as-of 2011-09-30  multi_class False
+  ==> institutional_ownership_pct = 1,470,532,695 / 2,751,320,136 = 53.45%
+  top 5 holders:
+                        manager_name  manager_cik  shares_held form_13f_accession_number     form    filed
+                  VANGUARD GROUP INC       102909  114432144.0      0000932471-11-003929 13F-HR/A 20111115
+                   STATE STREET CORP        93751  112652249.0      0001193125-11-296468   13F-HR 20111104
+BlackRock Institutional Trust Com...       913414   67978915.0      0001086364-11-006176   13F-HR 20111103
+                             FMR LLC       315066   50957210.0      0000315066-11-004295   13F-HR 20111114
+                 NORTHERN TRUST CORP        73124   40101097.0      0001256484-11-000023   13F-HR 20111110
+==============================================================================================================
+INTEL CORP   CIK 50863   13F value $98.7bn   map_source name_exact   conflict 0/0
+  CUSIPs held (counted):
+           managers  filings        shares      value_k desc  class_shares_out  class_pct   class_match  median_px
+cusip                                                                                                             
+458140100      1413     1413  3.050383e+09  98480607.81  COM      5.092000e+09  59.905403  single-class      21.33
+  CUSIPs EXCLUDED from the figure:
+                                                    managers       shares
+cusip     excluded_from_ownership list_desc                              
+458140AC4 debt_cusip                                       1    1300000.0
+458140AD2 debt_cusip              SDCV  2.950%12/1        21  141407818.0
+458140AF7 debt_cusip                                       1   42700000.0
+458140AJ9 debt_cusip                                       1      60000.0
+  shares held total 3,050,383,119  managers 1413  filings 1413  multi_filing rows 0
+  shares outstanding facts (XBRL, all rows for the CIK):
+class_axis       shares form                 adsh shares_outstanding_date      filed  gap_days  gap_flag
+           5092000000.0 10-Q 0001193125-11-297669              2011-10-31 2011-11-04        31     False
+  USED: shares_outstanding 5,092,000,000  source 10-Q 0001193125-11-297669  as-of 2011-10-31  multi_class False
+  ==> institutional_ownership_pct = 3,050,383,119 / 5,092,000,000 = 59.91%
+  top 5 holders:
+                        manager_name  manager_cik  shares_held form_13f_accession_number     form    filed
+                   STATE STREET CORP        93751  207755561.0      0001193125-11-296468   13F-HR 20111104
+                  VANGUARD GROUP INC       102909  207274637.0      0000932471-11-003929 13F-HR/A 20111115
+BlackRock Institutional Trust Com...       913414  133082243.0      0001086364-11-006176   13F-HR 20111103
+        Bank of New York Mellon CORP      1390777   96461801.0      0001390777-11-000150   13F-HR 20111019
+   Capital Research Global Investors      1422848   75689600.0      0000732812-11-000045   13F-HR 20111114
+==============================================================================================================
+AT&T INC.   CIK 732717   13F value $96.6bn   map_source name_exact   conflict 0/0
+  CUSIPs held (counted):
+           managers  filings        shares       value_k desc  class_shares_out  class_pct   class_match  median_px
+cusip                                                                                                              
+00206R102      1273     1273  3.013233e+09  9.648354e+07  COM      5.926000e+09  50.847674  single-class      28.52
+00206R904         1        1  3.747800e+06  1.068880e+05           5.926000e+09   0.063243  single-class      28.52
+00206R953         1        1  1.706600e+06  4.867300e+04           5.926000e+09   0.028799  single-class      28.52
+  CUSIPs EXCLUDED from the figure:
+                                             managers    shares
+cusip     excluded_from_ownership list_desc                    
+00206RAF9 debt_cusip                                1   35000.0
+00206RAJ1 debt_cusip                                1   99000.0
+00206RAM4 debt_cusip                                1   11000.0
+00206RAQ5 debt_cusip                                1  200000.0
+00206RAR3 debt_cusip                                1  110000.0
+00206RAV4 debt_cusip                                2  624000.0
+  shares held total 3,018,687,586  managers 1273  filings 1273  multi_filing rows 0
+  shares outstanding facts (XBRL, all rows for the CIK):
+class_axis       shares form                 adsh shares_outstanding_date      filed  gap_days  gap_flag
+           5926000000.0 10-Q 0000732717-11-000094              2011-10-31 2011-11-03        31     False
+  USED: shares_outstanding 5,926,000,000  source 10-Q 0000732717-11-000094  as-of 2011-10-31  multi_class False
+  ==> institutional_ownership_pct = 3,018,687,586 / 5,926,000,000 = 50.94%
+  top 5 holders:
+                        manager_name  manager_cik  shares_held form_13f_accession_number     form    filed
+                  VANGUARD GROUP INC       102909  231938702.0      0000932471-11-003929 13F-HR/A 20111115
+   Capital Research Global Investors      1422848  225086330.0      0000732812-11-000045   13F-HR 20111114
+                   STATE STREET CORP        93751  223318414.0      0001193125-11-296468   13F-HR 20111104
+BlackRock Institutional Trust Com...       913414  147032757.0      0001086364-11-006176   13F-HR 20111103
+        WELLINGTON MANAGEMENT CO LLP       902219  100122990.0      0000902219-11-001064   13F-HR 20111114
+==============================================================================================================
+UMB FINANCIAL CORP   CIK 101382   13F value $96.2bn   map_source name_exact   conflict 0/0
+  CUSIPs held (counted):
+           managers  filings      shares       value_k desc  class_shares_out  class_pct   class_match  median_px
+cusip                                                                                                            
+902788108       140      140  24221998.0  9.620197e+07  COM        40391225.0  59.968466  single-class      32.08
+  shares held total 24,221,998  managers 140  filings 140  multi_filing rows 0
+  shares outstanding facts (XBRL, all rows for the CIK):
+class_axis     shares form                 adsh shares_outstanding_date      filed  gap_days  gap_flag
+           40391225.0 10-Q 0001193125-11-294568              2011-10-31 2011-11-03        31     False
+  USED: shares_outstanding 40,391,225  source 10-Q 0001193125-11-294568  as-of 2011-10-31  multi_class False
+  ==> institutional_ownership_pct = 24,221,998 / 40,391,225 = 59.97%
+  top 5 holders:
+                      manager_name  manager_cik  shares_held form_13f_accession_number     form    filed
+                   UMB BANK N A/MO       933429    2977577.0      0000933429-11-000012   13F-HR 20111114
+                VANGUARD GROUP INC       102909    2105295.0      0000932471-11-003929 13F-HR/A 20111115
+Champlain Investment Partners, LLC      1315478    1501630.0      0001315478-11-000017   13F-HR 20111108
+           BlackRock Fund Advisors      1006249    1343296.0      0001086364-11-006173   13F-HR 20111103
+RAINIER INVESTMENT MANAGEMENT INC/       947772     937580.0      0001172661-11-000707   13F-HR 20111114
+==============================================================================================================
+MCDONALDS CORP   CIK 63908   13F value $94.9bn   map_source name_exact   conflict 0/0
+  CUSIPs held (counted):
+           managers  filings       shares       value_k desc  class_shares_out  class_pct   class_match  median_px
+cusip                                                                                                             
+580135101      1240     1240  671853255.0  9.486847e+07  COM      1.023218e+09  65.660792  single-class      87.82
+580135903         1        1     236300.0  2.075200e+04           1.023218e+09   0.023094  single-class      87.81
+580135952         1        1     123300.0  1.082900e+04           1.023218e+09   0.012050  single-class      87.83
+  shares held total 672,212,855  managers 1240  filings 1240  multi_filing rows 0
+  shares outstanding facts (XBRL, all rows for the CIK):
+class_axis       shares form                 adsh shares_outstanding_date      filed  gap_days  gap_flag
+           1023218317.0 10-Q 0001193125-11-296575              2011-09-30 2011-11-04         0     False
+  USED: shares_outstanding 1,023,218,317  source 10-Q 0001193125-11-296575  as-of 2011-09-30  multi_class False
+  ==> institutional_ownership_pct = 672,212,855 / 1,023,218,317 = 65.70%
+  top 5 holders:
+                        manager_name  manager_cik  shares_held form_13f_accession_number     form    filed
+                             FMR LLC       315066   46620859.0      0000315066-11-004295   13F-HR 20111114
+                  VANGUARD GROUP INC       102909   45999993.0      0000932471-11-003929 13F-HR/A 20111115
+                   STATE STREET CORP        93751   43466241.0      0001193125-11-296468   13F-HR 20111104
+             Capital World Investors      1422849   31226540.0      0000732812-11-000038   13F-HR 20111114
+BlackRock Institutional Trust Com...       913414   26337890.0      0001086364-11-006176   13F-HR 20111103
+==============================================================================================================
+QUALCOMM INC/DE   CIK 804328   13F value $92.0bn   map_source name_exact   conflict 0/0
+  CUSIPs held (counted):
+           managers  filings        shares       value_k desc  class_shares_out  class_pct   class_match  median_px
+cusip                                                                                                              
+747525103      1119     1119  1.324277e+09  9.192167e+07  COM      1.680984e+12   0.078780  single-class      48.63
+747525905         1        1  8.857000e+05  4.307200e+04           1.680984e+12   0.000053  single-class      48.63
+747525954         1        1  1.970000e+05  9.580000e+03           1.680984e+12   0.000012  single-class      48.65
+  shares held total 1,325,359,603  managers 1119  filings 1119  multi_filing rows 0
+  shares outstanding facts (XBRL, all rows for the CIK):
+class_axis       shares form                 adsh shares_outstanding_date      filed  gap_days  gap_flag
+           1.680984e+12 10-K 0001234452-11-000360              2011-10-31 2011-11-02        31     False
+  USED: shares_outstanding 1,680,984,426,000  source 10-K 0001234452-11-000360  as-of 2011-10-31  multi_class False
+  ==> institutional_ownership_pct = 1,325,359,603 / 1,680,984,426,000 = 0.08%
+  top 5 holders:
+                        manager_name  manager_cik  shares_held form_13f_accession_number     form    filed
+                             FMR LLC       315066   67314789.0      0000315066-11-004295   13F-HR 20111114
+                  VANGUARD GROUP INC       102909   65685639.0      0000932471-11-003929 13F-HR/A 20111115
+                   STATE STREET CORP        93751   59717617.0      0001193125-11-296468   13F-HR 20111104
+    PRICE T ROWE ASSOCIATES INC /MD/        80255   59664699.0      0000080255-11-000647   13F-HR 20111114
+BlackRock Institutional Trust Com...       913414   41081134.0      0001086364-11-006176   13F-HR 20111103
+==============================================================================================================
+COCA COLA CO   CIK 21344   13F value $91.1bn   map_source name_exact   conflict 0/0
+  CUSIPs held (counted):
+           managers  filings        shares      value_k desc  class_shares_out  class_pct   class_match  median_px
+cusip                                                                                                             
+191216100      1336     1336  1.197170e+09  91091315.89  COM      2.271232e+09  52.710173  single-class      67.56
+191216902         1        1  4.246000e+05     28686.00           2.271232e+09   0.018695  single-class      67.56
+191216951         1        1  2.059000e+05     13911.00           2.271232e+09   0.009066  single-class      67.58
+  CUSIPs EXCLUDED from the figure:
+                                             managers    shares
+cusip     excluded_from_ownership list_desc                    
+191216AK6 debt_cusip                                1   19000.0
+191216AQ3 debt_cusip                                1  250000.0
+  shares held total 1,197,800,927  managers 1336  filings 1336  multi_filing rows 0
+  shares outstanding facts (XBRL, all rows for the CIK):
+class_axis       shares form                 adsh shares_outstanding_date      filed  gap_days  gap_flag
+           2271232205.0 10-Q 0000021344-11-000011              2011-10-31 2011-10-27        31     False
+  USED: shares_outstanding 2,271,232,205  source 10-Q 0000021344-11-000011  as-of 2011-10-31  multi_class False
+  ==> institutional_ownership_pct = 1,197,800,927 / 2,271,232,205 = 52.74%
+  top 5 holders:
+                        manager_name  manager_cik  shares_held form_13f_accession_number     form    filed
+                  VANGUARD GROUP INC       102909   93020865.0      0000932471-11-003929 13F-HR/A 20111115
+                   STATE STREET CORP        93751   85756345.0      0001193125-11-296468   13F-HR 20111104
+                             FMR LLC       315066   74669897.0      0000315066-11-004295   13F-HR 20111114
+                  SUNTRUST BANKS INC       750556   54141397.0      0000750556-11-000193   13F-HR 20111114
+BlackRock Institutional Trust Com...       913414   53187726.0      0001086364-11-006176   13F-HR 20111103
+==============================================================================================================
+Merck & Co. Inc.   CIK 310158   13F value $91.1bn   map_source name_exact   conflict 0/0
+  CUSIPs held (counted):
+           managers  filings        shares       value_k desc  class_shares_out  class_pct   class_match  median_px
+cusip                                                                                                              
+58933Y105      1141     1141  2.162324e+09  9.102435e+07  COM      3.047921e+09  70.944225  single-class      32.70
+58933Y204         1        1  7.044000e+03  2.300000e+02           3.047921e+09   0.000231  single-class     250.03
+58933Y907         1        1  8.150000e+05  2.665100e+04           3.047921e+09   0.026740  single-class      32.70
+58933Y956         1        1  9.382000e+05  3.068000e+04           3.047921e+09   0.030782  single-class      32.70
+  CUSIPs EXCLUDED from the figure:
+                                             managers   shares
+cusip     excluded_from_ownership list_desc                   
+58933YAB1 debt_cusip                                1  15000.0
+  shares held total 2,164,084,457  managers 1142  filings 1142  multi_filing rows 0
+  shares outstanding facts (XBRL, all rows for the CIK):
+class_axis       shares form                 adsh shares_outstanding_date      filed  gap_days  gap_flag
+           3047921407.0 10-Q 0000950123-11-096564              2011-10-31 2011-11-08        31     False
+  USED: shares_outstanding 3,047,921,407  source 10-Q 0000950123-11-096564  as-of 2011-10-31  multi_class False
+  ==> institutional_ownership_pct = 2,164,084,457 / 3,047,921,407 = 71.00%
+  top 5 holders:
+                     manager_name  manager_cik  shares_held form_13f_accession_number     form    filed
+          Capital World Investors      1422849  199233650.0      0000732812-11-000038   13F-HR 20111114
+                STATE STREET CORP        93751  121080080.0      0001193125-11-296468   13F-HR 20111104
+               VANGUARD GROUP INC       102909  120224095.0      0000932471-11-003929 13F-HR/A 20111115
+     WELLINGTON MANAGEMENT CO LLP       902219  116041053.0      0000902219-11-001064   13F-HR 20111114
+Capital Research Global Investors      1422848   94734270.0      0000732812-11-000045   13F-HR 20111114
+==============================================================================================================
+GENERAL ELECTRIC CO   CIK 40545   13F value $87.7bn   map_source name_exact   conflict 0/0
+  CUSIPs held (counted):
+           managers  filings        shares       value_k desc  class_shares_out  class_pct   class_match  median_px
+cusip                                                                                                              
+369604103      1448     1448  5.287503e+09  8.761137e+07  COM      1.055735e+10  50.083618  single-class      15.22
+369604905         1        1  1.452600e+06  2.210900e+04           1.055735e+10   0.013759  single-class      15.22
+369604954         1        1  5.266200e+06  8.015200e+04           1.055735e+10   0.049882  single-class      15.22
+  CUSIPs EXCLUDED from the figure:
+                                             managers    shares
+cusip     excluded_from_ownership list_desc                    
+369604AY9 debt_cusip                                2  834000.0
+369604BC6 debt_cusip                                1  375000.0
+  shares held total 5,294,222,098  managers 1448  filings 1448  multi_filing rows 0
+  shares outstanding facts (XBRL, all rows for the CIK):
+class_axis       shares form                 adsh shares_outstanding_date      filed  gap_days  gap_flag
+           1.055735e+10 10-Q 0000040545-11-000058              2011-09-30 2011-11-08         0     False
+  USED: shares_outstanding 10,557,351,000  source 10-Q 0000040545-11-000058  as-of 2011-09-30  multi_class False
+  ==> institutional_ownership_pct = 5,294,222,098 / 10,557,351,000 = 50.15%
+  top 5 holders:
+                        manager_name  manager_cik  shares_held form_13f_accession_number     form    filed
+                  VANGUARD GROUP INC       102909  412335282.0      0000932471-11-003929 13F-HR/A 20111115
+                   STATE STREET CORP        93751  375485991.0      0001193125-11-296468   13F-HR 20111104
+BlackRock Institutional Trust Com...       913414  260029915.0      0001086364-11-006176   13F-HR 20111103
+                             FMR LLC       315066  177791094.0      0000315066-11-004295   13F-HR 20111114
+             Capital World Investors      1422849  151856400.0      0000732812-11-000038   13F-HR 20111114

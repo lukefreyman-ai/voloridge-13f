@@ -1,0 +1,84 @@
+2010Q2: CUSIP->CIK resolution v2 (decisions 2026-10-11), quarter end 2010-06-30, 13(f) list 2010q2
+valid 9-char CUSIPs with a subject CIK: 2,884 (placeholder 000000000 dropped from 3 filings)
+conflicts, raw definition (>1 subject CIK): 44 = 1.53%  -> all flagged conflict_flag=1
+conflicts, TWO-SIDED definition (>=2 filings on each of >=2 CIKs): 4 = 0.14%   [stop condition 2%: not hit]
+1-vs-1 ties among raw conflicts: 16; two-sided or tie resolved by 10-K/10-Q closeness: 17; with no 10-K/10-Q in reach (majority kept): 2
+CUSIPs where the 10-K/10-Q rule chose a CIK other than the majority: 0
+two-sided conflicts (all, by filing count):
+    cusip  subject_cik                      company_name  n_links  tenk_date  tenk_gap  chosen
+066849100       743367             BAR HARBOR BANKSHARES        2 2010-08-09      40.0    True
+066849100      1114039         BAR HARBOR TRUST SERVICES        2        NaT       NaN   False
+12429T104      1392179                   BWAY Holding CO        3 2010-05-07      54.0    True
+12429T104       943897                         BWAY CORP        2 2010-05-07      54.0   False
+23130A102      1328598         CURRENCYSHARES EURO TRUST        3 2010-06-09      21.0    True
+23130A102      1353613 CURRENCYSHARES JAPANESE YEN TRUST        2 2010-06-09      21.0   False
+44919P508       891103               IAC/INTERACTIVECORP        3 2010-07-29      29.0    True
+44919P508       816159                  AIR METHODS CORP        2 2010-08-06      37.0   False
+
+name match validation on issuers mapped by 13G/13D with a 13(f) list name: exact unique matches 1,641 / 2,765; agreement with the 13G/13D CIK 1,620 / 1,641 = 98.7%
+disagreements (sample 15):
+cusip6  cik_13g  cik_name                    list_name                       name_13g                    name_match
+002083  1283843    824068                  ATS MED INC        Voyager Oil & Gas, Inc.               ATS MEDICAL INC
+02076X  1310243   1301063  ALPHA NATURAL RESOURCES INC                            NaN Alpha Natural Resources, Inc.
+025334   802356    789868           AMERICAN DAIRY INC          PARLUX FRAGRANCES INC            AMERICAN DAIRY INC
+05564E     9677   1011174           BRE PROPERTIES INC                            NaN       BRE PROPERTIES INC /MD/
+09746Y  1475448   1391390                    BOISE INC   BZ INTERMEDIATE HOLDINGS LLC                    BOISE INC.
+116794  1036968   1109354                  BRUKER CORP                     VAXGEN INC                   BRUKER CORP
+20451Q  1345122   1345126 COMPASS DIVERSIFIED HOLDINGS Compass Group Diversified H...  Compass Diversified Holdings
+23962Q   749254   1262200     DAYSTAR TECHNOLOGIES INC          Access to Money, Inc.      DAYSTAR TECHNOLOGIES INC
+25470M   946486   1001082            DISH NETWORK CORP DISCOVERY LABORATORIES INC ...             DISH Network CORP
+29355M  1080360    922237            ENOVA SYSTEMS INC   CHINA VALVES TECHNOLOGY, INC             ENOVA SYSTEMS INC
+30243C   742161   1006177                FFD FINL CORP            FIRST FRANKLIN CORP         FFD FINANCIAL CORP/OH
+61745P   861185    895421               MORGAN STANLEY Invesco Insured Municipal B...                MORGAN STANLEY
+69404P   731805    357264      PACIFIC CAP BANCORP NEW                            NaN  PACIFIC CAPITAL BANCORP /CA/
+737630    79716   1338749            POTLATCH CORP NEW                            NaN                 POTLATCH CORP
+858907  1418489    891098      STERLING BANCSHARES INC       GRAND RIVER COMMERCE INC       STERLING BANCSHARES INC
+
+unmapped 13F issuers (6-char): 11,384 carrying $9,824.7bn; with a 13(f) list name: 3,822 ($9,692.7bn)
+exact unique name matches added: 2,598 issuers = $8,304.8bn; of these fund CIKs (excluded later): 77 = $229.4bn
+review file (ambiguous + fuzzy, NOT used): 666 rows = $929.8bn -> data/2010Q2_name_match_review.csv; by reason: {'fuzzy (token Jaccard >= 0.5)': 608, 'ambiguous: 2 CIKs': 52, 'ambiguous: 3 CIKs': 4, 'ambiguous: 4 CIKs': 2}
+coverage of 13F value, all issuers: 13G/13D map 28.3% -> with name matches 88.9%
+largest name-match additions:
+cusip6  company_cik                         company_name  is_fund  value_bn                                 evidence
+30231G        34088                     EXXON MOBIL CORP    False    356.22 13(f) list 'EXXON MOBIL CORP' == EDGA...
+037833       320193                            APPLE INC    False    182.46  13(f) list 'APPLE INC' == EDGAR 'APPLE'
+594918       789019                       MICROSOFT CORP    False    153.26 13(f) list 'MICROSOFT CORP' == EDGAR ...
+478160       200406                    JOHNSON & JOHNSON    False    128.86 13(f) list 'JOHNSON & JOHNSON' == EDG...
+46625H        19617                J P MORGAN CHASE & CO    False    120.99 13(f) list 'JPMORGAN CHASE & CO' == E...
+742718        80424                  PROCTER & GAMBLE CO    False    120.53 13(f) list 'PROCTER & GAMBLE CO' == E...
+949746        72971                  WELLS FARGO & CO/MN    False    115.82 13(f) list 'WELLS FARGO & CO NEW' == ...
+459200        51143 INTERNATIONAL BUSINESS MACHINES CORP    False    115.34 13(f) list 'INTERNATIONAL BUSINESS MA...
+369604        40545                  GENERAL ELECTRIC CO    False    103.92 13(f) list 'GENERAL ELECTRIC CO' == E...
+060505        70858            BANK OF AMERICA CORP /DE/    False    103.03 13(f) list 'BANK OF AMERICA CORPORATI...
+166764        93410                         CHEVRON CORP    False    102.99 13(f) list 'CHEVRON CORP NEW' == EDGA...
+17275R       858877                    CISCO SYSTEMS INC    False    101.35 13(f) list 'CISCO SYS INC' == EDGAR '...
+38259P      1288776                          Google Inc.    False    100.20 13(f) list 'GOOGLE INC' == EDGAR 'GOO...
+78462F       884394               SPDR S&P 500 ETF TRUST     True     97.39 13(f) list 'SPDR S&P 500 ETF TR' == E...
+717081        78003                           PFIZER INC    False     97.36 13(f) list 'PFIZER INC' == EDGAR 'PFI...
+428236        47217                   HEWLETT PACKARD CO    False     94.63 13(f) list 'HEWLETT PACKARD CO' == ED...
+00206R       732717                            AT&T INC.    False     90.72 13(f) list 'AT&T INC' == EDGAR 'AT AN...
+58933Y       310158                     Merck & Co. Inc.    False     89.05 13(f) list 'MERCK & CO INC NEW' == ED...
+458140        50863                           INTEL CORP    False     87.58 13(f) list 'INTEL CORP' == EDGAR 'INTEL'
+713448        77476                          PEPSICO INC    False     83.15 13(f) list 'PEPSICO INC' == EDGAR 'PE...
+68389X      1341439                          ORACLE CORP    False     72.30 13(f) list 'ORACLE CORP' == EDGAR 'OR...
+931142       104169                  WAL MART STORES INC    False     71.99 13(f) list 'WAL MART STORES INC' == E...
+718172      1413329     Philip Morris International Inc.    False     67.89 13(f) list 'PHILIP MORRIS INTL INC' =...
+20825C      1163165                       CONOCOPHILLIPS    False     60.79 13(f) list 'CONOCOPHILLIPS' == EDGAR ...
+806857        87347                SCHLUMBERGER LTD /NV/    False     60.63 13(f) list 'SCHLUMBERGER LTD' == EDGA...
+largest review-file rows (not used):
+cusip6                    list_name                       reason                                       candidates      value_k
+34958B FORTRESS INVESTMENT GROUP LL fuzzy (token Jaccard >= 0.5)                0.75 FORTRESS INVT GRP -> 1380393 61002331.959
+254687               DISNEY WALT CO fuzzy (token Jaccard >= 0.5)                      1.00 WALT DISNEY -> 1001039 51610449.354
+064149     BANK NOVA SCOTIA HALIFAX fuzzy (token Jaccard >= 0.5)                   0.60 BK OF NOVA SCOTIA -> 9631 38389028.201
+585055                MEDTRONIC INC            ambiguous: 2 CIKs        64670:MEDTRONIC INC|1613103:Medtronic plc 35078253.354
+891160      TORONTO DOMINION BK ONT fuzzy (token Jaccard >= 0.5)               0.75 TORONTO DOMINION BK -> 947263 33352359.481
+902973               US BANCORP DEL fuzzy (token Jaccard >= 0.5) 0.67 US BANCORP DE -> 36104|0.50 BANCORP -> 1... 31630893.538
+35671D FREEPORT-MCMORAN COPPER & GO fuzzy (token Jaccard >= 0.5)  0.67 FREEPORT MCMORAN COPPER AND GOLD -> 831259 24875182.969
+263534  DU PONT E I DE NEMOURS & CO fuzzy (token Jaccard >= 0.5)               0.50 DUPONT EI DE NEMOURS -> 30554 24508810.258
+136385         CANADIAN NAT RES LTD fuzzy (token Jaccard >= 0.5)             0.50 CANADIAN NATURAL RES -> 1017413 24360290.009
+452308        ILLINOIS TOOL WKS INC fuzzy (token Jaccard >= 0.5)                0.50 ILLINOIS TOOL WORKS -> 49826 22592125.971
+65248E                    NEWS CORP            ambiguous: 2 CIKs              1308161:NEWS CORP|1564708:NEWS CORP 22083378.622
+922042 VANGUARD INTL EQUITY INDEX F fuzzy (token Jaccard >= 0.5)  0.67 VANGUARD INTL EQUITY INDEX FUNDS -> 857489 20019473.340
+053015 AUTOMATIC DATA PROCESSING IN fuzzy (token Jaccard >= 0.5)           0.75 AUTOMATIC DATA PROCESSING -> 8670 17727761.191
+25746U      DOMINION RES INC VA NEW fuzzy (token Jaccard >= 0.5)                      0.50 DOMINION RES -> 715957 15550450.687
+192446 COGNIZANT TECHNOLOGY SOLUTIO fuzzy (token Jaccard >= 0.5)         0.50 COGNIZANT TECH SOLUTIONS -> 1058290 15187598.595

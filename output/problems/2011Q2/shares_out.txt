@@ -1,0 +1,5 @@
+2011Q2 shares outstanding (quarter end 2011-06-30) from 2011q3_notes, 2011q4_notes
+facts loaded 14,892 on 7,536 CIKs | selected 7,959 rows on 7,536 CIKs
+CIKs with class-dimensioned facts (multi-class): 329; undimensioned-only: 7,207
+gap > 100 days flagged: 678 rows; gap distribution (days): {'min': -880.0, '25%': 31.0, '50%': 31.0, '75%': 31.0, 'max': 184.0}
+by form: {'10-Q': 6283, '10-Q/A': 1496, '10-K': 149, '10-K/A': 22, '20-F': 9}

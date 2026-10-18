@@ -1,0 +1,435 @@
+cusip,subject_cik,company_name,n_links,evidence_accession,conflict_two_sided,tie,tenk_date,tenk_gap,rule,chosen
+00162Q304,1479713,Jefferies TR/J CRB Commodity Index ETF,2,0001144204-11-034546,0,False,,,conflict: majority by filing count,True
+00162Q304,1168164,SPDR INDEX SHARES FUNDS (Formerly streetTRACKS Index Shares Funds),1,0001144204-11-034565,0,False,,,conflict: majority by filing count,False
+00374N107,1043533,ABOVENET INC,4,0001193125-11-035523,0,False,2011-03-01,30.0,conflict: majority by filing count,True
+00374N107,1108730,PUBLIC MEDIA WORKS INC,1,0001104659-11-028912,0,False,2011-06-03,64.0,conflict: majority by filing count,False
+00439T206,817979,ACCURIDE CORP,4,0001193125-11-062316,0,False,2011-03-28,3.0,conflict: majority by filing count,True
+00439T206,1506744,"RLJ Acquisition, Inc.",1,0001011438-11-000143,0,False,2011-05-12,42.0,conflict: majority by filing count,False
+00448Q201,1070336,ACHILLION PHARMACEUTICALS INC,5,0000315066-11-003288,0,False,2011-03-03,28.0,conflict: majority by filing count,True
+00448Q201,1375200,NUPATHE INC.,1,0000950123-11-013913,0,False,2011-03-18,13.0,conflict: majority by filing count,False
+00506P103,1183941,ACTIVIDENTITY CORP,2,0000919574-11-001291,0,False,2010-12-10,111.0,conflict: majority by filing count,True
+00506P103,803014,COMVERSE TECHNOLOGY INC/NY/,1,0001193125-11-035311,0,False,2011-05-31,61.0,conflict: majority by filing count,False
+00685T108,894158,"ADEONA PHARMACEUTICALS, INC.",4,0001213900-11-001990,0,False,2011-03-31,0.0,conflict: majority by filing count,True
+00685T108,312257,INNOVATIVE FOOD HOLDINGS INC,1,0001213900-11-002799,0,False,2011-03-17,14.0,conflict: majority by filing count,False
+00817R103,908598,AETRIUM INC,3,0000072971-11-000620,0,False,2011-03-30,1.0,conflict: majority by filing count,True
+00817R103,768411,CYBEROPTICS CORP,1,0001104659-11-007303,0,False,2011-03-10,21.0,conflict: majority by filing count,False
+012348108,819793,ALBANY INTERNATIONAL CORP /DE/,4,0000902219-11-000497,0,False,2011-03-02,29.0,conflict: majority by filing count,True
+012348108,3303,ALBANY INTERNATIONAL CORP /NY/,1,0000932471-11-000213,0,False,,,conflict: majority by filing count,False
+01890A108,1500711,"Alliance Bancorp, Inc. of Pennsylvania",6,0001133796-11-000220,0,False,2011-03-18,13.0,conflict: majority by filing count,True
+01890A108,1373079,ALLIANCE BANCORP INC OF PENNSYLVANIA,1,0001133796-11-000023,0,False,2010-11-12,139.0,conflict: majority by filing count,False
+020409108,799231,ALMOST FAMILY INC,5,0001330325-11-000004,0,False,2011-04-28,28.0,conflict: majority by filing count,True
+020409108,919012,AMERICAN EAGLE OUTFITTERS INC,1,0000906304-11-000023,0,False,2011-03-11,20.0,conflict: majority by filing count,False
+02076X102,1301063,"Alpha Natural Resources, Inc.",4,0001086364-11-004748,0,False,2011-02-25,34.0,conflict: majority by filing count,True
+02076X102,1310243,"Alpha Natural Resources, Inc./Old",1,0000315066-11-002218,0,False,,,conflict: majority by filing count,False
+023111206,897448,AMARIN CORP PLC\UK,3,0000930413-11-001056,0,False,2011-03-16,15.0,conflict: majority by filing count,True
+023111206,1120246,AMARIN CORP PLC,1,0000930413-11-001042,0,False,,,conflict: majority by filing count,False
+028884104,1373079,ALLIANCE BANCORP INC OF PENNSYLVANIA,1,0001144204-11-003816,0,True,2010-11-12,139.0,two-sided/tie: CIK with 10-K/10-Q filed closest to quarter end,True
+028884104,1118148,AMERICAN PHYSICIANS CAPITAL INC,1,0000932471-11-001111,0,True,2010-08-09,234.0,two-sided/tie: CIK with 10-K/10-Q filed closest to quarter end,False
+029683109,713425,AMERICAN SOFTWARE INC,6,0001398344-11-000840,0,False,2011-03-10,21.0,conflict: majority by filing count,True
+029683109,887211,LOMBARDIA CAPITAL PARTNERS LLC,1,0000887211-11-000003,0,False,,,conflict: majority by filing count,False
+03152W109,1178879,AMICUS THERAPEUTICS INC,3,0000950159-11-000127,0,False,2011-03-04,27.0,conflict: majority by filing count,True
+03152W109,1023024,BIOSANTE PHARMACEUTICALS INC,1,0000930413-11-001045,0,False,2011-03-16,15.0,conflict: majority by filing count,False
+03822W406,711065,APPLIED MICRO CIRCUITS CORP,9,0000902219-11-000941,0,False,2011-05-10,40.0,conflict: majority by filing count,True
+03822W406,350917,EMULEX CORP /DE/,1,0001193125-11-035299,0,False,2011-05-04,34.0,conflict: majority by filing count,False
+043632108,1437106,Ascent Media CORP,3,0000315066-11-002261,0,False,2011-03-14,17.0,conflict: majority by filing count,True
+043632108,61442,ASCENT MEDIA GROUP INC,1,0000080255-11-000326,0,False,,,conflict: majority by filing count,False
+049298102,1279228,ARKHAN Corp,7,0000895421-11-000330,0,False,2010-11-09,142.0,conflict: majority by filing count,True
+049298102,1042810,"EQUITY ONE, INC.",1,0001341004-11-000059,0,False,2011-03-11,20.0,conflict: majority by filing count,False
+049433105,1402479,Atlas Therapeutics Corp,5,0001213900-11-001260,0,False,2011-03-31,0.0,conflict: majority by filing count,True
+049433105,847464,"China YCT International Group, Inc.",1,0001144204-11-018153,0,False,2011-03-01,30.0,conflict: majority by filing count,False
+05564E106,1011174,BRE PROPERTIES INC /MD/,7,0001033984-11-000007,0,False,2011-05-05,35.0,conflict: majority by filing count,True
+05564E106,9677,BRE PROPERTIES INC,1,0001086364-11-002396,0,False,,,conflict: majority by filing count,False
+05969A105,1295401,"Bancorp, Inc.",3,0000902219-11-000862,1,False,2011-02-23,36.0,two-sided/tie: CIK with 10-K/10-Q filed closest to quarter end,True
+05969A105,1258754,BANCORP INC,2,0000766524-11-000004,1,False,,,two-sided/tie: CIK with 10-K/10-Q filed closest to quarter end,False
+067383109,9892,BARD C R INC /NJ/,2,0000315066-11-002286,0,False,2011-04-25,25.0,conflict: majority by filing count,True
+067383109,275110,BARD C R INC (PRED),1,0001390777-11-000046,0,False,,,conflict: majority by filing count,False
+068463108,902791,BARRETT BUSINESS SERVICES INC,1,0001104659-11-023641,0,True,2011-04-01,1.0,two-sided/tie: CIK with 10-K/10-Q filed closest to quarter end,True
+068463108,887211,LOMBARDIA CAPITAL PARTNERS LLC,1,0000887211-11-000004,0,True,,,two-sided/tie: CIK with 10-K/10-Q filed closest to quarter end,False
+080555105,356080,BELO CORP,4,0000950123-11-013353,0,False,2011-03-11,20.0,conflict: majority by filing count,True
+080555105,1521422,Fairpointe Capital LLC,1,0001521422-11-000009,0,False,,,conflict: majority by filing count,False
+080555105,1037763,OPTIMUM INVESTMENT ADVISORS,1,0001037763-11-000005,0,False,,,conflict: majority by filing count,False
+09060J106,1103021,BIODELIVERY SCIENCES INTERNATIONAL INC,2,0000930413-11-002142,0,False,2011-03-11,20.0,conflict: majority by filing count,True
+09060J106,1328003,Redpoint Bio CORP,1,0001104659-11-007373,0,False,2011-03-04,27.0,conflict: majority by filing count,False
+092113109,1130464,BLACK HILLS CORP /SD/,2,0000093748-11-000061,0,False,2011-02-25,34.0,conflict: majority by filing count,True
+092113109,12400,BLACK HILLS POWER INC,1,0001086364-11-000134,0,False,2011-03-08,23.0,conflict: majority by filing count,False
+09248F109,894242,BLACKROCK INVESTMENT QUALITY MUNICIPAL TRUST INC,1,0001010549-11-000385,0,True,,,"two-sided/tie: no 10-K/10-Q within 400 days, majority / latest evidence",True
+09248F109,1137393,BLACKROCK MUNICIPAL INCOME TRUST,1,0001445546-11-000665,0,True,,,"two-sided/tie: no 10-K/10-Q within 400 days, majority / latest evidence",False
+09255K108,1336050,"BlackRock Enhanced Government Fund, Inc.",3,0000769317-11-000017,0,False,,,conflict: majority by filing count,True
+09255K108,1322436,Eaton Vance Tax-Managed Buy-Write Opportunities Fund,1,0001445546-11-000333,0,False,,,conflict: majority by filing count,False
+09776J101,878079,BON TON STORES INC,4,0000902664-11-000645,0,False,2011-04-13,13.0,conflict: majority by filing count,True
+09776J101,1363544,"Bon-Ton Department Stores, Inc.",1,0001089212-11-000004,0,False,,,conflict: majority by filing count,False
+125581801,1171825,CIT GROUP INC,4,0000728889-11-000424,0,False,2011-03-10,21.0,conflict: majority by filing count,True
+125581801,20388,CIT GROUP INC,1,0000728889-11-000196,0,False,,,conflict: majority by filing count,False
+12620N104,1418919,"CPEX Pharmaceuticals, Inc.",19,0001085146-11-000524,0,False,2011-03-31,0.0,conflict: majority by filing count,True
+12620N104,314727,HANDLEMAN CO /MI/,1,0001144204-11-016192,0,False,2011-03-03,28.0,conflict: majority by filing count,False
+13123X102,928022,CALLON PETROLEUM CO,3,0001086364-11-004350,0,False,2011-03-15,16.0,conflict: majority by filing count,True
+13123X102,942125,CALLON PETROLEUM CO /DE/,1,0000354204-11-001123,0,False,,,conflict: majority by filing count,False
+133131102,906345,CAMDEN PROPERTY TRUST,9,0000932471-11-001924,0,False,2011-04-29,29.0,conflict: majority by filing count,True
+133131102,1011174,BRE PROPERTIES INC /MD/,1,0001033984-11-000008,0,False,2011-05-05,35.0,conflict: majority by filing count,False
+136069101,1045520,CANADIAN IMPERIAL BANK OF COMMERCE /CAN/,3,0001104659-11-007414,1,False,,,"two-sided/tie: no 10-K/10-Q within 400 days, majority / latest evidence",True
+136069101,16847,CANADIAN IMPERIAL BANK OF COMMERCE,2,0000934729-11-000015,1,False,,,"two-sided/tie: no 10-K/10-Q within 400 days, majority / latest evidence",False
+143658300,815097,CARNIVAL CORP,3,0000950142-11-001201,0,False,2011-04-01,1.0,conflict: majority by filing count,True
+143658300,1125259,CARNIVAL PLC,1,0000950142-11-001202,0,False,2011-04-01,1.0,conflict: majority by filing count,False
+15100E106,1428156,Celera CORP,16,0000947871-11-000512,0,False,2011-03-18,13.0,conflict: majority by filing count,True
+15100E106,77551,APPLIED BIOSYSTEMS INC.,1,0000354204-11-001271,0,False,,,conflict: majority by filing count,False
+153527106,887733,CENTRAL GARDEN & PET CO,5,0001104659-11-007741,0,False,2011-05-05,35.0,conflict: majority by filing count,True
+153527106,1470944,"Lee Munder Capital Group, LLC",1,0001470944-11-000001,0,False,,,conflict: majority by filing count,False
+16208T102,1476045,Chatham Lodging Trust,7,0001144204-11-017348,0,False,2011-03-09,22.0,conflict: majority by filing count,True
+16208T102,799088,CARMIKE CINEMAS INC,1,0001144204-11-033242,0,False,2011-03-08,23.0,conflict: majority by filing count,False
+163428105,1333763,"Chelsea Therapeutics International, Ltd.",4,0000950123-11-013179,0,False,2011-03-02,29.0,conflict: majority by filing count,True
+163428105,1313161,Chelsea Therapeutics Inc,1,0001011438-11-000077,0,False,,,conflict: majority by filing count,False
+16939B107,1093903,"CHINA AMERICA HOLDINGS, INC.",1,0001354488-11-000333,0,True,2011-02-14,45.0,two-sided/tie: CIK with 10-K/10-Q filed closest to quarter end,True
+16939B107,1400704,HARBORVIEW MASTER FUND LP,1,0001354488-11-000330,0,True,,,two-sided/tie: CIK with 10-K/10-Q filed closest to quarter end,False
+169476207,1080360,"CHINA VALVES TECHNOLOGY, INC",2,0000902664-11-000589,0,False,2011-03-16,15.0,conflict: majority by filing count,True
+169476207,1434708,HAMON INVESTMENT GROUP PTE LTD,1,0001434708-11-000007,0,False,,,conflict: majority by filing count,False
+17163Y102,943034,IMAGE SENSING SYSTEMS INC,1,0000919859-11-000021,0,True,2011-03-24,7.0,two-sided/tie: CIK with 10-K/10-Q filed closest to quarter end,True
+17163Y102,1123870,CIBT Education Group Inc.,1,0000919859-11-000020,0,True,,,two-sided/tie: CIK with 10-K/10-Q filed closest to quarter end,False
+178566105,201461,CITY NATIONAL CORP,2,0000315066-11-002384,0,False,2011-03-01,30.0,conflict: majority by filing count,True
+178566105,275216,CITY NATIONAL BANK,1,0001193125-11-034441,0,False,,,conflict: majority by filing count,False
+19122T109,1491675,"COCA-COLA ENTERPRISES, INC.",3,0001172661-11-000229,0,False,2011-04-29,29.0,conflict: majority by filing count,True
+19122T109,804055,"COCA-COLA REFRESHMENTS USA, INC.",1,0001086364-11-002645,0,False,2010-07-28,246.0,conflict: majority by filing count,False
+20038K109,6814,COMFORCE CORP,1,0000906344-11-000056,0,True,2010-11-05,146.0,two-sided/tie: CIK with 10-K/10-Q filed closest to quarter end,True
+20038K109,1016607,"PreVu, INC",1,0000906344-11-000053,0,True,,,two-sided/tie: CIK with 10-K/10-Q filed closest to quarter end,False
+203668108,1108109,COMMUNITY HEALTH SYSTEMS INC,4,0001140361-11-008509,0,False,2011-04-29,29.0,conflict: majority by filing count,True
+203668108,1412824,"Community Health Systems, Inc.",1,0000899140-11-000264,0,False,,,conflict: majority by filing count,False
+205768203,23194,COMSTOCK RESOURCES INC,6,0001390777-11-000118,0,False,2011-05-04,34.0,conflict: majority by filing count,True
+205768203,926326,"OMNICELL, Inc",1,0001269678-11-000161,0,False,2011-03-11,20.0,conflict: majority by filing count,False
+210226106,23795,CONSOLIDATED TOMOKA LAND CO,4,0001360079-11-000004,0,False,2011-03-11,20.0,conflict: majority by filing count,True
+210226106,830122,PICO HOLDINGS INC /NEW,1,0001140361-11-009792,0,False,2011-03-01,30.0,conflict: majority by filing count,False
+216648402,711404,COOPER COMPANIES INC,8,0000928749-11-000005,0,False,2011-03-04,27.0,conflict: majority by filing count,True
+216648402,1319947,DSW Inc.,1,0000928749-11-000004,0,False,2011-03-22,9.0,conflict: majority by filing count,False
+239359102,351231,DAWSON GEOPHYSICAL CO,4,0000354204-11-000890,1,False,2011-05-10,40.0,two-sided/tie: CIK with 10-K/10-Q filed closest to quarter end,True
+239359102,1009215,COLUMBIA PARTNERS L L C INVESTMENT MANAGEMENT,2,0001009215-11-000006,1,False,,,two-sided/tie: CIK with 10-K/10-Q filed closest to quarter end,False
+242309102,1333513,"DealerTrack Holdings, Inc.",6,0000072971-11-000510,0,False,2011-05-10,40.0,conflict: majority by filing count,True
+242309102,1164941,DEALERTRACK HOLDINGS INC,1,0001390777-11-000013,0,False,,,conflict: majority by filing count,False
+25179M103,1090012,DEVON ENERGY CORP/DE,1,0001036325-11-000090,0,True,2011-02-25,34.0,two-sided/tie: CIK with 10-K/10-Q filed closest to quarter end,True
+25179M103,837330,DEVON ENERGY CORP /OK/,1,0001086364-11-002749,0,True,,,two-sided/tie: CIK with 10-K/10-Q filed closest to quarter end,False
+25381B101,1438231,Digimarc CORP,3,0000891836-11-000036,0,False,2011-03-03,28.0,conflict: majority by filing count,True
+25381B101,1089443,DIGIMARC CORP,1,0001193805-11-000285,0,False,,,conflict: majority by filing count,False
+25388B104,1062530,DIGITAL RIVER INC /DE,7,0001104659-11-007742,0,False,2011-02-24,35.0,conflict: majority by filing count,True
+25388B104,703361,INTEGRATED DEVICE TECHNOLOGY INC,1,0001104659-11-007744,0,False,2011-02-10,49.0,conflict: majority by filing count,False
+25388B104,1484478,"Furiex Pharmaceuticals, Inc.",1,0001104659-11-007743,0,False,2011-03-18,13.0,conflict: majority by filing count,False
+256603101,18169,DOLE FOOD CO INC,3,0001140361-11-008533,0,False,2011-03-14,17.0,conflict: majority by filing count,True
+256603101,802555,"SCOTT & STRINGFELLOW, LLC",1,0000092230-11-000011,0,False,,,conflict: majority by filing count,False
+260174107,1017673,DOVER MOTORSPORTS INC,2,0000919574-11-002798,0,False,2011-03-15,16.0,conflict: majority by filing count,True
+260174107,1162556,DOVER DOWNS GAMING & ENTERTAINMENT INC,1,0001279042-11-000003,0,False,2011-03-04,27.0,conflict: majority by filing count,False
+27885J101,1058307,SILVER HORN MINING LTD.,1,0001469299-11-000311,0,True,2011-03-30,1.0,two-sided/tie: CIK with 10-K/10-Q filed closest to quarter end,True
+27885J101,887497,HI TECH PHARMACAL CO INC,1,0001144204-11-013903,0,True,2011-03-14,17.0,two-sided/tie: CIK with 10-K/10-Q filed closest to quarter end,False
+291005106,1001604,EMERITUS CORP\WA\,1,0000315066-11-002484,0,True,2011-03-11,20.0,two-sided/tie: CIK with 10-K/10-Q filed closest to quarter end,True
+291005106,1071993,CONTANGO OIL & GAS CO,1,0001193125-11-060564,0,True,2011-05-10,40.0,two-sided/tie: CIK with 10-K/10-Q filed closest to quarter end,False
+293389102,33002,"ENNIS, INC.",5,0001193125-11-034953,0,False,2011-05-10,40.0,conflict: majority by filing count,True
+293389102,861465,KILLEN GROUP INC,1,0000861465-11-000005,0,False,,,conflict: majority by filing count,False
+30239F106,1012771,FBL FINANCIAL GROUP INC,1,0000354204-11-001161,0,True,2011-05-09,39.0,two-sided/tie: CIK with 10-K/10-Q filed closest to quarter end,True
+30239F106,1033753,IOWA FARM BUREAU FEDERATION,1,0001012771-11-000013,0,True,,,two-sided/tie: CIK with 10-K/10-Q filed closest to quarter end,False
+30247C301,1371446,FBR CAPITAL MARKETS CORP,9,0000914208-11-000329,1,False,2011-03-15,16.0,two-sided/tie: CIK with 10-K/10-Q filed closest to quarter end,True
+30247C301,1505748,FBR Capital Markets & Co,2,0000909012-11-000117,1,False,,,two-sided/tie: CIK with 10-K/10-Q filed closest to quarter end,False
+311642102,917491,FARO TECHNOLOGIES INC,6,0001193125-11-034450,0,False,2011-02-25,34.0,conflict: majority by filing count,True
+311642102,1315478,"Champlain Investment Partners, LLC",1,0001315478-11-000008,0,False,,,conflict: majority by filing count,False
+31429C101,1486058,FedFirst Financial Corp,2,0001490037-11-000002,0,False,2011-03-18,13.0,conflict: majority by filing count,True
+31429C101,1308017,FedFirst Financial CORP,1,0001099281-11-000011,0,False,2010-08-16,227.0,conflict: majority by filing count,False
+31429Y103,789868,Feihe International Inc,2,0001390777-11-000097,0,False,2011-03-31,0.0,conflict: majority by filing count,True
+31429Y103,1434708,HAMON INVESTMENT GROUP PTE LTD,1,0001434708-11-000008,0,False,,,conflict: majority by filing count,False
+318910106,811589,FIRST BANCORP /NC/,1,0001086364-11-002887,0,True,2011-03-16,15.0,two-sided/tie: CIK with 10-K/10-Q filed closest to quarter end,True
+318910106,859070,FIRST COMMUNITY BANCSHARES INC /NV/,1,0001086364-11-002891,0,True,2011-03-11,20.0,two-sided/tie: CIK with 10-K/10-Q filed closest to quarter end,False
+33832D106,1159281,FIVE STAR QUALITY CARE INC,6,0001104659-11-035948,0,False,2011-04-28,28.0,conflict: majority by filing count,True
+33832D106,1223389,CONNS INC,1,0000929638-11-000116,0,False,2011-04-01,1.0,conflict: majority by filing count,False
+35137T108,1485176,Fox Chase Bancorp Inc,2,0000902219-11-000652,1,True,2011-03-14,17.0,two-sided/tie: CIK with 10-K/10-Q filed closest to quarter end,True
+35137T108,1359111,Fox Chase Bancorp Inc,2,0001026081-11-000011,1,True,2010-05-17,318.0,two-sided/tie: CIK with 10-K/10-Q filed closest to quarter end,False
+357023100,1320854,"FreightCar America, Inc.",4,0000902219-11-000807,1,False,2011-03-15,16.0,two-sided/tie: CIK with 10-K/10-Q filed closest to quarter end,True
+357023100,1311810,"FreightCar America, Inc.",2,0000937394-11-000056,1,False,,,two-sided/tie: CIK with 10-K/10-Q filed closest to quarter end,False
+358010106,39020,FREQUENCY ELECTRONICS INC,2,0000354204-11-000902,0,False,2011-03-17,14.0,conflict: majority by filing count,True
+358010106,1163648,CI INVESTMENTS INC.,1,0001163648-11-000006,0,False,,,conflict: majority by filing count,False
+358010106,1510831,EDMUNDS WHITE PARTNERS LLC,1,0001510831-11-000006,0,False,,,conflict: majority by filing count,False
+358748101,39047,FRISCHS RESTAURANTS INC,3,0000909012-11-000263,0,False,2011-04-06,6.0,conflict: majority by filing count,True
+358748101,1388028,"REIK & CO., LLC",1,0001388028-11-000001,0,False,,,conflict: majority by filing count,False
+36106P101,1484478,"Furiex Pharmaceuticals, Inc.",8,0001193125-11-151982,0,False,2011-03-18,13.0,conflict: majority by filing count,True
+36106P101,1083712,WEBMEDIABRANDS INC.,1,0001019687-11-001870,0,False,2011-03-08,23.0,conflict: majority by filing count,False
+367299104,1170154,GASTAR EXPLORATION LTD,1,0000895126-11-000058,0,True,2011-03-10,21.0,two-sided/tie: CIK with 10-K/10-Q filed closest to quarter end,True
+367299104,895126,CHESAPEAKE ENERGY CORP,1,0000895126-11-000056,0,True,2011-03-01,30.0,two-sided/tie: CIK with 10-K/10-Q filed closest to quarter end,False
+367905106,1040829,GAYLORD ENTERTAINMENT CO /DE,4,0000072971-11-000624,1,False,2011-02-25,34.0,two-sided/tie: CIK with 10-K/10-Q filed closest to quarter end,True
+367905106,878658,GAYLORD ENTERTAINMENT CO,2,0000354204-11-001223,1,False,,,two-sided/tie: CIK with 10-K/10-Q filed closest to quarter end,False
+370023103,1496048,"General Growth Properties, Inc.",6,0000899140-11-000282,0,False,2011-03-08,23.0,conflict: majority by filing count,True
+370023103,895648,GENERAL GROWTH PROPERTIES INC,1,0000895421-11-000197,0,False,2010-10-29,153.0,conflict: majority by filing count,False
+37947B103,1344907,"GLOBAL TRAFFIC NETWORK, INC.",6,0000909450-11-000031,0,False,2011-05-13,43.0,conflict: majority by filing count,True
+37947B103,1094348,Mattersight Corp,1,0001479800-11-000004,0,False,2011-03-17,14.0,conflict: majority by filing count,False
+382410405,943861,GOODRICH PETROLEUM CORP,6,0000080255-11-000556,0,False,2011-05-06,36.0,conflict: majority by filing count,True
+382410405,1470944,"Lee Munder Capital Group, LLC",1,0001470944-11-000002,0,False,,,conflict: majority by filing count,False
+384556106,716314,GRAHAM CORP,2,0001086364-11-002983,0,False,2011-02-08,51.0,conflict: majority by filing count,True
+384556106,861465,KILLEN GROUP INC,1,0000861465-11-000008,0,False,,,conflict: majority by filing count,False
+389375106,43196,GRAY TELEVISION INC,5,0000315066-11-002560,1,False,2011-03-11,20.0,two-sided/tie: CIK with 10-K/10-Q filed closest to quarter end,True
+389375106,902266,NOMURA SECURITIES INTERNATIONAL INC,2,0001140361-11-032916,1,False,,,two-sided/tie: CIK with 10-K/10-Q filed closest to quarter end,False
+390607109,1372020,Great Lakes Dredge & Dock CORP,5,0000902219-11-000659,1,False,2011-03-15,16.0,two-sided/tie: CIK with 10-K/10-Q filed closest to quarter end,True
+390607109,885538,GREAT LAKES DREDGE & DOCK CORP,2,0001137774-11-000060,1,False,,,two-sided/tie: CIK with 10-K/10-Q filed closest to quarter end,False
+42223Y108,1355304,HEALTHY FAST FOOD INC,5,0001140361-11-008431,1,False,2011-03-10,21.0,two-sided/tie: CIK with 10-K/10-Q filed closest to quarter end,True
+42223Y108,1298824,PetroHunter Energy Corp,2,0000949353-11-000040,1,False,2011-05-12,42.0,two-sided/tie: CIK with 10-K/10-Q filed closest to quarter end,False
+42726X102,1493491,Heritage Financial Group Inc,3,0001019056-11-000333,0,False,2011-03-31,0.0,conflict: majority by filing count,True
+42726X102,1320002,Heritage Financial Group,1,0000950123-11-010115,0,False,2010-11-15,136.0,conflict: majority by filing count,False
+43708L108,1500375,"Home Federal Bancorp, Inc. of Louisiana",2,0001065407-11-000187,0,False,2011-05-12,42.0,conflict: majority by filing count,True
+43708L108,1283858,HOME FEDERAL BANCORP INC,1,0000919574-11-000013,0,False,,,conflict: majority by filing count,False
+43710G105,1413440,"Home Federal Bancorp, Inc.",5,0000902219-11-000680,1,False,2011-05-09,39.0,two-sided/tie: CIK with 10-K/10-Q filed closest to quarter end,True
+43710G105,1283858,HOME FEDERAL BANCORP INC,2,0000919574-11-000730,1,False,,,two-sided/tie: CIK with 10-K/10-Q filed closest to quarter end,False
+439038100,1077688,HOOKER FURNITURE CORP,5,0000909012-11-000124,0,False,2011-04-13,13.0,conflict: majority by filing count,True
+439038100,861465,KILLEN GROUP INC,1,0000861465-11-000007,0,False,,,conflict: majority by filing count,False
+440543106,1131227,HORNBECK OFFSHORE SERVICES INC /LA,2,0001013594-11-000082,1,False,2011-03-16,15.0,two-sided/tie: CIK with 10-K/10-Q filed closest to quarter end,True
+440543106,354359,HORNBECK OFFSHORE SERVICES INC,5,0000919574-11-002227,1,False,,,two-sided/tie: CIK with 10-K/10-Q filed closest to quarter end,False
+440543106,1311887,"HOS-IV, LLC",1,0000354204-11-001315,1,False,,,two-sided/tie: CIK with 10-K/10-Q filed closest to quarter end,False
+44920E104,1421601,WESTMOUNTAIN INDEX ADVISOR INC,3,0001161697-11-000236,0,False,2011-03-31,0.0,conflict: majority by filing count,True
+44920E104,1077634,IA GLOBAL INC,1,0001161697-11-000106,0,False,2011-03-21,10.0,conflict: majority by filing count,False
+45814P105,764241,INTEGRA BANK CORP,1,0000354204-11-000969,0,True,2011-03-15,16.0,two-sided/tie: CIK with 10-K/10-Q filed closest to quarter end,True
+45814P105,275802,INTEGRA BANK N A,1,0000950123-11-002009,0,True,,,two-sided/tie: CIK with 10-K/10-Q filed closest to quarter end,False
+458483203,1378846,"interclick, inc.",5,0001188112-11-001680,0,False,2011-03-21,10.0,conflict: majority by filing count,True
+458483203,1294538,"Great Wolf Resorts, Inc.",1,0001158202-11-000015,0,False,2011-02-25,34.0,conflict: majority by filing count,False
+458743101,1292900,"INTERLINE BRANDS, INC./DE",5,0001104659-11-035383,1,False,2011-03-01,30.0,two-sided/tie: CIK with 10-K/10-Q filed closest to quarter end,True
+458743101,1250189,INTERLINE BRANDS INC,3,0000950103-11-000610,1,False,,,two-sided/tie: CIK with 10-K/10-Q filed closest to quarter end,False
+460146103,51434,INTERNATIONAL PAPER CO /NEW/,4,0000093748-11-000022,0,False,2011-02-25,34.0,conflict: majority by filing count,True
+460146103,1283246,INTERNATIONAL PAPER CO,1,0000914208-11-000171,0,False,,,conflict: majority by filing count,False
+464288539,1100663,iSHARES TRUST,1,0001398344-11-000108,0,True,,,"two-sided/tie: no 10-K/10-Q within 400 days, majority / latest evidence",True
+464288539,1275902,"HELIOS STRATEGIC INCOME FUND, INC",1,0001398344-11-000106,0,True,,,"two-sided/tie: no 10-K/10-Q within 400 days, majority / latest evidence",False
+466096104,103884,ALEXANDERS J CORP,6,0001473210-11-000004,1,False,2011-04-04,4.0,two-sided/tie: CIK with 10-K/10-Q filed closest to quarter end,True
+466096104,752431,NETWORK EQUIPMENT TECHNOLOGIES INC,2,0001103285-11-000003,1,False,2011-02-02,57.0,two-sided/tie: CIK with 10-K/10-Q filed closest to quarter end,False
+480838101,920033,BANK JOS A CLOTHIERS INC /DE/,4,0000315066-11-002655,1,False,2011-03-30,1.0,two-sided/tie: CIK with 10-K/10-Q filed closest to quarter end,True
+480838101,814675,JOS A BANK CLOTHIERS INC,2,0000769993-11-000238,1,False,,,two-sided/tie: CIK with 10-K/10-Q filed closest to quarter end,False
+482423100,1063494,"KBW, INC.",4,0001193125-11-092097,1,False,2011-02-25,34.0,two-sided/tie: CIK with 10-K/10-Q filed closest to quarter end,True
+482423100,1089654,KBW ASSET MANAGEMENT INC,2,0001390777-11-000098,1,False,,,two-sided/tie: CIK with 10-K/10-Q filed closest to quarter end,False
+48282T104,886346,KADANT INC,4,0000354204-11-001049,0,False,2011-03-17,14.0,conflict: majority by filing count,True
+48282T104,1470944,"Lee Munder Capital Group, LLC",1,0001470944-11-000003,0,False,,,conflict: majority by filing count,False
+483056107,1412109,"Kaiser Federal Financial Group, Inc.",5,0000936872-11-000022,0,False,2011-05-13,43.0,conflict: majority by filing count,True
+483056107,1270985,K-FED BANCORP,1,0001126328-11-000019,0,False,2010-11-15,136.0,conflict: majority by filing count,False
+486026107,54681,KATY INDUSTRIES INC,3,0000807249-11-000220,0,False,2011-03-31,0.0,conflict: majority by filing count,True
+486026107,1066551,"SUN RIVER ENERGY, INC",1,0001140361-11-010380,0,False,2011-03-11,20.0,conflict: majority by filing count,False
+502003106,721765,LL&E ROYALTY TRUST,6,0001354488-11-001414,0,False,2011-08-19,141.0,conflict: majority by filing count,True
+502003106,1212641,BRINX RESOURCES LTD,1,0001354488-11-001657,0,False,2011-03-16,15.0,conflict: majority by filing count,False
+502003106,803578,INFORMATION ANALYSIS INC,1,0001354488-11-000889,0,False,2011-03-31,0.0,conflict: majority by filing count,False
+502424104,1056239,L 3 COMMUNICATIONS HOLDINGS INC,3,0001104659-11-035929,0,False,2011-05-05,35.0,conflict: majority by filing count,True
+502424104,794323,LEVEL 3 COMMUNICATIONS INC,1,0000813917-11-000077,0,False,2011-02-25,34.0,conflict: majority by filing count,False
+502424104,1408773,lll to 1 Maritime Partners Cayman l LP,1,0000813917-11-000049,0,False,,,conflict: majority by filing count,False
+502424104,1039101,L 3 COMMUNICATIONS CORP,1,0001086364-11-003274,0,False,2011-05-05,35.0,conflict: majority by filing count,False
+511656100,721994,LAKELAND FINANCIAL CORP,2,0000950123-11-011883,0,False,2011-03-07,24.0,conflict: majority by filing count,True
+511656100,728575,CS MCKEE LP,1,0000728575-11-000008,0,False,,,conflict: majority by filing count,False
+514766104,1005286,LANDEC CORP \CA\,7,0000088525-11-000064,0,False,2011-04-08,8.0,conflict: majority by filing count,True
+514766104,866273,MATRIX SERVICE CO,1,0001057439-11-000046,0,False,2011-05-04,34.0,conflict: majority by filing count,False
+521050104,888504,LAYNE CHRISTENSEN CO,5,0001140361-11-009322,0,False,2011-04-15,15.0,conflict: majority by filing count,True
+521050104,728575,CS MCKEE LP,1,0000728575-11-000009,0,False,,,conflict: majority by filing count,False
+526057104,920760,LENNAR CORP /NEW/,3,0000315066-11-002682,1,False,2011-04-11,11.0,two-sided/tie: CIK with 10-K/10-Q filed closest to quarter end,True
+526057104,58696,LENNAR CORP,2,0001144204-11-007087,1,False,,,two-sided/tie: CIK with 10-K/10-Q filed closest to quarter end,False
+531172104,921112,LIBERTY PROPERTY TRUST,9,0001033984-11-000023,0,False,2011-02-25,34.0,conflict: majority by filing count,True
+531172104,921113,LIBERTY PROPERTY LIMITED PARTNERSHIP,1,0001104659-11-007324,0,False,2011-02-25,34.0,conflict: majority by filing count,False
+53219L109,1301611,"LIFEPOINT HOSPITALS, INC.",3,0000315066-11-002686,1,False,2011-04-29,29.0,two-sided/tie: CIK with 10-K/10-Q filed closest to quarter end,True
+53219L109,1074772,"HISTORIC LIFEPOINT HOSPITALS, INC",2,0000888002-11-000145,1,False,,,two-sided/tie: CIK with 10-K/10-Q filed closest to quarter end,False
+552697104,876883,MDC PARTNERS INC,7,0001277537-11-000002,0,False,2011-03-14,17.0,conflict: majority by filing count,True
+552697104,876167,PROGRESS SOFTWARE CORP /MA,1,0000790502-11-000022,0,False,2011-04-11,11.0,conflict: majority by filing count,False
+55302L102,1301236,MHI Hospitality CORP,4,0001422107-11-000033,0,False,2011-03-29,2.0,conflict: majority by filing count,True
+55302L102,810972,BAIRD ROBERT W & CO INC /WI/,1,0000898531-11-000085,0,False,,,conflict: majority by filing count,False
+55302L102,1510831,EDMUNDS WHITE PARTNERS LLC,1,0001510831-11-000001,0,False,,,conflict: majority by filing count,False
+554571109,36506,MACKINAC FINANCIAL CORP /MI/,1,0000919574-11-000589,0,True,2011-03-31,0.0,two-sided/tie: CIK with 10-K/10-Q filed closest to quarter end,True
+554571109,866939,MACKINAC FINANCIAL CORP,1,0001029311-11-000011,0,True,,,two-sided/tie: CIK with 10-K/10-Q filed closest to quarter end,False
+55973B102,1335190,MAGNUM HUNTER RESOURCES CORP,3,0001086364-11-004516,0,False,2011-05-09,39.0,conflict: majority by filing count,True
+55973B102,854271,MAGNUM HUNTER RESOURCES INC,1,0000929638-11-000004,0,False,,,conflict: majority by filing count,False
+56035L104,1396440,Main Street Capital CORP,3,0001104659-11-005691,0,False,2011-03-11,20.0,conflict: majority by filing count,True
+56035L104,1112412,ENDEAVOUR INTERNATIONAL CORP,1,0001144204-11-009208,0,False,2011-03-10,21.0,conflict: majority by filing count,False
+56035L104,1162112,"RigNet, Inc.",1,0001144204-11-008670,0,False,2011-03-30,1.0,conflict: majority by filing count,False
+56418H100,871763,MANPOWER INC /WI/,3,0001140361-11-008905,0,False,2011-05-05,35.0,conflict: majority by filing count,True
+56418H100,62072,MANPOWER INC,1,0000080255-11-000443,0,False,,,conflict: majority by filing count,False
+56509R108,1401923,"MAP Pharmaceuticals, Inc.",7,0000315066-11-002713,0,False,2011-03-04,27.0,conflict: majority by filing count,True
+56509R108,1297401,"DreamWorks Animation SKG, Inc.",1,0000950142-11-000277,0,False,2011-04-27,27.0,conflict: majority by filing count,False
+582411104,64279,MCMORAN EXPLORATION CO /DE/,5,0001086364-11-004232,0,False,2011-02-28,31.0,conflict: majority by filing count,True
+582411104,831259,FREEPORT MCMORAN COPPER & GOLD INC,1,0000831259-11-000002,0,False,2011-02-25,34.0,conflict: majority by filing count,False
+582757209,92230,BB&T CORP,1,0000092230-11-000008,0,True,2011-02-25,34.0,two-sided/tie: CIK with 10-K/10-Q filed closest to quarter end,True
+582757209,729284,MCRAE INDUSTRIES INC,1,0001230245-11-000048,0,True,,,two-sided/tie: CIK with 10-K/10-Q filed closest to quarter end,False
+58471A105,1750,AAR CORP,1,0001104659-11-007139,1,False,2011-03-22,9.0,two-sided/tie: CIK with 10-K/10-Q filed closest to quarter end,True
+58471A105,1453814,"Medidata Solutions, Inc.",4,0001398344-11-001265,1,False,2011-03-16,15.0,two-sided/tie: CIK with 10-K/10-Q filed closest to quarter end,False
+58471A105,1362004,"ICF International, Inc.",2,0001104659-11-019420,1,False,2011-03-04,27.0,two-sided/tie: CIK with 10-K/10-Q filed closest to quarter end,False
+58471A105,711065,APPLIED MICRO CIRCUITS CORP,2,0001104659-11-019421,1,False,2011-05-10,40.0,two-sided/tie: CIK with 10-K/10-Q filed closest to quarter end,False
+589889104,856982,MERIT MEDICAL SYSTEMS INC,3,0001086364-11-004517,0,False,2011-03-15,16.0,conflict: majority by filing count,True
+589889104,728575,CS MCKEE LP,1,0000728575-11-000007,0,False,,,conflict: majority by filing count,False
+590418109,826683,"Merriman Holdings, Inc",2,0000922423-11-000259,0,False,2011-03-30,1.0,conflict: majority by filing count,True
+590418109,730272,REPLIGEN CORP,1,0001068800-11-000072,0,False,2011-02-09,50.0,conflict: majority by filing count,False
+59100U108,907471,META FINANCIAL GROUP INC,5,0000950005-11-000064,0,False,2011-05-10,40.0,conflict: majority by filing count,True
+59100U108,1351407,"Philadelphia Financial Management of San Francisco, LLC",1,0000950005-11-000061,0,False,,,conflict: majority by filing count,False
+591520200,65270,METHODE ELECTRONICS INC,6,0000914208-11-000188,0,False,2011-03-03,28.0,conflict: majority by filing count,True
+591520200,861465,KILLEN GROUP INC,1,0000861465-11-000006,0,False,,,conflict: majority by filing count,False
+595112103,723125,MICRON TECHNOLOGY INC,3,0000947871-11-000087,0,False,2011-04-12,12.0,conflict: majority by filing count,True
+595112103,1489147,SMART Technologies Inc.,1,0000050863-11-000042,0,False,,,conflict: majority by filing count,False
+602675100,1373060,Mindray Medical International LTD,6,0001193125-11-034995,0,False,,,conflict: majority by filing count,True
+602675100,928340,CONSOLIDATED WATER CO LTD,1,0000950123-11-009732,0,False,2011-03-16,15.0,conflict: majority by filing count,False
+602720104,66570,MINE SAFETY APPLIANCES CO,4,0001193125-11-031688,0,False,2011-04-28,28.0,conflict: majority by filing count,True
+602720104,714562,FIRST FINANCIAL CORP /IN/,1,0001193125-11-031700,0,False,2011-03-15,16.0,conflict: majority by filing count,False
+603432105,66649,MINES MANAGEMENT INC,1,0000950123-11-013914,0,True,2011-03-31,0.0,two-sided/tie: CIK with 10-K/10-Q filed closest to quarter end,True
+603432105,1415311,ProShares Trust II,1,0000950123-11-024107,0,True,2011-03-01,30.0,two-sided/tie: CIK with 10-K/10-Q filed closest to quarter end,False
+611742107,1020416,MONSTER WORLDWIDE INC,5,0000315066-11-003172,1,False,2011-04-29,29.0,two-sided/tie: CIK with 10-K/10-Q filed closest to quarter end,True
+611742107,895421,MORGAN STANLEY,2,0001085146-11-000129,1,False,2011-02-28,31.0,two-sided/tie: CIK with 10-K/10-Q filed closest to quarter end,False
+624758108,1460801,"Tri-Tech Holding, Inc.",3,0000950123-11-012620,1,False,2011-03-29,2.0,two-sided/tie: CIK with 10-K/10-Q filed closest to quarter end,True
+624758108,1350593,"Mueller Water Products, Inc.",4,0000895345-11-000137,1,False,2011-05-09,39.0,two-sided/tie: CIK with 10-K/10-Q filed closest to quarter end,False
+62845B104,1094810,MUTUALFIRST FINANCIAL INC,2,0000902664-11-001005,0,False,2011-03-16,15.0,conflict: majority by filing count,True
+62845B104,1169770,FIRST PACTRUST BANCORP INC,1,0000927089-11-000041,0,False,2011-04-29,29.0,conflict: majority by filing count,False
+62913F201,1037016,NII HOLDINGS INC,4,0001374170-11-000024,0,False,2011-02-24,35.0,conflict: majority by filing count,True
+62913F201,320187,NIKE INC,1,0001086364-11-003453,0,False,2011-04-06,6.0,conflict: majority by filing count,False
+629437104,740571,NVCN CORP,2,0001193125-11-058558,0,False,2011-04-26,26.0,conflict: majority by filing count,True
+629437104,217222,SCANNER TECHNOLOGIES CORP,1,0001193125-11-039206,0,False,,,conflict: majority by filing count,False
+63009F105,1105184,NANOSPHERE INC,6,0001172661-11-000415,1,False,2011-04-27,27.0,two-sided/tie: CIK with 10-K/10-Q filed closest to quarter end,True
+63009F105,1428669,"SolarWinds, Inc.",2,0001193125-11-175355,1,False,2011-02-25,34.0,two-sided/tie: CIK with 10-K/10-Q filed closest to quarter end,False
+638904102,793547,NAVIGATORS GROUP INC,4,0001193125-11-034358,0,False,2011-05-09,39.0,conflict: majority by filing count,True
+638904102,1315478,"Champlain Investment Partners, LLC",1,0001315478-11-000009,0,False,,,conflict: majority by filing count,False
+64128C106,1487610,Neuberger Berman High Yield Strategies Fund Inc.,2,0001445546-11-002206,0,False,,,conflict: majority by filing count,True
+64128C106,1228361,NEUBERGER BERMAN HIGH YIELD STRATEGIES FUND,1,0000891804-11-000507,0,False,,,conflict: majority by filing count,False
+650111107,71691,NEW YORK TIMES CO,1,0000080255-11-000418,0,True,2011-05-05,35.0,two-sided/tie: CIK with 10-K/10-Q filed closest to quarter end,True
+650111107,1521422,Fairpointe Capital LLC,1,0001521422-11-000008,0,True,,,two-sided/tie: CIK with 10-K/10-Q filed closest to quarter end,False
+650111107,1037763,OPTIMUM INVESTMENT ADVISORS,1,0001037763-11-000003,0,True,,,two-sided/tie: CIK with 10-K/10-Q filed closest to quarter end,False
+651639106,1164727,NEWMONT MINING CORP /DE/,1,0001086364-11-003444,0,True,2011-04-21,21.0,two-sided/tie: CIK with 10-K/10-Q filed closest to quarter end,True
+651639106,71824,NEWMONT USA LTD,1,0001422849-11-000269,0,True,,,two-sided/tie: CIK with 10-K/10-Q filed closest to quarter end,False
+65473P105,1111711,NISOURCE INC/DE,3,0000093748-11-000077,1,False,2011-02-28,31.0,two-sided/tie: CIK with 10-K/10-Q filed closest to quarter end,True
+65473P105,823392,NISOURCE INC,2,0000080255-11-000430,1,False,,,two-sided/tie: CIK with 10-K/10-Q filed closest to quarter end,False
+656844107,1368519,North American Energy Partners Inc.,2,0000315066-11-002785,0,False,,,conflict: majority by filing count,True
+656844107,1272869,NORTH AMERICAN ENERGY PARTNERS INC,1,0000950142-11-001220,0,False,,,conflict: majority by filing count,False
+667746101,1001385,NORTHWEST PIPE CO,7,0001086364-11-004530,0,False,2011-03-22,9.0,conflict: majority by filing count,True
+667746101,110019,NORTHWEST PIPELINE GP,1,0001086364-11-003459,0,False,2011-02-24,35.0,conflict: majority by filing count,False
+67072E200,1114446,UBS AG,1,0000950123-11-034561,0,True,,,"two-sided/tie: no 10-K/10-Q within 400 days, majority / latest evidence",True
+67072E200,1177212,NUVEEN ARIZONA DIVIDEND ADVANTAGE MUNICIPAL FUND 3,1,0001140361-11-021573,0,True,,,"two-sided/tie: no 10-K/10-Q within 400 days, majority / latest evidence",False
+670987106,880843,NUVEEN PREMIER INSURED MUNICIPAL INCOME FUND INC,1,0001445546-11-000407,0,True,,,"two-sided/tie: no 10-K/10-Q within 400 days, majority / latest evidence",True
+670987106,880845,NUVEEN PREMIER MUNICIPAL INCOME FUND INC,1,0001445546-11-000400,0,True,,,"two-sided/tie: no 10-K/10-Q within 400 days, majority / latest evidence",False
+682159108,890564,ON ASSIGNMENT INC,7,0000072971-11-000616,0,False,2011-03-16,15.0,conflict: majority by filing count,True
+682159108,30302,DUCKWALL ALCO STORES INC,1,0001140361-11-015558,0,False,2011-04-15,15.0,conflict: majority by filing count,False
+682159108,1002811,KENSEY NASH CORP,1,0001140361-11-015561,0,False,2011-05-06,36.0,conflict: majority by filing count,False
+68401H104,1142576,OPTIMER PHARMACEUTICALS INC,6,0001086364-11-004383,1,False,2011-03-10,21.0,two-sided/tie: CIK with 10-K/10-Q filed closest to quarter end,True
+68401H104,828750,GSI COMMERCE INC,2,0001104659-11-034112,1,False,2011-03-01,30.0,two-sided/tie: CIK with 10-K/10-Q filed closest to quarter end,False
+686164104,1382911,"Orexigen Therapeutics, Inc.",4,0001178913-11-000516,0,False,2011-03-11,20.0,conflict: majority by filing count,True
+686164104,1278906,OREXIGEN THERAPEUTICS INC,1,0001072613-11-000082,0,False,,,conflict: majority by filing count,False
+693315103,1284766,WHITE MOUNTAIN TITANIUM CORP,1,0001213206-11-000009,0,True,2011-03-29,2.0,two-sided/tie: CIK with 10-K/10-Q filed closest to quarter end,True
+693315103,1165231,PROCERA NETWORKS INC,1,0001213206-11-000015,0,True,2011-03-16,15.0,two-sided/tie: CIK with 10-K/10-Q filed closest to quarter end,False
+693315103,1087934,"inContact, Inc.",1,0001213206-11-000012,0,True,2011-03-11,20.0,two-sided/tie: CIK with 10-K/10-Q filed closest to quarter end,False
+693315103,925528,HUDSON TECHNOLOGIES INC /NY,1,0001213206-11-000011,0,True,2011-03-07,24.0,two-sided/tie: CIK with 10-K/10-Q filed closest to quarter end,False
+693315103,915127,PHC INC /MA/,1,0001213206-11-000013,0,True,2011-05-11,41.0,two-sided/tie: CIK with 10-K/10-Q filed closest to quarter end,False
+693315103,889930,OVERLAND STORAGE INC,1,0001213206-11-000010,0,True,2011-02-16,43.0,two-sided/tie: CIK with 10-K/10-Q filed closest to quarter end,False
+693315103,700998,COMPUMED INC,1,0001213206-11-000014,0,True,2011-02-14,45.0,two-sided/tie: CIK with 10-K/10-Q filed closest to quarter end,False
+697529303,881695,PALOMAR MEDICAL TECHNOLOGIES INC,2,0001086364-11-003519,0,False,2011-03-09,22.0,conflict: majority by filing count,True
+697529303,857005,PARAMETRIC TECHNOLOGY CORP,1,0001086364-11-003524,0,False,2011-05-11,41.0,conflict: majority by filing count,False
+708160106,1166126,J C PENNEY CO INC,5,0001166126-11-000013,0,False,2011-03-29,2.0,conflict: majority by filing count,True
+708160106,77182,J C PENNEY CORP INC,1,0000888002-11-000140,0,False,,,conflict: majority by filing count,False
+71361F100,887226,PERCEPTRON INC/MI,6,0001095449-11-000020,0,False,2011-05-16,46.0,conflict: majority by filing count,True
+71361F100,854860,WILLIAMS CONTROLS INC,1,0001140361-11-009651,0,False,2011-05-12,42.0,conflict: majority by filing count,False
+71902E109,1129633,PHOENIX COMPANIES INC/DE,3,0000914760-11-000026,0,False,2011-03-08,23.0,conflict: majority by filing count,True
+71902E109,854665,PHOENIX COMPANIES INC,1,0001086364-11-003566,0,False,,,conflict: majority by filing count,False
+73174C100,1341843,"POLYMEDIX, INC",3,0001140361-11-026231,0,False,2011-03-07,24.0,conflict: majority by filing count,True
+73174C100,740726,BROADCAST INTERNATIONAL INC,1,0001104659-11-005659,0,False,2011-03-31,0.0,conflict: majority by filing count,False
+73935Y102,1354730,PowerShares DB G10 Currency Harvest Fund,4,0001390777-11-000110,1,False,2011-02-28,31.0,two-sided/tie: CIK with 10-K/10-Q filed closest to quarter end,True
+73935Y102,19481,"Virtus Investment Advisers, Inc.",2,0001193125-11-137440,1,False,,,two-sided/tie: CIK with 10-K/10-Q filed closest to quarter end,False
+73936T789,1224696,Invesco PowerShares Capital Management LLC,1,0001395067-11-000003,0,True,,,"two-sided/tie: no 10-K/10-Q within 400 days, majority / latest evidence",True
+73936T789,1378872,PowerShares Exchange-Traded Fund Trust II,1,0000914208-11-000027,0,True,,,"two-sided/tie: no 10-K/10-Q within 400 days, majority / latest evidence",False
+73936T854,1209466,POWERSHARES EXCHANGE TRADED FUND TRUST,2,0001193125-11-137856,0,False,,,conflict: majority by filing count,True
+73936T854,1378872,PowerShares Exchange-Traded Fund Trust II,1,0000914208-11-000104,0,False,,,conflict: majority by filing count,False
+740921101,1102287,PREMIERWEST BANCORP,3,0001019056-11-000218,0,False,2011-03-17,14.0,conflict: majority by filing count,True
+740921101,1425525,"George C. St. Laurent, Jr. Trust",1,0000896595-11-000032,0,False,,,conflict: majority by filing count,False
+744573106,788784,PUBLIC SERVICE ENTERPRISE GROUP INC,2,0001422848-11-000053,0,False,2011-02-25,34.0,conflict: majority by filing count,True
+744573106,81033,PUBLIC SERVICE ELECTRIC & GAS CO,1,0001086364-11-002227,0,False,2011-02-25,34.0,conflict: majority by filing count,False
+74460D109,1393311,Public Storage,4,0001284812-11-000114,0,False,2011-03-01,30.0,conflict: majority by filing count,True
+74460D109,318380,PUBLIC STORAGE INC /CA,1,0000315066-11-002862,0,False,,,conflict: majority by filing count,False
+746228303,276720,PURE CYCLE CORP,4,0000902219-11-000785,0,False,2011-04-08,8.0,conflict: majority by filing count,True
+746228303,1164062,TEALWOOD ASSET MANAGEMENT INC,1,0001164062-11-000001,0,False,,,conflict: majority by filing count,False
+749552105,740664,R F INDUSTRIES LTD,3,0001144204-11-037757,0,False,2011-03-09,22.0,conflict: majority by filing count,True
+749552105,1015789,"PROELITE, INC.",1,0001144204-11-036743,0,False,2011-11-21,235.0,conflict: majority by filing count,False
+74975N105,1100441,"RTI Biologics, Inc.",6,0000909012-11-000250,0,False,2011-05-02,32.0,conflict: majority by filing count,True
+74975N105,1361579,Virtual Radiologic CORP,1,0000909012-11-000094,0,False,2010-04-29,336.0,conflict: majority by filing count,False
+755408200,716634,READING INTERNATIONAL INC,1,0000950123-11-015221,0,True,2011-03-16,15.0,two-sided/tie: CIK with 10-K/10-Q filed closest to quarter end,True
+755408200,830122,PICO HOLDINGS INC /NEW,1,0001140361-11-009935,0,True,2011-03-01,30.0,two-sided/tie: CIK with 10-K/10-Q filed closest to quarter end,False
+759148109,812191,REHABCARE GROUP INC,9,0001390777-11-000111,0,False,2011-04-29,29.0,conflict: majority by filing count,True
+759148109,1160858,TRUE RELIGION APPAREL INC,1,0000950123-11-023451,0,False,2011-03-14,17.0,conflict: majority by filing count,False
+767744105,1046102,RITCHIE BROS AUCTIONEERS INC,8,0000728014-11-000006,0,False,,,conflict: majority by filing count,True
+767744105,859598,SEACOR HOLDINGS INC /NEW/,1,0001140361-11-008519,0,False,2011-04-27,27.0,conflict: majority by filing count,False
+774678403,785815,ROCKY MOUNTAIN CHOCOLATE FACTORY INC,2,0000315066-11-002901,0,False,2011-05-24,54.0,conflict: majority by filing count,True
+774678403,736012,INTRUSION INC,1,0001483885-11-000005,0,False,2011-03-29,2.0,conflict: majority by filing count,False
+777779307,1340282,Rosetta Resources Inc.,2,0000902219-11-000816,0,False,2011-02-25,34.0,conflict: majority by filing count,True
+777779307,1334809,ROSETTA RESURCES INC,1,0001086364-11-003681,0,False,,,conflict: majority by filing count,False
+783332109,1324272,"Ruths Hospitality Group, Inc.",4,0001193125-11-035217,0,False,2011-03-04,27.0,conflict: majority by filing count,True
+783332109,1385280,"Cinemark Holdings, Inc.",1,0001193125-11-030890,0,False,2011-03-01,30.0,conflict: majority by filing count,False
+783859101,719220,S&T BANCORP INC,1,0001086364-11-003643,0,True,2011-03-16,15.0,two-sided/tie: CIK with 10-K/10-Q filed closest to quarter end,True
+783859101,1010911,S&T BANK/PA,1,0000719220-11-000006,0,True,,,two-sided/tie: CIK with 10-K/10-Q filed closest to quarter end,False
+784153108,914536,SFN Group Inc.,7,0001103173-11-000001,1,False,2011-03-04,27.0,two-sided/tie: CIK with 10-K/10-Q filed closest to quarter end,True
+784153108,1065059,USEC INC,2,0000814375-11-000035,1,False,2011-05-04,34.0,two-sided/tie: CIK with 10-K/10-Q filed closest to quarter end,False
+78425V104,1500213,"SI Financial Group, Inc.",1,0000909654-11-000121,0,True,2011-03-28,3.0,two-sided/tie: CIK with 10-K/10-Q filed closest to quarter end,True
+78425V104,1292580,"SI Financial Group, Inc.",1,0001026081-11-000027,0,True,2010-11-15,136.0,two-sided/tie: CIK with 10-K/10-Q filed closest to quarter end,False
+806882106,912603,SCHNITZER STEEL INDUSTRIES INC,6,0001072613-11-000210,0,False,2011-04-05,5.0,conflict: majority by filing count,True
+806882106,1144215,ACUITY BRANDS INC,1,0000922898-11-000021,0,False,2011-03-30,1.0,conflict: majority by filing count,False
+807863105,1055454,SCHOOL SPECIALTY INC,6,0000354204-11-001241,0,False,2011-02-22,37.0,conflict: majority by filing count,True
+807863105,1470944,"Lee Munder Capital Group, LLC",1,0001470944-11-000004,0,False,,,conflict: majority by filing count,False
+817337405,1076481,SEQUENOM INC,3,0001086364-11-004522,0,False,2011-03-09,22.0,conflict: majority by filing count,True
+817337405,1105472,SONUS NETWORKS INC,1,0001193125-11-035332,0,False,2011-03-10,21.0,conflict: majority by filing count,False
+82312B106,354963,SHENANDOAH TELECOMMUNICATIONS CO/VA/,1,0000932471-11-001510,0,True,2011-03-08,23.0,two-sided/tie: CIK with 10-K/10-Q filed closest to quarter end,True
+82312B106,1118404,SHENANDOAH TELECOMMUNICATIONS CO,1,0001086364-11-003738,0,True,,,two-sided/tie: CIK with 10-K/10-Q filed closest to quarter end,False
+83066R107,1351051,"Skilled Healthcare Group, Inc.",6,0001104659-11-007748,0,False,2011-05-03,33.0,conflict: majority by filing count,True
+83066R107,1055468,SKILLED HEALTHCARE GROUP INC,1,0001354488-11-001417,0,False,,,conflict: majority by filing count,False
+83172R108,1489147,SMART Technologies Inc.,9,0000914208-11-000380,0,False,,,conflict: majority by filing count,True
+83172R108,1172228,SMART TECHNOLOGY INC,1,0001140361-11-008146,0,False,,,conflict: majority by filing count,False
+832727101,94610,SMURFIT-STONE CONTAINER Corp,1,0000899140-11-000079,0,True,2011-04-29,29.0,two-sided/tie: CIK with 10-K/10-Q filed closest to quarter end,True
+832727101,919226,SMURFIT STONE CONTAINER CORP,1,0000902664-11-000111,0,True,2010-05-05,330.0,two-sided/tie: CIK with 10-K/10-Q filed closest to quarter end,False
+84760C107,789132,SPECTRANETICS CORP,5,0000072971-11-000631,0,False,2011-03-14,17.0,conflict: majority by filing count,True
+84760C107,1092699,SPS COMMERCE INC,1,0000828405-11-000006,0,False,2011-03-03,28.0,conflict: majority by filing count,False
+848574109,1364885,"Spirit AeroSystems Holdings, Inc.",6,0000919574-11-003769,1,False,2011-05-06,36.0,two-sided/tie: CIK with 10-K/10-Q filed closest to quarter end,True
+848574109,1349682,SPIRIT AEROSYSTEMS HOLDINGS INC,2,0001085146-11-000717,1,False,,,two-sided/tie: CIK with 10-K/10-Q filed closest to quarter end,False
+849415203,1287950,SPREADTRUM COMMUNICATIONS INC,4,0000950123-11-037038,0,False,,,conflict: majority by filing count,True
+849415203,1434708,HAMON INVESTMENT GROUP PTE LTD,1,0001434708-11-000009,0,False,,,conflict: majority by filing count,False
+855244109,829224,STARBUCKS CORP,3,0001422849-11-000287,0,False,2011-05-06,36.0,conflict: majority by filing count,True
+855244109,887557,STARBUCKS CORP,1,0000315066-11-002963,0,False,,,conflict: majority by filing count,False
+855716106,723458,STATE BANCORP INC,1,0001086364-11-003802,0,True,2011-03-10,21.0,two-sided/tie: CIK with 10-K/10-Q filed closest to quarter end,True
+855716106,939683,STATE BANCORP INC EMPL STK OWNERSHIP PLAN,1,0000723458-11-000016,0,True,,,two-sided/tie: CIK with 10-K/10-Q filed closest to quarter end,False
+855898102,1497275,STATE BANK FINANCIAL CORP,1,0001029311-11-000037,0,True,2011-03-31,0.0,two-sided/tie: CIK with 10-K/10-Q filed closest to quarter end,True
+855898102,1469236,State Bank & Trust Co,1,0001029311-11-000019,0,True,,,two-sided/tie: CIK with 10-K/10-Q filed closest to quarter end,False
+85590A401,316206,STARWOOD HOTEL & RESORTS WORLDWIDE INC,6,0000080255-11-000535,0,False,2011-04-29,29.0,conflict: majority by filing count,True
+85590A401,48595,STARWOOD HOTELS & RESORTS,1,0000080255-11-000106,0,False,,,conflict: majority by filing count,False
+864739107,754673,SUFFOLK BANCORP,3,0000932471-11-000973,1,False,2011-03-15,16.0,two-sided/tie: CIK with 10-K/10-Q filed closest to quarter end,True
+864739107,861465,KILLEN GROUP INC,2,0000861465-11-000009,1,False,,,two-sided/tie: CIK with 10-K/10-Q filed closest to quarter end,False
+872540109,109198,TJX COMPANIES INC /DE/,2,0000315066-11-003183,1,True,2011-03-30,1.0,two-sided/tie: CIK with 10-K/10-Q filed closest to quarter end,True
+872540109,814445,TJX COMPANIES INC,2,0001086364-11-004396,1,True,,,two-sided/tie: CIK with 10-K/10-Q filed closest to quarter end,False
+87929J103,1111665,TELECOMMUNICATION SYSTEMS INC /FA/,3,0001008322-11-000023,0,False,2011-03-07,24.0,conflict: majority by filing count,True
+87929J103,1276770,TELECOMMUNICATION SYSTEMS INC,1,0001390777-11-000038,0,False,,,conflict: majority by filing count,False
+89365K206,1043961,TRANSGENOMIC INC,3,0001140361-11-008728,0,False,2011-03-14,17.0,conflict: majority by filing count,True
+89365K206,1107421,ZIOPHARM ONCOLOGY INC,1,0001140361-11-008317,0,False,2011-03-01,30.0,conflict: majority by filing count,False
+902952100,101507,US GLOBAL INVESTORS FUNDS,2,0001051042-11-000006,0,False,,,conflict: majority by filing count,True
+902952100,754811,U S GLOBAL INVESTORS INC,1,0000906304-11-000229,0,False,2011-05-06,36.0,conflict: majority by filing count,False
+90333L201,1073429,US CONCRETE INC,6,0001140361-11-025855,0,False,2011-03-11,20.0,conflict: majority by filing count,True
+90333L201,1307784,"U.S. Concrete, Inc.",1,0000061227-11-000002,0,False,,,conflict: majority by filing count,False
+904572203,1171012,Uni-Pixel,2,0000950123-11-012637,1,True,2011-03-10,21.0,two-sided/tie: CIK with 10-K/10-Q filed closest to quarter end,True
+904572203,1375996,UNIPIXEL INC,2,0001512291-11-000006,1,True,,,two-sided/tie: CIK with 10-K/10-Q filed closest to quarter end,False
+904572203,1512291,Goldberg Capital Management,1,0001512291-11-000004,1,True,,,two-sided/tie: CIK with 10-K/10-Q filed closest to quarter end,False
+909214306,746838,UNISYS CORP,5,0000766524-11-000014,0,False,2011-05-02,32.0,conflict: majority by filing count,True
+909214306,1521422,Fairpointe Capital LLC,1,0001521422-11-000010,0,False,,,conflict: majority by filing count,False
+909214306,1037763,OPTIMUM INVESTMENT ADVISORS,1,0001037763-11-000004,0,False,,,conflict: majority by filing count,False
+91911K102,885590,"Valeant Pharmaceuticals International, Inc.",5,0001418812-11-000046,0,False,2011-02-28,31.0,conflict: majority by filing count,True
+91911K102,930184,VALEANT PHARMACEUTICALS INTERNATIONAL,1,0000728014-11-000001,0,False,2010-08-03,240.0,conflict: majority by filing count,False
+91913Y100,1035002,VALERO ENERGY CORP/TX,1,0000888002-11-000175,0,True,2011-02-25,34.0,two-sided/tie: CIK with 10-K/10-Q filed closest to quarter end,True
+91913Y100,21271,VALERO ENERGY CORP,1,0001086364-11-004080,0,True,,,two-sided/tie: CIK with 10-K/10-Q filed closest to quarter end,False
+921659108,1347178,Vanda Pharmaceuticals Inc.,5,0000930413-11-000917,1,False,2011-03-10,21.0,two-sided/tie: CIK with 10-K/10-Q filed closest to quarter end,True
+921659108,1305597,Vanda Pharmaceuticals Inc,3,0000072971-11-000633,1,False,,,two-sided/tie: CIK with 10-K/10-Q filed closest to quarter end,False
+92553H803,1101169,VIASYSTEMS GROUP INC,3,0000909518-11-000081,0,False,2011-05-03,33.0,conflict: majority by filing count,True
+92553H803,1484505,"VG Holdings, LLC",1,0001101169-11-000010,0,False,,,conflict: majority by filing count,False
+92672A101,1487052,ViewPoint Financial Group Inc.,4,0000927089-11-000043,0,False,2011-03-03,28.0,conflict: majority by filing count,True
+92672A101,1356628,ViewPoint Financial Group,1,0000950123-11-012000,0,False,2010-05-07,328.0,conflict: majority by filing count,False
+92833U103,1415911,VISIONCHINA MEDIA INC.,4,0001390777-11-000113,1,False,,,"two-sided/tie: no 10-K/10-Q within 400 days, majority / latest evidence",True
+92833U103,1434708,HAMON INVESTMENT GROUP PTE LTD,2,0001434708-11-000012,1,False,,,"two-sided/tie: no 10-K/10-Q within 400 days, majority / latest evidence",False
+95766L107,891760,WESTERN ASSET HIGH INCOME FUND INC.,1,0000312348-11-000021,0,True,,,"two-sided/tie: no 10-K/10-Q within 400 days, majority / latest evidence",True
+95766L107,895523,WESTERN ASSET MANAGED HIGH INCOME FUND INC.,1,0001445546-11-000537,0,True,,,"two-sided/tie: no 10-K/10-Q within 400 days, majority / latest evidence",False
+960908309,1034669,FISHER COMMUNICATIONS INC,1,0001193125-11-099718,0,True,2011-03-08,23.0,two-sided/tie: CIK with 10-K/10-Q filed closest to quarter end,True
+960908309,1370416,WESTPORT INNOVATIONS INC,1,0000935836-11-000010,0,True,,,two-sided/tie: CIK with 10-K/10-Q filed closest to quarter end,False
+969203108,1449732,"Willbros Group, Inc.\NEW\",5,0001086364-11-004400,0,False,2011-03-15,16.0,conflict: majority by filing count,True
+969203108,895450,WILLBROS GROUP INC,1,0000072971-11-000231,0,False,,,conflict: majority by filing count,False
+G02995101,783603,AMERICAN SAFETY INSURANCE HOLDINGS LTD,4,0000884589-11-000003,0,False,2011-03-16,15.0,conflict: majority by filing count,True
+G02995101,906326,RURAL/METRO CORP /DE/,1,0001193125-11-149877,0,False,2011-05-09,39.0,conflict: majority by filing count,False
+G3075P101,1363829,Enstar Group LTD,5,0000950103-11-001630,0,False,2011-03-07,24.0,conflict: majority by filing count,True
+G3075P101,55820,ENSTAR GROUP INC,1,0001230245-11-000078,0,False,,,conflict: majority by filing count,False
+G4388N106,916789,HELEN OF TROY LTD,5,0000902219-11-000669,0,False,2011-05-16,46.0,conflict: majority by filing count,True
+G4388N106,46675,HELEN OF TROY CORP,1,0001086364-11-003033,0,False,,,conflict: majority by filing count,False
+G94368100,1323854,Warner Chilcott plc,3,0001144204-11-008489,0,False,2011-02-25,34.0,conflict: majority by filing count,True
+G94368100,1042459,WARNER CHILCOTT PLC,1,0001193125-11-035661,0,False,,,conflict: majority by filing count,False
+G98777108,1356462,Yucheng Technologies LTD,2,0001104659-11-008769,0,False,,,conflict: majority by filing count,True
+G98777108,1105101,GIGAMEDIA LTD,1,0001104659-11-008771,0,False,,,conflict: majority by filing count,False
+G98777108,1336644,UNIVERSAL TRAVEL GROUP,1,0001104659-11-008770,0,False,2011-06-08,69.0,conflict: majority by filing count,False
+H89128104,833444,TYCO INTERNATIONAL LTD,1,0001086364-11-003942,0,True,2011-04-28,28.0,two-sided/tie: CIK with 10-K/10-Q filed closest to quarter end,True
+H89128104,100441,TYCO INTERNATIONAL LTD,1,0001193125-11-030642,0,True,,,two-sided/tie: CIK with 10-K/10-Q filed closest to quarter end,False
+M22013102,1119769,CERAGON NETWORKS LTD,1,0000902595-11-000020,0,True,,,"two-sided/tie: no 10-K/10-Q within 400 days, majority / latest evidence",True
+M22013102,946394,Ellomay Capital Ltd.,1,0001178913-11-000118,0,True,,,"two-sided/tie: no 10-K/10-Q within 400 days, majority / latest evidence",False
+M22013102,1365767,Allot Communications Ltd.,1,0001178913-11-000116,0,True,,,"two-sided/tie: no 10-K/10-Q within 400 days, majority / latest evidence",False
+M87915100,928876,TOWER SEMICONDUCTOR LTD,3,0000902561-11-000023,0,False,,,conflict: majority by filing count,True
+M87915100,723125,MICRON TECHNOLOGY INC,1,0000723125-11-000106,0,False,2011-04-12,12.0,conflict: majority by filing count,False
+Y62196103,1333172,Navios Maritime Holdings Inc.,1,0000315066-11-002231,0,True,,,"two-sided/tie: no 10-K/10-Q within 400 days, majority / latest evidence",True
+Y62196103,732857,GLICKENHAUS & CO,1,0000732857-11-000002,0,True,,,"two-sided/tie: no 10-K/10-Q within 400 days, majority / latest evidence",False
+Y62267102,1415921,Navios Maritime Partners L.P.,2,0001140361-11-008781,0,False,,,conflict: majority by filing count,True
+Y62267102,732857,GLICKENHAUS & CO,1,0000732857-11-000004,0,False,,,conflict: majority by filing count,False

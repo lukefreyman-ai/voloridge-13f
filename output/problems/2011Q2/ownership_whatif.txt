@@ -1,0 +1,29 @@
+2011Q2: what-if on the over-100% stop condition (read-only; output unchanged)
+debt-pattern CUSIPs filed as SH: 7,247 rows, 5,661 CUSIPs, $154.9bn; 13(f) list descriptions of those: {'(not i': 5226, 'NOTE  ': 342, 'DBCV  ': 35, 'SDCV  ': 20, 'FRNT  ': 17, 'DEBT  ': 10}
+13(f) list description of ALL output CUSIPs (distinct), top: {'(not': 13679, 'COM': 4500, 'NOTE': 344, 'CL': 295, 'SPONSORED': 180, 'SHS': 154, '*W': 78, 'SPON': 76, 'UNIT': 70, 'ADR': 66}
+ADR/ADS CUSIPs in output: 394 on 264 companies, $680.0bn
+amendments duplicating the original (>= 90% identical rows): 0 ({}), rows 0
+
+S0 as produced                                               all: over 100%   236 / 3,532 =  6.7% | median  60.7 | top-500:  43 / 426 = 10.1%
+S1 drop debt-pattern CUSIPs                                  all: over 100%   122 / 3,532 =  3.5% | median  59.9 | top-500:  15 / 426 =  3.5%
+S2 + collapse duplicate amendments                           all: over 100%   122 / 3,532 =  3.5% | median  59.9 | top-500:  15 / 426 =  3.5%
+S3 + drop ADR/ADS securities                                 all: over 100%   122 / 3,526 =  3.5% | median  59.9 | top-500:  15 / 426 =  3.5%
+
+remaining top-500 companies over 100% under S3: 15
+                                      name       held           so    pct  value_bn  n_cusips     so_date                    so_source
+company_cik                                                                                                                           
+1029800.0    URSTADT BIDDLE PROPERTIES INC   17333546    8669760.0  199.9      11.3         4  2011-08-31    10-Q 0001029800-11-000023
+67472.0                          MOLEX INC  128245707   95560076.0  134.2      17.0         2  2011-07-31    10-K 0000950123-11-073357
+1101215.0       ALLIANCE DATA SYSTEMS CORP   63652037   50917709.0  125.0       7.4         1  2011-07-31    10-Q 0001101215-11-000084
+1407739.0    DUPONT FABROS TECHNOLOGY, ...   76112827   62445458.0  121.9      17.0         3  2011-07-31    10-Q 0001193125-11-207982
+1298946.0       DiamondRock Hospitality Co  181189294  167385657.0  108.2      12.5         1  2011-07-31    10-Q 0001445305-11-002166
+1289236.0          BioMed Realty Trust Inc  141401039  131259602.0  107.7      17.6         2  2011-07-31    10-Q 0000950123-11-073418
+879169.0                       INCYTE CORP  132165185  126239670.0  104.7       6.7         1  2011-07-31    10-Q 0001104659-11-041507
+912242.0                       MACERICH CO  137451460  131916463.0  104.2      80.5         1  2011-07-31    10-Q 0001047469-11-006998
+899629.0               ACADIA REALTY TRUST   41326528   40332554.0  102.5      17.0         1  2011-07-31    10-Q 0000930413-11-005141
+14930.0                     BRUNSWICK CORP   90990107   89076560.0  102.1      18.7         1  2011-07-31    10-Q 0000014930-11-000069
+313143.0                  HAEMONETICS CORP   26161191   25770869.0  101.5       7.4         1  2011-06-30    10-Q 0000950123-11-075415
+910606.0              REGENCY CENTERS CORP   91033504   89905971.0  101.3      52.2         5  2011-07-31  10-Q/A 0000910606-11-000018
+1040971.0             SL GREEN REALTY CORP   86488229   85464921.0  101.2      53.2         3  2011-07-31    10-Q 0001104659-11-045184
+1477294.0    Sensata Technologies Holdi...  177795631  175903748.0  101.1       6.7         1  2011-06-30    10-Q 0001193125-11-194310
+921082.0          HIGHWOODS PROPERTIES INC   72504138   72399428.0  100.1      13.3         1  2011-06-30  10-Q/A 0000921082-11-000029

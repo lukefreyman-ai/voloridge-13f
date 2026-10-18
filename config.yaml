@@ -1,0 +1,12 @@
+# Voloridge 13F pipeline config
+sample:
+  first_quarter_end: 2010-03-31
+  last_quarter_end: 2014-12-31
+edgar:
+  # SEC requires a real contact in the User-Agent. Change if you want.
+  user_agent: "SEC requires a contact string: set your own name and email here"
+  rate_limit_per_sec: 8
+  workers: 6
+  cache_dir: cache
+  timeout_sec: 60
+output_dir: output

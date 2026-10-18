@@ -1,0 +1,44 @@
+2012Q2: checksum pass rate weighted three ways (holdings-bearing filings = 3589)
+value weight = filing's row values after shares-check scale normalization ($000), rows > $200bn excluded
+rows excluded from weights as glued digit runs (> $200bn): 1644
+
+all holdings-bearing: filings 2544/3589 = 70.9% | rows 883,813/1,488,936 = 59.4% | value $11,029bn/$83,012bn = 13.3%
+usable summary page  : filings 2465/3235 = 76.2% | rows 871,455/1,401,393 = 62.2% | value $10,803bn/$62,729bn = 17.2%
+
+non-pass buckets weighted:
+                                                    filings    rows  value_bn rows_share value_share
+checksum_cause                                                                                      
+entry count off by >2, unexplained                      225  153767  41,731.4      10.3%       50.3%
+entry total counts distinct CUSIPs not rows             150   58885  19,872.8       4.0%       23.9%
+value scale x1000 (dollars vs thousands)                194  143647   5,246.6       9.6%        6.3%
+value off >1%, unexplained                              102   76873   2,779.1       5.2%        3.3%
+entry count off by <=2                                   32   42923   1,156.0       2.9%        1.4%
+value within 1% (rounding)                               40   21856     461.1       1.5%        0.6%
+summary page missing                                    235   51034     342.7       3.4%        0.4%
+entry off by <=2 and value within 1%                     20   51190     336.4       3.4%        0.4%
+entry off by <=2 and value off >1%                       20    4946      56.8       0.3%        0.1%
+summary fields swapped (entry total = value total)        1       2       0.2       0.0%        0.0%
+no rows parsed                                           26       0       0.0       0.0%        0.0%
+
+20 largest non-pass filings by normalized value:
+           accession                   manager_name parse_method  n_rows  entry_total           value_sum     value_total             weight_src                 checksum_cause
+0001007280-12-000008 PUBLIC EMPLOYEES RETIREMENT...         text    1409       1412.0 127,687,742,897,548      17,916,120 rows, scale-normalized entry count off by >2, unex...
+0001145443-12-000977 MANUFACTURERES LIFE INSURAN...         text    1370        801.0     440,195,387,256                 rows, scale-normalized entry total counts distinct...
+0001419186-12-000008 Cambridge Investment Resear...         text     764        764.0       1,215,896,291       1,274,999 rows, scale-normalized value scale x1000 (dollars ...
+0000813917-12-000069          HARRIS ASSOCIATES L P         text     489        489.0       4,424,459,284      62,006,892 rows, scale-normalized     value off >1%, unexplained
+0001208646-12-000196             Alliance Trust PLC         text      37         37.0         859,829,067         859,829 rows, scale-normalized value scale x1000 (dollars ...
+0001208646-12-000189             Alliance Trust PLC         text      37         37.0         859,829,067         859,829 rows, scale-normalized value scale x1000 (dollars ...
+0001193125-12-354266              STATE STREET CORP         text    3658       3658.0         614,702,125     621,848,371 rows, scale-normalized     value off >1%, unexplained
+0000315066-12-003887                        FMR LLC         text    7068       7066.0         517,813,069     517,812,279 rows, scale-normalized         entry count off by <=2
+0000315066-12-003876                        FMR LLC         text    7068       7066.0         517,796,472     517,796,258 rows, scale-normalized         entry count off by <=2
+0001475150-12-000004                Randolph Co Inc         text      39         39.0         433,935,891         433,805 rows, scale-normalized value scale x1000 (dollars ...
+0000891092-12-004693    STRATEGY ASSET MANAGERS LLC         text     119        119.0         375,602,028         375,602 rows, scale-normalized value scale x1000 (dollars ...
+0001003279-12-000005 FORTALEZA ASSET MANAGEMENT ...         text     193        193.0         363,660,449         148,195 rows, scale-normalized     value off >1%, unexplained
+0000902219-12-000573   WELLINGTON MANAGEMENT CO LLP         text    4450       4450.0         269,228,476     267,900,982 rows, scale-normalized     value within 1% (rounding)
+0000019617-12-000292            JPMORGAN CHASE & CO         text   26981      26981.0         261,318,541 261,318,476,909 rows, scale-normalized value scale x1000 (dollars ...
+0000729056-12-000005 STATE FARM MUTUAL AUTOMOBIL...         text     865        173.0         241,575,145      48,315,029 rows, scale-normalized entry count off by >2, unex...
+0001475150-12-000003                Randolph Co Inc         text      46         46.0         387,293,578         386,086 rows, scale-normalized value scale x1000 (dollars ...
+0000070858-12-000313      BANK OF AMERICA CORP /DE/         text   17125      17125.0         176,765,163 177,994,315,000 rows, scale-normalized value scale x1000 (dollars ...
+0000038777-12-000201         FRANKLIN RESOURCES INC         text    3373       3373.0         145,641,675     146,032,727 rows, scale-normalized     value within 1% (rounding)
+0000933429-12-000006                UMB BANK N A/MO         text     504          NaN         140,400,278                 rows, scale-normalized           summary page missing
+0000930413-12-004488 TIAA CREF INVESTMENT MANAGE...         text    3029       3073.0         108,248,053     109,679,464 rows, scale-normalized entry count off by >2, unex...

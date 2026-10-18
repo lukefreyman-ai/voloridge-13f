@@ -1,0 +1,44 @@
+2013Q3: checksum pass rate weighted three ways (holdings-bearing filings = 3679)
+value weight = filing's row values after shares-check scale normalization ($000), rows > $200bn excluded
+rows excluded from weights as glued digit runs (> $200bn): 1
+
+all holdings-bearing: filings 3291/3679 = 89.5% | rows 1,241,159/1,519,004 = 81.7% | value $19,784bn/$22,347bn = 88.5%
+usable summary page  : filings 3286/3607 = 91.1% | rows 1,241,154/1,516,039 = 81.9% | value $19,784bn/$22,342bn = 88.6%
+
+non-pass buckets weighted:
+                                                                 filings    rows value_bn rows_share value_share
+checksum_cause                                                                                                  
+entry count off by >2, unexplained                                    75  106695    974.9       7.0%        4.4%
+value scale x1000 (dollars vs thousands)                              82   68880    806.3       4.5%        3.6%
+value off >1%, unexplained                                            39   20903    265.8       1.4%        1.2%
+entry count off by <=2                                                26   29830    260.7       2.0%        1.2%
+entry total counts distinct CUSIPs not rows                           71   33615    133.6       2.2%        0.6%
+value within 1% (rounding)                                            25   14332    116.5       0.9%        0.5%
+summary totals zero but holdings present (filer omitted totals)        5    2709      5.0       0.2%        0.0%
+entry off by <=2 and value within 1%                                   4     702      0.7       0.0%        0.0%
+summary fields swapped (entry total = value total)                     1      72      0.2       0.0%        0.0%
+entry off by <=2 and value off >1%                                     1      48      0.2       0.0%        0.0%
+empty filing (single placeholder row, totals zero)                    59      59      0.0       0.0%        0.0%
+
+20 largest non-pass filings by normalized value:
+           accession                   manager_name parse_method  n_rows  entry_total       value_sum     value_total             weight_src                 checksum_cause
+0001390777-13-000092   Bank of New York Mellon Corp          xml   22162        22775     329,910,413     335,139,297 rows, scale-normalized entry count off by >2, unex...
+0000019617-13-000398            JPMORGAN CHASE & CO          xml   26127        26127     337,448,794 337,448,845,555 rows, scale-normalized value scale x1000 (dollars ...
+0001256484-13-000010            NORTHERN TRUST CORP          xml   12724        12274     283,935,159     283,935,159 rows, scale-normalized entry count off by >2, unex...
+0000950123-13-008712 MASSACHUSETTS FINANCIAL SER...          xml    2310         2310 161,462,329,065     161,462,329 rows, scale-normalized value scale x1000 (dollars ...
+0001166588-13-000010      BNP PARIBAS ARBITRAGE, SA          xml    2620         2620 137,492,938,605     137,492,939 rows, scale-normalized value scale x1000 (dollars ...
+0001532155-13-000125         ALLIANCEBERNSTEIN L.P.          xml    3488         3490     101,233,093     101,233,093 rows, scale-normalized         entry count off by <=2
+0001086364-13-004302         BLACKROCK ADVISORS LLC          xml    4030         4030      99,413,497     101,166,417 rows, scale-normalized     value off >1%, unexplained
+0000861177-13-000019 UBS GLOBAL ASSET MANAGEMENT...          xml    6934         6439      80,931,397      80,931,397 rows, scale-normalized entry count off by >2, unex...
+0000950123-13-009621    Allianz Asset Management AG          xml    3888         2915      75,588,645      75,588,645 rows, scale-normalized entry count off by >2, unex...
+0000950123-13-008340 PNC FINANCIAL SERVICES GROU...          xml   13463         3624      68,628,622      51,596,785 rows, scale-normalized entry total counts distinct...
+0000891092-13-008463 Mondrian Investment Partner...          xml      88           88      67,835,037       6,783,503 rows, scale-normalized     value off >1%, unexplained
+0001086364-13-004304                 BlackRock Inc.          xml    7212         7212      53,058,941      53,277,303 rows, scale-normalized     value within 1% (rounding)
+0000312069-13-000470                   BARCLAYS PLC          xml   13329        17636      83,773,300      83,773,300 rows, scale-normalized entry count off by >2, unex...
+0001062993-13-005704         PUTNAM INVESTMENTS LLC          xml    2893         2911      37,420,798      37,420,800 rows, scale-normalized entry count off by >2, unex...
+0000314969-13-000014 NEW YORK STATE TEACHERS RET...          xml    1498         1498      36,364,860  36,364,836,000 rows, scale-normalized value scale x1000 (dollars ...
+0000092230-13-000075           BB&T SECURITIES, LLC          xml     813          813      32,281,453   3,228,145,300 rows, scale-normalized     value off >1%, unexplained
+0001089877-13-000026 KEYBANK NATIONAL ASSOCIATIO...          xml    2320         2321      27,094,134      27,098,024 rows, scale-normalized         entry count off by <=2
+0001089877-13-000025 KEYBANK NATIONAL ASSOCIATIO...          xml    2231         2233      27,032,573      27,037,119 rows, scale-normalized         entry count off by <=2
+0001089877-13-000024 KEYBANK NATIONAL ASSOCIATIO...          xml    2151         2153      25,106,070      25,110,847 rows, scale-normalized         entry count off by <=2
+0001512575-13-000005 Mizuho Trust & Banking Co.,...          xml     772          772      23,912,977      23,885,183 rows, scale-normalized     value within 1% (rounding)

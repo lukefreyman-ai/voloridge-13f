@@ -1,0 +1,23 @@
+2012Q2: wrong-CUSIP-token rows (status invalid_9/ambiguous/unconfirmed_short but a valid 13(f)-list CUSIP sits in the text): 2,987 rows in 144 filings (0.201% of 1,487,562 rows); shares>0 on 1,644 of them; by parse method {'text': 2987}
+candidate rows checked 10,393 by status {'invalid_9': 5574, 'unconfirmed_short': 4058, 'ambiguous': 761}
+filings with most such rows:
+                      rows        value                            manager method    checksum  n_rows
+accession                                                                                            
+0001193125-12-331247   350        350.0        PICTET ASSET MANAGEMENT LTD   text   fail_both    1688
+0001007280-12-000008   295   18190621.0  PUBLIC EMPLOYEES RETIREMENT SY...   text   fail_both    1409
+0000947871-12-000575   173        173.0     DekaBank Deutsche Girozentrale   text  fail_value    1919
+0001081019-12-000014   110          0.0  CALIFORNIA STATE TEACHERS RETI...   text  fail_value    2989
+0000898417-12-000055   105        160.0                     PRUDENTIAL PLC   text  fail_value     629
+0001085146-12-001118   102    2042993.0                           GLG INC.   text  fail_value     583
+0000932471-12-005055    92        104.0                 VANGUARD GROUP INC   text  fail_value   10172
+0000019617-12-000292    91        564.0                JPMORGAN CHASE & CO   text  fail_value   26981
+0000902219-12-000573    81  452228364.0       WELLINGTON MANAGEMENT CO LLP   text  fail_value    4450
+0001140361-12-036226    65    4783109.0                  CREDIT SUISSE AG/   text  fail_value   16062
+sample rows:
+           accession         name_of_issuer        title_of_class cusip_raw cusip_in_text  value  shares
+0001140361-12-037471        AMERICAN EQUITY    CONV 025676AE7 431 434000PRN     025676AE7    0.0       0
+0001140361-12-037471          AMGEN INC B's CONV 031162AQ3 115808 104562000     031162AQ3    0.0       0
+0001140361-12-037471      BOSTON PROPERTIES    CONV 10112RAG9 803 690000PRN     10112RAG9    0.0       0
+0001140361-12-037471       DFC GLOBAL GROUP    CONV 256664AC7 521 442000PRN     256664AC7    0.0       0
+0001140361-12-037471 HELIX ENERGY SOLUTIONS    CONV 42330PAG2 596 554000PRN     42330PAG2    0.0       0
+0001140361-12-037471 LEUCADIA NATIONAL CORP    CONV 527288AX2 699 638000PRN     527288AX2    0.0       0

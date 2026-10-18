@@ -1,0 +1,315 @@
+"""Stage 4: institutional ownership per company-quarter for one pilot.
+  python3 -m pipeline.ownership <label> <quarter_end YYYY-MM-DD> <period_of_report YYYYMMDD>
+Inputs: <label>_holdings/_filings parquets, data/<label>_cusip_cik_map.csv (v2: 13G/13D + exact-name rows),
+<label>_shares_out.parquet (XBRL), optional <label>_shares_out_regex.parquet (only exists if the regex fallback was
+approved and deployed), cache/parsed/fund_ciks.parquet, cache/parsed/seclist_<y>q<q>.parquet.
+Rules: SH rows only, no put/call, resolved CUSIPs only;
+period_of_report == the pilot period; 13F-HR/A RESTATEMENT replaces the manager's original for the
+period, NEW HOLDINGS appends, unknown amendment type -> treated as RESTATEMENT when an original exists
+(logged); duplicate filings by the same manager for the same period: latest filed wins; duplicate CUSIP
+rows within a filing are summed. Company pct = sum of shares across the issuer's CUSIPs / sum of the
+company's class share counts (undimensioned fact when present, else the sum of class facts); null +
+multi_class_flag when the XBRL facts are class-dimensioned and more than one class is held.
+Decision 2 (2026-10-11): ETFs, closed-end funds and unit trusts are EXCLUDED from the ownership output
+(pipeline/funds.py: F1 1940-Act/UIT forms, F2 SIC 6221 commodity trusts, F3 13(f) list ETF/ETN rows); the removed
+CUSIPs and value are reported, and issuer coverage is reported among operating companies only.
+Luke 2026-10-12 (after the over-100% stop): (i) debt-pattern CUSIPs (letter in CUSIP position 7) filed as SH are
+flagged and EXCLUDED from the ownership figure, rows kept (excluded_from_ownership='debt_cusip'); (ii) a 13F-HR/A
+"NEW HOLDINGS" amendment that repeats >= 90% of the original's rows with identical shares is treated as a RESTATEMENT
+(the original's rows are dropped, count reported); (iii) ADR/ADS securities (13(f) list description) are flagged and
+excluded from the main figure (excluded_from_ownership='adr'), count and value reported. Remaining over-100% companies
+are reported with causes and flagged in the output (over_100_flag, over_100_cause; 'no identified data cause' when none
+applies, with securities lending named in the write-up only); no further tuning toward 5%.
+Share classes (Luke 2026-10-12, decision 3): NEVER summed. institutional_ownership_pct (company level) only where the
+company reports an undimensioned share count; companies with class-dimensioned facts only get null + multi_class_flag,
+and each CUSIP gets class_ownership_pct against its own class's share count when the 13(f) list class (CL A/B/C) matches
+an XBRL class member (class_match='matched'); 'unmatched' otherwise. Single-class companies get class_ownership_pct per
+CUSIP against the company count (class_match='single-class').
+Value is never used for the metric; value_scale_flag is carried as information only."""
+from __future__ import annotations
+
+import sys
+from pathlib import Path
+
+import numpy as np
+import pandas as pd
+
+from . import funds as fundsmod
+
+REQUIRED = ["quarter_end", "company_name", "company_cik", "cusip", "manager_cik", "manager_name", "shares_held",
+            "shares_outstanding", "institutional_ownership_pct", "form_13f_accession_number",
+            "shares_outstanding_source", "shares_outstanding_date"]
+TRACEABILITY = ["shares_outstanding_evidence", "cusip_issuer", "map_source", "list_desc", "excluded_from_ownership",
+                "class_shares_outstanding", "class_ownership_pct", "class_match", "multi_class_flag", "map_conflict",
+                "map_conflict_two_sided", "multi_filing_flag", "dup_amendment_flag", "debt_cusip_flag", "adr_flag",
+                "over_100_flag", "over_100_cause", "n_rows"]
+OUTPUT_COLUMNS = REQUIRED + TRACEABILITY
+
+
+def output_path(label: str) -> Path:
+    return Path("output") / f"{label}_institutional_ownership.csv"
+
+
+def write_output(mc: pd.DataFrame, label: str) -> Path:
+    """Write the per-quarter deliverable: the 12 spec columns first, then the traceability columns."""
+    Path("output").mkdir(exist_ok=True)
+    p = output_path(label)
+    mc[OUTPUT_COLUMNS].to_csv(p, index=False)
+    return p
+
+
+def select_filings(f: pd.DataFrame, period: str) -> tuple[pd.DataFrame, list[str]]:
+    notes = []
+    f = f[(f["period_of_report"] == period) & (f["report_type"].str.upper() != "13F NOTICE")].copy()
+    f["is_amend"] = f["form_type"].str.endswith("/A")
+    f["atype"] = f["amendment_type"].fillna("").str.upper()
+    f = f.sort_values(["manager_cik", "filed_date", "accession"])
+    keep = []
+    for cik, g in f.groupby("manager_cik"):
+        orig = g[~g["is_amend"]]
+        amends = g[g["is_amend"]]
+        base = orig.tail(1)                      # latest original for the period
+        if len(orig) > 1:
+            notes.append(f"manager {cik}: {len(orig)} originals for the period, kept latest {base['accession'].iloc[0]}")
+        chosen = [base] if len(base) else []
+        for _, a in amends.iterrows():
+            if a["atype"].startswith("RESTATEMENT") or (a["atype"] == "" and len(base)):
+                chosen = [pd.DataFrame([a])]     # replaces everything before it
+                if a["atype"] == "":
+                    notes.append(f"manager {cik}: amendment {a['accession']} has no amendment type; treated as RESTATEMENT")
+            else:                                # NEW HOLDINGS (or an amendment with no original): append
+                chosen.append(pd.DataFrame([a]))
+        keep.extend(chosen)
+    sel = pd.concat(keep, ignore_index=True) if keep else f.iloc[0:0]
+    return sel, notes
+
+
+def shares_outstanding_table(label: str) -> tuple[pd.DataFrame, str]:
+    so = pd.read_parquet(f"cache/parsed/{label}_shares_out.parquet")
+    so["evidence"] = ""
+    note = "XBRL only"
+    rx = Path(f"cache/parsed/{label}_shares_out_regex.parquet")
+    if rx.exists():
+        r = pd.read_parquet(rx)
+        r = r[~r["cik"].isin(so["cik"])]
+        so = pd.concat([so, r[so.columns.intersection(r.columns)]], ignore_index=True)
+        note = f"XBRL + regex fallback ({len(r):,} companies)"
+    return so, note
+
+
+def run(label: str, qend: str, period: str):
+    h = pd.read_parquet(f"cache/parsed/{label}_holdings.parquet")
+    f = pd.read_parquet(f"cache/parsed/{label}_filings.parquet")
+    m = pd.read_csv(f"data/{label}_cusip_cik_map.csv", dtype={"cusip6": str, "cusip9": str})
+    so, so_note = shares_outstanding_table(label)
+    qe = pd.Timestamp(qend); ly, lq = qe.year, (qe.month - 1) // 3 + 1
+    seclist = pd.read_parquet(f"cache/parsed/seclist_{ly}q{lq}.parquet")
+    fund = fundsmod.load().set_index("cik")["reason"]
+    f3 = fundsmod.f3_cusips(seclist)
+    ntok = fundsmod.name_token_cusip6(seclist)
+    out = [f"{label} ownership, quarter end {qend}, period_of_report {period}; shares outstanding: {so_note}"]
+    sel, notes = select_filings(f, period)
+    out.append(f"filings for the period: {len(f[f['period_of_report'] == period]):,}; after amendment/duplicate resolution: {len(sel):,} "
+               f"({sel['form_type'].value_counts().to_dict()}); notes: {len(notes)} (first 5 below)")
+    out.extend("  " + n for n in notes[:5])
+    rows = h[h["accession"].isin(sel["accession"])]
+    rows = rows[(rows["sh_prn"] != "PRN") & (rows["put_call"] == "") & rows["cusip_status"].isin(["ok", "repaired_check_digit", "repaired_pad_zeros"])]
+    rows = rows[rows["shares"].fillna(0) > 0]
+    out.append(f"holdings rows used: {len(rows):,} (SH, no put/call, resolved CUSIP, shares > 0)")
+    # value per CUSIP (scale-normalized, for reporting only)
+    sc = pd.read_parquet(f"cache/parsed/{label}_shares_check.parquet", columns=["accession", "cusip", "value_norm"])
+    sc = sc[sc["accession"].isin(sel["accession"]) & (sc["value_norm"] <= 2e8)]
+    v9 = sc.groupby("cusip")["value_norm"].sum(); v6 = sc.groupby(sc["cusip"].str[:6])["value_norm"].sum()
+    # per manager x CUSIP
+    mc = rows.groupby(["accession", "cusip"], as_index=False).agg(shares_held=("shares", "sum"), n_rows=("shares", "size"))
+    mc = mc.merge(sel[["accession", "manager_cik", "manager_name", "value_scale_flag"]] if "value_scale_flag" in sel else sel[["accession", "manager_cik", "manager_name"]], on="accession")
+    mc["cusip6"] = mc["cusip"].str[:6]
+    m6 = m.drop_duplicates("cusip6").set_index("cusip6")      # map is sorted: most 13G/13D links first within an issuer
+    mc["company_cik"] = mc["cusip6"].map(m6["company_cik"]); mc["company_name"] = mc["cusip6"].map(m6["company_name"])
+    mc["map_conflict"] = mc["cusip6"].map(m6["conflict_flag"]); mc["map_conflict_two_sided"] = mc["cusip6"].map(m6["conflict_two_sided"])
+    mc["map_source"] = mc["cusip6"].map(m6["map_source"])
+    # ---- decision 2: fund exclusion
+    reason = mc["company_cik"].map(fund)
+    reason = reason.where(reason.notna(), mc["cusip"].map(f3))
+    excl = mc[reason.notna()].assign(reason=reason[reason.notna()])
+    mc = mc[reason.isna()].copy()
+    excl_c9 = excl.drop_duplicates("cusip")
+    excl_val = v9.reindex(excl_c9["cusip"]).fillna(0)
+    excl_tab = excl_c9.assign(value=excl_val.values).groupby(excl_c9["reason"].str.slice(0, 2))["value"].agg(cusips="size", value_bn=lambda s: s.sum() / 1e6)
+    out.append(f"\nFUNDS EXCLUDED (decision 2): {excl_c9['cusip'].nunique():,} CUSIPs on {excl_c9['company_cik'].nunique():,} CIKs, {len(excl):,} manager-CUSIP rows, "
+               f"${excl_val.sum() / 1e6:,.1f}bn of 13F value = {excl_val.sum() / v9.sum():.1%} of the selected filings' value\n" + excl_tab.round(1).to_string())
+    excl_c9.assign(value_k=excl_val.values).sort_values("value_k", ascending=False)[["cusip", "company_cik", "company_name", "reason", "value_k"]].to_csv(f"output/{label}_excluded_funds.csv", index=False)
+    out.append("largest excluded:\n" + excl_c9.assign(value_bn=(excl_val.values / 1e6).round(1)).sort_values("value_bn", ascending=False).head(12)[["cusip", "company_cik", "company_name", "reason", "value_bn"]].to_string(index=False, max_colwidth=40))
+    # double-count control: same manager cik + cusip in more than one selected filing (NEW HOLDINGS appends are legit; others flagged)
+    dup = mc.groupby(["manager_cik", "cusip"])["accession"].nunique()
+    mc["multi_filing_flag"] = mc.set_index(["manager_cik", "cusip"]).index.map(dup).values > 1
+    # FLAGS ONLY (2026-10-11 stop-condition analysis; see ownership_whatif.txt): nothing is excluded by these.
+    mc["debt_cusip_flag"] = mc["cusip"].str[6].str.isalpha()           # CUSIP issue number starting with a letter = fixed income
+    sl9 = seclist.drop_duplicates("cusip").set_index("cusip")["issuer_desc"]
+    mc["list_desc"] = mc["cusip"].map(sl9).fillna("")
+    mc["adr_flag"] = mc["list_desc"].str.contains(r"\bADR|\bADS|SPON ADR|SP ADR", regex=True)
+    dup_amend = set()
+    selx = sel.set_index("accession")
+    multi_mgr = mc.groupby("manager_cik")["accession"].nunique()
+    for mcik, g in mc[mc["manager_cik"].isin(multi_mgr[multi_mgr > 1].index)].groupby("manager_cik"):
+        accs = g["accession"].unique()
+        if len(accs) < 2:
+            continue
+        orig = g[~selx.loc[g["accession"], "form_type"].str.endswith("/A").values]
+        if not len(orig):
+            continue
+        o = orig.groupby("cusip")["shares_held"].sum()
+        for acc in accs:
+            if acc in orig["accession"].values:
+                continue
+            a = g[g["accession"] == acc].groupby("cusip")["shares_held"].sum()
+            if (a.reindex(o.index) == o).sum() >= 0.9 * len(o):
+                dup_amend.add(acc)
+    mc["dup_amendment_flag"] = mc["accession"].isin(dup_amend)
+    # (ii) duplicate NEW HOLDINGS amendments act as RESTATEMENTS: drop the manager's original rows
+    dup_mgrs = set(mc.loc[mc["dup_amendment_flag"], "manager_cik"])
+    orig_acc = set(selx.index[~selx["form_type"].str.endswith("/A")])
+    drop_orig = mc["manager_cik"].isin(dup_mgrs) & mc["accession"].isin(orig_acc)
+    n_orig_filings = mc.loc[drop_orig, "accession"].nunique(); n_orig_rows = int(drop_orig.sum())
+    mc = mc[~drop_orig].copy()
+    dup = mc.groupby(["manager_cik", "cusip"])["accession"].nunique()
+    mc["multi_filing_flag"] = mc.set_index(["manager_cik", "cusip"]).index.map(dup).values > 1
+    # (i) + (iii) exclusions from the ownership figure; rows are kept in the output
+    mc["excluded_from_ownership"] = np.where(mc["debt_cusip_flag"], "debt_cusip", np.where(mc["adr_flag"], "adr", ""))
+    own = mc[mc["excluded_from_ownership"] == ""]
+    dv = v9.reindex(mc.loc[mc["debt_cusip_flag"]].drop_duplicates("cusip")["cusip"]).fillna(0).sum()
+    av = v9.reindex(mc.loc[mc["adr_flag"]].drop_duplicates("cusip")["cusip"]).fillna(0).sum()
+    out.append(f"\nFIXES (Luke 2026-10-12): debt-pattern CUSIPs excluded from ownership (rows kept): {int(mc['debt_cusip_flag'].sum()):,} rows / "
+               f"{mc.loc[mc['debt_cusip_flag'], 'cusip'].nunique():,} CUSIPs / ${dv / 1e6:,.1f}bn; "
+               f"ADR/ADS excluded from the main figure: {int(mc['adr_flag'].sum()):,} rows / {mc.loc[mc['adr_flag'], 'cusip'].nunique():,} CUSIPs on "
+               f"{mc.loc[mc['adr_flag'], 'company_cik'].nunique():,} companies / ${av / 1e6:,.1f}bn; "
+               f"NEW HOLDINGS amendments duplicating >= 90% of the original treated as restatements: {len(dup_amend):,} amendments, "
+               f"{n_orig_filings:,} original filings / {n_orig_rows:,} rows dropped")
+    # shares outstanding per company: undimensioned fact only (classes are never summed)
+    und = so[so["class_axis"] == ""].drop_duplicates("cik").set_index("cik")
+    cls = so[so["class_axis"] != ""].copy()
+    cls["letter"] = cls["class_axis"].str.extract(r"Class\s*([A-C])\b|Class([A-C])Member|([A-C])Member", expand=True).bfill(axis=1).iloc[:, 0]
+    cls_n = cls.groupby("cik")["class_axis"].nunique()
+    cls1 = cls[cls["letter"].notna()].drop_duplicates(["cik", "letter"]).set_index(["cik", "letter"])
+    so_shares = und["shares"]
+    so_src = und["shares_outstanding_source"]; so_date = und["shares_outstanding_date"]; so_gap = und["gap_flag"]; so_ev = und["evidence"]
+    # company level
+    comp = own.groupby("company_cik", dropna=False).agg(shares_held_total=("shares_held", "sum"), n_managers=("manager_cik", "nunique"), n_cusips=("cusip", "nunique"), company_name=("company_name", "first")).reset_index()
+    comp["shares_outstanding"] = comp["company_cik"].map(so_shares)
+    comp["multi_class_flag"] = comp["shares_outstanding"].isna() & comp["company_cik"].isin(cls_n.index)
+    comp["institutional_ownership_pct"] = np.where(comp["multi_class_flag"], np.nan, comp["shares_held_total"] / comp["shares_outstanding"] * 100)
+    comp["so_gap_flag"] = comp["company_cik"].map(so_gap)
+    # per-class figure per CUSIP
+    mc["class_letter"] = mc["list_desc"].str.upper().str.extract(r"\bCL(?:ASS)?\s*([A-C])\b", expand=False)
+    mc.loc[mc["list_desc"].str.upper().str.contains(r"\bSPL\b|SPECIAL|\bSER\b|SERIES", regex=True), "class_letter"] = np.nan   # special / series classes never match a plain class member
+    cu_held = own.groupby("cusip")["shares_held"].sum()
+    mc["cusip_shares_held"] = mc["cusip"].map(cu_held)
+    is_multi = mc["company_cik"].isin(comp.loc[comp["multi_class_flag"], "company_cik"])
+    key = pd.MultiIndex.from_arrays([mc["company_cik"], mc["class_letter"]])
+    cls_sh = pd.Series(key.map(cls1["shares"]), index=mc.index)
+    cls_src = pd.Series(key.map(cls1["shares_outstanding_source"]), index=mc.index); cls_dt = pd.Series(key.map(cls1["shares_outstanding_date"]), index=mc.index)
+    mc["class_shares_outstanding"] = np.where(is_multi, cls_sh, mc["company_cik"].map(so_shares))
+    mc["class_match"] = np.where(~is_multi & mc["company_cik"].map(so_shares).notna(), "single-class", np.where(is_multi & cls_sh.notna(), "matched", np.where(is_multi, "unmatched", "")))
+    mc["class_ownership_pct"] = mc["cusip_shares_held"] / mc["class_shares_outstanding"] * 100
+    mc.loc[mc["excluded_from_ownership"] != "", ["class_ownership_pct"]] = np.nan
+    nm = comp["multi_class_flag"].sum(); mrows = mc[is_multi & (mc["excluded_from_ownership"] == "")]
+    out.append(f"\nSHARE CLASSES (never summed): multi-class companies (class-dimensioned facts only) {nm:,}; their CUSIPs: matched to a class {mrows.loc[mrows['class_match'] == 'matched', 'cusip'].nunique():,} "
+               f"(${v9.reindex(mrows.loc[mrows['class_match'] == 'matched', 'cusip'].unique()).fillna(0).sum() / 1e6:,.1f}bn), unmatched {mrows.loc[mrows['class_match'] == 'unmatched', 'cusip'].nunique():,} "
+               f"(${v9.reindex(mrows.loc[mrows['class_match'] == 'unmatched', 'cusip'].unique()).fillna(0).sum() / 1e6:,.1f}bn); company-level pct is null for all {nm:,}")
+    ex = mrows[mrows["class_match"] == "matched"].drop_duplicates("cusip").assign(value_bn=lambda d: v9.reindex(d["cusip"]).fillna(0).values / 1e6).sort_values("value_bn", ascending=False).head(8)
+    out.append("largest per-class figures:\n" + ex[["company_name", "cusip", "list_desc", "cusip_shares_held", "class_shares_outstanding", "class_ownership_pct", "value_bn"]].round(1).to_string(index=False, max_colwidth=28))
+    # row-level output
+    mc["quarter_end"] = qend
+    mc["shares_outstanding"] = mc["company_cik"].map(so_shares)
+    mc["shares_outstanding_source"] = mc["company_cik"].map(so_src).where(~is_multi, cls_src); mc["shares_outstanding_date"] = mc["company_cik"].map(so_date).where(~is_multi, cls_dt)
+    mc["shares_outstanding_evidence"] = mc["company_cik"].map(so_ev)
+    mc["shares_outstanding"] = mc["shares_outstanding"].where(~is_multi, mc["class_shares_outstanding"])
+    mc["institutional_ownership_pct"] = mc["company_cik"].map(comp.set_index("company_cik")["institutional_ownership_pct"])
+    mc.loc[mc["excluded_from_ownership"] != "", "institutional_ownership_pct"] = np.nan
+    mc["multi_class_flag"] = mc["company_cik"].map(comp.set_index("company_cik")["multi_class_flag"]).fillna(False)
+    mc = mc.rename(columns={"accession": "form_13f_accession_number"})
+    mc["cusip_issuer"] = mc["cusip6"]
+    mc["over_100_flag"] = False; mc["over_100_cause"] = ""
+    comp.to_parquet(f"cache/parsed/{label}_ownership_company.parquet", index=False)
+    # ---- report: coverage among operating companies
+    all6 = pd.Index(v6.index)
+    fund6 = set(excl["cusip6"]) | set(all6[all6.isin(ntok.index) & ~all6.isin(m6.index)])
+    op6 = all6[~all6.isin(fund6)]
+    mapped_op = op6[op6.isin(m6.index)]
+    out.append(f"\nCUSIP->CIK coverage among OPERATING companies (6-char issuers, funds removed: {len(fund6):,} incl. {int((all6.isin(ntok.index) & ~all6.isin(m6.index)).sum()):,} unmapped by name token only): "
+               f"{len(mapped_op):,} / {len(op6):,} = {len(mapped_op) / len(op6):.1%}; by value {v6[mapped_op].sum() / v6[op6].sum():.1%}; "
+               f"by map source: {m6.loc[mapped_op, 'map_source'].value_counts().to_dict()}")
+    c = comp[comp["company_cik"].notna()]
+    has = c["shares_outstanding"].notna()
+    vcik = v6.groupby(m6["company_cik"].reindex(v6.index)).sum()
+    out.append(f"shares outstanding ({so_note}): companies with a figure {has.sum():,} / {len(c):,} = {has.mean():.1%}; by 13F value {vcik.reindex(c.loc[has, 'company_cik']).fillna(0).sum() / vcik.reindex(c['company_cik']).fillna(0).sum():.1%}; "
+               f"gap > 100 days flagged: {c['so_gap_flag'].fillna(False).sum():,}; multi-class null: {c['multi_class_flag'].sum():,}")
+    p = c["institutional_ownership_pct"].dropna()
+    out.append(f"\nownership pct distribution (n={len(p):,}): " + p.describe(percentiles=[.05, .25, .5, .75, .95]).round(1).to_dict().__str__())
+    bins = pd.cut(p, [-1, 0, 5, 25, 50, 75, 90, 100, 150, 1e9], labels=["0", "0-5", "5-25", "25-50", "50-75", "75-90", "90-100", "100-150", ">150"])
+    out.append("histogram: " + bins.value_counts().sort_index().to_dict().__str__())
+    over = c[c["institutional_ownership_pct"] > 100]
+    out.append(f"companies over 100%: {len(over):,} / {len(p):,} = {len(over) / max(len(p), 1):.1%}")
+    big = c[c["company_cik"].isin(vcik.sort_values(ascending=False).head(500).index)]
+    bigp = big["institutional_ownership_pct"].dropna()
+    out.append(f"large companies (top 500 by 13F value) with a pct: {len(bigp):,}; over 100%: {(bigp > 100).sum():,} = {(bigp > 100).mean():.1%}  [stop condition at 5%]")
+    own = mc[mc["excluded_from_ownership"] == ""]       # re-derived: row-level columns were added above
+    oc = []
+    for _, r in over.iterrows():
+        x = own[own["company_cik"] == r["company_cik"]]
+        cause = []
+        if r["institutional_ownership_pct"] > 500: cause.append("shares outstanding implausible (XBRL fact scale/units)")
+        if x["multi_filing_flag"].any(): cause.append("manager-CUSIP in >1 filing")
+        if r["so_gap_flag"]: cause.append("shares outstanding gap >100d")
+        if (x["shares_held"] > 0.5 * r["shares_outstanding"]).any(): cause.append("single holding > 50% of shares out")
+        if x["map_conflict"].fillna(0).max() == 1: cause.append("CUSIP->CIK conflict")
+        if r["n_cusips"] > 1: cause.append("multiple CUSIPs summed (classes/units)")
+        if not cause: cause.append("no identified data cause")
+        sod = pd.to_datetime(x["shares_outstanding_date"].iloc[0], errors="coerce") if len(x) else pd.NaT
+        if pd.notna(sod) and sod > qe: cause.append(f"[as-of {int((sod - qe).days)}d after quarter end: buybacks lower the denominator]")
+        oc.append("; ".join(cause))
+    over = over.assign(over_100_cause=oc)
+    out.append("Note: companies with 'no identified data cause' can still exceed 100% through securities lending (the lender and the\n"
+               "borrower's buyer both report the same shares on 13F); that is a possible explanation, not a measured cause.")
+    out.append("over-100% causes (combinations; [..] = annotation):\n" + (pd.Series([c.split(" [")[0].rstrip("; ") for c in oc]).value_counts().head(14).to_string() if oc else "none") + f"\n  with the as-of date after quarter end: {sum('[as-of' in c for c in oc):,} of {len(oc):,}")
+    ov = over.assign(value_bn=(vcik.reindex(over["company_cik"]).fillna(0).values / 1e6).round(2)).sort_values("value_bn", ascending=False)
+    out.append("largest over-100% companies:\n" + ov.head(20)[["company_cik", "company_name", "n_managers", "shares_held_total", "shares_outstanding", "institutional_ownership_pct", "value_bn", "over_100_cause"]].round(1).to_string(index=False, max_colwidth=60))
+    over.to_csv(f"output/problems/{label}/over_100_companies.csv", index=False)
+    mc["over_100_flag"] = mc["company_cik"].isin(over["company_cik"])
+    mc["over_100_cause"] = mc["company_cik"].map(over.set_index("company_cik")["over_100_cause"]).fillna("")
+    write_output(mc, label)
+    # missing shares outstanding, with causes from the EDGAR full index
+    nso = c[~has].copy()
+    idx = pd.read_parquet("cache/parsed/edgar_full_index_2010Q1_2015Q1.parquet")
+    idx["date_filed"] = pd.to_datetime(idx["date_filed"])
+    near = idx[(idx["date_filed"] >= qe - pd.Timedelta(days=200)) & (idx["date_filed"] <= qe + pd.Timedelta(days=200))]
+    k10 = set(near.loc[near["form_type"].isin(["10-K", "10-Q", "10-KT", "10-QT", "10-K/A", "10-Q/A"]), "cik"])
+    frn = set(near.loc[near["form_type"].isin(["20-F", "40-F", "20-F/A", "40-F/A", "6-K"]), "cik"])
+    anyf = set(near["cik"])
+    att = Path(f"cache/parsed/{label}_shares_out_regex_attempts.parquet")
+    rx_status = pd.read_parquet(att).set_index("cik")["status"] if att.exists() else pd.Series(dtype=str)
+    def cause_nso(cik):
+        if cik in cls_n.index:
+            return "class-dimensioned facts only: company pct null by rule, per-class pct given (class_ownership_pct)"
+        if cik in rx_status.index and rx_status[cik] != "ok":
+            return f"regex fallback tried: {rx_status[cik]}"
+        if cik in k10:
+            return "files 10-K/10-Q but no XBRL cover fact (XBRL phase-in / small filer)"
+        if cik in frn:
+            return "foreign private issuer (20-F/40-F/6-K): no dei cover fact"
+        if cik in anyf:
+            return "other EDGAR filings only near quarter end (no 10-K/10-Q/20-F/40-F)"
+        return "no EDGAR filing within 200 days of quarter end"
+    nso["cause"] = nso["company_cik"].map(cause_nso)
+    nso_val = vcik.reindex(nso["company_cik"]).fillna(0)
+    nso["value_bn"] = (nso_val.values / 1e6).round(2)
+    cz = nso.groupby("cause")["value_bn"].agg(companies="size", value_bn="sum").sort_values("value_bn", ascending=False)
+    out.append(f"\nNO COMPANY-LEVEL FIGURE: {len(nso):,} companies carrying ${nso_val.sum() / 1e6:,.1f}bn = {nso_val.sum() / vcik.reindex(c['company_cik']).fillna(0).sum():.1%} of mapped operating value; causes:\n" + cz.round(1).to_string())
+    out.append("largest without shares outstanding:\n" + nso.sort_values("value_bn", ascending=False).head(12)[["company_cik", "company_name", "n_managers", "value_bn", "cause"]].to_string(index=False, max_colwidth=40))
+    txt = "\n".join(out); Path(f"output/problems/{label}").mkdir(parents=True, exist_ok=True)
+    open(f"output/problems/{label}/ownership_report.txt", "w").write(txt); print(txt)
+    return comp, mc
+
+
+if __name__ == "__main__":
+    run(sys.argv[1], sys.argv[2], sys.argv[3])

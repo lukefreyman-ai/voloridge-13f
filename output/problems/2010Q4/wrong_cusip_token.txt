@@ -1,0 +1,23 @@
+2010Q4: wrong-CUSIP-token rows (status invalid_9/ambiguous/unconfirmed_short but a valid 13(f)-list CUSIP sits in the text): 4,029 rows in 169 filings (0.278% of 1,447,852 rows); shares>0 on 2,204 of them; by parse method {'text': 4029}
+candidate rows checked 9,393 by status {'invalid_9': 5775, 'unconfirmed_short': 2962, 'ambiguous': 656}
+filings with most such rows:
+                      rows       value                       manager method    checksum  n_rows
+accession                                                                                      
+0000070858-11-000041   587  10558252.0     MERRILL LYNCH GROUP, INC.   text   fail_both   18063
+0000070858-11-000042   587  10558252.0     BANK OF AMERICA CORP /DE/   text   fail_both   18063
+0000950123-11-008058   330       331.0   PICTET ASSET MANAGEMENT LTD   text   fail_both    1569
+0000070858-11-000043   202         0.0  MANAGED ACCOUNT ADVISORS LLC   text   fail_both    1968
+0000810972-11-000003   187       187.0  BAIRD ROBERT W & CO INC /WI/   text  fail_value    1434
+0000950123-11-012445   155  73361957.0          Calamos Advisors LLC   text  fail_value     523
+0000019617-11-000144   136       741.0         J P MORGAN CHASE & CO   text  fail_value   22584
+0001140022-11-000008   108       114.0                     AVIVA PLC   text  fail_value    1395
+0000072971-11-000418    92    401650.0           WELLS FARGO & CO/MN   text  fail_value   19106
+0001085146-11-000163    80         0.0   EULAV ASSET MANAGEMENT, LLC   text  fail_value     820
+sample rows:
+           accession        name_of_issuer             title_of_class cusip_raw cusip_in_text  value   shares
+0001085146-11-000083      LDK SOLAR CO LTD NOTE 4.750% 4/1 50183LA... 745000PRN     50183LAB3    0.0 745000.0
+0001140361-11-011610                 ALCOA        CONV 013817AT8 1605 602000PRN     013817AT8    0.0      0.0
+0001140361-11-011610 HEALTH CARE REIT INC.         CONV 42217KAR7 240 220000PRN     42217KAR7    0.0      0.0
+0001140361-11-011610        INGERSOLL-RAND        CONV 45687AAD4 2459 926000PRN     45687AAD4    0.0      0.0
+0001140361-11-011610              JNJ/ALZA         CONV 02261WAB5 706 824000PRN     02261WAB5    0.0      0.0
+0001140361-11-011610  ZIONS BANCORPORATION        CONV 989701107 2358 100000PRN     989701107    0.0      0.0

@@ -1,0 +1,122 @@
+2013Q1: 972 non-pass filings
+
+verdict
+info: summary page not found (no entry/value total text)                    220
+filer: declared entry total disagrees with the lines present                150
+value: value scale x1000 (dollars vs thousands)                             145
+value: value off >1%, unexplained                                           103
+parser/filer: more rows than declared (dup or non-holding line captured)    101
+parser: CUSIP lines unparsed (n_cusip_lines > n_rows)                        93
+filer: holding lines without a CUSIP (n_shaped > n_rows)                     92
+value: value within 1% (rounding)                                            34
+parser: CUSIP lines present, tails did not parse                             14
+info: summary page not found (words present, regex missed)                   10
+parser: layout unrecognized (no CUSIP lines, no holding-shaped lines)         6
+parser: holding-shaped lines but no CUSIP token found                         4
+
+
+--- filer: declared entry total disagrees with the lines present  (150)
+           accession                 manager_name parse_method  n_rows  n_cusip_lines  n_shaped  entry_total   value_sum  value_total               checksum_cause
+0001144204-13-029287 AFTON CAPITAL MANAGEMENT LLC         text      14             14        14         32.0    42330887     111733.0 entry count off by >2, un...
+0001047469-13-005965      ANALYTIC INVESTORS, LLC         text     676            656       656        677.0     4841881    4842881.0       entry count off by <=2
+0001573876-13-000002 Advisory Services Network...         text      75             75        75         77.0 13662503510     130944.0 entry total counts distin...
+0001308778-13-000002 America First Investment ...         text     166            161       162        167.0      196649     196735.0 entry total counts distin...
+0001348183-13-000002      AlphaMark Advisors, LLC         text     453            439         0        454.0      158754     158761.0       entry count off by <=2
+0000009015-13-000007 BABSON CAPITAL MANAGEMENT...         text     890            890       890        896.0     2143559    2143559.0 entry count off by >2, un...
+
+--- filer: holding lines without a CUSIP (n_shaped > n_rows)  (92)
+           accession                 manager_name parse_method  n_rows  n_cusip_lines  n_shaped  entry_total  value_sum  value_total               checksum_cause
+0001510940-13-000006     ACK Asset Management LLC         text      33             33        34         35.0     226904     230563.0 entry total counts distin...
+0001140361-13-016940 ADVENT CAPITAL MANAGEMENT...         text     533            532       535        536.0    9475746    6507715.0 entry count off by >2, un...
+0001519611-13-000003 ARGI Investment Services,...         text     127            127       128        128.0     462378     485822.0 entry off by <=2 and valu...
+0001056827-13-000002 ARMSTRONG HENRY H ASSOCIA...         text      37             37        38         38.0     347709          NaN entry total counts distin...
+0001080166-13-000002      AR ASSET MANAGEMENT INC         text     105            105       106        106.0     222836     223331.0 entry total counts distin...
+0001497637-13-000003     Accuvest Global Advisors         text      60             60        63         64.0     409452     440830.0 entry count off by >2, un...
+
+--- info: summary page not found (no entry/value total text)  (220)
+           accession                 manager_name parse_method  n_rows  n_cusip_lines  n_shaped  entry_total  value_sum  value_total       checksum_cause
+0000872078-13-000004              ACADIA TRUST NA         text     342            342       232          NaN  259384635          NaN summary page missing
+0001193125-13-154259       ACCOUNT MANAGEMENT LLC         text      36             36         0          NaN  112639594          NaN summary page missing
+0001054257-13-000002          ADIRONDACK TRUST CO         text     409            366       366          NaN     112880          NaN summary page missing
+0001053013-13-000004       AMARILLO NATIONAL BANK         text     258            258       139          NaN  112811396          NaN summary page missing
+0001226886-13-000005 ALPINE WOODS CAPITAL INVE...         text     344            344       344          NaN    1559955          NaN summary page missing
+0000813933-13-000003  ANCHOR CAPITAL ADVISORS LLC         text     289            289       289          NaN    4782385          NaN summary page missing
+
+--- info: summary page not found (words present, regex missed)  (10)
+           accession                 manager_name parse_method  n_rows  n_cusip_lines  n_shaped  entry_total  value_sum  value_total       checksum_cause
+0001193125-13-148909 ASIA PACIFIC ASSOCIATES I...         text       1              1         1          NaN     120803          NaN summary page missing
+0001308757-13-000004  BALASA DINVERNO & FOLTZ LLC         text     132            132       132          NaN     629061          NaN summary page missing
+0000922423-13-000190        Belfer Management LLC         text       0              0         0          NaN          0          NaN summary page missing
+0001144204-13-029560      CONYERS INVESTMENTS LLC         text       0              0         0          NaN          0          NaN summary page missing
+0000902664-13-002253       ENDICOTT MANAGEMENT CO         text      13             13        13          NaN     184398          NaN summary page missing
+0000945625-13-000002    HARTLINE INVESTMENT CORP/         text      96             97        96          NaN     233006          NaN summary page missing
+
+--- parser/filer: more rows than declared (dup or non-holding line captured)  (101)
+           accession                 manager_name parse_method  n_rows  n_cusip_lines  n_shaped  entry_total  value_sum  value_total               checksum_cause
+0001019687-13-001808           AFAM CAPITAL, INC.         text     132            132       132        131.0     733450     731139.0 entry total counts distin...
+0000766351-13-000009 ADVANTUS CAPITAL MANAGEME...         text     951            951         0          0.0 2287495152 2305173966.0 entry count off by >2, un...
+0001193125-13-216410           ALLEGHANY CORP /DE         text     128            128         0         64.0    1891617    1891617.0 entry total counts distin...
+0001221362-13-000004         AVALON ADVISORS, LLC         text     192            192       192        191.0    1646964    1646974.0 entry total counts distin...
+0001386929-13-000002    Adams Asset Advisors, LLC         text      90             90        90         87.0     644085     635400.0 entry count off by >2, un...
+0001532155-13-000070                          AXA         text    1743           1743         0       1741.0   17482611   17491326.0       entry count off by <=2
+
+--- parser: CUSIP lines present, tails did not parse  (14)
+           accession                 manager_name parse_method  n_rows  n_cusip_lines  n_shaped  entry_total  value_sum  value_total checksum_cause
+0001228242-13-000005 BRITISH COLUMBIA INVESTME...         text       0            636       636        636.0          0          NaN no rows parsed
+0001398344-13-002482 Bridgecreek Investment Ma...         text       0            218       218        218.0          0     331187.0 no rows parsed
+0001386088-13-000002 Edelman Financial Service...         text       0              5         0         36.0          0    4387765.0 no rows parsed
+0001389191-13-000002                Hexavest Inc.         text       0            370       370        371.0          0    6030542.0 no rows parsed
+0001047469-13-005511 Highland Management Partn...         text       0              1         1          1.0          0       5512.0 no rows parsed
+0001193125-13-210488    Hugh Johnson Advisors LLC         text       0             73        73         71.0          0     227183.0 no rows parsed
+
+--- parser: CUSIP lines unparsed (n_cusip_lines > n_rows)  (93)
+           accession                 manager_name parse_method  n_rows  n_cusip_lines  n_shaped  entry_total  value_sum  value_total               checksum_cause
+0001080434-13-000006 ABERDEEN ASSET MANAGEMENT...         text     619            620       639        639.0  209871792   34677909.0 entry count off by >2, un...
+0000810672-13-000004   AFFINITY WEALTH MANAGEMENT         text      40             43        54         58.0    4247941  217397402.0 entry count off by >2, un...
+0001144204-13-020966 ATALANTA SOSNOFF CAPITAL,...         text     135            137       138        136.0    4273074    4273087.0       entry count off by <=2
+0000893879-13-000002          ARVEST TRUST CO N A         text     159            160       100        149.0     841304     841304.0 entry count off by >2, un...
+0000919574-13-003306            Amiya Capital LLP         text      20             21         0         24.0     244164     244498.0 entry count off by >2, un...
+0001387723-13-000004             BANK OF STOCKTON         text     189            190         0        190.0     130806     130811.0       entry count off by <=2
+
+--- parser: holding-shaped lines but no CUSIP token found  (4)
+           accession                 manager_name parse_method  n_rows  n_cusip_lines  n_shaped  entry_total  value_sum  value_total checksum_cause
+0001193125-13-163028  Genesis Asset Managers, LLP         text       0              0        17         17.0          0 3541696444.0 no rows parsed
+0001193125-13-199104            NBGE Manager, LLC         text       0              0         1          1.0          0      98411.0 no rows parsed
+0001193125-13-199117                 NBVM GP, LLC         text       0              0         2          2.0          0     123922.0 no rows parsed
+0001519676-13-000002 Stelac Advisory Services LLC         text       0              0        29         29.0          0     160709.0 no rows parsed
+
+--- parser: layout unrecognized (no CUSIP lines, no holding-shaped lines)  (6)
+           accession                 manager_name parse_method  n_rows  n_cusip_lines  n_shaped  entry_total  value_sum  value_total checksum_cause
+0000010742-13-000007       BECK MACK & OLIVER LLC         text       0              0         0        439.0          0    3632594.0 no rows parsed
+0000893838-13-000047      BESSEMER SECURITIES LLC         text       0              0         0          3.0          0          0.0 no rows parsed
+0001041885-13-000038         INGALLS & SNYDER LLC         text       0              0         0      70672.0          0    1526614.0 no rows parsed
+0001532292-13-000005 KLS Professional Advisors...         text       0              0         0          2.0          0     386306.0 no rows parsed
+0001374170-13-000014                  Norges Bank         text       0              0         0       2090.0          0  149919302.0 no rows parsed
+0001085146-13-000806 WEISEL THOMAS PARTNERS AS...         text       0              0         0          1.0          0          NaN no rows parsed
+
+--- value: value off >1%, unexplained  (103)
+           accession                 manager_name parse_method  n_rows  n_cusip_lines  n_shaped  entry_total       value_sum  value_total             checksum_cause
+0001031972-13-000002 ACADEMY CAPITAL MANAGEMEN...         text      42             42        42         42.0       591552570  376935000.0 value off >1%, unexplained
+0000894189-13-002711 APPLETON GROUP WEALTH MAN...         text       7              7         0          7.0           51239    1025976.0 value off >1%, unexplained
+0000748054-13-000004 AMERICAN CENTURY COMPANIE...         text    1450           1450      1450       1450.0 905020887938646   73890666.0 value off >1%, unexplained
+0001140022-13-000011                    AVIVA PLC         text    1049           1050      1049       1049.0         9361452    9794869.0 value off >1%, unexplained
+0001193125-13-222108          Ally Financial Inc.         text     135            135       135        135.0          988887     973781.0 value off >1%, unexplained
+0001156950-13-000002      Arbiter Partners QP, LP         text      70             70         0         70.0         2000162     584904.0 value off >1%, unexplained
+
+--- value: value scale x1000 (dollars vs thousands)  (145)
+           accession                 manager_name parse_method  n_rows  n_cusip_lines  n_shaped  entry_total  value_sum  value_total               checksum_cause
+0001511144-13-000004       10-15 ASSOCIATES, INC.         text     346            287       287        346.0     236023  236188578.0 value scale x1000 (dollar...
+0001013536-13-000014                      AJO, LP         text     523            523       523        523.0   21250088      21250.0 value scale x1000 (dollar...
+0001093589-13-000002 ALTA CAPITAL MANAGEMENT LLC/         text      77             77        77         77.0     694572  692877000.0 value scale x1000 (dollar...
+0001006438-13-000004      APPALOOSA MANAGEMENT LP         text      64             64         0         64.0    4716698 4716695000.0 value scale x1000 (dollar...
+0000857538-13-000002 AMICA PENSION FUND BOARD ...         text     381            381       381        381.0     671528  671533185.0 value scale x1000 (dollar...
+0001120926-13-000005 ARGENT CAPITAL MANAGEMENT...         text     151            151       151        151.0    1521726 1521726476.0 value scale x1000 (dollar...
+
+--- value: value within 1% (rounding)  (34)
+           accession                 manager_name parse_method  n_rows  n_cusip_lines  n_shaped  entry_total  value_sum  value_total             checksum_cause
+0001038661-13-000002    ABNER HERRMAN & BROCK LLC         text      88             89        89         88.0     213570     213883.0 value within 1% (rounding)
+0000919574-13-003515  AKRE CAPITAL MANAGEMENT LLC         text      37             37        37         37.0    1767306    1776306.0 value within 1% (rounding)
+0001140361-13-018823                ALLSTATE CORP         text     711            711       711        711.0    2375656    2356919.0 value within 1% (rounding)
+0001164508-13-000004 ARROWSTREET CAPITAL LIMIT...         text     822            822       822        822.0   12380947   12424489.0 value within 1% (rounding)
+0001140361-13-016622 BERKSHIRE ASSET MANAGEMEN...         text     140            140       140        140.0     381657     380910.0 value within 1% (rounding)
+0001086364-13-003672       BLACKROCK ADVISORS LLC         text    4039           4039      4039       4039.0   99732588  100064619.0 value within 1% (rounding)

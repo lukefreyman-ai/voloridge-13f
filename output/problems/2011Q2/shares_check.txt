@@ -1,0 +1,86 @@
+2011Q2: shares/value check   (min distinct filings per CUSIP = 3, tolerance = 25%, rounding-aware)
+
+rows total 1,404,877 | excluded: PRN 12,596, put/call 96,414, zero/missing value or shares 15,654 | eligible 1,280,213
+testable rows (CUSIP in >= 3 filings) 1,262,735 of eligible 1,280,213; not testable 17,478
+
+PASS 1 (values as filed, rounding-aware): flagged 89,270 / 1,262,735 = 7.07%
+filings given value_scale_flag: x1000 171, div1000 1 (rows 62,535 / 89); of the x1000 filings, checksum already said 'scale': 35
+
+PASS 2 (scale-normalized internally): FLAG RATE 29,022 / 1,262,735 = 2.30%
+
+flagged rows by cause (one per row, precedence as listed):
+cause
+unexplained                                                            17957
+wrong shares column (swap note or >50% of filing flagged)               8236
+cusip ambiguous (filing prices spread >tol: class / ADR / unit mix)     1292
+cusip repaired / short id                                               1048
+scale (row-level x1000 / ÷1000)                                          489
+  sum 29,022
+
+by parse path:
+                 rows  flagged   rate
+parse_method                         
+html              103        0  0.00%
+text          1262632    29022  2.30%
+
+by value/shares swap note:
+               rows  flagged    rate
+swap_noted                          
+False       1260957    27605   2.19%
+True           1778     1417  79.70%
+
+by value_scale_flag:
+                     rows  flagged   rate
+value_scale_flag                         
+                  1201014    27613  2.30%
+div1000                89        8  8.99%
+x1000               61632     1401  2.27%
+
+by checksum status:
+                   rows  flagged   rate
+checksum_status                        
+fail_both        126656     6966  5.50%
+fail_entries     127379     2185  1.72%
+fail_value       223584    10060  4.50%
+no_summary        54596      772  1.41%
+pass             730520     9039  1.24%
+
+flagged rows by implied/median ratio (after normalization):
+ratio
+<0.0015         121
+0.0015–0.5     3689
+0.5–0.75      10188
+0.75–1.25         0
+1.25–2         6523
+2–500          6175
+500–2000        396
+>2000          1930
+
+filings with testable rows 3,386; >50% of rows flagged 79; any flag 962
+
+filings with >=5 testable rows, highest flagged share (after normalization):
+           accession  rows  flagged share                     manager_name value_scale_flag                   checksum_cause
+0001140361-11-041751     6        6  100%       SCS Capital Management LLC                                                  
+0001483532-11-000004     6        6  100%                 TT INTERNATIONAL                  entry count off by >2, unexpl...
+0000932024-11-000005    86       86  100%      SKBA CAPITAL MANAGEMENT LLC                        value off >1%, unexplained
+0000885415-11-000006   174      174  100% FOLGER NOLAN FLEMING DOUGLAS ...                              summary page missing
+0001322853-11-000006    70       70  100%     Foyston, Gordon, & Payne Inc                              summary page missing
+0000928605-11-000003     7        7  100%         HARRISON WALTER F III/NY                  entry count off by >2, unexpl...
+0000092230-11-000051   590      590  100%        SCOTT & STRINGFELLOW, LLC                        value off >1%, unexplained
+0000909012-11-000507   648      648  100%     Nuveen Asset Management, LLC                  entry count off by >2, unexpl...
+0001140361-11-041749     5        5  100%       SCS Capital Management LLC                                                  
+0001450791-11-000165    96       96  100% Olstein Capital Management, L.P.                        value off >1%, unexplained
+
+swap-noted filings, row-level result:
+           accession  rows  flagged                     manager_name value_scale_flag                   checksum_cause
+0000894579-11-000257    30       30     PI Investment Management LTD                  value scale x1000 (dollars vs...
+0000909012-11-000465   101       99           Kingfisher Capital LLC                  value scale x1000 (dollars vs...
+0000909012-11-000466   141      137           Kingfisher Capital LLC                  value scale x1000 (dollars vs...
+0000909012-11-000467   135      131           Kingfisher Capital LLC                  value scale x1000 (dollars vs...
+0001063571-11-000012    10        0 VAUGHAN DAVID INVESTMENTS INC/IL                        value off >1%, unexplained
+0001063571-11-000013    10        0 VAUGHAN DAVID INVESTMENTS INC/IL                        value off >1%, unexplained
+0001080493-11-000007   477      314  MARCO INVESTMENT MANAGEMENT LLC            x1000       value off >1%, unexplained
+0001080493-11-000009   477      314  MARCO INVESTMENT MANAGEMENT LLC            x1000       value off >1%, unexplained
+0001208646-11-000321     2        2               Alliance Trust PLC                  value scale x1000 (dollars vs...
+0001214659-11-002539   324      324                 RBF Capital, LLC                        value off >1%, unexplained
+0001340807-11-000019    71       66   Bares Capital Management, Inc.            x1000       value off >1%, unexplained

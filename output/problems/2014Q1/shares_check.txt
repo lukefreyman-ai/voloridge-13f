@@ -1,0 +1,68 @@
+2014Q1: shares/value check   (min distinct filings per CUSIP = 3, tolerance = 25%, rounding-aware)
+
+rows total 1,588,230 | excluded: PRN 13,502, put/call 114,963, zero/missing value or shares 23,170 | eligible 1,436,595
+testable rows (CUSIP in >= 3 filings) 1,426,659 of eligible 1,436,595; not testable 9,936
+
+PASS 1 (values as filed, rounding-aware): flagged 59,939 / 1,426,659 = 4.20%
+filings given value_scale_flag: x1000 89, div1000 0 (rows 50,496 / 0); of the x1000 filings, checksum already said 'scale': 39
+
+PASS 2 (scale-normalized internally): FLAG RATE 11,162 / 1,426,659 = 0.78%
+
+flagged rows by cause (one per row, precedence as listed):
+cause
+unexplained                                                            7180
+wrong shares column (swap note or >50% of filing flagged)              3413
+cusip ambiguous (filing prices spread >tol: class / ADR / unit mix)     376
+scale (row-level x1000 / ÷1000)                                         144
+cusip repaired / short id                                                49
+  sum 11,162
+
+by parse path:
+                 rows  flagged   rate
+parse_method                         
+xml           1426659    11162  0.78%
+
+by value/shares swap note:
+               rows  flagged   rate
+swap_noted                         
+False       1426659    11162  0.78%
+
+by value_scale_flag:
+                     rows  flagged   rate
+value_scale_flag                         
+                  1377484    10747  0.78%
+x1000               49175      415  0.84%
+
+by checksum status:
+                    rows  flagged   rate
+checksum_status                         
+fail_both          49823      675  1.35%
+fail_entries       55292      176  0.32%
+fail_value         78717     1672  2.12%
+pass             1242827     8639  0.70%
+
+flagged rows by implied/median ratio (after normalization):
+ratio
+<0.0015         12
+0.0015–0.5    1449
+0.5–0.75      3997
+0.75–1.25        0
+1.25–2        2496
+2–500         3032
+500–2000       137
+>2000           39
+
+filings with testable rows 3,944; >50% of rows flagged 58; any flag 771
+
+filings with >=5 testable rows, highest flagged share (after normalization):
+           accession  rows  flagged share                     manager_name value_scale_flag                   checksum_cause
+0001599883-14-000005    11       11  100%     Majedie Asset Management Ltd                                                  
+0000092230-14-000020   914      914  100%             BB&T SECURITIES, LLC                        value off >1%, unexplained
+0001128074-14-000004   231      230  100% HANSEATIC MANAGEMENT SERVICES...                        value off >1%, unexplained
+0001116247-14-000002   144      143   99%          FAIRFIELD RESEARCH CORP                  entry off by <=2 and value of...
+0001140361-14-017121    45       38   84%     AGF Investments America Inc.                                                  
+0001140361-14-016251   289      238   82%            Rathbone Brothers plc                                                  
+0001085146-14-001056    49       40   82% GREYLIN INVESTMENT MANGEMENT INC                                                  
+0001591663-14-000023    55       42   76% Detwiler Fenton Investment Ma...                                                  
+0001591663-14-000025    83       61   73% Detwiler Fenton Investment Ma...                                                  
+0001563223-14-000005    45       33   73%             GaveKal Capital, LLC                  entry count off by >2, unexpl...

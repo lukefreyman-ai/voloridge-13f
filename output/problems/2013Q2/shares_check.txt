@@ -1,0 +1,69 @@
+2013Q2: shares/value check   (min distinct filings per CUSIP = 3, tolerance = 25%, rounding-aware)
+
+rows total 1,533,634 | excluded: PRN 14,290, put/call 98,713, zero/missing value or shares 38,211 | eligible 1,382,420
+testable rows (CUSIP in >= 3 filings) 1,373,273 of eligible 1,382,420; not testable 9,147
+
+PASS 1 (values as filed, rounding-aware): flagged 58,260 / 1,373,273 = 4.24%
+filings given value_scale_flag: x1000 90, div1000 1 (rows 42,016 / 100); of the x1000 filings, checksum already said 'scale': 42
+
+PASS 2 (scale-normalized internally): FLAG RATE 17,725 / 1,373,273 = 1.29%
+
+flagged rows by cause (one per row, precedence as listed):
+cause
+unexplained                                                            11133
+wrong shares column (swap note or >50% of filing flagged)               5691
+cusip ambiguous (filing prices spread >tol: class / ADR / unit mix)      503
+scale (row-level x1000 / ÷1000)                                          221
+cusip repaired / short id                                                177
+  sum 17,725
+
+by parse path:
+                 rows  flagged   rate
+parse_method                         
+xml           1373273    17725  1.29%
+
+by value/shares swap note:
+               rows  flagged   rate
+swap_noted                         
+False       1373273    17725  1.29%
+
+by value_scale_flag:
+                     rows  flagged    rate
+value_scale_flag                          
+                  1331689    16699   1.25%
+div1000               100       17  17.00%
+x1000               41484     1009   2.43%
+
+by checksum status:
+                    rows  flagged   rate
+checksum_status                         
+fail_both         103297     1924  1.86%
+fail_entries       85101      620  0.73%
+fail_value        105758     1181  1.12%
+pass             1079117    14000  1.30%
+
+flagged rows by implied/median ratio (after normalization):
+ratio
+<0.0015         21
+0.0015–0.5    2308
+0.5–0.75      7013
+0.75–1.25        0
+1.25–2        4818
+2–500         3341
+500–2000       199
+>2000           25
+
+filings with testable rows 3,723; >50% of rows flagged 79; any flag 756
+
+filings with >=5 testable rows, highest flagged share (after normalization):
+           accession  rows  flagged share                     manager_name value_scale_flag             checksum_cause
+0000092230-13-000055   786      786  100%             BB&T SECURITIES, LLC                  value off >1%, unexplained
+0001398344-13-003755   111      111  100% Altavista Wealth Management, ...                                            
+0000859804-13-000008    21       21  100%           WEDGEWOOD PARTNERS INC                                            
+0001442055-13-000004   254      253  100% CONFLUENCE INVESTMENT MANAGEM...                                            
+0001509842-13-000008   115      113   98%            PointState Capital LP                                            
+0001536411-13-000018    17       16   94%       Duquesne Family Office LLC                                            
+0001085146-13-001346    50       45   90%                   GRUSS & CO INC                                            
+0001469751-13-000012   123      102   83% RiverFront Investment Group, LLC                                            
+0000919574-13-004739    30       24   80%              SUN VALLEY GOLD LLC                                            
+0000315038-13-000015    18       14   78% TEACHERS INSURANCE & ANNUITY ...                                            

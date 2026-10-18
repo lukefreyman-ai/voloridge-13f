@@ -1,0 +1,84 @@
+2010Q2: shares/value check   (min distinct filings per CUSIP = 3, tolerance = 25%, rounding-aware)
+
+rows total 1,280,224 | excluded: PRN 13,029, put/call 74,904, zero/missing value or shares 15,908 | eligible 1,176,383
+testable rows (CUSIP in >= 3 filings) 1,158,929 of eligible 1,176,383; not testable 17,454
+
+PASS 1 (values as filed, rounding-aware): flagged 91,379 / 1,158,929 = 7.88%
+filings given value_scale_flag: x1000 222, div1000 1 (rows 71,026 / 90); of the x1000 filings, checksum already said 'scale': 43
+
+PASS 2 (scale-normalized internally): FLAG RATE 24,091 / 1,158,929 = 2.08%
+
+flagged rows by cause (one per row, precedence as listed):
+cause
+wrong shares column (swap note or >50% of filing flagged)              13493
+unexplained                                                             8455
+scale (row-level x1000 / ÷1000)                                         1269
+cusip ambiguous (filing prices spread >tol: class / ADR / unit mix)      823
+cusip repaired / short id                                                 51
+  sum 24,091
+
+by parse path:
+                 rows  flagged   rate
+parse_method                         
+html               58        0  0.00%
+text          1158871    24091  2.08%
+
+by value/shares swap note:
+               rows  flagged    rate
+swap_noted                          
+False       1157336    22929   1.98%
+True           1593     1162  72.94%
+
+by value_scale_flag:
+                     rows  flagged    rate
+value_scale_flag                          
+                  1088984    21706   1.99%
+div1000                90        9  10.00%
+x1000               69855     2376   3.40%
+
+by checksum status:
+                   rows  flagged   rate
+checksum_status                        
+fail_both        159263     2022  1.27%
+fail_entries      96489     1247  1.29%
+fail_value       172480     9664  5.60%
+no_summary        60529     1188  1.96%
+pass             670168     9970  1.49%
+
+flagged rows by implied/median ratio (after normalization):
+ratio
+<0.0015        443
+0.0015–0.5    3951
+0.5–0.75      3063
+0.75–1.25        0
+1.25–2        8318
+2–500         6862
+500–2000       887
+>2000          567
+
+filings with testable rows 3,097; >50% of rows flagged 83; any flag 763
+
+filings with >=5 testable rows, highest flagged share (after normalization):
+           accession  rows  flagged share                    manager_name value_scale_flag                   checksum_cause
+0000938077-10-000020    39       39  100%  DOLIVER CAPITAL ADVISORS, INC.                        value off >1%, unexplained
+0001399437-10-000012     8        8  100% Admiral Capital Management, LLC                  entry count off by >2, unexpl...
+0000909012-10-000360    32       32  100%           GV Capital Management                                                  
+0000909012-10-000361    31       31  100%           GV Capital Management                                                  
+0000909012-10-000383    79       79  100%          Kingfisher Capital LLC                  value scale x1000 (dollars vs...
+0001144969-10-000018     6        6  100%  NORTHERN CROSS INVESTMENTS LTD                        value off >1%, unexplained
+0000909012-10-000357    28       28  100%           GV Capital Management                                                  
+0000909012-10-000356    28       28  100%           GV Capital Management                                                  
+0001387303-10-000008    40       40  100%      MOON CAPITAL MANAGEMENT LP                  entry total counts distinct C...
+0001105487-10-000006    48       48  100%      KRA CAPITAL MANAGEMENT INC                  entry count off by >2, unexpl...
+
+swap-noted filings, row-level result:
+           accession  rows  flagged                    manager_name value_scale_flag                   checksum_cause
+0000909012-10-000383    79       79          Kingfisher Capital LLC                  value scale x1000 (dollars vs...
+0000938077-10-000020    39       39  DOLIVER CAPITAL ADVISORS, INC.                        value off >1%, unexplained
+0000950159-10-000776   338      301   DREMAN VALUE MANAGEMENT L L C                        value off >1%, unexplained
+0001080493-10-000008   463      271 MARCO INVESTMENT MANAGEMENT LLC            x1000       value off >1%, unexplained
+0001080493-10-000010   464      272 MARCO INVESTMENT MANAGEMENT LLC            x1000       value off >1%, unexplained
+0001103804-10-000011    60       60      VIKING GLOBAL INVESTORS LP                        value off >1%, unexplained
+0001208646-10-000219     2        2              Alliance Trust PLC                  value scale x1000 (dollars vs...
+0001340807-10-000021    56       54  Bares Capital Management, Inc.            x1000       value off >1%, unexplained
+0001378410-10-000013    92       84  Arrow Investment Advisors, LLC            x1000       value off >1%, unexplained

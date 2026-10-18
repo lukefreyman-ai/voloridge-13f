@@ -1,0 +1,26 @@
+regex fallback, 200 random 2013Q4 10-K/10-Q filings with the XBRL fact (seed 7):
+coverage (returned a value) 74/200 = 37.0% | precision (within 1% of XBRL) 64/74 = 86.5%
+misses by cause:
+cause
+wrong date (different as-of sentence)    8
+wrong number matched                     2
+
+subsets (precision = within 1%; coverage = share of the 200):
+  as-of date within 45 days of XBRL as-of       n= 61  precision 96.7%  coverage 30.5%
+  sentence says "outstanding as of/at/on"       n= 29  precision 89.7%  coverage 14.5%
+  both                                          n= 26  precision 96.2%  coverage 13.0%
+  10-Q filings only                             n= 23  precision 69.6%  coverage 11.5%
+  not multi-class and date close                n= 61  precision 96.7%  coverage 30.5%
+
+misses (sample):
+                          name  xbrl_shares     shares          asof_text  xbrl_asof                          cause
+      NEVADA HEALTH SCAN, INC.   16100000.0 14950000.0   January 17, 2014 2013-12-31           wrong number matched
+      SPUTNIK ENTERPRISES, INC     295278.0   115278.0      June 30, 2013 2014-02-28 wrong date (different as-of...
+               FAIR ISAAC CORP   34913253.0  2687000.0    October 1, 2013 2014-01-31 wrong date (different as-of...
+       BROADVIEW INSTITUTE INC   13508252.0  2000000.0  December 31, 2013 2014-01-31           wrong number matched
+             KIWIBOX.COM, INC.  683693060.0  4031448.0  December 31, 2013 2014-04-30 wrong date (different as-of...
+                CYANOTECH CORP    5486438.0  1495856.0     March 31, 2013 2014-01-31 wrong date (different as-of...
+DIAGNOSTIC IMAGING INTERNAT...   23426481.0   410200.0      June 30, 2013 2014-03-31 wrong date (different as-of...
+                UAN POWER CORP   78273000.0 48275000.0       May 23, 2011 2013-10-31 wrong date (different as-of...
+              IF BANCORP, INC.    4427657.0   228535.0 September 11, 2013 2014-01-31 wrong date (different as-of...
+             FLURIDA GROUP INC   39290827.0 10013067.0      June 30, 2013 2014-03-31 wrong date (different as-of...

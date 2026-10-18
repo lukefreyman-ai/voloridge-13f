@@ -1,0 +1,107 @@
+2012Q3 ownership, quarter end 2012-09-30, period_of_report 20120930; shares outstanding: XBRL + regex fallback (2 companies)
+filings for the period: 3,361; after amendment/duplicate resolution: 3,239 ({'13F-HR': 3132, '13F-HR/A': 107}); notes: 117 (first 5 below)
+  manager 36270: amendment 0001193125-12-499690 has no amendment type; treated as RESTATEMENT
+  manager 40417: amendment 0000040417-12-000087 has no amendment type; treated as RESTATEMENT
+  manager 49205: amendment 0000049205-12-000011 has no amendment type; treated as RESTATEMENT
+  manager 70858: amendment 0000070858-12-000402 has no amendment type; treated as RESTATEMENT
+  manager 71259: amendment 0000071259-12-000010 has no amendment type; treated as RESTATEMENT
+holdings rows used: 1,149,517 (SH, no put/call, resolved CUSIP, shares > 0)
+
+FUNDS EXCLUDED (decision 2): 1,420 CUSIPs on 289 CIKs, 57,424 manager-CUSIP rows, $1,262.6bn of 13F value = 2.2% of the selected filings' value
+        cusips  value_bn
+reason                  
+F1        1018     701.9
+F2          55      67.1
+F3         347     493.6
+largest excluded:
+    cusip  company_cik                     company_name                                   reason  value_bn
+464287655    1159508.0 DEUTSCHE BANK AKTIENGESELLSCHAFT F3 13(f) list ETF/ETN/unit (RUSSELL 2...     145.9
+78462F103     884394.0           SPDR S&P 500 ETF TRUST          F1 1940-Act/UIT forms (485BPOS)     127.0
+83413U100    1418076.0               Solar Capital Ltd.              F1 1940-Act/UIT forms (497)     115.4
+29266R108     811797.0                MALAYSIA FUND INC            F1 1940-Act/UIT forms (N-CSR)     112.7
+78463V107    1222333.0                  SPDR GOLD TRUST         F2 SIC 6221 commodity pool/trust      51.9
+922042858          NaN                              NaN F3 13(f) list ETF/ETN/unit (MSCI EMR ...      38.3
+78464A763    1064642.0                SPDR SERIES TRUST          F1 1940-Act/UIT forms (485APOS)      36.6
+81369Y803    1064641.0         SELECT SECTOR SPDR TRUST          F1 1940-Act/UIT forms (485BPOS)      35.9
+74348T102    1287032.0            PROSPECT CAPITAL CORP              F1 1940-Act/UIT forms (497)      30.6
+464287234    1159508.0 DEUTSCHE BANK AKTIENGESELLSCHAFT F3 13(f) list ETF/ETN/unit (MSCI EMER...      27.4
+464287465    1159508.0 DEUTSCHE BANK AKTIENGESELLSCHAFT F3 13(f) list ETF/ETN/unit (MSCI EAFE...      24.7
+464287242    1159508.0 DEUTSCHE BANK AKTIENGESELLSCHAFT F3 13(f) list ETF/ETN/unit (IBOXX INV...      20.0
+
+FIXES (Luke 2026-10-12): debt-pattern CUSIPs excluded from ownership (rows kept): 2,521 rows / 792 CUSIPs / $34.8bn; ADR/ADS excluded from the main figure: 35,776 rows / 382 CUSIPs on 254 companies / $702.6bn; NEW HOLDINGS amendments duplicating >= 90% of the original treated as restatements: 0 amendments, 0 original filings / 0 rows dropped
+
+SHARE CLASSES (never summed): multi-class companies (class-dimensioned facts only) 249; their CUSIPs: matched to a class 194 ($2,820.8bn), unmatched 159 ($1,027.9bn); company-level pct is null for all 249
+largest per-class figures:
+           company_name     cusip    list_desc  cusip_shares_held  class_shares_outstanding  class_ownership_pct  value_bn
+             EZCORP INC 302301106 CL A NON VTG         41224603.0                48395890.0                 85.2     194.6
+      LENNAR CORP /NEW/ 526057104         CL A        168768765.0               159580731.0                105.8     192.2
+WILEY JOHN & SONS, INC. 968223206         CL A         43908321.0                50628592.0                 86.7     177.8
+          LINKEDIN CORP 53578A108     COM CL A         77554425.0                87176511.0                 89.0     175.6
+            Google Inc. 38259P508         CL A        221356618.0               264956901.0                 83.5     166.2
+          HUB GROUP INC 443320106         CL A         36195640.0                37105441.0                 97.5     153.5
+     Under Armour, Inc. 904311107         CL A         77604324.0                83152708.0                 93.3     138.1
+         GREEN DOT CORP 39304D102         CL A         23258150.0                31320883.0                 74.3     120.3
+
+CUSIP->CIK coverage among OPERATING companies (6-char issuers, funds removed: 546 incl. 225 unmapped by name token only): 4,328 / 11,798 = 36.7%; by value 85.3%; by map source: {'name_exact': 2590, 'SC 13G': 1062, 'SC 13D': 676}
+shares outstanding (XBRL + regex fallback (2 companies)): companies with a figure 3,439 / 4,057 = 84.8%; by 13F value 87.8%; gap > 100 days flagged: 41; multi-class null: 249
+
+ownership pct distribution (n=3,439): {'count': 3439.0, 'mean': 258878.6, 'std': 15176169.4, 'min': 0.0, '5%': 2.3, '25%': 27.7, '50%': 63.1, '75%': 85.0, '95%': 100.6, 'max': 889976000.0}
+histogram: {'0': 0, '0-5': 272, '5-25': 516, '25-50': 571, '50-75': 756, '75-90': 735, '90-100': 406, '100-150': 169, '>150': 14}
+companies over 100%: 183 / 3,439 = 5.3%
+large companies (top 500 by 13F value) with a pct: 427; over 100%: 30 = 7.0%  [stop condition at 5%]
+Note: companies with 'no identified data cause' can still exceed 100% through securities lending (the lender and the
+borrower's buyer both report the same shares on 13F); that is a possible explanation, not a measured cause.
+over-100% causes (combinations; [..] = annotation):
+no identified data cause                                                                                                              128
+multiple CUSIPs summed (classes/units)                                                                                                 39
+shares outstanding implausible (XBRL fact scale/units); single holding > 50% of shares out                                              5
+single holding > 50% of shares out                                                                                                      4
+single holding > 50% of shares out; multiple CUSIPs summed (classes/units)                                                              3
+shares outstanding implausible (XBRL fact scale/units); single holding > 50% of shares out; multiple CUSIPs summed (classes/units)      1
+CUSIP->CIK conflict; multiple CUSIPs summed (classes/units)                                                                             1
+single holding > 50% of shares out; CUSIP->CIK conflict                                                                                 1
+shares outstanding gap >100d; multiple CUSIPs summed (classes/units)                                                                    1
+  with the as-of date after quarter end: 160 of 183
+largest over-100% companies:
+ company_cik                        company_name  n_managers  shares_held_total  shares_outstanding  institutional_ownership_pct  value_bn                                               over_100_cause
+   1071739.0                        CENTENE CORP         210           52503024          51633824.0                        101.7     196.7                                     no identified data cause
+   1289308.0                             EnerSys         231           48759321          48483321.0                        100.6     195.1 no identified data cause; [as-of 31d after quarter end: b...
+   1168195.0                      SOURCEFIRE INC         213           32655612          30172944.0                        108.2     191.8 no identified data cause; [as-of 31d after quarter end: b...
+   1270400.0                   VIRGIN MEDIA INC.         238          295912826         268425983.0                        110.2     191.8 no identified data cause; [as-of 31d after quarter end: b...
+   1014473.0                     VERISIGN INC/CA         337          166550958         155256629.0                        107.3     180.7 no identified data cause; [as-of 31d after quarter end: b...
+    807884.0      CASH AMERICA INTERNATIONAL INC         181           33075305          29051910.0                        113.8     166.6 no identified data cause; [as-of 31d after quarter end: b...
+     19584.0                         CHEMED CORP         182           19997853          19288868.0                        103.7     159.7                                     no identified data cause
+   1124941.0           BEACON ROOFING SUPPLY INC         178           54462928          47694202.0                        114.2     142.3 no identified data cause; [as-of 31d after quarter end: b...
+     73887.0                   Bristow Group Inc         149           36991328          35980233.0                        102.8     140.4 no identified data cause; [as-of 31d after quarter end: b...
+   1009356.0           SALIX PHARMACEUTICALS LTD         227           59218912          58841531.0                        100.6     138.2 no identified data cause; [as-of 31d after quarter end: b...
+   1045450.0      ENTERTAINMENT PROPERTIES TRUST         205           51555671          46842184.0                        110.1     132.4 multiple CUSIPs summed (classes/units); [as-of 31d after ...
+   1082526.0                        SCIQUEST INC          95           20621967             22460.0                      91816.4     130.6 shares outstanding implausible (XBRL fact scale/units); s...
+   1012140.0            ONYX PHARMACEUTICALS INC         244           69647714          67151719.0                        103.7     127.9 no identified data cause; [as-of 31d after quarter end: b...
+   1468516.0                            AOL Inc.         276           87895749          83696734.0                        105.0     124.9 no identified data cause; [as-of 31d after quarter end: b...
+    703351.0           BRINKER INTERNATIONAL INC         263           73593168          73140354.0                        100.6     121.0 no identified data cause; [as-of 31d after quarter end: b...
+   1145197.0                        INSULET CORP         137           54182358          48164869.0                        112.5     115.5 no identified data cause; [as-of 31d after quarter end: b...
+   1071993.0               CONTANGO OIL & GAS CO         178           36152784          15194952.0                        237.9     113.9 CUSIP->CIK conflict; multiple CUSIPs summed (classes/unit...
+   1360530.0                Vitamin Shoppe, Inc.         181           32338028          30165955.0                        107.2     112.7 no identified data cause; [as-of 31d after quarter end: b...
+   1049108.0 DOLLAR THRIFTY AUTOMOTIVE GROUP INC         149           29397659          28058117.0                        104.8     106.9 no identified data cause; [as-of 31d after quarter end: b...
+     16058.0         CACI INTERNATIONAL INC /DE/         206           25788834          22827396.0                        113.0     105.0 no identified data cause; [as-of 31d after quarter end: b...
+
+NO COMPANY-LEVEL FIGURE: 618 companies carrying $5,704.6bn = 12.2% of mapped operating value; causes:
+                                                                                                   companies  value_bn
+cause                                                                                                                 
+class-dimensioned facts only: company pct null by rule, per-class pct given (class_ownership_pct)        249    3873.1
+regex fallback tried: no 10-K filed within the window                                                    364    1830.1
+regex fallback tried: no match                                                                             5       1.4
+largest without shares outstanding:
+ company_cik                       company_name  n_managers  value_bn                                    cause
+    891103.0                IAC/INTERACTIVECORP         307    201.00 class-dimensioned facts only: company...
+    876523.0                         EZCORP INC         168    194.62 class-dimensioned facts only: company...
+    313216.0 KONINKLIJKE PHILIPS ELECTRONICS NV         170    192.70 regex fallback tried: no 10-K filed w...
+    920760.0                  LENNAR CORP /NEW/         369    192.40 class-dimensioned facts only: company...
+    107140.0            WILEY JOHN & SONS, INC.         238    177.77 class-dimensioned facts only: company...
+   1271024.0                      LINKEDIN CORP         316    175.65 class-dimensioned facts only: company...
+   1131383.0                        STANTEC INC          64    172.37 regex fallback tried: no 10-K filed w...
+   1288776.0                        Google Inc.        1428    166.21 class-dimensioned facts only: company...
+    940942.0                      HUB GROUP INC         150    153.52 class-dimensioned facts only: company...
+   1336917.0                 Under Armour, Inc.         265    138.06 class-dimensioned facts only: company...
+   1135017.0       KINDER MORGAN MANAGEMENT LLC         336    132.34 class-dimensioned facts only: company...
+    878088.0 PAR PHARMACEUTICAL COMPANIES, INC.         159    128.17 regex fallback tried: no 10-K filed w...

@@ -1,0 +1,54 @@
+2013Q2: 452 non-pass filings
+
+verdict
+parser/filer: more rows than declared (dup or non-holding line captured)    149
+filer: declared entry total disagrees with the lines present                142
+value: value scale x1000 (dollars vs thousands)                              77
+value: value off >1%, unexplained                                            57
+value: value within 1% (rounding)                                            27
+
+
+--- filer: declared entry total disagrees with the lines present  (142)
+           accession                 manager_name parse_method  n_rows  n_cusip_lines  n_shaped  entry_total  value_sum  value_total               checksum_cause
+0000872078-13-000006              ACADIA TRUST NA          xml     139            139         0          140     225353     228385.0 entry off by <=2 and valu...
+0001169318-13-000005           ALBERT D MASON INC          xml     122            122         0          123     452600     452600.0 entry total counts distin...
+0000902584-13-000006        ADVISORY RESEARCH INC          xml     346            346         0          347    8841475    8841476.0       entry count off by <=2
+0001093589-13-000006 ALTA CAPITAL MANAGEMENT LLC/          xml      80             80         0           91     740317     748768.0 entry count off by >2, un...
+0001016972-13-000003 ARCADIA INVESTMENT MANAGE...          xml     108            108         0          109     351732     351732.0 entry total counts distin...
+0000857508-13-000042    AMICA MUTUAL INSURANCE CO          xml     392            392         0          393    1130731    1137350.0 entry total counts distin...
+
+--- parser/filer: more rows than declared (dup or non-holding line captured)  (149)
+           accession              manager_name parse_method  n_rows  n_cusip_lines  n_shaped  entry_total  value_sum  value_total               checksum_cause
+0000950123-13-006983    1922 Investment Co LLC          xml       1              1         0            0          0          0.0 empty filing (single plac...
+0000950123-13-006810 292 Asset Management, LLC          xml       1              1         0            0          0          0.0 empty filing (single plac...
+0001053013-13-000006    AMARILLO NATIONAL BANK          xml     255            255         0          132     112232     112232.0 entry total counts distin...
+0001388829-13-000004   AMG National Trust Bank          xml     347            347         0          267    1308970        741.0 entry count off by >2, un...
+0001104659-13-059733   ANALYTIC INVESTORS, LLC          xml     621            621         0          620    6028624    6028624.0       entry count off by <=2
+0001569656-13-000003 Aft, Forsyth & Sober, LLC          xml      49             49         0            0     427409          0.0 summary totals zero but h...
+
+--- value: value off >1%, unexplained  (57)
+           accession                 manager_name parse_method  n_rows  n_cusip_lines  n_shaped  entry_total  value_sum  value_total             checksum_cause
+0001054257-13-000004          ADIRONDACK TRUST CO          xml     398            398         0          398     109950    1719619.0 value off >1%, unexplained
+0001467112-13-000004 Advanced Investment Partn...          xml     270            270         0          270      56770     568869.0 value off >1%, unexplained
+0000950123-13-006552      BALDWIN BROTHERS INC/MA          xml     229            229         0          229     505567     526991.0 value off >1%, unexplained
+0000092230-13-000055         BB&T SECURITIES, LLC          xml     795            795         0          795   30595259 3059525900.0 value off >1%, unexplained
+0001086364-13-004115       BLACKROCK ADVISORS LLC          xml    4073           4073         0         4073   95358725   96573777.0 value off >1%, unexplained
+0001426588-13-000005      Barnett & Company, Inc.          xml     193            193         0          193     182503     193540.0 value off >1%, unexplained
+
+--- value: value scale x1000 (dollars vs thousands)  (77)
+           accession                 manager_name parse_method  n_rows  n_cusip_lines  n_shaped  entry_total   value_sum  value_total               checksum_cause
+0001144204-13-043828 AFTON CAPITAL MANAGEMENT LLC          xml      33             33         0           33   108195964     108196.0 value scale x1000 (dollar...
+0001134152-13-000006 ADELL HARRIMAN & CARPENTE...          xml     120            120         0          120   279130995     279131.0 value scale x1000 (dollar...
+0000950123-13-006272     APPLETON PARTNERS INC/MA          xml     151            151         0          151   346839042     346839.0 value scale x1000 (dollar...
+0001518195-13-000005 American National Registe...          xml     209            209         0          209      176082        176.0 value scale x1000 (dollar...
+0001536725-13-000004 Archipel Asset Management AB          xml      64             64         0           64      488058        488.0 value scale x1000 (dollar...
+0000950123-13-005968 Artisan Partners Limited ...          xml     383            383         0          383 46605762351   46605762.0 value scale x1000 (dollar...
+
+--- value: value within 1% (rounding)  (27)
+           accession                 manager_name parse_method  n_rows  n_cusip_lines  n_shaped  entry_total  value_sum  value_total             checksum_cause
+0000919574-13-004772 ARGONAUT CAPITAL MANAGEME...          xml      32             32         0           32     222520     220725.0 value within 1% (rounding)
+0001055977-13-000005 ARBOR CAPITAL MANAGEMENT LLC          xml     119            119         0          119    1236179    1233161.0 value within 1% (rounding)
+0001423065-13-000007 Ativo Capital Management LLC          xml     178            178         0          178     193419     193179.0 value within 1% (rounding)
+0001047339-13-000003        BURNS J W & CO INC/NY          xml     147            147         0          147     243665     242929.0 value within 1% (rounding)
+0001086364-13-004117               BlackRock Inc.          xml    7319           7319         1         7319   50455149   50517502.0 value within 1% (rounding)
+0000950123-13-007048           Canal Insurance CO          xml      97             97         0           97     281075     279946.0 value within 1% (rounding)

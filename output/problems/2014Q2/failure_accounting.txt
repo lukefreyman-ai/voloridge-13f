@@ -1,0 +1,43 @@
+2014Q2: 4083 filings in the EDGAR index (13F-HR and 13F-HR/A)
+
+Definitions: 'pass' = every summary total that is present on the filing matches the parsed holdings
+(entry count exactly; value total within 0.1%). A filing with only one total present can pass on that one.
+'usable summary page' = both totals present and > 0.
+
+13F NOTICE (no holdings by design)                0
+holdings-bearing                                4083
+                                              -----
+  sum                                          4083  == 4083
+
+Holdings-bearing filings, one bucket each (checksum_cause from pipeline/checksum.py):
+   3679  pass: all present totals match
+     90  value scale x1000 (dollars vs thousands)
+     85  entry total counts distinct CUSIPs not rows
+     77  entry count off by >2, unexplained
+     52  empty filing (single placeholder row, totals zero)
+     32  value off >1%, unexplained
+     30  value within 1% (rounding)
+     21  entry count off by <=2
+      7  summary totals zero but holdings present (filer omitted totals)
+      6  entry off by <=2 and value within 1%
+      2  entry off by <=2 and value off >1%
+      1  summary page missing
+      1  summary fields swapped (entry total = value total)
+  -----
+   4083  == 4083
+
+Summary page presence (holdings-bearing):
+  both totals present and >0 (usable)    4010
+  both present, one or both == 0           72
+  entry total only                          0
+  value total only                          0
+  neither                                   1
+  -----
+  sum                                    4083
+
+Pass rate:
+  over ALL 4083 index filings:                     pass  3679  = 90.1%   (both totals match:  3679 = 90.1%)
+  over 4083 holdings-bearing filings:          pass  3679  = 90.1%   (both totals match:  3679 = 90.1%)
+  over 4010 usable-summary filings:            pass  3667  = 91.4%   (both totals match:  3667 = 91.4%)
+    entry total matches among usable:   3805 = 94.9%
+    value total matches among usable:   3778 = 94.2%

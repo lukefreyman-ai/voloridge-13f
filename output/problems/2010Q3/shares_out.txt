@@ -1,0 +1,5 @@
+2010Q3 shares outstanding (quarter end 2010-09-30) from 2010q4_notes, 2011q1_notes
+facts loaded 3,107 on 1,466 CIKs | selected 1,618 rows on 1,466 CIKs
+CIKs with class-dimensioned facts (multi-class): 93; undimensioned-only: 1,373
+gap > 100 days flagged: 71 rows; gap distribution (days): {'min': -273.0, '25%': 31.0, '50%': 31.0, '75%': 31.0, 'max': 151.0}
+by form: {'10-Q': 1400, '10-K': 167, '10-Q/A': 23, '20-F': 18, '10-K/A': 9, '40-F': 1}

@@ -1,0 +1,10 @@
+2013Q3: wrong-CUSIP-token rows (status invalid_9/ambiguous/unconfirmed_short but a valid 13(f)-list CUSIP sits in the text): 0 rows in 0 filings (0.000% of 1,519,004 rows); shares>0 on 0 of them; by parse method {}
+candidate rows checked 3,420 by status {'invalid_9': 1552, 'ambiguous': 1012, 'unconfirmed_short': 856}
+filings with most such rows:
+Empty DataFrame
+Columns: [rows, value, manager, method, checksum, n_rows]
+Index: []
+sample rows:
+Empty DataFrame
+Columns: [accession, name_of_issuer, title_of_class, cusip_raw, cusip_in_text, value, shares]
+Index: []

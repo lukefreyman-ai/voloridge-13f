@@ -1,0 +1,69 @@
+pilot_2013Q4: shares/value check   (min distinct filings per CUSIP = 3, tolerance = 25%, rounding-aware)
+
+rows total 1,584,855 | excluded: PRN 17,138, put/call 122,874, zero/missing value or shares 26,172 | eligible 1,418,671
+testable rows (CUSIP in >= 3 filings) 1,408,025 of eligible 1,418,671; not testable 10,646
+
+PASS 1 (values as filed, rounding-aware): flagged 47,797 / 1,408,025 = 3.39%
+filings given value_scale_flag: x1000 79, div1000 1 (rows 33,483 / 38); of the x1000 filings, checksum already said 'scale': 30
+
+PASS 2 (scale-normalized internally): FLAG RATE 15,401 / 1,408,025 = 1.09%
+
+flagged rows by cause (one per row, precedence as listed):
+cause
+unexplained                                                            7311
+wrong shares column (swap note or >50% of filing flagged)              7141
+scale (row-level x1000 / ÷1000)                                         428
+cusip ambiguous (filing prices spread >tol: class / ADR / unit mix)     389
+cusip repaired / short id                                               132
+  sum 15,401
+
+by parse path:
+                 rows  flagged   rate
+parse_method                         
+xml           1408025    15401  1.09%
+
+by value/shares swap note:
+               rows  flagged   rate
+swap_noted                         
+False       1408025    15401  1.09%
+
+by value_scale_flag:
+                     rows  flagged    rate
+value_scale_flag                          
+                  1375509    15268   1.11%
+div1000                38       36  94.74%
+x1000               32478       97   0.30%
+
+by checksum status:
+                    rows  flagged   rate
+checksum_status                         
+fail_both          54534     3208  5.88%
+fail_entries       69388      269  0.39%
+fail_value         91465     2451  2.68%
+pass             1192638     9473  0.79%
+
+flagged rows by implied/median ratio (after normalization):
+ratio
+<0.0015         52
+0.0015–0.5    2562
+0.5–0.75      6642
+0.75–1.25        0
+1.25–2        1997
+2–500         3552
+500–2000       392
+>2000          204
+
+filings with testable rows 3,966; >50% of rows flagged 49; any flag 712
+
+filings with >=5 testable rows, highest flagged share (after normalization):
+           accession  rows  flagged share                     manager_name value_scale_flag                   checksum_cause
+0000074260-14-000016    64       64  100%  OLD REPUBLIC INTERNATIONAL CORP                                                  
+0000092230-14-000006   879      879  100%             BB&T SECURITIES, LLC                        value off >1%, unexplained
+0001398344-14-000082    28       28  100% Berkshire Money Management, Inc.                                                  
+0001571669-14-000003    82       82  100%   Personal Capital Advisors Corp                        value off >1%, unexplained
+0000850401-14-000002  1403     1399  100%                    TCW GROUP INC                        value off >1%, unexplained
+0001020617-14-000003   257      255   99%   ROOSEVELT INVESTMENT GROUP INC                                                  
+0001398344-14-000084    38       36   95% Berkshire Money Management, Inc.          div1000                                 
+0001542166-14-000002    54       51   94%              Callan Capital, LLC                                                  
+0001134288-14-000002   101       93   92%               DE BURLO GROUP INC                                                  
+0001080628-14-000002   730      670   92%                 COLONY GROUP LLC                  entry total counts distinct C...

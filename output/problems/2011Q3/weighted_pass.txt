@@ -1,0 +1,45 @@
+2011Q3: checksum pass rate weighted three ways (holdings-bearing filings = 3477)
+value weight = filing's row values after shares-check scale normalization ($000), rows > $200bn excluded
+rows excluded from weights as glued digit runs (> $200bn): 191
+
+all holdings-bearing: filings 2485/3477 = 71.5% | rows 848,850/1,427,996 = 59.4% | value $14,072bn/$23,449bn = 60.0%
+usable summary page  : filings 2384/3090 = 77.2% | rows 833,073/1,327,428 = 62.8% | value $13,956bn/$21,314bn = 65.5%
+
+non-pass buckets weighted:
+                                                                 filings    rows value_bn rows_share value_share
+checksum_cause                                                                                                  
+value scale x1000 (dollars vs thousands)                             197  138405  2,030.5       9.7%        8.7%
+summary page missing                                                 248   61128  1,943.5       4.3%        8.3%
+value off >1%, unexplained                                           108   55314  1,188.2       3.9%        5.1%
+entry off by <=2 and value off >1%                                    13   13057    982.0       0.9%        4.2%
+value within 1% (rounding)                                            28   90616    963.6       6.3%        4.1%
+entry count off by >2, unexplained                                   180  104630    932.4       7.3%        4.0%
+entry count off by <=2                                                22   32303    811.3       2.3%        3.5%
+entry total counts distinct CUSIPs not rows                          150   66794    361.1       4.7%        1.5%
+entry off by <=2 and value within 1%                                  14   16848    163.9       1.2%        0.7%
+summary totals zero but holdings present (filer omitted totals)        1      50      0.0       0.0%        0.0%
+empty filing (single placeholder row, totals zero)                     1       1      0.0       0.0%        0.0%
+no rows parsed                                                        30       0      0.0       0.0%        0.0%
+
+20 largest non-pass filings by normalized value:
+           accession                   manager_name parse_method  n_rows  entry_total             value_sum     value_total             weight_src                 checksum_cause
+0001226886-11-000008 ALPINE WOODS CAPITAL INVEST...         text     373          NaN         1,624,875,486                 rows, scale-normalized           summary page missing
+0000813917-11-000099          HARRIS ASSOCIATES L P         text     475        476.0         2,955,934,386      51,107,836 rows, scale-normalized entry off by <=2 and value ...
+0001208646-11-000423             Alliance Trust PLC         text      56         56.0           777,237,278         777,237 rows, scale-normalized value scale x1000 (dollars ...
+0000932471-11-003915             VANGUARD GROUP INC         text    6977       6978.0           560,724,617     560,724,617 rows, scale-normalized         entry count off by <=2
+0001193125-11-296468              STATE STREET CORP         text    3641       3641.0           494,481,392     505,785,142 rows, scale-normalized     value off >1%, unexplained
+0000314949-11-000005           GLENMEDE TRUST CO NA         text    1748       3200.0 1,439,291,878,648,128       4,952,314 rows, scale-normalized entry count off by >2, unex...
+0000902219-11-001064   WELLINGTON MANAGEMENT CO LLP         text    4207       4207.0           230,902,750     230,020,347 rows, scale-normalized     value within 1% (rounding)
+0000080255-11-000622 PRICE T ROWE ASSOCIATES INC...         text    2184       2184.0           223,895,503     226,110,803 rows, scale-normalized     value within 1% (rounding)
+0000080255-11-000621 PRICE T ROWE ASSOCIATES INC...         text    2146       2146.0           213,308,125     425,299,828 rows, scale-normalized     value off >1%, unexplained
+0000019617-11-000270            JPMORGAN CHASE & CO         text   22811      22811.0           185,377,493 185,377,489,706 rows, scale-normalized value scale x1000 (dollars ...
+0001475150-11-000008                Randolph Co Inc         text      34         33.0           379,739,336         379,739 rows, scale-normalized value scale x1000 (dollars ...
+0000914208-11-000513                   Invesco Ltd.         text   14498      14500.0           158,378,087     158,617,754 rows, scale-normalized entry off by <=2 and value ...
+0000909012-11-000537         Kingfisher Capital LLC         text     128        129.0           150,581,360         150,581 rows, scale-normalized value scale x1000 (dollars ...
+0000895421-11-000529                 MORGAN STANLEY         text   35067      35067.0           150,523,229     150,817,890 rows, scale-normalized     value within 1% (rounding)
+0000070858-11-000160      BANK OF AMERICA CORP /DE/         text   16241      16241.0           179,551,844 170,388,006,000 rows, scale-normalized value scale x1000 (dollars ...
+0000950123-11-098420       AMERIPRISE FINANCIAL INC         text   10381      10383.0           125,013,861     125,013,861 rows, scale-normalized         entry count off by <=2
+0000038777-11-000209         FRANKLIN RESOURCES INC         text    3647       3647.0           122,897,976     123,218,072 rows, scale-normalized     value within 1% (rounding)
+0000933429-11-000012                UMB BANK N A/MO         text     499          NaN            96,734,648                 rows, scale-normalized           summary page missing
+0000922423-11-000423    GILDER GAGNON HOWE & CO LLC         text     162        243.0            97,051,186   4,149,308,099 rows, scale-normalized entry count off by >2, unex...
+0001140361-11-053547         ROYAL BANK OF CANADA \         text   16008      16008.0            94,915,004      94,393,595 rows, scale-normalized     value within 1% (rounding)

@@ -1,0 +1,23 @@
+pilot_2010Q1: wrong-CUSIP-token rows (status invalid_9/ambiguous/unconfirmed_short but a valid 13(f)-list CUSIP sits in the text): 3,319 rows in 130 filings (0.235% of 1,411,313 rows); shares>0 on 1,156 of them; by parse method {'text': 3319}
+candidate rows checked 7,810 by status {'invalid_9': 5088, 'unconfirmed_short': 2241, 'ambiguous': 481}
+filings with most such rows:
+                      rows        value                            manager method    checksum  n_rows
+accession                                                                                            
+0000950123-10-049284   341        342.0        PICTET ASSET MANAGEMENT LTD   text   fail_both    1578
+0000065100-10-000007   193  349484930.0       MANAGED ACCOUNT ADVISORS LLC   text  fail_value    1936
+0000070858-10-000276   192  348979930.0       MANAGED ACCOUNT ADVISORS LLC   text  fail_value    1921
+0000072971-10-000804   188       1867.0                WELLS FARGO & CO/MN   text  fail_value   24473
+0001007280-10-000005   146  321204964.0  PUBLIC EMPLOYEES RETIREMENT SY...   text  fail_value    3044
+0000950123-10-049409   141   64781930.0               Calamos Advisors LLC   text  fail_value     445
+0000950123-10-050072   141   64781930.0               Calamos Advisors LLC   text  fail_value     445
+0000019617-10-000208   132        722.0              J P MORGAN CHASE & CO   text  fail_value   22508
+0001140022-10-000061   114        134.0                          AVIVA PLC   text   fail_both    1397
+0001269107-10-000005   106          0.0   SWISS RE FINANCIAL SERVICES CORP   text  fail_value     131
+sample rows:
+           accession             name_of_issuer             title_of_class cusip_raw cusip_in_text  value  shares
+0001085146-10-000366           ISHARES TR INDEX RUSSELL 2000 464287655 335 670000PRN     464287655    1.0  670000
+0001140361-10-020733                      ALCOA        CONV 013817AT8 1319 602000PRN     013817AT8    0.0       0
+0001140361-10-020733 PLACER DOME INC2.750000...         CONV 725906AK7 533 300000PRN     725906AK7    0.0       0
+0001140361-10-020733          BOSTON PROPERTIES         CONV 10112RAG9 540 500000PRN     10112RAG9    0.0       0
+0001140361-10-020733                  CORE LABS         CONV 21868FAB9 909 560000PRN     21868FAB9    0.0       0
+0001140361-10-020733                 CMS ENERGY         CONV 125896BD1 577 466000PRN     125896BD1    0.0       0

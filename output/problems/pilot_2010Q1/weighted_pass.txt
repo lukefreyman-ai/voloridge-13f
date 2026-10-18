@@ -1,0 +1,45 @@
+pilot_2010Q1: checksum pass rate weighted three ways (holdings-bearing filings = 3377)
+value weight = filing's row values after shares-check scale normalization ($000), rows > $200bn excluded
+rows excluded from weights as glued digit runs (> $200bn): 185
+
+all holdings-bearing: filings 2207/3377 = 65.4% | rows 830,384/1,413,090 = 58.8% | value $9,202bn/$14,898bn = 61.8%
+usable summary page  : filings 2141/2974 = 72.0% | rows 821,017/1,316,976 = 62.3% | value $9,070bn/$14,348bn = 63.2%
+
+non-pass buckets weighted:
+                                                                 filings    rows value_bn rows_share value_share
+checksum_cause                                                                                                  
+value off >1%, unexplained                                           129   92392  2,023.7       6.5%       13.6%
+value scale x1000 (dollars vs thousands)                             215  149577  1,096.7      10.6%        7.4%
+entry count off by >2, unexplained                                   247  155223    967.2      11.0%        6.5%
+entry count off by <=2                                                50   40539    635.9       2.9%        4.3%
+entry total counts distinct CUSIPs not rows                          141   38406    347.0       2.7%        2.3%
+summary page missing                                                 292   65082    322.3       4.6%        2.2%
+value within 1% (rounding)                                            21   16588    190.3       1.2%        1.3%
+entry off by <=2 and value off >1%                                    20   10859     85.7       0.8%        0.6%
+entry off by <=2 and value within 1%                                  21   13928     27.6       1.0%        0.2%
+summary totals zero but holdings present (filer omitted totals)        2     105      0.4       0.0%        0.0%
+empty filing (single placeholder row, totals zero)                     7       7      0.0       0.0%        0.0%
+no rows parsed                                                        25       0      0.0       0.0%        0.0%
+
+20 largest non-pass filings by normalized value:
+           accession                   manager_name parse_method  n_rows  entry_total           value_sum     value_total             weight_src                 checksum_cause
+0000888002-10-000481                            AXA         text    6498       6498.0       1,062,918,065     178,317,208 rows, scale-normalized     value off >1%, unexplained
+0000315066-10-002783                        FMR LLC         text    6040       6039.0         497,925,017     497,938,836 rows, scale-normalized         entry count off by <=2
+0000070858-10-000277      BANK OF AMERICA CORP /DE/         text   25237      25237.0         289,739,526 289,755,778,000 rows, scale-normalized value scale x1000 (dollars ...
+0000070858-10-000280      BANK OF AMERICA CORP /DE/         text   24198      24215.0         204,906,353 206,172,234,000 rows, scale-normalized value scale x1000 (dollars ...
+0000019617-10-000208          J P MORGAN CHASE & CO         text   22508      22508.0         171,098,916 171,098,840,976 rows, scale-normalized value scale x1000 (dollars ...
+0000038777-10-000160         FRANKLIN RESOURCES INC         text    3821       3821.0         121,903,265     122,336,254 rows, scale-normalized     value within 1% (rounding)
+0001295044-10-000004 Strategic Point Investment ...         text      11         11.0         115,599,511     113,582,813 rows, scale-normalized     value off >1%, unexplained
+0000914208-10-000298                   Invesco Ltd.         text   13462      13490.0         112,354,012     112,456,913 rows, scale-normalized entry count off by >2, unex...
+0001348554-10-000002 GRASSI INVESTMENT MANAGEMEN...         text     129        129.0         109,126,855         165,482 rows, scale-normalized     value off >1%, unexplained
+0001140361-10-020504         ROYAL BANK OF CANADA \         text   14070      14116.0          90,293,137      89,363,934 rows, scale-normalized entry count off by >2, unex...
+0001140361-10-021813         ROYAL BANK OF CANADA \         text   14413      14421.0          87,563,099      87,548,844 rows, scale-normalized entry count off by >2, unex...
+0001214717-10-000004   GEODE CAPITAL MANAGEMENT LLC         text    3755       3755.0 440,932,170,275,931      61,805,995 rows, scale-normalized     value off >1%, unexplained
+0001214717-10-000006   GEODE CAPITAL MANAGEMENT LLC         text    3755       3755.0 440,687,170,176,825      61,805,995 rows, scale-normalized     value off >1%, unexplained
+0000872162-10-000004          BLACKHILL CAPITAL INC         text       1         79.0          59,563,510         345,614 rows, scale-normalized entry count off by >2, unex...
+0000950123-10-049493       AMERIPRISE FINANCIAL INC         text    7043       7047.0          59,319,213      59,319,316 rows, scale-normalized entry count off by >2, unex...
+0000728889-10-000777          OPPENHEIMER FUNDS INC         text    2619       2621.0          56,682,772      56,682,755 rows, scale-normalized entry total counts distinct...
+0000934729-10-000021          HARRIS FINANCIAL CORP         text    8834       1775.0          54,085,944      54,085,858 rows, scale-normalized entry total counts distinct...
+0001193125-10-114145              RUSSELL FRANK CO/         text   10169      10169.0   1,042,160,868,650               0 rows, scale-normalized     value off >1%, unexplained
+0000748054-10-000005 AMERICAN CENTURY COMPANIES INC         text    1719       1719.0 325,870,378,980,419      49,861,289 rows, scale-normalized     value off >1%, unexplained
+0001193125-10-119979           LORD ABBETT & CO LLC         text    1002       1002.0      46,860,398,036      46,860,398 rows, scale-normalized value scale x1000 (dollars ...

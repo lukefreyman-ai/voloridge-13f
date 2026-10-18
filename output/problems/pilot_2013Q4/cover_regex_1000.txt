@@ -1,0 +1,27 @@
+pilot_2013Q4: regex cover-page fallback vs XBRL on 1,000 sampled 10-K/10-Q filings (seed 11)
+status: {'no match': 626, 'ok': 374}
+matched 374 / 1,000 = coverage 37.4%; precision within 1%: 327 / 374 = 87.4%; as-of date parsed: 372
+subset A (|as-of - XBRL as-of| <= 45d):      n=332  precision 95.5%  coverage 33.2%
+subset B (|as-of - filing date| <= 45d) [deployable]: n=334  precision 94.9%  coverage 33.4%   -> DO NOT USE (< 95%)
+subset A and B: n=328  precision 95.4%  coverage 32.8%
+by form, subset B: {'10-K': {'size': 264, 'mean': 0.966}, '10-Q': {'size': 70, 'mean': 0.886}}
+
+subset B misses:
+                           name                 adsh form  xbrl_shares      shares         asof_text  xbrl_asof  gapB
+                       NIKE INC 0000320187-14-000003 10-Q 8.854844e+08 177957876.0   January 2, 2014 2013-12-31   5.0
+  TWO RIVERS WATER & FARMING CO 0001302946-14-000008 10-K 2.127439e+07  24879549.0    March 12, 2014 2014-02-28   7.0
+                A. H. BELO CORP 0001413898-14-000014 10-K 2.200339e+07   2396930.0 February 28, 2014 2014-02-28   7.0
+      GRANITE FALLS ENERGY, LLC 0001181749-14-000007 10-Q 3.060600e+04   2065495.0  January 31, 2014 2014-01-31  45.0
+   AEOLUS PHARMACEUTICALS, INC. 0001102624-14-000242 10-Q 1.345501e+08    526080.0 December 31, 2013 2014-01-31  45.0
+LAS VEGAS RAILWAY EXPRESS, INC. 0001096906-14-000164 10-Q 9.219708e+06   4846111.0 December 31, 2013 2014-01-31  43.0
+               EATON VANCE CORP 0001144204-14-014059 10-Q 1.227359e+08    396455.0  January 31, 2014 2014-01-31  35.0
+                    SPHERIX INC 0001415889-14-001024 10-K 7.033607e+06   7846106.0    March 28, 2014 2014-03-31   3.0
+      KINGSTONE COMPANIES, INC. 0001354488-14-001549 10-K 3.816594e+06   7266573.0    March 29, 2014 2013-10-31   2.0
+ CONSOLIDATED GRAPHICS INC /TX/ 0001104659-14-005172 10-Q 9.712642e+06   1328500.0 December 31, 2013 2014-01-31  30.0
+                          3M CO 0001104659-14-009773 10-K 6.626922e+08    662692.0  January 31, 2014 2014-01-31  13.0
+       NEVADA HEALTH SCAN, INC. 0001127855-14-000078 10-Q 1.610000e+07  14950000.0  January 17, 2014 2013-12-31  33.0
+  U.S. AUTO PARTS NETWORK, INC. 0001193125-14-094601 10-K 3.337779e+13  33377794.0     March 6, 2014 2014-02-28   6.0
+        INNOPHOS HOLDINGS, INC. 0001364099-14-000006 10-K 2.189314e+07  22348092.0  February 4, 2014 2013-12-31  23.0
+      CHINA NETWORK MEDIA, INC. 0001144204-14-019340 10-K 6.038583e+07    385829.0    March 27, 2014 2014-03-31   4.0
+                  SPINDLE, INC. 0001393905-14-000153 10-K 3.266306e+07  37611315.0    March 25, 2014 2013-12-31   6.0
+                   GRIFFON CORP 0000930413-14-000393 10-Q 5.482565e+07   1200000.0 December 31, 2013 2013-12-31  31.0

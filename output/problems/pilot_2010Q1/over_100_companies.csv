@@ -1,0 +1,128 @@
+company_cik,shares_held_total,n_managers,n_cusips,company_name,shares_outstanding,multi_class_flag,institutional_ownership_pct,so_gap_flag,over_100_cause
+5133.0,37196389,137,1,AMERICAN GREETINGS CORP,36270550.0,False,102.55259156533332,False,no identified data cause; [as-of 27d after quarter end: buybacks lower the denominator]
+6885.0,38825148,140,1,STAGE STORES INC,38372857.0,False,101.17867429052781,False,no identified data cause
+29534.0,399780928,81,1,DOLLAR GENERAL CORP,340816996.0,False,117.3007604350811,False,single holding > 50% of shares out
+57055.0,18386915,75,2,KV PHARMACEUTICAL CO /DE/,12111835.0,False,151.8094904694458,False,multiple CUSIPs summed (classes/units)
+69499.0,321109050,455,2,MYLAN INC.,309360933.0,False,103.79754382238045,True,shares outstanding gap >100d; multiple CUSIPs summed (classes/units); [as-of 122d after quarter end: buybacks lower the denominator]
+77776.0,64800447,166,1,PHH CORP,55492224.0,False,116.77392313560905,True,shares outstanding gap >100d; [as-of 122d after quarter end: buybacks lower the denominator]
+85974.0,45786712,154,3,RYLAND GROUP INC,44107262.0,False,103.80764963374965,True,shares outstanding gap >100d; multiple CUSIPs summed (classes/units); [as-of 122d after quarter end: buybacks lower the denominator]
+93451.0,18143496,106,1,STERLING BANCORP,18115987.0,False,100.1518493030493,False,no identified data cause
+97210.0,182212433,254,1,"TERADYNE, INC",181347263.0,False,100.47707916054955,True,shares outstanding gap >100d; [as-of 122d after quarter end: buybacks lower the denominator]
+104889.0,5725120,265,1,WASHINGTON POST CO,1291693.0,False,443.22606068160155,False,single holding > 50% of shares out
+313143.0,25900730,183,1,HAEMONETICS CORP,24669566.0,False,104.99061880537339,False,no identified data cause; [as-of 91d after quarter end: buybacks lower the denominator]
+350403.0,11188891,60,2,PHI INC,2852616.0,False,392.2326383922687,False,multiple CUSIPs summed (classes/units)
+350698.0,160944497,209,3,"AUTONATION, INC.",146389924.0,False,109.94233250643673,True,shares outstanding gap >100d; single holding > 50% of shares out; multiple CUSIPs summed (classes/units); [as-of 122d after quarter end: buybacks lower the denominator]
+350907.0,58916951,182,1,THORATEC CORP,58460160.0,False,100.78137145023209,True,shares outstanding gap >100d; [as-of 122d after quarter end: buybacks lower the denominator]
+711404.0,52396385,167,1,COOPER COMPANIES INC,45663989.0,False,114.7433374688313,True,shares outstanding gap >100d; [as-of 153d after quarter end: buybacks lower the denominator]
+722104.0,70136840,151,1,SAVIENT PHARMACEUTICALS INC,67604590.0,False,103.74567762336848,True,shares outstanding gap >100d; [as-of 122d after quarter end: buybacks lower the denominator]
+726958.0,43720259,166,1,CASEYS GENERAL STORES INC,37848026.0,False,115.51529530232303,True,shares outstanding gap >100d; [as-of 153d after quarter end: buybacks lower the denominator]
+729580.0,7764562,77,2,BEL FUSE INC /NJ,2174912.0,False,357.0058006944649,False,single holding > 50% of shares out; multiple CUSIPs summed (classes/units)
+740260.0,157595257,281,2,VENTAS INC,156853254.0,False,100.47305553507995,False,multiple CUSIPs summed (classes/units); [as-of 30d after quarter end: buybacks lower the denominator]
+768835.0,82668360,288,2,BIG LOTS INC,75553416.0,False,109.41710431729518,True,shares outstanding gap >100d; multiple CUSIPs summed (classes/units); [as-of 153d after quarter end: buybacks lower the denominator]
+786110.0,32633793,186,3,GYMBOREE CORP,27342201.0,False,119.35320422814534,True,shares outstanding gap >100d; multiple CUSIPs summed (classes/units); [as-of 153d after quarter end: buybacks lower the denominator]
+790703.0,47244803,204,1,TECH DATA CORP,46606692.0,False,101.36914029427362,True,shares outstanding gap >100d; [as-of 153d after quarter end: buybacks lower the denominator]
+792977.0,28308316,111,2,AMAG PHARMACEUTICALS INC.,21050459.0,False,134.47837883249954,True,shares outstanding gap >100d; multiple CUSIPs summed (classes/units); [as-of 122d after quarter end: buybacks lower the denominator]
+803649.0,162726113,215,4,HRPT PROPERTIES TRUST,64596310.0,False,251.91239716324355,True,shares outstanding gap >100d; multiple CUSIPs summed (classes/units); [as-of 122d after quarter end: buybacks lower the denominator]
+807884.0,30435409,182,1,CASH AMERICA INTERNATIONAL INC,29387499.0,False,103.56583593588553,False,no identified data cause; [as-of 91d after quarter end: buybacks lower the denominator]
+810136.0,53269958,108,1,PHOTRONICS INC,53185252.0,False,100.15926595590823,False,no identified data cause
+811156.0,231996171,287,1,CMS ENERGY CORP,229772845.0,False,100.96761912836132,False,no identified data cause
+814547.0,44792176,155,1,FAIR ISAAC CORP,41710784.0,False,107.3875187769187,True,shares outstanding gap >100d; [as-of 122d after quarter end: buybacks lower the denominator]
+816159.0,97490792,245,4,AIR METHODS CORP,12451721.0,False,782.9503407601247,False,shares outstanding implausible (XBRL fact scale/units); single holding > 50% of shares out; CUSIP->CIK conflict; multiple CUSIPs summed (classes/units)
+827054.0,191035507,369,1,MICROCHIP TECHNOLOGY INC,185542931.0,False,102.96027230485004,False,no identified data cause; [as-of 61d after quarter end: buybacks lower the denominator]
+833640.0,28094543,139,1,POWER INTEGRATIONS INC,27849260.0,False,100.88075230724263,True,shares outstanding gap >100d; [as-of 122d after quarter end: buybacks lower the denominator]
+845877.0,2630840,39,2,FEDERAL AGRICULTURAL MORTGAGE CORP,1030780.0,False,255.22807970662993,False,single holding > 50% of shares out; multiple CUSIPs summed (classes/units)
+850429.0,17845605,112,1,TREDEGAR CORP,5000389.0,False,356.8843343987838,False,single holding > 50% of shares out
+860546.0,60242306,196,4,CORPORATE OFFICE PROPERTIES TRUST,59287048.0,False,101.61124230708873,True,shares outstanding gap >100d; multiple CUSIPs summed (classes/units); [as-of 122d after quarter end: buybacks lower the denominator]
+873364.0,87711206,353,1,CEPHALON INC,75197933.0,False,116.64044808252908,True,shares outstanding gap >100d; [as-of 122d after quarter end: buybacks lower the denominator]
+874214.0,62553068,160,3,ANNTAYLOR STORES CORP,59039187.0,False,105.9517774186152,True,shares outstanding gap >100d; multiple CUSIPs summed (classes/units); [as-of 153d after quarter end: buybacks lower the denominator]
+874716.0,58943122,233,1,IDEXX LABORATORIES INC /DE,57705856.0,False,102.14409088741358,True,shares outstanding gap >100d; [as-of 122d after quarter end: buybacks lower the denominator]
+884217.0,55689675,140,1,MENS WEARHOUSE INC,52683462.0,False,105.7061796736137,True,shares outstanding gap >100d; [as-of 153d after quarter end: buybacks lower the denominator]
+889331.0,22226693,129,1,LITTELFUSE INC /DE,21838250.0,False,101.77872769109246,False,no identified data cause
+890319.0,60376550,166,2,TAUBMAN CENTERS INC,52059790.0,False,115.97540059228054,True,shares outstanding gap >100d; multiple CUSIPs summed (classes/units)
+892025.0,33739323,173,1,MARTEK BIOSCIENCES CORP,33480546.0,False,100.77291750259987,True,shares outstanding gap >100d; [as-of 153d after quarter end: buybacks lower the denominator]
+896262.0,35261219,252,1,AMEDISYS INC,28559614.0,False,123.4653206447398,False,no identified data cause; [as-of 30d after quarter end: buybacks lower the denominator]
+899629.0,40341816,125,1,ACADIA REALTY TRUST,40111565.0,False,100.57402646842625,False,CUSIP->CIK conflict
+899751.0,40408606,119,1,TITAN INTERNATIONAL INC,35275510.0,False,114.55144376367628,False,CUSIP->CIK conflict
+910606.0,92344781,195,6,REGENCY CENTERS CORP,81858697.0,False,112.80998157104798,True,shares outstanding gap >100d; multiple CUSIPs summed (classes/units); [as-of 122d after quarter end: buybacks lower the denominator]
+911583.0,5432058,51,1,STEINWAY MUSICAL INSTRUMENTS INC,477952.0,False,1136.5279358596679,False,shares outstanding implausible (XBRL fact scale/units); single holding > 50% of shares out
+912728.0,31030899,128,1,FORWARD AIR CORP,29012915.0,False,106.95546793557283,True,shares outstanding gap >100d; [as-of 122d after quarter end: buybacks lower the denominator]
+915912.0,87954219,298,2,AVALONBAY COMMUNITIES INC,82984697.0,False,105.98848002059947,False,multiple CUSIPs summed (classes/units); [as-of 30d after quarter end: buybacks lower the denominator]
+916076.0,48269062,234,3,MARTIN MARIETTA MATERIALS INC,45523432.0,False,106.03124562313315,True,shares outstanding gap >100d; multiple CUSIPs summed (classes/units); [as-of 122d after quarter end: buybacks lower the denominator]
+920033.0,19514744,165,3,BANK JOS A CLOTHIERS INC /DE/,18351162.0,False,106.34064480494479,False,CUSIP->CIK conflict; multiple CUSIPs summed (classes/units)
+920522.0,30947728,187,1,ESSEX PROPERTY TRUST INC,30329994.0,False,102.0367099314296,True,shares outstanding gap >100d; [as-of 122d after quarter end: buybacks lower the denominator]
+920527.0,62566286,161,1,PSS WORLD MEDICAL INC,56453817.0,False,110.82737948436684,True,shares outstanding gap >100d; [as-of 122d after quarter end: buybacks lower the denominator]
+921082.0,72405622,173,2,HIGHWOODS PROPERTIES INC,71614985.0,False,101.10401056426947,False,multiple CUSIPs summed (classes/units); [as-of 91d after quarter end: buybacks lower the denominator]
+922475.0,34883914,265,3,ITT EDUCATIONAL SERVICES INC,33590086.0,False,103.85181508615369,False,multiple CUSIPs summed (classes/units); [as-of 91d after quarter end: buybacks lower the denominator]
+922717.0,8901661,59,1,CHINDEX INTERNATIONAL INC,1162500.0,False,765.7342795698925,False,shares outstanding implausible (XBRL fact scale/units); single holding > 50% of shares out; [as-of 71d after quarter end: buybacks lower the denominator]
+929008.0,47420869,164,1,WESCO INTERNATIONAL INC,42453342.0,False,111.70114475322109,True,shares outstanding gap >100d; [as-of 122d after quarter end: buybacks lower the denominator]
+930184.0,82949079,197,1,VALEANT PHARMACEUTICALS INTERNATIONAL,75921797.0,False,109.25594793284463,True,shares outstanding gap >100d; [as-of 122d after quarter end: buybacks lower the denominator]
+935226.0,9335707,55,2,BENIHANA INC,5649139.0,False,165.25893591926132,False,multiple CUSIPs summed (classes/units); [as-of 65d after quarter end: buybacks lower the denominator]
+941138.0,33060908,154,1,UNISOURCE ENERGY CORP,32139434.0,False,102.86711334119947,False,no identified data cause
+941604.0,38372005,149,1,COINSTAR INC,32718140.0,False,117.28052083645342,True,shares outstanding gap >100d; [as-of 122d after quarter end: buybacks lower the denominator]
+945235.0,9673439,97,1,M & F WORLDWIDE CORP,7248000.0,False,133.4635623620309,False,no identified data cause
+1009356.0,58625522,171,1,SALIX PHARMACEUTICALS LTD,56466257.0,False,103.82399173368265,False,no identified data cause
+1010552.0,85848584,222,3,POLYCOM INC,85268495.0,False,100.68030871191054,True,shares outstanding gap >100d; multiple CUSIPs summed (classes/units); [as-of 122d after quarter end: buybacks lower the denominator]
+1010775.0,153445120,226,5,MIRANT CORP,145457714.0,False,105.49122200559265,False,multiple CUSIPs summed (classes/units); [as-of 30d after quarter end: buybacks lower the denominator]
+1012019.0,33086022,86,2,RUSH ENTERPRISES INC \TX\,26471733.0,False,124.98623342869166,False,multiple CUSIPs summed (classes/units)
+1013934.0,17235385,224,2,STRAYER EDUCATION INC,13887668.0,False,124.10568138581655,True,shares outstanding gap >100d; multiple CUSIPs summed (classes/units); [as-of 122d after quarter end: buybacks lower the denominator]
+1017480.0,32622287,144,1,HIBBETT SPORTS INC,28466539.0,False,114.59871184199808,True,shares outstanding gap >100d; [as-of 153d after quarter end: buybacks lower the denominator]
+1021561.0,41702104,167,1,NU SKIN ENTERPRISES INC,9.0,False,463356711.1111111,True,shares outstanding implausible (XBRL fact scale/units); shares outstanding gap >100d; single holding > 50% of shares out; [as-of 122d after quarter end: buybacks lower the denominator]
+1023313.0,22566527,94,1,FORRESTER RESEARCH INC,22449868.0,False,100.51964225357584,False,no identified data cause
+1030469.0,28801068,113,1,ORIENTAL FINANCIAL GROUP INC,24179686.0,False,119.11266341506668,False,no identified data cause
+1034054.0,128954710,238,1,SBA COMMUNICATIONS CORP,114634391.0,False,112.49216650873994,True,shares outstanding gap >100d; [as-of 122d after quarter end: buybacks lower the denominator]
+1035443.0,55313157,216,4,ALEXANDRIA REAL ESTATE EQUITIES INC,49996702.0,False,110.6336113930075,True,shares outstanding gap >100d; multiple CUSIPs summed (classes/units); [as-of 122d after quarter end: buybacks lower the denominator]
+1038074.0,44876830,204,3,SILICON LABORATORIES INC,44630334.0,False,100.55230597198756,True,shares outstanding gap >100d; multiple CUSIPs summed (classes/units); [as-of 122d after quarter end: buybacks lower the denominator]
+1039889.0,26672530,155,2,P F CHANGS CHINA BISTRO INC,22933862.0,False,116.30195559736079,False,multiple CUSIPs summed (classes/units)
+1040971.0,82871634,232,3,SL GREEN REALTY CORP,78215826.0,False,105.95251400912137,True,shares outstanding gap >100d; multiple CUSIPs summed (classes/units); [as-of 122d after quarter end: buybacks lower the denominator]
+1041859.0,28124020,164,3,CHILDRENS PLACE RETAIL STORES INC,27240081.0,False,103.24499402186065,True,shares outstanding gap >100d; multiple CUSIPs summed (classes/units); [as-of 153d after quarter end: buybacks lower the denominator]
+1045450.0,46581696,210,5,ENTERTAINMENT PROPERTIES TRUST,46496931.0,False,100.18230235453605,True,shares outstanding gap >100d; multiple CUSIPs summed (classes/units); [as-of 122d after quarter end: buybacks lower the denominator]
+1046568.0,83872778,188,2,CAREER EDUCATION CORP,81819798.0,False,102.50914821373674,False,multiple CUSIPs summed (classes/units); [as-of 30d after quarter end: buybacks lower the denominator]
+1048477.0,109777286,184,1,BIOMARIN PHARMACEUTICAL INC,102058660.0,False,107.56293096538793,True,shares outstanding gap >100d; [as-of 122d after quarter end: buybacks lower the denominator]
+1049108.0,29010618,125,1,DOLLAR THRIFTY AUTOMOTIVE GROUP INC,28597079.0,False,101.44608825257993,False,no identified data cause
+1051512.0,84410756,226,4,TELEPHONE & DATA SYSTEMS INC /DE/,49849632.0,False,169.33075052590158,False,multiple CUSIPs summed (classes/units); [as-of 91d after quarter end: buybacks lower the denominator]
+1053532.0,71541494,183,4,LASALLE HOTEL PROPERTIES,69790208.0,False,102.50935775975907,True,shares outstanding gap >100d; multiple CUSIPs summed (classes/units); [as-of 122d after quarter end: buybacks lower the denominator]
+1057352.0,21957200,108,1,COSTAR GROUP INC,20581462.0,False,106.68435507642751,False,no identified data cause
+1064863.0,55444941,175,1,AMERIGROUP CORP,51022288.0,False,108.66808050630736,True,shares outstanding gap >100d; [as-of 122d after quarter end: buybacks lower the denominator]
+1065049.0,85122345,134,1,LEAP WIRELESS INTERNATIONAL INC,78334810.0,False,108.66477495764654,True,shares outstanding gap >100d; [as-of 122d after quarter end: buybacks lower the denominator]
+1065280.0,54247614,260,3,NETFLIX INC,52261855.0,False,103.79963359509532,False,multiple CUSIPs summed (classes/units)
+1066104.0,35524982,122,1,CORPORATE EXECUTIVE BOARD CO,34272302.0,False,103.65507983677315,True,shares outstanding gap >100d; [as-of 122d after quarter end: buybacks lower the denominator]
+1067983.0,466445285,1076,4,BERKSHIRE HATHAWAY INC,976414.0,False,47771.26147310465,True,shares outstanding implausible (XBRL fact scale/units); shares outstanding gap >100d; single holding > 50% of shares out; multiple CUSIPs summed (classes/units); [as-of 122d after quarter end: buybacks lower the denominator]
+1069157.0,114340168,176,1,EAST WEST BANCORP INC,110506071.0,False,103.46958041789395,False,no identified data cause
+1072341.0,12745402,49,2,PLAYBOY ENTERPRISES INC,4864102.0,False,262.0299080899208,False,single holding > 50% of shares out; multiple CUSIPs summed (classes/units)
+1076195.0,45451212,150,1,LIFE TIME FITNESS INC,41867444.0,False,108.55979648530729,True,shares outstanding gap >100d; [as-of 122d after quarter end: buybacks lower the denominator]
+1080014.0,56342728,82,1,THERAVANCE INC,54830359.0,False,102.7582693740889,False,no identified data cause
+1091171.0,17584920,109,1,BLUE NILE INC,14317767.0,False,122.81887252390685,True,shares outstanding gap >100d; [as-of 122d after quarter end: buybacks lower the denominator]
+1098277.0,44709325,127,1,WEBSENSE INC,42464852.0,False,105.28548409870825,True,shares outstanding gap >100d; [as-of 122d after quarter end: buybacks lower the denominator]
+1101215.0,71357135,245,1,ALLIANCE DATA SYSTEMS CORP,52632878.0,False,135.57521023266105,True,shares outstanding gap >100d; [as-of 122d after quarter end: buybacks lower the denominator]
+1101239.0,49255831,250,1,EQUINIX INC,45589839.0,False,108.04124796317002,False,no identified data cause; [as-of 91d after quarter end: buybacks lower the denominator]
+1106942.0,36352971,163,1,BLACKBOARD INC,34285344.0,False,106.03064388095392,True,shares outstanding gap >100d; [as-of 122d after quarter end: buybacks lower the denominator]
+1110803.0,132679068,252,1,ILLUMINA INC,124285833.0,False,106.75317113576412,False,no identified data cause; [as-of 91d after quarter end: buybacks lower the denominator]
+1114200.0,81219016,189,1,AMERICAN MEDICAL SYSTEMS HOLDINGS INC,75997564.0,False,106.8705517982129,True,shares outstanding gap >100d; CUSIP->CIK conflict; [as-of 122d after quarter end: buybacks lower the denominator]
+1121484.0,50881517,210,1,"OIL STATES INTERNATIONAL, INC",50263388.0,False,101.2297798150813,True,shares outstanding gap >100d; [as-of 122d after quarter end: buybacks lower the denominator]
+1123360.0,80127660,257,2,GLOBAL PAYMENTS INC,79262662.0,False,101.0913057651281,True,shares outstanding gap >100d; multiple CUSIPs summed (classes/units); [as-of 117d after quarter end: buybacks lower the denominator]
+1131096.0,36380080,152,1,ATHENAHEALTH INC,34143627.0,False,106.55013305997045,True,shares outstanding gap >100d; [as-of 122d after quarter end: buybacks lower the denominator]
+1137861.0,41115035,133,1,WRIGHT MEDICAL GROUP INC,38815186.0,False,105.92512683051423,False,no identified data cause
+1142596.0,44140903,200,1,NUVASIVE INC,39384692.0,False,112.0762935000228,True,shares outstanding gap >100d; [as-of 122d after quarter end: buybacks lower the denominator]
+1160858.0,26544467,144,1,TRUE RELIGION APPAREL INC,24984741.0,False,106.24271430310203,False,no identified data cause
+1164863.0,20567462,131,1,"ENPRO INDUSTRIES, INC",20296467.0,False,101.33518311339604,False,no identified data cause
+1171500.0,43193864,163,1,PLATINUM UNDERWRITERS HOLDINGS LTD,41094952.0,False,105.10746916068913,False,no identified data cause; [as-of 91d after quarter end: buybacks lower the denominator]
+1171759.0,16348130,118,1,RED ROBIN GOURMET BURGERS INC,15615940.0,False,104.6887347159377,False,no identified data cause
+1179755.0,52447681,185,1,ENDURANCE SPECIALTY HOLDINGS LTD,51896314.0,False,101.06243961758055,True,shares outstanding gap >100d; [as-of 122d after quarter end: buybacks lower the denominator]
+1182129.0,56605885,108,3,AUXILIUM PHARMACEUTICALS INC,47633309.0,False,118.83676819513,True,shares outstanding gap >100d; multiple CUSIPs summed (classes/units); [as-of 122d after quarter end: buybacks lower the denominator]
+1185348.0,17393354,161,1,PORTFOLIO RECOVERY ASSOCIATES INC,17056625.0,False,101.97418305203989,True,shares outstanding gap >100d; [as-of 122d after quarter end: buybacks lower the denominator]
+1201792.0,18391520,136,1,AMERICAN PUBLIC EDUCATION INC,18379242.0,False,100.06680362552494,False,no identified data cause; [as-of 30d after quarter end: buybacks lower the denominator]
+1206264.0,72487027,189,1,TEMPUR PEDIC INTERNATIONAL INC,69780192.0,False,103.87908792225737,True,shares outstanding gap >100d; CUSIP->CIK conflict; [as-of 122d after quarter end: buybacks lower the denominator]
+1226308.0,19637171,96,1,"DTS, INC.",17498379.0,False,112.22280075200108,False,CUSIP->CIK conflict
+1232241.0,33653338,76,1,JOURNAL COMMUNICATIONS INC,8676705.0,False,387.85850158556735,False,single holding > 50% of shares out
+1255474.0,54841941,257,4,WHITING PETROLEUM CORP,50998477.0,False,107.5364289800262,False,multiple CUSIPs summed (classes/units); [as-of 91d after quarter end: buybacks lower the denominator]
+1280058.0,44951802,128,1,BLACKBAUD INC,43806589.0,False,102.61424828123458,True,shares outstanding gap >100d; [as-of 122d after quarter end: buybacks lower the denominator]
+1292900.0,33072069,88,1,"INTERLINE BRANDS, INC./DE",32554251.0,False,101.59063097473813,False,CUSIP->CIK conflict
+1297996.0,99117695,247,4,"Digital Realty Trust, Inc.",87303748.0,False,113.53200437626114,True,shares outstanding gap >100d; multiple CUSIPs summed (classes/units); [as-of 122d after quarter end: buybacks lower the denominator]
+1309108.0,38694660,156,1,Wright Express CORP,38262848.0,False,101.12854118961559,True,shares outstanding gap >100d; [as-of 122d after quarter end: buybacks lower the denominator]
+1379895.0,350471092,188,2,DYNEGY INC.,120487900.0,False,290.8765876075523,False,single holding > 50% of shares out; multiple CUSIPs summed (classes/units); [as-of 91d after quarter end: buybacks lower the denominator]
+1389050.0,63970037,151,1,EXTERRAN HOLDINGS INC.,63205388.0,False,101.20978452026905,True,shares outstanding gap >100d; [as-of 122d after quarter end: buybacks lower the denominator]
+1406251.0,16489119,5,2,WESTERN LIBERTY BANCORP,10959169.0,False,150.45957407902003,False,single holding > 50% of shares out; multiple CUSIPs summed (classes/units)
+1418255.0,46743814,65,3,BPW Acquisition Corp.,41176471.0,False,113.52069000765024,False,multiple CUSIPs summed (classes/units)
+1424454.0,103973421,241,3,Rovi Corp,103152700.0,False,100.79563695375884,True,shares outstanding gap >100d; multiple CUSIPs summed (classes/units); [as-of 122d after quarter end: buybacks lower the denominator]
+1446847.0,30785110,43,1,IRONWOOD PHARMACEUTICALS INC,19166667.0,False,160.61796242403543,False,single holding > 50% of shares out
+1465740.0,29397805,27,2,Two Harbors Investment Corp.,13379209.0,False,219.72752649278445,False,multiple CUSIPs summed (classes/units)

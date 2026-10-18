@@ -1,0 +1,68 @@
+2014Q3: shares/value check   (min distinct filings per CUSIP = 3, tolerance = 25%, rounding-aware)
+
+rows total 1,636,489 | excluded: PRN 13,176, put/call 139,700, zero/missing value or shares 24,129 | eligible 1,459,484
+testable rows (CUSIP in >= 3 filings) 1,449,279 of eligible 1,459,484; not testable 10,205
+
+PASS 1 (values as filed, rounding-aware): flagged 55,714 / 1,449,279 = 3.84%
+filings given value_scale_flag: x1000 87, div1000 0 (rows 49,473 / 0); of the x1000 filings, checksum already said 'scale': 48
+
+PASS 2 (scale-normalized internally): FLAG RATE 8,161 / 1,449,279 = 0.56%
+
+flagged rows by cause (one per row, precedence as listed):
+cause
+unexplained                                                            4956
+wrong shares column (swap note or >50% of filing flagged)              2305
+scale (row-level x1000 / ÷1000)                                         417
+cusip ambiguous (filing prices spread >tol: class / ADR / unit mix)     404
+cusip repaired / short id                                                79
+  sum 8,161
+
+by parse path:
+                 rows  flagged   rate
+parse_method                         
+xml           1449279     8161  0.56%
+
+by value/shares swap note:
+               rows  flagged   rate
+swap_noted                         
+False       1449279     8161  0.56%
+
+by value_scale_flag:
+                     rows  flagged   rate
+value_scale_flag                         
+                  1401079     7494  0.53%
+x1000               48200      667  1.38%
+
+by checksum status:
+                    rows  flagged   rate
+checksum_status                         
+fail_both          89329      796  0.89%
+fail_entries       63840      123  0.19%
+fail_value         64336     2569  3.99%
+pass             1231774     4673  0.38%
+
+flagged rows by implied/median ratio (after normalization):
+ratio
+<0.0015         33
+0.0015–0.5     954
+0.5–0.75      1205
+0.75–1.25        0
+1.25–2        2013
+2–500         3432
+500–2000       391
+>2000          133
+
+filings with testable rows 3,960; >50% of rows flagged 34; any flag 645
+
+filings with >=5 testable rows, highest flagged share (after normalization):
+           accession  rows  flagged share                     manager_name value_scale_flag                   checksum_cause
+0001085146-14-002392    17       17  100%    Sarbit Advisory Services Inc.                                                  
+0001576762-14-000010    34       34  100%              Advisory Alpha, LLC                                                  
+0001542165-14-000004    95       95  100% Boyer & Corporon Wealth Manag...                                                  
+0001133385-14-000008    49       49  100% OLD DOMINION CAPITAL MANAGEME...                                                  
+0001085146-14-002139    17       17  100%    Sarbit Advisory Services Inc.                                                  
+0000092230-14-000064  1023     1023  100%             BB&T SECURITIES, LLC                        value off >1%, unexplained
+0000762152-14-000008   950      949  100% STATE TREASURER STATE OF MICH...                        value off >1%, unexplained
+0001140361-14-042345    35       32   91% Lombard Odier Asset Managemen...                                                  
+0001317329-14-000013    63       56   89%       ALPINE ASSOCIATES ADVISORS            x1000 entry total counts distinct C...
+0001586463-14-000007    37       32   86%                  CMT TRADING LLC                                                  

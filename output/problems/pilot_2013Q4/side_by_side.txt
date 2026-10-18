@@ -1,0 +1,296 @@
+==============================================================================================================
+0001172661-14-000598  Slate Path Capital LP  13F-HR  period 20131231  rows 19  checksum pass 
+https://www.sec.gov/Archives/edgar/data/1559706/000117266114000598/0001172661-14-000598.txt
+
+--- RAW HEADER (excerpt) ---
+  ACCESSION NUMBER: 0001172661-14-000598
+  CONFORMED SUBMISSION TYPE: 13F-HR
+  CONFORMED PERIOD OF REPORT: 20131231
+  COMPANY CONFORMED NAME: Slate Path Capital LP
+  CENTRAL INDEX KEY: 0001559706
+
+--- RAW SUMMARY PAGE ---
+<summaryPage>
+      <otherIncludedManagersCount>0</otherIncludedManagersCount>
+      <tableEntryTotal>19</tableEntryTotal>
+      <tableValueTotal>2897985</tableValueTotal>
+    </summaryPage>
+
+--- RAW INFORMATION TABLE: first 2 <infoTable> entries ---
+<infoTable>
+    <nameOfIssuer>ALNYLAM PHARMACEUTICALS INC</nameOfIssuer>
+    <titleOfClass>COM</titleOfClass>
+    <cusip>02043Q107</cusip>
+    <value>64300</value>
+    <shrsOrPrnAmt>
+      <sshPrnamt>1000000</sshPrnamt>
+      <sshPrnamtType>SH</sshPrnamtType>
+    </shrsOrPrnAmt>
+    <investmentDiscretion>SOLE</investmentDiscretion>
+    <votingAuthority>
+      <Sole>1000000</Sole>
+      <Shared>0</Shared>
+      <None>0</None>
+    </votingAuthority>
+  </infoTable>
+<infoTable>
+    <nameOfIssuer>AMERICAN INTL GROUP INC</nameOfIssuer>
+    <titleOfClass>COM NEW</titleOfClass>
+    <cusip>026874784</cusip>
+    <value>201903</value>
+    <shrsOrPrnAmt>
+      <sshPrnamt>3955000</sshPrnamt>
+      <sshPrnamtType>SH</sshPrnamtType>
+    </shrsOrPrnAmt>
+    <investmentDiscretion>SOLE</investmentDiscretion>
+    <votingAuthority>
+      <Sole>3955000</Sole>
+      <Shared>0</Shared>
+      <None>0</None>
+    </votingAuthority>
+  </infoTable>
+
+--- PARSED: first 2 rows + totals ---
+             name_of_issuer title_of_class     cusip  value  shares sh_prn put_call investment_discretion other_managers  voting_sole  voting_shared  voting_none
+ALNYLAM PHARMACEUTICALS INC            COM 02043Q107  64300 1000000     SH                           SOLE                     1000000              0            0
+    AMERICAN INTL GROUP INC        COM NEW 026874784 201903 3955000     SH                           SOLE                     3955000              0            0
+parsed rows=19  sum value=2897985  declared entry_total=19.0  declared value_total=2897985.0
+
+==============================================================================================================
+0001097241-14-000004  STATE OF WISCONSIN INVESTMENT BOARD  13F-HR  period 20131231  rows 1322  checksum pass 
+https://www.sec.gov/Archives/edgar/data/854157/000109724114000004/0001097241-14-000004.txt
+
+--- RAW HEADER (excerpt) ---
+  ACCESSION NUMBER: 0001097241-14-000004
+  CONFORMED SUBMISSION TYPE: 13F-HR
+  CONFORMED PERIOD OF REPORT: 20131231
+  COMPANY CONFORMED NAME: STATE OF WISCONSIN INVESTMENT BOARD
+  CENTRAL INDEX KEY: 0000854157
+
+--- RAW SUMMARY PAGE ---
+<summaryPage>
+      <otherIncludedManagersCount>0</otherIncludedManagersCount>
+      <tableEntryTotal>1322</tableEntryTotal>
+      <tableValueTotal>26036965</tableValueTotal>
+      <isConfidentialOmitted>false</isConfidentialOmitted>
+    </summaryPage>
+
+--- RAW INFORMATION TABLE: first 2 <infoTable> entries ---
+<n1:infoTable>
+		<n1:nameOfIssuer>DEUTSCHE BANK AG</n1:nameOfIssuer>
+		<n1:titleOfClass>NAMEN AKT</n1:titleOfClass>
+		<n1:cusip>D18190898</n1:cusip>
+		<n1:value>46961</n1:value>
+		<n1:shrsOrPrnAmt>
+			<n1:sshPrnamt>982851</n1:sshPrnamt>
+			<n1:sshPrnamtType>SH</n1:sshPrnamtType>
+		</n1:shrsOrPrnAmt>
+		<n1:investmentDiscretion>SOLE</n1:investmentDiscretion>
+		<n1:votingAuthority>
+			<n1:Sole>982851</n1:Sole>
+			<n1:Shared>0</n1:Shared>
+			<n1:None>0</n1:None>
+		</n1:votingAuthority>
+	</n1:infoTable>
+<n1:infoTable>
+		<n1:nameOfIssuer>ACTAVIS PLC</n1:nameOfIssuer>
+		<n1:titleOfClass>SHS</n1:titleOfClass>
+		<n1:cusip>G0083B108</n1:cusip>
+		<n1:value>33409</n1:value>
+		<n1:shrsOrPrnAmt>
+			<n1:sshPrnamt>198866</n1:sshPrnamt>
+			<n1:sshPrnamtType>SH</n1:sshPrnamtType>
+		</n1:shrsOrPrnAmt>
+		<n1:investmentDiscretion>SOLE</n1:investmentDiscretion>
+		<n1:votingAuthority>
+			<n1:Sole>198866</n1:Sole>
+			<n1:Shared>0</n1:Shared>
+			<n1:None>0</n1:None>
+		</n1:votingAuthority>
+	</n1:infoTable>
+
+--- PARSED: first 2 rows + totals ---
+  name_of_issuer title_of_class     cusip  value  shares sh_prn put_call investment_discretion other_managers  voting_sole  voting_shared  voting_none
+DEUTSCHE BANK AG      NAMEN AKT D18190898  46961  982851     SH                           SOLE                      982851              0            0
+     ACTAVIS PLC            SHS G0083B108  33409  198866     SH                           SOLE                      198866              0            0
+parsed rows=1322  sum value=26036956  declared entry_total=1322.0  declared value_total=26036965.0
+
+==============================================================================================================
+0001504941-14-000002  Portland Global Advisors LLC  13F-HR  period 20131231  rows 82  checksum pass 
+https://www.sec.gov/Archives/edgar/data/1504941/000150494114000002/0001504941-14-000002.txt
+
+--- RAW HEADER (excerpt) ---
+  ACCESSION NUMBER: 0001504941-14-000002
+  CONFORMED SUBMISSION TYPE: 13F-HR
+  CONFORMED PERIOD OF REPORT: 20131231
+  COMPANY CONFORMED NAME: Portland Global Advisors LLC
+  CENTRAL INDEX KEY: 0001504941
+
+--- RAW SUMMARY PAGE ---
+<summaryPage>
+      <otherIncludedManagersCount>0</otherIncludedManagersCount>
+      <tableEntryTotal>82</tableEntryTotal>
+      <tableValueTotal>161011</tableValueTotal>
+      <isConfidentialOmitted>false</isConfidentialOmitted>
+    </summaryPage>
+
+--- RAW INFORMATION TABLE: first 2 <infoTable> entries ---
+<infoTable>
+    <nameOfIssuer>ADM</nameOfIssuer>
+    <titleOfClass>COM</titleOfClass>
+    <cusip>039483102</cusip>
+    <value>559</value>
+    <shrsOrPrnAmt>
+      <sshPrnamt>12874</sshPrnamt>
+      <sshPrnamtType>SH</sshPrnamtType>
+    </shrsOrPrnAmt>
+    <investmentDiscretion>SOLE</investmentDiscretion>
+    <votingAuthority>
+      <Sole>0</Sole>
+      <Shared>0</Shared>
+      <None>12874</None>
+    </votingAuthority>
+  </infoTable>
+<infoTable>
+    <nameOfIssuer>Allergan Inc</nameOfIssuer>
+    <titleOfClass>COM</titleOfClass>
+    <cusip>018490102</cusip>
+    <value>1149</value>
+    <shrsOrPrnAmt>
+      <sshPrnamt>10340</sshPrnamt>
+      <sshPrnamtType>SH</sshPrnamtType>
+    </shrsOrPrnAmt>
+    <investmentDiscretion>SOLE</investmentDiscretion>
+    <votingAuthority>
+      <Sole>0</Sole>
+      <Shared>0</Shared>
+      <None>10340</None>
+    </votingAuthority>
+  </infoTable>
+
+--- PARSED: first 2 rows + totals ---
+name_of_issuer title_of_class     cusip  value  shares sh_prn put_call investment_discretion other_managers  voting_sole  voting_shared  voting_none
+           ADM            COM 039483102    559   12874     SH                           SOLE                           0              0        12874
+  Allergan Inc            COM 018490102   1149   10340     SH                           SOLE                           0              0        10340
+parsed rows=82  sum value=161011  declared entry_total=82.0  declared value_total=161011.0
+
+==============================================================================================================
+0001140361-14-004518  CAPSTONE ASSET MANAGEMENT CO  13F-HR  period 20131231  rows 1872  checksum pass 
+https://www.sec.gov/Archives/edgar/data/825204/000114036114004518/0001140361-14-004518.txt
+
+--- RAW HEADER (excerpt) ---
+  ACCESSION NUMBER: 0001140361-14-004518
+  CONFORMED SUBMISSION TYPE: 13F-HR
+  CONFORMED PERIOD OF REPORT: 20131231
+  COMPANY CONFORMED NAME: CAPSTONE ASSET MANAGEMENT CO
+  CENTRAL INDEX KEY: 0000825204
+
+--- RAW SUMMARY PAGE ---
+<summaryPage>
+      <otherIncludedManagersCount>0</otherIncludedManagersCount>
+      <tableEntryTotal>1872</tableEntryTotal>
+      <tableValueTotal>3435523</tableValueTotal>
+      <isConfidentialOmitted>false</isConfidentialOmitted>
+    </summaryPage>
+
+--- RAW INFORMATION TABLE: first 2 <infoTable> entries ---
+<infoTable>
+			<nameOfIssuer>3-D SYS CORP DEL</nameOfIssuer>
+			<titleOfClass>COM</titleOfClass>
+			<cusip>88554D205</cusip>
+			<value>1082</value>
+			<shrsOrPrnAmt>
+				<sshPrnamt>11646</sshPrnamt>
+				<sshPrnamtType>SH</sshPrnamtType>
+			</shrsOrPrnAmt>
+			<investmentDiscretion>SOLE</investmentDiscretion>
+			<otherManager>NONE</otherManager>
+			<votingAuthority>
+				<Sole>10561</Sole>
+				<Shared>455</Shared>
+				<None>630</None>
+			</votingAuthority>
+		</infoTable>
+<infoTable>
+			<nameOfIssuer>3M COMPANY</nameOfIssuer>
+			<titleOfClass>COM</titleOfClass>
+			<cusip>88579Y101</cusip>
+			<value>17873</value>
+			<shrsOrPrnAmt>
+				<sshPrnamt>127436</sshPrnamt>
+				<sshPrnamtType>SH</sshPrnamtType>
+			</shrsOrPrnAmt>
+			<investmentDiscretion>SOLE</investmentDiscretion>
+			<otherManager>NONE</otherManager>
+			<votingAuthority>
+				<Sole>62191</Sole>
+				<Shared>64073</Shared>
+				<None>1172</None>
+			</votingAuthority>
+		</infoTable>
+
+--- PARSED: first 2 rows + totals ---
+  name_of_issuer title_of_class     cusip  value  shares sh_prn put_call investment_discretion other_managers  voting_sole  voting_shared  voting_none
+3-D SYS CORP DEL            COM 88554D205   1082   11646     SH                           SOLE           NONE        10561            455          630
+      3M COMPANY            COM 88579Y101  17873  127436     SH                           SOLE           NONE        62191          64073         1172
+parsed rows=1872  sum value=3435523  declared entry_total=1872.0  declared value_total=3435523.0
+
+==============================================================================================================
+0000724683-14-000008  PIPER JAFFRAY & CO.  13F-HR  period 20131231  rows 92  checksum pass 
+https://www.sec.gov/Archives/edgar/data/724683/000072468314000008/0000724683-14-000008.txt
+
+--- RAW HEADER (excerpt) ---
+  ACCESSION NUMBER: 0000724683-14-000008
+  CONFORMED SUBMISSION TYPE: 13F-HR
+  CONFORMED PERIOD OF REPORT: 20131231
+  COMPANY CONFORMED NAME: PIPER JAFFRAY & CO.
+  CENTRAL INDEX KEY: 0000724683
+
+--- RAW SUMMARY PAGE ---
+<summaryPage>
+      <otherIncludedManagersCount>0</otherIncludedManagersCount>
+      <tableEntryTotal>92</tableEntryTotal>
+      <tableValueTotal>119124</tableValueTotal>
+      <isConfidentialOmitted>false</isConfidentialOmitted>
+    </summaryPage>
+
+--- RAW INFORMATION TABLE: first 2 <infoTable> entries ---
+<ns1:infoTable>
+		<ns1:nameOfIssuer>ACELRX PHARMACEUTICALS INC</ns1:nameOfIssuer>
+		<ns1:titleOfClass>COM</ns1:titleOfClass>
+		<ns1:cusip>00444T100</ns1:cusip>
+		<ns1:value>336</ns1:value>
+		<ns1:shrsOrPrnAmt>
+			<ns1:sshPrnamt>29750</ns1:sshPrnamt>
+			<ns1:sshPrnamtType>SH</ns1:sshPrnamtType>
+		</ns1:shrsOrPrnAmt>
+		<ns1:investmentDiscretion>SOLE</ns1:investmentDiscretion>
+		<ns1:votingAuthority>
+			<ns1:Sole>29750</ns1:Sole>
+			<ns1:Shared>0</ns1:Shared>
+			<ns1:None>0</ns1:None>
+		</ns1:votingAuthority>
+	</ns1:infoTable>
+<ns1:infoTable>
+		<ns1:nameOfIssuer>ADEPT TECHNOLOGY INC</ns1:nameOfIssuer>
+		<ns1:titleOfClass>COM NEW</ns1:titleOfClass>
+		<ns1:cusip>006854202</ns1:cusip>
+		<ns1:value>502</ns1:value>
+		<ns1:shrsOrPrnAmt>
+			<ns1:sshPrnamt>29750</ns1:sshPrnamt>
+			<ns1:sshPrnamtType>SH</ns1:sshPrnamtType>
+		</ns1:shrsOrPrnAmt>
+		<ns1:investmentDiscretion>SOLE</ns1:investmentDiscretion>
+		<ns1:votingAuthority>
+			<ns1:Sole>29750</ns1:Sole>
+			<ns1:Shared>0</ns1:Shared>
+			<ns1:None>0</ns1:None>
+		</ns1:votingAuthority>
+	</ns1:infoTable>
+
+--- PARSED: first 2 rows + totals ---
+            name_of_issuer title_of_class     cusip  value  shares sh_prn put_call investment_discretion other_managers  voting_sole  voting_shared  voting_none
+ACELRX PHARMACEUTICALS INC            COM 00444T100    336   29750     SH                           SOLE                       29750              0            0
+      ADEPT TECHNOLOGY INC        COM NEW 006854202    502   29750     SH                           SOLE                       29750              0            0
+parsed rows=92  sum value=119124  declared entry_total=92.0  declared value_total=119124.0
+

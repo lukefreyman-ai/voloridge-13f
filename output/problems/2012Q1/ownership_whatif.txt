@@ -1,0 +1,30 @@
+2012Q1: what-if on the over-100% stop condition (read-only; output unchanged)
+debt-pattern CUSIPs filed as SH: 7,818 rows, 5,965 CUSIPs, $88.3bn; 13(f) list descriptions of those: {'(not i': 5582, 'NOTE  ': 312, 'DBCV  ': 24, 'FRNT  ': 16, 'SDCV  ': 15, 'DEB   ': 5}
+13(f) list description of ALL output CUSIPs (distinct), top: {'(not': 13631, 'COM': 4166, 'NOTE': 315, 'CL': 286, 'SPONSORED': 182, 'SHS': 149, '*W': 76, 'SPON': 73, 'UNIT': 72, 'ADR': 63}
+ADR/ADS CUSIPs in output: 386 on 291 companies, $603.7bn
+amendments duplicating the original (>= 90% identical rows): 0 ({}), rows 0
+
+S0 as produced                                               all: over 100%   223 / 4,007 =  5.6% | median  56.8 | top-500:  33 / 422 =  7.8%
+S1 drop debt-pattern CUSIPs                                  all: over 100%   101 / 4,007 =  2.5% | median  56.0 | top-500:  16 / 422 =  3.8%
+S2 + collapse duplicate amendments                           all: over 100%   101 / 4,007 =  2.5% | median  56.0 | top-500:  16 / 422 =  3.8%
+S3 + drop ADR/ADS securities                                 all: over 100%   101 / 3,949 =  2.6% | median  57.2 | top-500:  16 / 421 =  3.8%
+
+remaining top-500 companies over 100% under S3: 16
+                                      name       held           so         pct  value_bn  n_cusips     so_date                  so_source
+company_cik                                                                                                                              
+920148.0     LABORATORY CORP OF AMERICA...   91726354         96.8  94758630.2       8.4         1  2012-04-30  10-Q 0000920148-12-000057
+1392522.0    Freescale Semiconductor Ho...  427951866  246687843.0       173.5       6.6         1  2012-03-31  10-Q 0001193125-12-176131
+1101215.0       ALLIANCE DATA SYSTEMS CORP   59829786   50354665.0       118.8       7.8         1  2012-04-30  10-Q 0001101215-12-000111
+707549.0                 LAM RESEARCH CORP  134396547  120264497.0       111.8       6.1         1  2012-04-30  10-Q 0001193125-12-208438
+899751.0           TITAN INTERNATIONAL INC   46364557   42242524.0       109.8      44.3         1  2012-04-30  10-Q 0000899751-12-000034
+1297996.0       Digital Realty Trust, Inc.  118059775  110190705.0       107.1       9.0         3  2012-04-30  10-Q 0001193125-12-215321
+915912.0         AVALONBAY COMMUNITIES INC  101349073   95352207.0       106.3      14.3         1  2012-04-30  10-Q 0001104659-12-033050
+1101239.0                      EQUINIX INC   49947092   47413240.0       105.3       8.0         1  2012-03-31  10-Q 0001193125-12-190764
+794323.0        LEVEL 3 COMMUNICATIONS INC  225238228  216387585.0       104.1       6.3         2  2012-04-30  10-Q 0000794323-12-000008
+908255.0                    BORGWARNER INC  117902586  114613535.0       102.9      10.0         1  2012-04-30  10-Q 0000908255-12-000036
+886137.0              FINISH LINE INC /IN/   52042145   50833851.0       102.4      31.8         1  2012-08-31  10-Q 0001193125-12-408792
+945841.0                         POOL CORP   48717090   47630532.0       102.3       5.9         1  2012-04-30  10-Q 0000945841-12-000047
+1477294.0    Sensata Technologies Holdi...  180952287  177085892.0       102.2       6.1         1  2012-03-31  10-Q 0001477294-12-000013
+1270400.0                VIRGIN MEDIA INC.  281095724  277766072.0       101.2       7.2         1  2012-04-30  10-Q 0001193125-12-217293
+827054.0          MICROCHIP TECHNOLOGY INC  195149360  193583220.0       100.8       7.3         1  2012-05-31  10-K 0000827054-12-000170
+1110803.0                     ILLUMINA INC  123948663  123448010.0       100.4       6.5         1  2012-03-31  10-Q 0001110803-12-000104

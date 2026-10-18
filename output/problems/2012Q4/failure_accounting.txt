@@ -1,0 +1,43 @@
+2012Q4: 3915 filings in the EDGAR index (13F-HR and 13F-HR/A)
+
+Definitions: 'pass' = every summary total that is present on the filing matches the parsed holdings
+(entry count exactly; value total within 0.1%). A filing with only one total present can pass on that one.
+'usable summary page' = both totals present and > 0.
+
+13F NOTICE (no holdings by design)                4
+holdings-bearing                                3911
+                                              -----
+  sum                                          3915  == 3915
+
+Holdings-bearing filings, one bucket each (checksum_cause from pipeline/checksum.py):
+   2904  pass: all present totals match
+    236  summary page missing
+    187  entry count off by >2, unexplained
+    178  value scale x1000 (dollars vs thousands)
+    149  entry total counts distinct CUSIPs not rows
+    129  value off >1%, unexplained
+     38  entry count off by <=2
+     35  no rows parsed
+     27  value within 1% (rounding)
+     17  entry off by <=2 and value off >1%
+      9  entry off by <=2 and value within 1%
+      1  empty filing (single placeholder row, totals zero)
+      1  summary fields swapped (entry total = value total)
+  -----
+   3911  == 3911
+
+Summary page presence (holdings-bearing):
+  both totals present and >0 (usable)    3536
+  both present, one or both == 0           52
+  entry total only                         64
+  value total only                         23
+  neither                                 236
+  -----
+  sum                                    3911
+
+Pass rate:
+  over ALL 3915 index filings:                     pass  2904  = 74.2%   (both totals match:  2846 = 72.7%)
+  over 3911 holdings-bearing filings:          pass  2904  = 74.3%   (both totals match:  2846 = 72.8%)
+  over 3536 usable-summary filings:            pass  2804  = 79.3%   (both totals match:  2804 = 79.3%)
+    entry total matches among usable:   3094 = 87.5%
+    value total matches among usable:   2955 = 83.6%

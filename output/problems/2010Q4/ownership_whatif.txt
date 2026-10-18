@@ -1,0 +1,22 @@
+2010Q4: what-if on the over-100% stop condition (read-only; output unchanged)
+debt-pattern CUSIPs filed as SH: 6,225 rows, 4,608 CUSIPs, $217.0bn; 13(f) list descriptions of those: {'(not i': 4156, 'NOTE  ': 369, 'DBCV  ': 35, 'SDCV  ': 20, 'FRNT  ': 19, 'DEB   ': 6}
+13(f) list description of ALL output CUSIPs (distinct), top: {'(not': 11757, 'COM': 4298, 'NOTE': 370, 'CL': 295, 'SPONSORED': 175, 'SHS': 139, '*W': 80, 'SPON': 77, 'UNIT': 67, 'ADR': 66}
+ADR/ADS CUSIPs in output: 390 on 281 companies, $593.9bn
+amendments duplicating the original (>= 90% identical rows): 0 ({}), rows 0
+
+S0 as produced                                               all: over 100%   182 / 2,582 =  7.0% | median  66.4 | top-500:  34 / 426 =  8.0%
+S1 drop debt-pattern CUSIPs                                  all: over 100%    73 / 2,582 =  2.8% | median  65.7 | top-500:   8 / 426 =  1.9%
+S2 + collapse duplicate amendments                           all: over 100%    73 / 2,582 =  2.8% | median  65.7 | top-500:   8 / 426 =  1.9%
+S3 + drop ADR/ADS securities                                 all: over 100%    73 / 2,564 =  2.8% | median  65.8 | top-500:   8 / 424 =  1.9%
+
+remaining top-500 companies over 100% under S3: 8
+                                   name          held           so           pct  value_bn  n_cusips     so_date                    so_source
+company_cik                                                                                                                                  
+277948.0                       CSX CORP  2.334730e+08          1.0  2.334730e+10      15.1         1  2011-03-31    10-Q 0000277948-11-000017
+1067983.0        BERKSHIRE HATHAWAY INC  5.714858e+08     943242.0  6.058740e+04      61.2         4  2011-02-28    10-K 0001193125-11-048914
+68505.0        Motorola Solutions, Inc.  1.411667e+09  336710130.0  4.193000e+02      12.9         4  2011-01-31    10-K 0001193125-11-039822
+1101215.0    ALLIANCE DATA SYSTEMS CORP  6.864955e+07   51130335.0  1.343000e+02       5.4         1  2011-02-28    10-K 0001140361-11-012449
+1297996.0    Digital Realty Trust, Inc.  1.083374e+08   91394399.0  1.185000e+02       5.6         1  2011-02-28  10-K/A 0001193125-11-078103
+1101239.0                   EQUINIX INC  4.958985e+07   46198990.0  1.073000e+02       6.2         1  2011-01-31    10-K 0001193125-11-047157
+1034054.0       SBA COMMUNICATIONS CORP  1.225699e+08  114919445.0  1.067000e+02       5.3         1  2011-02-28    10-K 0001193125-11-047174
+873364.0                   CEPHALON INC  7.934281e+07   75730236.0  1.048000e+02       5.1         1  2011-01-31    10-K 0001047469-11-000780

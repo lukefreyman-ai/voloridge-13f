@@ -1,0 +1,266 @@
+pilot_2013Q4: investigation of over-100% companies (read-only)
+
+A. companies over 100% with 'manager-CUSIP in >1 filing': 78
+manager-CUSIP pairs reported in >1 selected filing: 96 across 78 companies; pairs with identical share counts (pure double count): 24
+companies that would drop under 100% if the repeated pair were counted once: 1 of 78
+by form combination: {'13F-HR+13F-HR/A/NEW HOLDINGS': 96}
+managers involved most often: {'Absolute Return Capital, LLC': 42, 'Gerstein Fisher': 22, 'RIVERHEAD CAPITAL MANAGEMENT L': 17, 'EMERALD MUTUAL FUND ADVISERS T': 15}
+
+per company:
+                                  pct  pairs  identical_pairs  dup_shares  pct_if_deduped
+company                                                                                  
+SOUTHWESTERN ENERGY CO        91975.6      1                0       19000         91970.2
+INTERCLOUD SYSTEMS, INC.        522.8      1                0       63115           522.2
+CHEMED CORP                     131.3      1                0       29866           131.1
+WESCO INTERNATIONAL INC         126.1      1                0       83850           125.9
+HIBBETT SPORTS INC              125.6      1                0       56875           125.4
+CASH AMERICA INTERNATIONAL I    120.7      1                0       86460           120.4
+Lumber Liquidators Holdings,    119.2      3                1      102714           119.0
+GameStop Corp.                  119.2      1                0        6000           119.2
+ICONIX BRAND GROUP, INC.        119.2      1                1        9856           119.2
+WORLD ACCEPTANCE CORP           118.7      2                1       25201           118.5
+CACI INTERNATIONAL INC /DE/     118.0      2                1       41781           117.9
+VERISIGN INC/CA                 117.2      1                0      158000           117.1
+EQUINIX INC                     116.8      1                0       37030           116.7
+NII HOLDINGS INC                115.0      1                0        6200           115.0
+AMERICAN EQUITY INVESTMENT L    115.0      1                1       38493           114.9
+DUPONT FABROS TECHNOLOGY, IN    114.5      1                1       12590           114.5
+DiamondRock Hospitality Co      114.4      2                2       50807           114.4
+ALLIANCE DATA SYSTEMS CORP      113.4      1                1       14794           113.3
+GEOSPACE TECHNOLOGIES CORP      113.1      1                0       67221           112.6
+HEARTLAND PAYMENT SYSTEMS IN    112.3      1                0       81384           112.1
+LINDSAY CORP                    110.8      1                0       27503           110.6
+ADT Corp                        110.0      2                0      621219           109.6
+PORTFOLIO RECOVERY ASSOCIATE    109.9      1                0      120494           109.6
+UNITED THERAPEUTICS Corp        109.8      2                1       25197           109.8
+SL GREEN REALTY CORP            109.5      1                0        2812           109.5
+J2 GLOBAL, INC.                 109.4      1                1        8975           109.4
+GULFPORT ENERGY CORP            109.4      1                0       91735           109.3
+AVIS BUDGET GROUP, INC.         109.1      1                1       16141           109.1
+OMNICARE INC                    108.6      1                0      132192           108.5
+ABERCROMBIE & FITCH CO /DE/     107.4      1                0      215070           107.1
+PACWEST BANCORP                 107.0      1                0       69290           106.9
+MACERICH CO                     106.7      1                0       15000           106.7
+MACK CALI REALTY CORP           106.5      1                0       14172           106.5
+DECKERS OUTDOOR CORP            106.4      1                0      148217           105.9
+Aegerion Pharmaceuticals, In    106.4      1                0       29931           106.3
+URS CORP /NEW/                  106.4      1                0       64383           106.3
+JOY GLOBAL INC                  106.0      1                0      396683           105.6
+BIG LOTS INC                    105.7      1                0       73750           105.6
+Mallinckrodt plc                105.1      1                0       36132           105.1
+QUEST DIAGNOSTICS INC           104.6      2                0      715567           104.1
+HOST HOTELS & RESORTS, INC.     104.6      2                1       87962           104.6
+RLJ Lodging Trust               104.5      1                1       10702           104.5
+ZIONS BANCORPORATION /UT/       104.5      1                0       60262           104.5
+ALEXANDRIA REAL ESTATE EQUIT    104.4      1                0       83154           104.3
+LABORATORY CORP OF AMERICA H    104.4      2                0      409848           104.0
+KAR Auction Services, Inc.      104.3      1                0       85617           104.2
+FIVE BELOW, INC                 104.2      1                0      100509           104.0
+OFG BANCORP                     104.2      1                1       73550           104.1
+QUESTCOR PHARMACEUTICALS INC    104.1      2                1      149941           103.8
+V F CORP                        104.0      2                1       39884           104.0
+CEPHEID                         104.0      1                0      169553           103.8
+Prologis, Inc.                  103.6      1                0       39660           103.6
+NRG ENERGY, INC.                103.3      2                0      989840           103.0
+CHART INDUSTRIES INC            102.7      1                0       19057           102.7
+APARTMENT INVESTMENT & MANAG    102.5      2                1       47439           102.4
+BRINKER INTERNATIONAL INC       102.4      1                0      599777           101.5
+BOSTON PROPERTIES INC           102.2      2                1       12023           102.2
+LEAR CORP                       102.2      1                1       25464           102.2
+MICROCHIP TECHNOLOGY INC        102.2      1                0      136949           102.1
+Post Holdings, Inc.             102.2      1                0      102684           101.8
+EQUITY RESIDENTIAL              102.0      2                1      269361           102.0
+BRANDYWINE REALTY TRUST         101.8      1                0      111167           101.7
+TEXAS CAPITAL BANCSHARES INC    101.7      1                0       11410           101.7
+UDR, Inc.                       101.5      1                0       14024           101.5
+RED ROBIN GOURMET BURGERS IN    101.5      1                0      108814           100.7
+REALOGY HOLDINGS CORP.          101.0      1                0       28324           101.0
+FAIRCHILD SEMICONDUCTOR INTE    101.0      1                0        4656           101.0
+FORWARD AIR CORP                100.9      1                0       48902           100.7
+ANN INC.                        100.9      1                0      153212           100.6
+QLIK TECHNOLOGIES INC           100.9      1                0      283598           100.5
+TransDigm Group INC             100.5      2                1       18792           100.5
+CHUY'S HOLDINGS, INC.           100.5      1                0      134337            99.7
+CommonWealth REIT               100.4      1                0       19052           100.4
+AFFILIATED MANAGERS GROUP, I    100.4      1                0        3455           100.4
+Western Union CO                100.4      2                0     1444506           100.2
+WEX Inc.                        100.3      1                1        2679           100.3
+CIENA CORP                      100.2      1                0      109570           100.1
+JETBLUE AIRWAYS CORP            100.1      1                1       17100           100.1
+
+sample pairs (first 25):
+                     company     pct                        manager                        forms          shares  identical  pct_if_deduped
+      SOUTHWESTERN ENERGY CO 91975.6 RIVERHEAD CAPITAL MANAGEMENT L 13F-HR+13F-HR/A/NEW HOLDINGS   19,000/40,985      False         91970.2
+ CACI INTERNATIONAL INC /DE/   118.0                Gerstein Fisher 13F-HR+13F-HR/A/NEW HOLDINGS     4,293/4,293       True           118.0
+ CACI INTERNATIONAL INC /DE/   118.0   Absolute Return Capital, LLC 13F-HR+13F-HR/A/NEW HOLDINGS   98,222/37,488      False           117.9
+                 CHEMED CORP   131.3   Absolute Return Capital, LLC 13F-HR+13F-HR/A/NEW HOLDINGS   29,866/33,427      False           131.1
+                   UDR, Inc.   101.5   Absolute Return Capital, LLC 13F-HR+13F-HR/A/NEW HOLDINGS   14,024/71,585      False           101.5
+              URS CORP /NEW/   106.4   Absolute Return Capital, LLC 13F-HR+13F-HR/A/NEW HOLDINGS   64,383/85,688      False           106.3
+                    V F CORP   104.0                Gerstein Fisher 13F-HR+13F-HR/A/NEW HOLDINGS   19,884/19,884       True           104.0
+                    V F CORP   104.0 RIVERHEAD CAPITAL MANAGEMENT L 13F-HR+13F-HR/A/NEW HOLDINGS   20,000/34,860      False           104.0
+       WORLD ACCEPTANCE CORP   118.7                Gerstein Fisher 13F-HR+13F-HR/A/NEW HOLDINGS     4,206/4,206       True           118.7
+       WORLD ACCEPTANCE CORP   118.7   Absolute Return Capital, LLC 13F-HR+13F-HR/A/NEW HOLDINGS   22,230/20,995      False           118.5
+   ZIONS BANCORPORATION /UT/   104.5 RIVERHEAD CAPITAL MANAGEMENT L 13F-HR+13F-HR/A/NEW HOLDINGS   60,262/89,086      False           104.5
+                OMNICARE INC   108.6   Absolute Return Capital, LLC 13F-HR+13F-HR/A/NEW HOLDINGS 132,192/198,094      False           108.5
+   BRINKER INTERNATIONAL INC   102.4   Absolute Return Capital, LLC 13F-HR+13F-HR/A/NEW HOLDINGS 707,115/599,777      False           101.5
+     AVIS BUDGET GROUP, INC.   109.1                Gerstein Fisher 13F-HR+13F-HR/A/NEW HOLDINGS   16,141/16,141       True           109.1
+                BIG LOTS INC   105.7   Absolute Return Capital, LLC 13F-HR+13F-HR/A/NEW HOLDINGS   73,750/90,490      False           105.6
+     BRANDYWINE REALTY TRUST   101.8   Absolute Return Capital, LLC 13F-HR+13F-HR/A/NEW HOLDINGS 232,643/111,167      False           101.7
+              JOY GLOBAL INC   106.0   Absolute Return Capital, LLC 13F-HR+13F-HR/A/NEW HOLDINGS 515,218/396,683      False           105.6
+           CommonWealth REIT   100.4   Absolute Return Capital, LLC 13F-HR+13F-HR/A/NEW HOLDINGS  175,006/19,052      False           100.4
+CASH AMERICA INTERNATIONAL I   120.7   Absolute Return Capital, LLC 13F-HR+13F-HR/A/NEW HOLDINGS   86,460/92,844      False           120.4
+    MICROCHIP TECHNOLOGY INC   102.2 RIVERHEAD CAPITAL MANAGEMENT L 13F-HR+13F-HR/A/NEW HOLDINGS 136,949/156,532      False           102.1
+                LINDSAY CORP   110.8   Absolute Return Capital, LLC 13F-HR+13F-HR/A/NEW HOLDINGS   27,503/36,833      False           110.6
+                   LEAR CORP   102.2                Gerstein Fisher 13F-HR+13F-HR/A/NEW HOLDINGS   25,464/25,464       True           102.2
+    ICONIX BRAND GROUP, INC.   119.2                Gerstein Fisher 13F-HR+13F-HR/A/NEW HOLDINGS     9,856/9,856       True           119.2
+                    ANN INC.   100.9   Absolute Return Capital, LLC 13F-HR+13F-HR/A/NEW HOLDINGS 231,582/153,212      False           100.6
+        GULFPORT ENERGY CORP   109.4 EMERALD MUTUAL FUND ADVISERS T 13F-HR+13F-HR/A/NEW HOLDINGS  91,735/122,325      False           109.3
+
+
+B. hand check of 10 'no identified data cause' companies (largest by 13F value; 120 such companies in total)
+====================================================================================================
+ILLUMINA INC  CIK 1110803  held 145,412,096 / out 128,200,000 = 113.4%  13F value $16.1bn  managers 374  shares_out source 10-K 0001110803-14-000087 as-of 2014-01-31  CUSIPs ['452327109']
+  identical share counts across different managers (>=100k): 0 rows in 0 groups
+  top holders:
+                    manager_name  shares_held     form        atype  other_mgrs form_13f_accession_number
+                         FMR LLC     15758327   13F-HR                      8.0      0000315066-14-001823
+            BAILLIE GIFFORD & CO     15281229   13F-HR                      3.0      0001088875-14-000027
+Capital Research Global Inves...     11928587   13F-HR                      2.0      0000732812-14-000008
+                  MORGAN STANLEY      9868615   13F-HR                     18.0      0000895421-14-000231
+         JENNISON ASSOCIATES LLC      8499055   13F-HR                      2.0      0000053417-14-000171
+              VANGUARD GROUP INC      6795804   13F-HR                      2.0      0000950123-14-001756
+PRICE T ROWE ASSOCIATES INC /MD/      3887692 13F-HR/A NEW HOLDINGS         0.0      0000080255-14-000558
+         EDGEWOOD MANAGEMENT LLC      3858866   13F-HR                      0.0      0001062993-14-000603
+  top-10 holders' share of total held: 56.9%; rows from filings listing other managers: 37% of rows, 73% of shares
+====================================================================================================
+SBA COMMUNICATIONS CORP  CIK 1034054  held 135,936,321 / out 128,506,612 = 105.8%  13F value $12.2bn  managers 355  shares_out source 10-K 0001034054-14-000004 as-of 2014-01-31  CUSIPs ['78388J106']
+  identical share counts across different managers (>=100k): 0 rows in 0 groups
+  top holders:
+                    manager_name  shares_held     form        atype  other_mgrs form_13f_accession_number
+                         FMR LLC      7216311   13F-HR                      8.0      0000315066-14-001823
+              VANGUARD GROUP INC      7091386   13F-HR                      2.0      0000950123-14-001756
+         GOLDMAN SACHS GROUP INC      5908079   13F-HR                      9.0      0000769993-14-000296
+         JENNISON ASSOCIATES LLC      5812260   13F-HR                      2.0      0000053417-14-000171
+PRICE T ROWE ASSOCIATES INC /MD/      5583191 13F-HR/A NEW HOLDINGS         0.0      0000080255-14-000558
+           LONE PINE CAPITAL LLC      5456548   13F-HR                      0.0      0000902664-14-001162
+TimesSquare Capital Managemen...      4400100   13F-HR                      0.0      0000950123-14-001515
+ Winslow Capital Management, LLC      4320837   13F-HR                      3.0      0000900973-14-000003
+  top-10 holders' share of total held: 39.7%; rows from filings listing other managers: 42% of rows, 65% of shares
+====================================================================================================
+ENDO HEALTH SOLUTIONS INC.  CIK 1100962  held 139,150,477 / out 115,623,740 = 120.3%  13F value $9.4bn  managers 315  shares_out source 10-K 0001445305-14-000793 as-of 2014-02-28  CUSIPs ['29264F205']
+  identical share counts across different managers (>=100k): 3 rows in 1 groups; e.g.
+    200,000: Polar Capital LLP | Fox Point Capital Management | QUALCOMM INC/DE
+  top holders:
+                    manager_name  shares_held   form atype  other_mgrs form_13f_accession_number
+Capital Research Global Inves...     14073200 13F-HR               2.0      0000732812-14-000008
+    JANUS CAPITAL MANAGEMENT LLC     10190488 13F-HR               2.0      0001140361-14-007428
+      Blue Ridge Capital, L.L.C.      8000000 13F-HR               0.0      0000902664-14-001042
+              VANGUARD GROUP INC      6806492 13F-HR               2.0      0000950123-14-001756
+                         FMR LLC      5731891 13F-HR               8.0      0000315066-14-001823
+                  MORGAN STANLEY      5640278 13F-HR              18.0      0000895421-14-000231
+         BlackRock Fund Advisors      4739196 13F-HR               0.0      0001086364-14-002231
+           LONE PINE CAPITAL LLC      4340000 13F-HR               0.0      0000902664-14-001162
+  top-10 holders' share of total held: 48.1%; rows from filings listing other managers: 42% of rows, 59% of shares
+====================================================================================================
+CONSOL Energy Inc  CIK 1070412  held 229,647,323 / out 229,162,591 = 100.2%  13F value $8.7bn  managers 326  shares_out source 10-K 0001070412-14-000005 as-of 2014-01-31  CUSIPs ['20854P109']
+  identical share counts across different managers (>=100k): 2 rows in 1 groups; e.g.
+    125,000: US GLOBAL INVESTORS FUNDS | U S GLOBAL INVESTORS INC
+  top holders:
+                    manager_name  shares_held     form        atype  other_mgrs form_13f_accession_number
+PRICE T ROWE ASSOCIATES INC /MD/     26592090 13F-HR/A NEW HOLDINGS         0.0      0000080255-14-000558
+SOUTHEASTERN ASSET MANAGEMENT...     22691279   13F-HR                      1.0      0000807985-14-000013
+              VANGUARD GROUP INC     15598546   13F-HR                      2.0      0000950123-14-001756
+    WELLINGTON MANAGEMENT CO LLP     14993344   13F-HR                      3.0      0000902219-14-001001
+         Capital World Investors     14935000   13F-HR                      2.0      0000732812-14-000009
+          FRANKLIN RESOURCES INC     14734930   13F-HR                     14.0      0000038777-14-000108
+               STATE STREET CORP     10391781 13F-HR/A  RESTATEMENT        10.0      0000950123-14-001215
+     LAZARD ASSET MANAGEMENT LLC      8649336   13F-HR                      1.0      0001207017-14-000041
+  top-10 holders' share of total held: 61.6%; rows from filings listing other managers: 46% of rows, 70% of shares
+====================================================================================================
+UNITED RENTALS INC /DE  CIK 1067701  held 99,753,812 / out 93,217,882 = 107.0%  13F value $7.8bn  managers 408  shares_out source 10-K 0001067701-14-000004 as-of 2014-01-31  CUSIPs ['911363109']
+  identical share counts across different managers (>=100k): 2 rows in 1 groups; e.g.
+    100,000: Bodri Capital Management, LL | Lafitte Capital Management L
+  top holders:
+                    manager_name  shares_held     form       atype  other_mgrs form_13f_accession_number
+              VANGUARD GROUP INC      5145016   13F-HR                     2.0      0000950123-14-001756
+   MARCATO CAPITAL MANAGEMENT LP      4405230   13F-HR                     0.0      0000950142-14-000402
+        AMERIPRISE FINANCIAL INC      3636944   13F-HR                     8.0      0000950123-14-002429
+                         FMR LLC      3163582   13F-HR                     8.0      0000315066-14-001823
+        WELLS FARGO & COMPANY/MN      3129828   13F-HR                    13.0      0000072971-14-000273
+         BlackRock Fund Advisors      2610232   13F-HR                     0.0      0001086364-14-002231
+BlackRock Institutional Trust...      2540220   13F-HR                     0.0      0001086364-14-002233
+               STATE STREET CORP      2363389 13F-HR/A RESTATEMENT        10.0      0000950123-14-001215
+  top-10 holders' share of total held: 31.2%; rows from filings listing other managers: 36% of rows, 56% of shares
+====================================================================================================
+ELECTRONIC ARTS INC.  CIK 712515  held 323,726,347 / out 309,590,213 = 104.6%  13F value $7.4bn  managers 359  shares_out source 10-Q 0000712515-14-000009 as-of 2014-01-31  CUSIPs ['285512109']
+  identical share counts across different managers (>=100k): 2 rows in 1 groups; e.g.
+    1,997,502: Technology Crossover Managem | TECHNOLOGY CROSSOVER MANAGEM
+  top holders:
+                    manager_name  shares_held     form       atype  other_mgrs form_13f_accession_number
+                         FMR LLC     38941465   13F-HR                     8.0      0000315066-14-001823
+              VANGUARD GROUP INC     21554299   13F-HR                     2.0      0000950123-14-001756
+      PRIMECAP MANAGEMENT CO/CA/     21302487   13F-HR                     0.0      0001104659-14-009568
+   MANNING & NAPIER ADVISORS LLC     19681296   13F-HR                     3.0      0000950123-14-000734
+  AMERICAN CENTURY COMPANIES INC     19526668   13F-HR                     1.0      0000748054-14-000002
+          ALLIANCEBERNSTEIN L.P.     14880955   13F-HR                     5.0      0001532155-14-000059
+               STATE STREET CORP     12376406 13F-HR/A RESTATEMENT        10.0      0000950123-14-001215
+BlackRock Institutional Trust...      8267590   13F-HR                     0.0      0001086364-14-002233
+  top-10 holders' share of total held: 53.1%; rows from filings listing other managers: 41% of rows, 66% of shares
+====================================================================================================
+Cobalt International Energy, Inc.  CIK 1471261  held 444,892,604 / out 411,284,727 = 108.2%  13F value $7.3bn  managers 249  shares_out source 10-K 0001047469-14-001453 as-of 2013-12-31  CUSIPs ['19075F106']
+  identical share counts across different managers (>=100k): 2 rows in 1 groups; e.g.
+    34,822,878: RIVERSTONE HOLDINGS LLC | Carlyle Group L.P.
+  top holders:
+                    manager_name  shares_held   form atype  other_mgrs form_13f_accession_number
+    WELLINGTON MANAGEMENT CO LLP     57580868 13F-HR               3.0      0000902219-14-001001
+       First Reserve GP XI, Inc.     36552041 13F-HR               2.0      0001104659-14-010350
+         GOLDMAN SACHS GROUP INC     34826204 13F-HR               9.0      0000769993-14-000296
+         RIVERSTONE HOLDINGS LLC     34822878 13F-HR               1.0      0001140361-14-007766
+              Carlyle Group L.P.     34822878 13F-HR               2.0      0001140361-14-007511
+HOTCHKIS & WILEY CAPITAL MANA...     23170460 13F-HR               0.0      0001085146-14-000657
+         Capital World Investors     21626000 13F-HR               2.0      0000732812-14-000009
+              VANGUARD GROUP INC     15876671 13F-HR               2.0      0000950123-14-001756
+  top-10 holders' share of total held: 64.4%; rows from filings listing other managers: 51% of rows, 81% of shares
+====================================================================================================
+lululemon athletica inc.  CIK 1397187  held 116,953,186 / out 115,411,223 = 101.3%  13F value $6.9bn  managers 294  shares_out source 10-K 0001397187-14-000021 as-of 2014-03-31  CUSIPs ['550021109']
+  identical share counts across different managers (>=100k): 0 rows in 0 groups
+  top holders:
+                    manager_name  shares_held     form       atype  other_mgrs form_13f_accession_number
+                         FMR LLC     17283282   13F-HR                     8.0      0000315066-14-001823
+THORNBURG INVESTMENT MANAGEME...     11661667   13F-HR                     1.0      0001140361-14-006829
+Capital Research Global Inves...      9571915   13F-HR                     2.0      0000732812-14-000008
+    WELLINGTON MANAGEMENT CO LLP      8895471   13F-HR                     3.0      0000902219-14-001001
+             JPMORGAN CHASE & CO      5672723 13F-HR/A RESTATEMENT        10.0      0000019617-14-000292
+              VANGUARD GROUP INC      5513889   13F-HR                     2.0      0000950123-14-001756
+   MANNING & NAPIER ADVISORS LLC      5470994   13F-HR                     3.0      0000950123-14-000734
+  MARSICO CAPITAL MANAGEMENT LLC      3670642   13F-HR                     0.0      0001398344-14-001044
+  top-10 holders' share of total held: 63.5%; rows from filings listing other managers: 42% of rows, 78% of shares
+====================================================================================================
+FEDERAL REALTY INVESTMENT TRUST  CIK 34903  held 67,040,995 / out 66,822,208 = 100.3%  13F value $6.8bn  managers 303  shares_out source 10-K 0000034903-14-000009 as-of 2014-01-31  CUSIPs ['313747206']
+  identical share counts across different managers (>=100k): 2 rows in 1 groups; e.g.
+    2,094,894: Daiwa Securities Group Inc. | Daiwa Capital Markets Americ
+  top holders:
+                    manager_name  shares_held     form       atype  other_mgrs form_13f_accession_number
+              VANGUARD GROUP INC      8184456   13F-HR                     2.0      0000950123-14-001756
+               STATE STREET CORP      4551939 13F-HR/A RESTATEMENT        10.0      0000950123-14-001215
+              COHEN & STEERS INC      4126539   13F-HR                     2.0      0001140361-14-007622
+                    Invesco Ltd.      3026257   13F-HR                    16.0      0001140361-14-006662
+         BlackRock Fund Advisors      2855994   13F-HR                     0.0      0001086364-14-002231
+                     NORGES BANK      2838790 13F-HR/A RESTATEMENT         0.0      0001374170-14-000010
+BlackRock Institutional Trust...      2655452   13F-HR                     0.0      0001086364-14-002233
+     Daiwa Securities Group Inc.      2094894   13F-HR                     4.0      0001489000-14-000006
+  top-10 holders' share of total held: 51.1%; rows from filings listing other managers: 44% of rows, 67% of shares
+====================================================================================================
+HOLOGIC INC  CIK 859737  held 274,491,313 / out 274,388,977 = 100.0%  13F value $6.1bn  managers 322  shares_out source 10-Q 0001193125-14-037832 as-of 2014-01-31  CUSIPs ['436440101']
+  identical share counts across different managers (>=100k): 0 rows in 0 groups
+  top holders:
+                    manager_name  shares_held     form       atype  other_mgrs form_13f_accession_number
+                    ICAHN CARL C     34154879   13F-HR                    15.0      0001140361-14-007841
+Capital Research Global Inves...     33126545   13F-HR                     2.0      0000732812-14-000008
+         Capital World Investors     32902194   13F-HR                     2.0      0000732812-14-000009
+        RELATIONAL INVESTORS LLC     19950200   13F-HR                     0.0      0001104659-14-010598
+              VANGUARD GROUP INC     14397123   13F-HR                     2.0      0000950123-14-001756
+    WELLINGTON MANAGEMENT CO LLP      8366244   13F-HR                     3.0      0000902219-14-001001
+               STATE STREET CORP      8106317 13F-HR/A RESTATEMENT        10.0      0000950123-14-001215
+         BlackRock Fund Advisors      7994637   13F-HR                     0.0      0001086364-14-002231
+  top-10 holders' share of total held: 62.9%; rows from filings listing other managers: 42% of rows, 70% of shares

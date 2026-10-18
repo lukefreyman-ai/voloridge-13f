@@ -1,0 +1,80 @@
+2012Q3: shares/value check   (min distinct filings per CUSIP = 3, tolerance = 25%, rounding-aware)
+
+rows total 1,498,709 | excluded: PRN 13,002, put/call 96,284, zero/missing value or shares 21,651 | eligible 1,367,772
+testable rows (CUSIP in >= 3 filings) 1,356,049 of eligible 1,367,772; not testable 11,723
+
+PASS 1 (values as filed, rounding-aware): flagged 106,363 / 1,356,049 = 7.84%
+filings given value_scale_flag: x1000 155, div1000 2 (rows 57,364 / 322); of the x1000 filings, checksum already said 'scale': 41
+
+PASS 2 (scale-normalized internally): FLAG RATE 50,680 / 1,356,049 = 3.74%
+
+flagged rows by cause (one per row, precedence as listed):
+cause
+wrong shares column (swap note or >50% of filing flagged)              25117
+unexplained                                                            20191
+cusip ambiguous (filing prices spread >tol: class / ADR / unit mix)     3157
+cusip repaired / short id                                               1516
+scale (row-level x1000 / ÷1000)                                          699
+  sum 50,680
+
+by parse path:
+                 rows  flagged   rate
+parse_method                         
+html              351        9  2.56%
+text          1355698    50671  3.74%
+
+by value/shares swap note:
+               rows  flagged    rate
+swap_noted                          
+False       1355438    50605   3.73%
+True            611       75  12.27%
+
+by value_scale_flag:
+                     rows  flagged    rate
+value_scale_flag                          
+                  1299439    49730   3.83%
+div1000               322      115  35.71%
+x1000               56288      835   1.48%
+
+by checksum status:
+                   rows  flagged   rate
+checksum_status                        
+fail_both        117298     5140  4.38%
+fail_entries     138246     1057  0.76%
+fail_value       263993    24706  9.36%
+no_summary        47947      633  1.32%
+pass             788565    19144  2.43%
+
+flagged rows by implied/median ratio (after normalization):
+ratio
+<0.0015          63
+0.0015–0.5     7832
+0.5–0.75      13372
+0.75–1.25         0
+1.25–2        15424
+2–500         11511
+500–2000        646
+>2000          1832
+
+filings with testable rows 3,511; >50% of rows flagged 95; any flag 989
+
+filings with >=5 testable rows, highest flagged share (after normalization):
+           accession  rows  flagged share                     manager_name value_scale_flag                   checksum_cause
+0000891092-12-006867   121      121  100%      STRATEGY ASSET MANAGERS LLC                        value off >1%, unexplained
+0001295044-12-000010     9        9  100% Strategic Point Investment Ad...                                                  
+0001475150-12-000006    41       41  100%                  Randolph Co Inc                  value scale x1000 (dollars vs...
+0001475150-12-000005    41       41  100%                  Randolph Co Inc                  value scale x1000 (dollars vs...
+0000092230-12-000103   619      619  100%        SCOTT & STRINGFELLOW, LLC                        value off >1%, unexplained
+0000092230-12-000123   554      554  100%        SCOTT & STRINGFELLOW, LLC                        value off >1%, unexplained
+0000092230-12-000124   668      668  100%        SCOTT & STRINGFELLOW, LLC                        value off >1%, unexplained
+0001546927-12-000070     6        6  100%                Dalal Street, LLC                        value off >1%, unexplained
+0001546927-12-000066     5        5  100% Reynders McVeigh Capital Mana...                  entry count off by >2, unexpl...
+0001007280-12-000009  1319     1319  100% PUBLIC EMPLOYEES RETIREMENT S...                  entry count off by >2, unexpl...
+
+swap-noted filings, row-level result:
+           accession  rows  flagged                     manager_name value_scale_flag                   checksum_cause
+0000894189-12-006176     6        0 APPLETON GROUP WEALTH MANAGEM...                        value off >1%, unexplained
+0001193125-12-471029   445        2      Visium Asset Management, LP                        value off >1%, unexplained
+0001242972-12-000009    72       14             RONALD BLUE & CO LLC                  entry count off by >2, unexpl...
+0001340807-12-000019    72       59   Bares Capital Management, Inc.            x1000       value off >1%, unexplained
+0001376474-12-000380    16        0          MASON HILL ADVISORS LLC                  entry count off by >2, unexpl...

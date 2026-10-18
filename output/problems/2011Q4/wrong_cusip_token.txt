@@ -1,0 +1,23 @@
+2011Q4: wrong-CUSIP-token rows (status invalid_9/ambiguous/unconfirmed_short but a valid 13(f)-list CUSIP sits in the text): 2,006 rows in 149 filings (0.140% of 1,432,081 rows); shares>0 on 1,248 of them; by parse method {'text': 2006}
+candidate rows checked 6,736 by status {'invalid_9': 3692, 'unconfirmed_short': 2531, 'ambiguous': 513}
+filings with most such rows:
+                      rows        value                        manager method    checksum  n_rows
+accession                                                                                        
+0001193125-12-024162   340        340.0    PICTET ASSET MANAGEMENT LTD   text   fail_both    1742
+0000810972-12-000002   188        188.0   BAIRD ROBERT W & CO INC /WI/   text  fail_value    1446
+0000019617-12-000147    89        535.0            JPMORGAN CHASE & CO   text  fail_value   22353
+0000902219-12-000499    84  278308497.0   WELLINGTON MANAGEMENT CO LLP   text  fail_value    4234
+0000932471-12-000904    74         74.0             VANGUARD GROUP INC   text  fail_value    6923
+0001140022-12-000003    63         39.0                      AVIVA PLC   text  fail_value    1097
+0001193125-12-014781    53  265773669.0  MANNING & NAPIER ADVISORS LLC   text  fail_value     959
+0000824468-12-000049    49    3144361.0              CREDIT SUISSE AG/   text  fail_value   17487
+0001085146-12-000174    49          0.0         EULAV Asset Management   text  fail_value     573
+0001085146-12-000436    48          0.0               CNH PARTNERS LLC   text  fail_value     365
+sample rows:
+           accession             name_of_issuer     title_of_class cusip_raw cusip_in_text  value  shares
+0001140361-12-003571            AMERICAN EQUITY CONV 025676AE7 439 434000PRN     025676AE7    0.0       0
+0001140361-12-003571                   AAR CORP CONV 000361AH8 169 169000PRN     000361AH8    0.0       0
+0001140361-12-003571                CHEMED CORP CONV 16359RAC7 393 416000PRN     16359RAC7    0.0       0
+0001140361-12-003571       CHIQUITA BRANDS INTL CONV 170032AT3 420 488000PRN     170032AT3    0.0       0
+0001140361-12-003571 ENERSYS INC. 3.375% 6/1/38 CONV 29275YAA0 458 457000PRN     29275YAA0    0.0       0
+0001140361-12-003571               HUMAN GENOME CONV 444903AM0 297 300000PRN     444903AM0    0.0       0

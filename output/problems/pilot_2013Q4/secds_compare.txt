@@ -1,0 +1,29 @@
+our filings: 4040   in SEC data set: 4038   ours not in SEC DS: 2   SEC DS not in ours: 1
+filing-level exact match — rows: 100.00%   shares: 100.00%   value: 100.00%
+row-level exact match on (cusip, shares, value): 1584855/1584855 = 100.000%
+filings matching on all three: 4038/4038 = 100.00%
+
+match by our checksum status:
+                    n   rows  shares  value
+checksum_status                            
+fail_both          87  100.0   100.0  100.0
+fail_entries      168  100.0   100.0  100.0
+fail_value        123  100.0   100.0  100.0
+pass             3660  100.0   100.0  100.0
+
+match by our checksum cause (failing only):
+                                                                  n   rows  shares  value
+checksum_cause                                                                           
+empty filing (single placeholder row, totals zero)               42  100.0   100.0  100.0
+entry count off by <=2                                           28  100.0   100.0  100.0
+entry count off by >2, unexplained                               75  100.0   100.0  100.0
+entry off by <=2 and value off >1%                                2  100.0   100.0  100.0
+entry off by <=2 and value within 1%                              4  100.0   100.0  100.0
+entry total counts distinct CUSIPs not rows                      80  100.0   100.0  100.0
+summary fields swapped (entry total = value total)                2  100.0   100.0  100.0
+summary totals zero but holdings present (filer omitted totals)  14  100.0   100.0  100.0
+value off >1%, unexplained                                       36  100.0   100.0  100.0
+value scale x1000 (dollars vs thousands)                         78  100.0   100.0  100.0
+value within 1% (rounding)                                       17  100.0   100.0  100.0
+
+filings with ANY mismatch vs SEC DS: 0

@@ -1,0 +1,7 @@
+cache/
+output/*.csv
+.ipynb_checkpoints/
+__pycache__/
+.env
+.virtual_documents/
+anaconda_projects/

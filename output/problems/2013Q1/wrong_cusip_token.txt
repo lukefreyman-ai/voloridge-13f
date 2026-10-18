@@ -1,0 +1,23 @@
+2013Q1: wrong-CUSIP-token rows (status invalid_9/ambiguous/unconfirmed_short but a valid 13(f)-list CUSIP sits in the text): 2,978 rows in 126 filings (0.191% of 1,557,233 rows); shares>0 on 1,909 of them; by parse method {'text': 2978}
+candidate rows checked 7,910 by status {'invalid_9': 4688, 'unconfirmed_short': 2563, 'ambiguous': 659}
+filings with most such rows:
+                      rows        value                         manager method    checksum  n_rows
+accession                                                                                         
+0001193125-13-220785   342        342.0     PICTET ASSET MANAGEMENT LTD   text   fail_both    1553
+0000810972-13-000009   274        274.0    BAIRD ROBERT W & CO INC /WI/   text  fail_value    2000
+0000947871-13-000308   178        178.0  DekaBank Deutsche Girozentrale   text  fail_value    1464
+0000019617-13-000276   167       1167.0             JPMORGAN CHASE & CO   text  fail_value   24990
+0001085146-13-000989   159    7030495.0                        GLG INC.   text  fail_value     705
+0001140361-13-020604   140       1296.0               CREDIT SUISSE AG/   text        pass   15701
+0000902219-13-000556   119  223108130.0    WELLINGTON MANAGEMENT CO LLP   text  fail_value    4531
+0000072971-13-000389   102       1622.0        WELLS FARGO & COMPANY/MN   text  fail_value   17879
+0000932471-13-006253    89        103.0              VANGUARD GROUP INC   text  fail_value   10074
+0000831001-13-000116    64   11116603.0                   CITIGROUP INC   text  fail_value   18902
+sample rows:
+           accession             name_of_issuer             title_of_class cusip_raw cusip_in_text    value  shares
+0001172661-13-000830           MOLYCORP INC DEL NOTE 5.500% 2/0 608753A... 500000PRN     608753AH2 500000.0       0
+0001085146-13-000968                ACCURAY INC NOTE 3.750% 8/0 004397A... 500000PRN     004397AB1      0.0       0
+0001085146-13-000968 AFFORDABLE RESIDENTIAL ... NOTE 7.500% 8/1 00828UA... 975000PRN     00828UAB9      0.0       0
+0001085146-13-000968           ARVINMERITOR INC FRNT 4.625% 3/0 043353A... 500000PRN     043353AF8      0.0       0
+0001085146-13-000968          BRISTOW GROUP INC NOTE 3.000% 6/1 110394A... 500000PRN     110394AC7      0.0       0
+0001085146-13-000968  CADENCE DESIGN SYSTEM INC NOTE 1.500%12/1 127387A... 500000PRN     127387AF5      0.0       0

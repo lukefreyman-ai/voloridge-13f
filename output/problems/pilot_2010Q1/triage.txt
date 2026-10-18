@@ -1,0 +1,119 @@
+pilot_2010Q1: 1170 non-pass filings
+
+verdict
+info: summary page not found (no entry/value total text)                    284
+value: value scale x1000 (dollars vs thousands)                             164
+parser: CUSIP lines unparsed (n_cusip_lines > n_rows)                       156
+filer: declared entry total disagrees with the lines present                149
+value: value off >1%, unexplained                                           129
+parser/filer: more rows than declared (dup or non-holding line captured)    118
+filer: holding lines without a CUSIP (n_shaped > n_rows)                    116
+value: value within 1% (rounding)                                            21
+parser: CUSIP lines present, tails did not parse                             15
+parser: layout unrecognized (no CUSIP lines, no holding-shaped lines)         9
+info: summary page not found (words present, regex missed)                    8
+parser: holding-shaped lines but no CUSIP token found                         1
+
+
+--- filer: declared entry total disagrees with the lines present  (149)
+           accession                 manager_name parse_method  n_rows  n_cusip_lines  n_shaped  entry_total  value_sum  value_total               checksum_cause
+0001135428-10-000188 ACADIAN ASSET MANAGEMENT LLC         text     841            840       841        844.0   11879557   11882497.0 entry count off by >2, un...
+0001105871-10-000002                 AGRAN LIBBIE         text      93             88        90         95.0     262407     263779.0 entry total counts distin...
+0001093589-10-000002 ALTA CAPITAL MANAGEMENT LLC/         text      76             76        76         78.0     546464  584232000.0 value scale x1000 (dollar...
+0001019056-10-000635   APIS CAPITAL ADVISORS, LLC         text      21             21         0         31.0      69182      84196.0 entry count off by >2, un...
+0001193125-10-110119     APPLETON PARTNERS INC/MA         text     121            121         0        124.0  230989081  230989080.0 entry count off by >2, un...
+0001348183-10-000002      AlphaMark Advisors, LLC         text     299            280         0        301.0     133256     133265.0       entry count off by <=2
+
+--- filer: holding lines without a CUSIP (n_shaped > n_rows)  (116)
+           accession                 manager_name parse_method  n_rows  n_cusip_lines  n_shaped  entry_total  value_sum  value_total               checksum_cause
+0001140361-10-020733 ADVENT CAPITAL MANAGEMENT...         text     366            366       367        367.0    4922522    4955199.0 entry total counts distin...
+0001081668-10-000004                      AIC LTD         text      65             65        67         67.0     966444     971173.0 entry total counts distin...
+0001144204-10-021465 AMERICAN CAPITAL MANAGEME...         text      92             92        93         93.0     339409     339510.0 entry total counts distin...
+0000943518-10-000002             APEX CAPITAL LLC         text      58             58        60         60.0     845133     865694.0 entry off by <=2 and valu...
+0001193125-10-122276 Absolute Return Investors...         text     116            116       117        117.0     180961     181014.0 entry total counts distin...
+0001308778-10-000006 America First Investment ...         text     173            171       179        181.0     118378     119301.0 entry count off by >2, un...
+
+--- info: summary page not found (no entry/value total text)  (284)
+           accession                 manager_name parse_method  n_rows  n_cusip_lines  n_shaped  entry_total  value_sum  value_total       checksum_cause
+0000872078-10-000004              ACADIA TRUST NA         text     519            513       513          NaN  291012657          NaN summary page missing
+0001193125-10-120121       ACCOUNT MANAGEMENT LLC         text      37             37         0          NaN   74064760          NaN summary page missing
+0001054257-10-000003          ADIRONDACK TRUST CO         text     352            331       331          NaN      82527          NaN summary page missing
+0001054677-10-000004   ALBION FINANCIAL GROUP /UT         text     107            107       107          NaN     321352          NaN summary page missing
+0001226886-10-000005 ALPINE WOODS CAPITAL INVE...         text     372            371       372          NaN    2174443          NaN summary page missing
+0001164061-10-000004   ALTER ASSET MANAGEMENT INC         text      16             16        16          NaN       5631          NaN summary page missing
+
+--- info: summary page not found (words present, regex missed)  (8)
+           accession                manager_name parse_method  n_rows  n_cusip_lines  n_shaped  entry_total  value_sum  value_total       checksum_cause
+0001308757-10-000002 BALASA DINVERNO & FOLTZ LLC         text     108            108       109          NaN     426218          NaN summary page missing
+0000922423-10-000223       Belfer Management LLC         text       0              0         0          NaN          0          NaN summary page missing
+0000909012-10-000286    GSA CAPITAL PARTNERS LLP         text     396            396       396          NaN     146728          NaN summary page missing
+0000945625-10-000002   HARTLINE INVESTMENT CORP/         text      86             87        86          NaN     216759          NaN summary page missing
+0000922423-10-000244         Hartz Capital, Inc.         text       0              0         0          NaN          0          NaN summary page missing
+0001384484-10-000004    MRM-Horizon Advisors LLC         text      36             36        36          NaN      74568          NaN summary page missing
+
+--- parser/filer: more rows than declared (dup or non-holding line captured)  (118)
+           accession                 manager_name parse_method  n_rows  n_cusip_lines  n_shaped  entry_total   value_sum  value_total               checksum_cause
+0001031972-10-000002 ACADEMY CAPITAL MANAGEMEN...         text      31             31        31         30.0 68602294292  237928000.0 entry total counts distin...
+0000766351-10-000054 ADVANTUS CAPITAL MANAGEME...         text    1048           1047         0          0.0  2589546895 2599546879.0 entry count off by >2, un...
+0001019687-10-001587 AL FRANK ASSET MANAGEMENT...         text     339            339         0        338.0      445634     444995.0 entry total counts distin...
+0000950123-10-045551           ALLEGHANY CORP /DE         text      87             87         0         65.0      848909     848909.0 entry total counts distin...
+0001140361-10-021695 Aletheia Research & Manag...         text     198            198       198        193.0     6157779    6157779.0 entry count off by >2, un...
+0001388168-10-000003             Atlas Brown,Inc.         text     243            243       243          1.0      180320  180322000.0 value scale x1000 (dollar...
+
+--- parser: CUSIP lines present, tails did not parse  (15)
+           accession                 manager_name parse_method  n_rows  n_cusip_lines  n_shaped  entry_total  value_sum  value_total checksum_cause
+0001398344-10-000674 Bridgecreek Investment Ma...         text       0            230       230        231.0          0     189796.0 no rows parsed
+0001086657-10-000005 CONSTITUTION RESEARCH & M...         text       0             34        57         57.0          0      40764.0 no rows parsed
+0001386088-10-000004 Edelman Financial Service...         text       0              1         0         12.0          0    1418484.0 no rows parsed
+0001164833-10-000040 HOTCHKIS & WILEY CAPITAL ...         text       0            152       152        152.0          0   15304884.0 no rows parsed
+0001389191-10-000005                Hexavest Inc.         text       0            167       167        168.0          0     675020.0 no rows parsed
+0001047469-10-005209  Loch Capital Management LLC         text       0             40        40         40.0          0     327173.0 no rows parsed
+
+--- parser: CUSIP lines unparsed (n_cusip_lines > n_rows)  (156)
+           accession                 manager_name parse_method  n_rows  n_cusip_lines  n_shaped  entry_total  value_sum  value_total               checksum_cause
+0000810672-10-000014   AFFINITY WEALTH MANAGEMENT         text      37             41        44         44.0     133861  157727044.0 entry count off by >2, un...
+0001080434-10-000004 ABERDEEN ASSET MANAGEMENT...         text     717            718       718        718.0   19442569   19442766.0 entry total counts distin...
+0001047469-10-005367    ALGER FRED MANAGEMENT INC         text     599            626       626        625.0   12470204   12422514.0 entry count off by >2, un...
+0001157523-10-002058 ATALANTA SOSNOFF CAPITAL,...         text     131            133       134        132.0    9484384    9484415.0       entry count off by <=2
+0001399437-10-000011 Admiral Capital Managemen...         text       7             31         0         31.0    1308300  231689340.0 entry count off by >2, un...
+0001457084-10-000003        Atlantic Advisors LLC         text      74             95         0          1.0    7170805          NaN entry count off by >2, un...
+
+--- parser: holding-shaped lines but no CUSIP token found  (1)
+           accession                manager_name parse_method  n_rows  n_cusip_lines  n_shaped  entry_total  value_sum  value_total checksum_cause
+0000930413-10-002778 Insight Holdings Group, LLC         text       0              0         1          1.0          0     207536.0 no rows parsed
+
+--- parser: layout unrecognized (no CUSIP lines, no holding-shaped lines)  (9)
+           accession                 manager_name parse_method  n_rows  n_cusip_lines  n_shaped  entry_total  value_sum  value_total checksum_cause
+0000893838-10-000052      BESSEMER SECURITIES LLC         text       0              0         0          3.0          0          0.0 no rows parsed
+0000889780-10-000002       DC CAPITAL PARTNERS LP         text       0              0         0         20.0          0     163945.0 no rows parsed
+0001041885-10-000041         INGALLS & SNYDER LLC         text       0              0         0      78728.0          0    1415203.0 no rows parsed
+0000950123-10-048893 International Value Advis...         text       0              0         0         27.0          0     989690.0 no rows parsed
+0000909518-10-000337 LEHMAN BROTHERS HOLDINGS INC         text       0              0         0          1.0          0          NaN no rows parsed
+0000894205-10-000012 PROFESSIONAL ADVISORY SER...         text       0              0         0         42.0          0     274287.0 no rows parsed
+
+--- value: value off >1%, unexplained  (129)
+           accession                 manager_name parse_method  n_rows  n_cusip_lines  n_shaped  entry_total        value_sum  value_total             checksum_cause
+0000748054-10-000005 AMERICAN CENTURY COMPANIE...         text    1719           1719      1719       1719.0  325870378980419   49861289.0 value off >1%, unexplained
+0001389848-10-000004       ARLINGTON PARTNERS LLC         text      27             27        27         27.0            71995      14530.0 value off >1%, unexplained
+0001323255-10-000019    APG All Pensions Group NV         text     721            721       721        721.0 1361781265013849   27654629.0 value off >1%, unexplained
+0001156950-10-000002          ARBITER PARTNERS LP         text      68             68        68         68.0           636366     603113.0 value off >1%, unexplained
+0001398344-10-000711  ATHENA CAPITAL ADVISORS LLC         text      58             58        58         58.0           196202     186202.0 value off >1%, unexplained
+0000009015-10-000020 BABSON CAPITAL MANAGEMENT...         text     741            741       741        741.0          1556714    1520051.0 value off >1%, unexplained
+
+--- value: value scale x1000 (dollars vs thousands)  (164)
+           accession                 manager_name parse_method  n_rows  n_cusip_lines  n_shaped  entry_total  value_sum  value_total               checksum_cause
+0001214659-10-001337         ADVISOR PARTNERS LLC         text    1525           1313      1313       1525.0     148869  148885000.0 value scale x1000 (dollar...
+0001144204-10-026458         AEGIS FINANCIAL CORP         text      85             85        85         85.0  213288787     213289.0 value scale x1000 (dollar...
+0001144204-10-026453 AFTON CAPITAL MANAGEMENT LLC         text      36             36        36         36.0   90227996      90228.0 value scale x1000 (dollar...
+0001214659-10-001427 ACUITY INVESTMENT MANAGEM...         text     123            123       123        123.0    2880145 2880144000.0 value scale x1000 (dollar...
+0000906344-10-000194 ALGERT COLDIRON INVESTORS...         text     644            644         0        644.0  272346000     272346.0 value scale x1000 (dollar...
+0000857508-10-000012    AMICA MUTUAL INSURANCE CO         text     340            340       340        340.0     991484  991479286.0 value scale x1000 (dollar...
+
+--- value: value within 1% (rounding)  (21)
+           accession                 manager_name parse_method  n_rows  n_cusip_lines  n_shaped  entry_total  value_sum  value_total             checksum_cause
+0000894579-10-000081         AGF INVESTMENTS INC.         text     302            302       302        302.0    5078844    5088842.0 value within 1% (rounding)
+0001313998-10-000004 Bristlecone Value Partner...         text      36             36        36         36.0      40432      40650.0 value within 1% (rounding)
+0001086364-10-009315               BlackRock Inc.         text    8176           8153      8153       8176.0   45677491   45817368.0 value within 1% (rounding)
+0001349352-10-000005 Caymus Capital Partners, ...         text      15             15        15         15.0     127203     127703.0 value within 1% (rounding)
+0001172779-10-000002 DOCK STREET ASSET MANAGEM...         text      71             71        72          NaN     128364     128790.0 value within 1% (rounding)
+0001057246-10-000004 FOREST INVESTMENT MANAGEM...         text      75             76        75         75.0     976458     983619.0 value within 1% (rounding)

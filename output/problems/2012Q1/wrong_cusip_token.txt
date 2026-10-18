@@ -1,0 +1,23 @@
+2012Q1: wrong-CUSIP-token rows (status invalid_9/ambiguous/unconfirmed_short but a valid 13(f)-list CUSIP sits in the text): 2,267 rows in 133 filings (0.148% of 1,531,086 rows); shares>0 on 1,172 of them; by parse method {'text': 2267}
+candidate rows checked 7,189 by status {'invalid_9': 4032, 'unconfirmed_short': 2450, 'ambiguous': 707}
+filings with most such rows:
+                      rows        value                            manager method    checksum  n_rows
+accession                                                                                            
+0001193125-12-216061   318        318.0        PICTET ASSET MANAGEMENT LTD   text   fail_both    1499
+0001193125-12-217312   121   41469950.0               Calamos Advisors LLC   text  fail_value     441
+0001081019-12-000012   115          0.0  CALIFORNIA STATE TEACHERS RETI...   text  fail_value    2941
+0001007280-12-000004    88  197491119.0  PUBLIC EMPLOYEES RETIREMENT SY...   text  fail_value    1386
+0000019617-12-000229    85        549.0                JPMORGAN CHASE & CO   text  fail_value   26342
+0000932471-12-004545    85         98.0                 VANGUARD GROUP INC   text  fail_value   10059
+0000902219-12-000537    81  354935825.0       WELLINGTON MANAGEMENT CO LLP   text  fail_value    4294
+0000824468-12-000095    61    5489939.0                  CREDIT SUISSE AG/   text  fail_value   16679
+0001140022-12-000009    56         40.0                          AVIVA PLC   text  fail_value    1068
+0001526411-12-000004    55    1455381.0      Barrett Asset Management, LLC   text   fail_both     355
+sample rows:
+           accession   name_of_issuer        title_of_class cusip_raw cusip_in_text  value  shares
+0001140361-12-023540  AMERICAN EQUITY    CONV 025676AE7 436 434000PRN     025676AE7    0.0       0
+0001140361-12-023540    AMGEN INC B's CONV 031162AQ3 123234 119981000     031162AQ3    0.0       0
+0001140361-12-023540      CHEMED CORP    CONV 16359RAC7 549 545000PRN     16359RAC7    0.0       0
+0001140361-12-023540 DFC GLOBAL GROUP    CONV 256664AC7 450 400000PRN     256664AC7    0.0       0
+0001140361-12-023540  GILEAD SCIENCES    CONV 375558AH6 955 685000PRN     375558AH6    0.0       0
+0001140361-12-023540      HOLOGIC INC    CONV 436440AA9 295 297000PRN     436440AA9    0.0       0

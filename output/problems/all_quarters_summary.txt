@@ -1,0 +1,157 @@
+All 20 quarters, current parser (Task B 2026-10-11; pilots included for reference).
+pass_value% weights each filing by its PARSED row values (shares-check scale normalization, rows > $200bn excluded); corrupted filings inflate their own weight.
+implausible filings = parsed value > 3x the filer's declared total (scale-normalized) or > $2tn: their parsed values are corrupt and would inflate their own weight.
+pass_value_plausible% = the same pass rate with implausible filings removed from numerator and denominator (they are reported separately; declared totals are not usable as weights: many are in dollars or garbage).
+
+              filings  holdings_bearing   xml%  text%  pass_filings%  pass_usable%  pass_rows%  pass_value%  pass+classA_value%  pass_value_plausible%  pass+classA_plausible%  shares_flag%
+quarter                                                                                                                                                                                     
+pilot_2010Q1     3386              3377    0.0   99.9           65.4          72.0        58.8         61.8                93.7                   68.6                    94.5          3.53
+2010Q2           3191              3182    0.0  100.0           67.3          74.9        57.5         64.0                86.0                   71.0                    93.1          2.08
+2010Q3           3161              3148    0.0   99.9           67.8          74.6        58.3         63.8                86.9                   69.4                    93.3          2.79
+2010Q4           3591              3576    0.0   99.9           69.1          75.7        59.6         53.9                69.4                   73.2                    91.4          4.64
+2011Q1           3585              3577    0.0   99.9           68.4          74.8        56.3         58.9                83.5                   65.5                    90.7          4.03
+2011Q2           3496              3490    0.0   99.9           69.1          75.1        58.0         43.9                62.5                   61.8                    86.5          2.30
+2011Q3           3483              3477    0.0   99.9           71.5          77.2        59.4         60.0                77.6                   67.4                    86.3          5.10
+2011Q4           3679              3672    0.0  100.0           72.1          77.5        58.8         42.2                59.7                   66.3                    92.7          4.75
+2012Q1           3615              3610    0.0   99.9           71.4          76.6        57.9         54.8                70.3                   75.7                    93.0          4.42
+2012Q2           3596              3589    0.0   99.9           70.9          76.2        59.4         13.3                22.1                   64.5                    87.2          3.45
+2012Q3           3620              3615    0.0   99.9           72.0          77.4        59.0         19.6                29.8                   66.0                    90.7          3.74
+2012Q4           3915              3911    0.0   99.9           74.3          79.3        66.6         21.2                28.4                   69.8                    90.8          6.59
+2013Q1           3732              3723    3.8   96.2           73.9          79.0        65.9         53.7                75.1                   70.3                    93.5          3.97
+2013Q2           3803              3803  100.0    0.0           88.1          89.5        78.8         81.0                98.7                   82.2                    98.7          1.29
+2013Q3           3679              3679  100.0    0.0           89.5          91.1        81.7         88.5                97.2                   87.3                    97.2          1.24
+pilot_2013Q4     4040              4038  100.0    0.0           90.6          91.9        85.1         90.3                97.5                   92.5                    99.5          1.09
+2014Q1           4015              4014  100.0    0.0           90.2          91.5        87.2         92.4                99.0                   92.8                    99.0          0.78
+2014Q2           4083              4083  100.0    0.0           90.1          91.4        85.9         90.7                99.1                   91.1                    99.1          0.93
+2014Q3           4050              4050  100.0    0.0           90.6          92.0        84.7         90.2                94.6                   91.2                    94.6          0.56
+2014Q4           4497              4496  100.0    0.0           91.4          92.3        87.1         93.5                99.0                   93.9                    99.0          4.05
+
+              usable_n  x1000_filings  no_rows  parse_errors  rows_total  implausible_filings  implausible_pass  implausible_value_bn  plausible_value_bn
+quarter                                                                                                                                                  
+pilot_2010Q1      2974            199       72            81     1413090                   45                 0                1491.0             13407.0
+2010Q2            2768            222       69            78     1280224                   48                 0                1461.0             13261.0
+2010Q3            2765            183       73            85     1266204                   45                 0                1171.0             13263.0
+2010Q4            3155            188       79            93     1429161                   66                 0                5285.0             14747.0
+2011Q1            3187            176       64            70     1386718                   66                 0                1805.0             16207.0
+2011Q2            3117            171       83            88     1384128                   59                 0                7154.0             17494.0
+2011Q3            3090            165       80            85     1427996                   46                 0                2561.0             20888.0
+2011Q4            3319            168       75            81     1433558                   47                 1                8242.0             14368.0
+2012Q1            3271            172       63            67     1532598                   48                 0                6590.0             17289.0
+2012Q2            3235            172       67            71     1488936                   50                 0               65912.0             17100.0
+2012Q3            3255            155       80            82     1498567                   45                 0               42563.0             17946.0
+2012Q4            3536            157       89            92     1653594                   39                 0               43061.0             18751.0
+2013Q1            3370            150       80            89     1559217                   47                 0                5888.0             18964.0
+2013Q2            3738             90        0             0     1533634                   57                 1                 293.0             19058.0
+2013Q3            3607             72        0             0     1519004                   35                 1                3221.0             19126.0
+pilot_2013Q4      3973             79        0             0     1584855                   40                 1                 539.0             22231.0
+2014Q1            3950             89        0             0     1588230                   39                 0                  88.0             22287.0
+2014Q2            4010             91        0             0     1638403                   38                 0                  98.0             23330.0
+2014Q3            3976             87        0             0     1636489                   40                 0                 267.0             23474.0
+2014Q4            4443             90        0             0     1768828                   31                 0                 110.0             23604.0
+
+=== checksum causes NOT seen in either pilot ===
+none
+
+=== triage verdicts NOT seen in either pilot ===
+none
+
+=== parser error strings NOT seen in either pilot ===
+2011Q3: 'no holdings parsed (html, cusip-lines=N)' x1  examples: 0001176347-11-000011 (TEXAS TREASURY SAFEKEEPING T, html)
+2011Q3: 'no documents' x1  examples: 0000900973-11-000047 (WINSLOW CAPITAL MANAGEMENT I, )
+2012Q4: 'no documents' x1  examples: 0001145443-13-000606 (HANCOCK JOHN LIFE INSURANCE , )
+
+=== per-quarter non-pass buckets (count) ===
+                                                                 pilot_2010Q1  2010Q2  2010Q3  2010Q4  2011Q1  2011Q2  2011Q3  2011Q4  2012Q1  2012Q2  2012Q3  2012Q4  2013Q1  2013Q2  2013Q3  pilot_2013Q4  2014Q1  2014Q2  2014Q3  2014Q4
+checksum_cause                                                                                                                                                                                                                             
+empty filing (single placeholder row, totals zero)                          7       1       1       1       0       2       1       1       0       0       0       1       0      47      59            42      48      52      54      36
+entry count off by <=2                                                     50      35      39      39      40      33      22      32      34      32      43      38      46      30      26            28      18      21      27      33
+entry count off by >2, unexplained                                        247     198     205     202     257     224     180     208     243     225     204     187     189      96      75            75      72      77      65      73
+entry off by <=2 and value off >1%                                         20       8       9      10      18      11      13      13      20      20       8      17      10       7       1             2       5       2       3       5
+entry off by <=2 and value within 1%                                       21       9       8      17      18      15      14      10      10      20      16       9      13       2       4             4       9       6       6       2
+entry total counts distinct CUSIPs not rows                               141     135     124     123     132     147     150     165     138     150     138     149     145      78      71            80      89      85      81      96
+no rows parsed                                                             25      24      22      27      26      30      30      32      25      26      34      35      24       0       0             0       0       0       0       0
+pass                                                                     2207    2141    2133    2471    2448    2412    2485    2646    2576    2544    2603    2904    2751    3351    3291          3660    3622    3679    3671    4108
+summary fields swapped (entry total = value total)                          0       0       0       0       0       0       0       1       1       1       0       1       1       2       1             2       2       1       0       1
+summary page missing                                                      292     290     275     301     264     262     248     242     233     235     234     236     230       0       0             0       0       1       0       0
+summary totals zero but holdings present (filer omitted totals)             2       4       2       2       2       2       1       0       0       0       0       0       0      12       5            14       9       7       6       7
+value off >1%, unexplained                                                129     112     102     130     143     114     108     102     111     102     129     129     103      57      39            36      41      32      30      35
+value scale x1000 (dollars vs thousands)                                  215     196     202     214     203     201     197     192     179     194     176     178     177      94      82            78      80      90      95      82
+value within 1% (rounding)                                                 21      29      26      39      26      37      28      28      40      40      30      27      34      27      25            17      19      30      12      18
+
+=== per-quarter triage verdicts (count) ===
+                                                                          pilot_2010Q1  2010Q2  2010Q3  2010Q4  2011Q1  2011Q2  2011Q3  2011Q4  2012Q1  2012Q2  2012Q3  2012Q4  2013Q1  2013Q2  2013Q3  pilot_2013Q4  2014Q1  2014Q2  2014Q3  2014Q4
+verdict                                                                                                                                                                                                                                             
+filer: declared entry total disagrees with the lines present                       149     126     117     116     136     134     121     126     159     175     139     146     150     142     122           133     133     129     129     150
+filer: holding lines without a CUSIP (n_shaped > n_rows)                           116      96      88      95     159     127      93     118     113     112      87      97      92       0       0             0       0       0       0       0
+info: summary page not found (no entry/value total text)                           284     283     267     288     258     255     240     232     223     223     226     231     220       0       0             0       0       1       0       0
+info: summary page not found (words present, regex missed)                           8       7       8      13       6       7       8      10      10      12       8       5      10       0       0             0       0       0       0       0
+parser/filer: more rows than declared (dup or non-holding line captured)           118     107      89     104      98      99      89      95     105      90      83      78     101     149     136           122     126     136     131     118
+parser: CUSIP lines present, tails did not parse                                    15      16      16      22      16      16      21      20      17      18      24      19      14       0       0             0       0       0       0       0
+parser: CUSIP lines unparsed (n_cusip_lines > n_rows)                              156     103     135     123     111     104     120     122     103     107     127     115      93       0       0             0       0       0       0       0
+parser: holding-shaped lines but no CUSIP token found                                1       0       0       0       4       1       1       1       2       2       2       5       4       0       0             0       0       0       0       0
+parser: layout unrecognized (no CUSIP lines, no holding-shaped lines)                9       8       6       5       6      13       8      11       6       6       8      11       6       0       0             0       0       0       0       0
+value: value off >1%, unexplained                                                  129     112     102     130     143     114     108     102     111     102     129     129     103      57      39            36      41      32      30      35
+value: value scale x1000 (dollars vs thousands)                                    164     154     161     170     166     171     155     161     145     158     149     144     145      77      66            70      73      76      77      67
+value: value within 1% (rounding)                                                   21      29      26      39      26      37      28      28      40      40      30      27      34      27      25            17      19      30      12      18
+
+=== three largest non-pass filings per quarter (by normalized value, $bn) with big_filers class ===
+pilot_2010Q1  0000888002-10-000481 AXA                             1062.9  text  rows   6498 declared   6498  (a) parse right, summary wrong [rows == declared]
+pilot_2010Q1  0000315066-10-002783 FMR LLC                          494.9  text  rows   6040 declared   6039  (a) parse right, summary wrong [rows > declared, nothing missing]
+pilot_2010Q1  0000070858-10-000277 BANK OF AMERICA CORP /DE/        233.0  text  rows  25237 declared  25237  (a) parse right, summary wrong [rows == declared]
+2010Q2        0001208646-10-000219 Alliance Trust PLC               827.0  text  rows     51 declared     51  (c) rows wrong
+2010Q2        0000932471-10-002913 VANGUARD GROUP INC               635.2  text  rows   7105 declared   7105  (a) parse right, summary wrong [rows == declared]
+2010Q2        0000902219-10-000999 WELLINGTON MANAGEMENT CO LLP     216.7  text  rows   4036 declared   4036  (a) parse right, summary wrong [rows == declared]
+2010Q3        0001208646-10-000313 Alliance Trust PLC               774.0  text  rows     53 declared     53  (c) rows wrong
+2010Q3        0001193125-10-260255 STATE STREET Corp                492.1  text  rows   3737 declared   3737  (a) parse right, summary wrong [rows == declared]
+2010Q3        0000902219-10-001041 WELLINGTON MANAGEMENT CO LLP     248.2  text  rows   4230 declared   4230  (a) parse right, summary wrong [rows == declared]
+2010Q4        0001110443-11-000002 DOOLITTLE & GANOS INVESTMENT C  3566.3  text  rows    131 declared    121  (c) rows wrong
+2010Q4        0001208646-11-000048 Alliance Trust PLC               857.8  text  rows     50 declared     50  (c) rows wrong
+2010Q4        0000019617-11-000144 J P MORGAN CHASE & CO            209.8  text  rows  22584 declared  22584  (a) parse right, summary wrong [rows == declared]
+2011Q1        0001208646-11-000189 Alliance Trust PLC               990.7  text  rows     60 declared     60  (c) rows wrong
+2011Q1        0001193125-11-133685 STATE STREET Corp                661.1  text  rows   3676 declared   3676  (a) parse right, summary wrong [rows == declared]
+2011Q1        0001520354-11-000002 BNP Paribas Investment Partner   376.8  text  rows   1920 declared   1920  (c) rows wrong
+2011Q2        0000909012-11-000507 Nuveen Asset Management, LLC    3497.9  text  rows    649 declared   1331  (c) rows wrong
+2011Q2        0001208646-11-000321 Alliance Trust PLC              1020.0  text  rows     64 declared     64  (c) rows wrong
+2011Q2        0001193125-11-217567 STATE STREET Corp                580.5  text  rows   3669 declared   3670  (a) parse right, summary wrong [within 0.5% of declared]
+2011Q3        0001226886-11-000008 ALPINE WOODS CAPITAL INVESTORS  1624.9  text  rows    373 declared         (c) rows wrong
+2011Q3        0000813917-11-000099 HARRIS ASSOCIATES L P            878.4  text  rows    475 declared    476  (c) rows wrong
+2011Q3        0001208646-11-000423 Alliance Trust PLC               777.2  text  rows     56 declared     56  (c) rows wrong
+2011Q4        0001110443-12-000004 DOOLITTLE & GANOS INVESTMENT C  3242.7  text  rows    159 declared    154  (c) rows wrong
+2011Q4        0001483499-12-000001 Banyan Partners, LLC            2653.0  text  rows    186 declared    186  (c) rows wrong
+2011Q4        0000813917-12-000002 HARRIS ASSOCIATES L P            892.9  text  rows    480 declared    482  (c) rows wrong
+2012Q1        0001110443-12-000007 DOOLITTLE & GANOS INVESTMENT C  2614.5  text  rows    129 declared    154  (c) rows wrong
+2012Q1        0001387131-12-001371 WHITTIER TRUST CO               1010.2  text  rows   1603 declared   1576  (c) rows wrong
+2012Q1        0001208646-12-000095 Alliance Trust PLC               536.2  text  rows     39 declared     39  (c) rows wrong
+2012Q2        0001007280-12-000008 PUBLIC EMPLOYEES RETIREMENT SY 40510.0  text  rows   1409 declared   1412  (c) rows wrong
+2012Q2        0001145443-12-000977 MANUFACTURERES LIFE INSURANCE  19553.2  text  rows   1370 declared    801  (c) rows wrong
+2012Q2        0001419186-12-000008 Cambridge Investment Research   1215.9  text  rows    764 declared    764  (c) rows wrong
+2012Q3        0001007280-12-000009 PUBLIC EMPLOYEES RETIREMENT SY 38729.6  text  rows   1359 declared   1363  (c) rows wrong
+2012Q3        0001208646-12-000304 Alliance Trust PLC              1145.5  text  rows     36 declared     36  (a) parse right, summary wrong [rows == declared]
+2012Q3        0001193125-12-466409 STATE STREET CORP                654.4  text  rows   3620 declared   3620  (a) parse right, summary wrong [rows == declared]
+2012Q4        0001007280-13-000004 PUBLIC EMPLOYEES RETIREMENT SY 39183.3  text  rows   1399 declared   1402  (c) rows wrong
+2012Q4        0001208646-13-000014 Alliance Trust PLC              1327.5  text  rows     35 declared     35  (c) rows wrong
+2012Q4        0001193125-13-036146 PARAMETRIC PORTFOLIO ASSOCIATE   864.7  text  rows   3401 declared 865752393  (c) rows wrong
+2013Q1        0001573876-13-000002 Advisory Services Network, LLC  1956.6  text  rows     75 declared     77  (c) rows wrong
+2013Q1        0001208646-13-000116 Alliance Trust PLC              1534.9  text  rows     38 declared     38  (c) rows wrong
+2013Q1        0001193125-13-172902 STATE STREET CORP                743.5  text  rows   3609 declared   3609  (a) parse right, summary wrong [rows == declared]
+2013Q2        0000315066-13-003968 FMR LLC                          608.6  xml   rows   5571 declared   5571  (a) parse right, summary wrong [rows == declared]
+2013Q2        0000315066-13-003630 FMR LLC                          608.6  xml   rows   5571 declared   5571  (a) parse right, summary wrong [rows == declared]
+2013Q2        0001390777-13-000081 Bank of New York Mellon Corp     318.9  xml   rows  22743 declared  22742  (a) parse right, summary wrong [rows > declared, nothing missing]
+2013Q3        0001390777-13-000092 Bank of New York Mellon Corp     329.9  xml   rows  22162 declared  22775  (b) rows missing (filer: no CUSIP / declared total)
+2013Q3        0000019617-13-000398 JPMORGAN CHASE & CO              322.4  xml   rows  26127 declared  26127  (a) parse right, summary wrong [rows == declared]
+2013Q3        0001256484-13-000010 NORTHERN TRUST CORP              281.4  xml   rows  12724 declared  12274  (a) parse right, summary wrong [rows > declared, nothing missing]
+pilot_2013Q4  0000850401-14-000002 TCW GROUP INC                    437.3  xml   rows   1410 declared   1410  (c) rows wrong
+pilot_2013Q4  0000019617-14-000292 JPMORGAN CHASE & CO              337.8  xml   rows  24697 declared  24697  (a) parse right, summary wrong [rows == declared]
+pilot_2013Q4  0000019617-14-000264 JPMORGAN CHASE & CO              334.5  xml   rows  24679 declared  24679  (a) parse right, summary wrong [rows == declared]
+2014Q1        0000019617-14-000357 JPMORGAN CHASE & CO              352.8  xml   rows  24079 declared  24079  (a) parse right, summary wrong [rows == declared]
+2014Q1        0000950123-14-005611 MASSACHUSETTS FINANCIAL SERVIC   182.7  xml   rows   2436 declared   2436  (a) parse right, summary wrong [rows == declared]
+2014Q1        0001166588-14-000006 BNP PARIBAS ARBITRAGE, SA        126.6  xml   rows   3478 declared   3478  (a) parse right, summary wrong [rows == declared]
+2014Q2        0000019617-14-000425 JPMORGAN CHASE & CO              385.0  xml   rows  23789 declared  23789  (a) parse right, summary wrong [rows == declared]
+2014Q2        0000019617-14-000437 JPMORGAN CHASE & CO              385.0  xml   rows  23773 declared  23773  (a) parse right, summary wrong [rows == declared]
+2014Q2        0001214717-14-000010 GEODE CAPITAL MANAGEMENT, LLC    154.3  xml   rows   4616 declared   4616  (a) parse right, summary wrong [rows == declared]
+2014Q3        0000019617-14-000501 JPMORGAN CHASE & CO              395.8  xml   rows  24886 declared  42982  (b) rows missing (filer: no CUSIP / declared total)
+2014Q3        0000019617-14-000465 JPMORGAN CHASE & CO              394.6  xml   rows  24883 declared  33379  (b) rows missing (filer: no CUSIP / declared total)
+2014Q3        0000762152-14-000008 STATE TREASURER STATE OF MICHI   304.7  xml   rows    950 declared    950  (c) rows wrong
+2014Q4        0000950123-15-001950 MASSACHUSETTS FINANCIAL SERVIC   196.5  xml   rows   2574 declared   2574  (a) parse right, summary wrong [rows == declared]
+2014Q4        0001166588-15-000002 BNP PARIBAS ARBITRAGE, SA        112.3  xml   rows   3522 declared   3522  (a) parse right, summary wrong [rows == declared]
+2014Q4        0000950123-15-000981 PNC FINANCIAL SERVICES GROUP,     91.0  xml   rows  14220 declared   4021  (a) parse right, summary wrong [rows > declared, nothing missing]

@@ -1,0 +1,9 @@
+pilot_2010Q1: comparatives from 2010q3_notes, 2011q1_notes, 2011q2_notes, 2011q3_notes, 2012q1_notes for quarter end 2010-03-31
+13F companies mapped to a CIK: 5,971; with a 2010 cover-page XBRL fact: 1,266; missing: 4,705
+  instant exactly at quarter end (balance-sheet comparative): covers 18 of 4,705 missing companies (0.4%); facts on 101 CIKs overall
+  instant within 100 days of quarter end: covers 183 of 4,705 missing companies (3.9%); facts on 1,253 CIKs overall
+  weighted-average basic shares, the 3 months ended at quarter end: covers 168 of 4,705 missing companies (3.6%); facts on 1,126 CIKs overall
+missing companies carry 19.1% of mapped 13F value; of that, covered by exact instant: 0.6%, by instant within 100d: 13.5%, by weighted-average: 16.8%
+validation exact instant: n=69; within 1% of the cover-page fact 69.6%; within 5% 88.4%; median |diff| 0.28%
+validation instant within 100d: n=923; within 1% of the cover-page fact 63.1%; within 5% 86.1%; median |diff| 0.56%
+validation weighted-average: n=882; within 1% of the cover-page fact 53.3%; within 5% 83.1%; median |diff| 0.92%
