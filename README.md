@@ -91,6 +91,10 @@ A residual has no identified data cause and is labelled as such.
   outstanding; company-level percentage is null for multi-class companies rather than inferred.
 - CUSIP to company mapping is evidence-first: Schedule 13G and 13D, then exact name matching
   against the SEC 13(f) securities list. Conflicts flagged, not resolved by guess.
+  The limit of this method: a company only appears in 13G/13D if someone crossed 5% ownership
+  of it, so companies with no 5% holder fall through to name matching or stay unmapped. That is
+  why CUSIP-to-company coverage is 40-45% of companies but 96-98% of dollar value: the companies
+  that fall through are small ones.
 - Every parser rule is backed by a real filing kept as a test fixture, so a fix for one filer's
   layout cannot silently break another's. See `tests/` and `tests/FIXTURE_REVIEW.md`.
 
