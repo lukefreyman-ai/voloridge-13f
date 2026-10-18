@@ -1,5 +1,0 @@
-2010Q2 shares outstanding (quarter end 2010-06-30) from 2010q3_notes, 2010q4_notes
-facts loaded 2,955 on 1,430 CIKs | selected 1,550 rows on 1,430 CIKs
-CIKs with class-dimensioned facts (multi-class): 84; undimensioned-only: 1,346
-gap > 100 days flagged: 85 rows; gap distribution (days): {'min': -365.0, '25%': 31.0, '50%': 31.0, '75%': 31.0, 'max': 184.0}
-by form: {'10-Q': 1371, '10-Q/A': 140, '10-K': 33, '20-F': 3, '10-K/A': 3}

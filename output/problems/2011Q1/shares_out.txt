@@ -1,5 +1,0 @@
-2011Q1 shares outstanding (quarter end 2011-03-31) from 2011q2_notes, 2011q3_notes
-facts loaded 8,774 on 6,650 CIKs | selected 7,030 rows on 6,650 CIKs
-CIKs with class-dimensioned facts (multi-class): 295; undimensioned-only: 6,355
-gap > 100 days flagged: 4,620 rows; gap distribution (days): {'min': -789.0, '25%': 61.0, '50%': 122.0, '75%': 122.0, 'max': 214.0}
-by form: {'10-Q': 5752, '10-Q/A': 1133, '10-K': 108, '20-F': 32, '10-K/A': 5}

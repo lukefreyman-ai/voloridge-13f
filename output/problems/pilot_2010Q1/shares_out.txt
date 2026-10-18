@@ -1,5 +1,0 @@
-pilot_2010Q1 shares outstanding (quarter end 2010-03-31) from 2010q2_notes, 2010q3_notes
-facts loaded 1,955 on 1,350 CIKs | selected 1,456 rows on 1,350 CIKs
-CIKs with class-dimensioned facts (multi-class): 70; undimensioned-only: 1,280
-gap > 100 days flagged: 784 rows; gap distribution (days): {'min': -274.0, '25%': 30.0, '50%': 122.0, '75%': 122.0, 'max': 183.0}
-by form: {'10-Q': 1331, '10-Q/A': 83, '10-K': 24, '20-F': 18}

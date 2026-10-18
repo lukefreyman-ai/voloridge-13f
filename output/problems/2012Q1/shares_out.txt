@@ -1,5 +1,0 @@
-2012Q1 shares outstanding (quarter end 2012-03-31) from 2012q2_notes, 2012q3_notes
-facts loaded 16,881 on 7,710 CIKs | selected 8,261 rows on 7,710 CIKs
-CIKs with class-dimensioned facts (multi-class): 408; undimensioned-only: 7,302
-gap > 100 days flagged: 335 rows; gap distribution (days): {'min': -821.0, '25%': 30.0, '50%': 30.0, '75%': 30.0, 'max': 183.0}
-by form: {'10-Q': 6569, '10-K': 1042, '10-Q/A': 273, '10-K/A': 187, '20-F': 180, '10-KT': 6, '40-F': 4}
