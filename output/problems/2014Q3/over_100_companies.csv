@@ -1,0 +1,267 @@
+company_cik,shares_held_total,n_managers,n_cusips,company_name,shares_outstanding,multi_class_flag,institutional_ownership_pct,pct_suppressed_cause,so_gap_flag,over_100_cause
+6885.0,36609806,126,1,STAGE STORES INC,31629430.0,False,115.74601881854969,,False,manager-CUSIP in >1 filing; [as-of 61d after quarter end: buybacks lower the denominator]
+16058.0,24590688,191,1,CACI INTERNATIONAL INC /DE/,23722000.0,False,103.66195093162465,,False,no identified data cause
+19584.0,18545734,193,1,CHEMED CORP,17010464.0,False,109.02544457341081,,False,manager-CUSIP in >1 filing
+23194.0,51698063,181,1,COMSTOCK RESOURCES INC,47860582.0,False,108.01804081697126,,False,no identified data cause
+26780.0,172489340,220,1,DANA HOLDING CORP,169949672.0,False,101.49436475523177,,False,no identified data cause
+40211.0,44930638,224,1,GATX CORP,44173551.0,False,101.71389209801131,,False,manager-CUSIP in >1 filing
+40888.0,61691125,141,1,GENCORP INC,58800000.0,False,104.91687925170068,,False,no identified data cause
+46619.0,49646306,177,2,HEICO CORP,26847000.0,False,184.92310500242112,,False,manager-CUSIP in >1 filing; multiple CUSIPs summed (classes/units); [as-of 31d after quarter end: buybacks lower the denominator]
+49754.0,19540742,172,1,"DineEquity, Inc",18957602.0,False,103.07602195678547,,False,no identified data cause
+61004.0,3207364,15,2,LGL GROUP INC,2594680.0,False,123.61308523594433,,False,multiple CUSIPs summed (classes/units)
+71829.0,85675612,162,1,NEWPARK RESOURCES INC,83990240.0,False,102.00662838920331,,False,no identified data cause; [as-of 31d after quarter end: buybacks lower the denominator]
+73887.0,37848997,200,1,Bristow Group Inc,35303808.0,False,107.20938942337325,,False,no identified data cause
+77159.0,81240206,188,2,PENN VIRGINIA CORP,71558867.0,False,113.52919548041476,,False,manager-CUSIP in >1 filing; multiple CUSIPs summed (classes/units); [as-of 31d after quarter end: buybacks lower the denominator]
+77776.0,73426985,159,1,PHH CORP,50840342.0,False,144.42661499011948,,False,no identified data cause
+77877.0,38192149,196,1,"PDC ENERGY, INC.",35876283.0,False,106.45514475398691,,False,manager-CUSIP in >1 filing; [as-of 31d after quarter end: buybacks lower the denominator]
+78890.0,49246949,166,1,BRINKS CO,48573324.0,False,101.38682088135455,,False,no identified data cause; [as-of 31d after quarter end: buybacks lower the denominator]
+85974.0,49792671,181,1,RYLAND GROUP INC,46112214.0,False,107.98152307325776,,False,no identified data cause; [as-of 31d after quarter end: buybacks lower the denominator]
+88941.0,66764573,171,1,SEMTECH CORP,66690299.0,False,100.11137152046656,,False,manager-CUSIP in >1 filing; [as-of 31d after quarter end: buybacks lower the denominator]
+98222.0,50172365,231,1,TIDEWATER INC,49728092.0,False,100.89340447648785,,False,manager-CUSIP in >1 filing; [as-of 31d after quarter end: buybacks lower the denominator]
+102729.0,25517009,255,1,VALMONT INDUSTRIES INC,24605848.0,False,103.70302620742842,,False,manager-CUSIP in >1 filing; [as-of 31d after quarter end: buybacks lower the denominator]
+103379.0,436942498,691,1,V F CORP,431649948.0,False,101.22612084734921,,False,manager-CUSIP in >1 filing
+105319.0,58508930,144,1,WEIGHT WATCHERS INTERNATIONAL INC,56685659.0,False,103.2164590341977,,False,single holding > 50% of shares out; [as-of 31d after quarter end: buybacks lower the denominator]
+108385.0,11248262,153,1,WORLD ACCEPTANCE CORP,9453505.0,False,118.98509600407468,,False,no identified data cause
+216539.0,88584930,107,1,MEDIA GENERAL INC,47802816.0,False,185.31320414261788,,True,shares outstanding gap >100d; single holding > 50% of shares out
+313143.0,52806360,170,1,HAEMONETICS CORP,51336678.0,False,102.86283035298855,,False,no identified data cause
+351817.0,51845832,146,1,SWIFT ENERGY CO,43857765.0,False,118.21357517876253,,False,no identified data cause
+352363.0,129859183,214,1,Kate Spade & Co,127111444.0,False,102.16167711854489,,False,no identified data cause; [as-of 31d after quarter end: buybacks lower the denominator]
+353230.0,102808245,338,1,OMNICARE INC,97883851.0,False,105.03085437453825,,False,manager-CUSIP in >1 filing
+355999.0,40826472,165,1,UNITED STATIONERS INC,38899710.0,False,104.9531526070503,,False,no identified data cause; [as-of 31d after quarter end: buybacks lower the denominator]
+356213.0,68533805,162,1,PINNACLE ENTERTAINMENT INC.,59979853.0,False,114.26137539883601,,False,no identified data cause
+704415.0,38333622,118,1,"HEALTHWAYS, INC",35360327.0,False,108.40856194570824,,False,no identified data cause
+708819.0,248582360,223,2,MCDERMOTT INTERNATIONAL INC,237646523.0,False,104.60172396462961,,False,multiple CUSIPs summed (classes/units); [as-of 31d after quarter end: buybacks lower the denominator]
+716643.0,55908478,136,1,REGIS CORP,55250514.0,False,101.1908739889732,,False,no identified data cause
+723612.0,108105009,265,1,"AVIS BUDGET GROUP, INC.",106244995.0,False,101.75068387927355,,False,no identified data cause; [as-of 31d after quarter end: buybacks lower the denominator]
+740260.0,295508690,485,1,VENTAS INC,294318374.0,False,100.4044314270369,,False,manager-CUSIP in >1 filing; [as-of 31d after quarter end: buybacks lower the denominator]
+745308.0,99387750,155,1,ST JOE CO,92302636.0,False,107.67596063020346,,False,manager-CUSIP in >1 filing
+768835.0,56731651,246,1,BIG LOTS INC,52996000.0,False,107.04893010793268,,False,no identified data cause; [as-of 31d after quarter end: buybacks lower the denominator]
+784977.0,83013684,260,1,PORTLAND GENERAL ELECTRIC CO /OR/,78209428.0,False,106.14280927869719,,False,no identified data cause
+789132.0,43688887,148,1,SPECTRANETICS CORP,41902736.0,False,104.26261187336311,,False,manager-CUSIP in >1 filing
+792977.0,26474180,112,1,AMAG PHARMACEUTICALS INC.,22026189.0,False,120.19410166688391,,False,no identified data cause
+794323.0,272981779,315,2,LEVEL 3 COMMUNICATIONS INC,238374738.0,False,114.51791464580445,,False,multiple CUSIPs summed (classes/units)
+799165.0,12543097,52,1,TGC INDUSTRIES INC,8065233.0,False,155.5205782647569,,False,no identified data cause
+799292.0,26260136,103,2,M I HOMES INC,24474139.0,False,107.29748654283608,,False,multiple CUSIPs summed (classes/units); [as-of 31d after quarter end: buybacks lower the denominator]
+799729.0,57557854,269,1,PAREXEL INTERNATIONAL CORP,54981283.0,False,104.68626932550846,,False,no identified data cause
+801898.0,102596823,381,1,JOY GLOBAL INC,97371112.0,False,105.36679811153846,,False,no identified data cause; [as-of 61d after quarter end: buybacks lower the denominator]
+805264.0,71390245,190,1,AXIALL CORP/DE/,70196116.0,False,101.70113258118157,,False,no identified data cause
+806888.0,9359617,39,1,RESPONSE BIOMEDICAL CORP,7949285.0,False,117.74162078727835,,False,no identified data cause; [as-of 31d after quarter end: buybacks lower the denominator]
+807884.0,30937913,180,1,CASH AMERICA INTERNATIONAL INC,30235164.0,False,102.32427712315368,,False,no identified data cause
+808326.0,72831480,160,3,EMCORE CORP,31109000.0,False,234.1170722299013,,False,multiple CUSIPs summed (classes/units)
+808450.0,87401842,168,2,NAVISTAR INTERNATIONAL CORP,81414738.0,False,107.35383315978981,,False,multiple CUSIPs summed (classes/units); [as-of 61d after quarter end: buybacks lower the denominator]
+811596.0,20181820,189,1,KAISER ALUMINUM CORP,17829629.0,False,113.19259643596622,,False,no identified data cause
+812128.0,23674522,244,1,SANDERSON FARMS INC,23130503.0,False,102.35195490560668,,False,no identified data cause; [as-of 31d after quarter end: buybacks lower the denominator]
+813672.0,300282312,268,1,CADENCE DESIGN SYSTEMS INC,292720000.0,False,102.58346269472534,,False,no identified data cause
+815094.0,47466417,136,1,ABIOMED INC,40577134.0,False,116.9782395178526,,False,manager-CUSIP in >1 filing
+816159.0,42212850,183,1,AIR METHODS CORP,39205446.0,False,107.67088327473688,,False,no identified data cause
+823094.0,69507195,232,1,SOTHEBYS,68990927.0,False,100.74831289047617,,False,no identified data cause
+827054.0,203702928,572,1,MICROCHIP TECHNOLOGY INC,200962463.0,False,101.36367008997098,,False,manager-CUSIP in >1 filing
+833640.0,29896432,187,1,POWER INTEGRATIONS INC,29525131.0,False,101.2575761306529,,False,no identified data cause; [as-of 31d after quarter end: buybacks lower the denominator]
+836157.0,14404421,180,1,LINDSAY CORP,12200857.0,False,118.06073130764503,,False,no identified data cause
+842183.0,80326378,164,2,RAMCO GERSHENSON PROPERTIES TRUST,77563000.0,False,103.56275285896626,,False,multiple CUSIPs summed (classes/units)
+857737.0,55431127,231,1,"ICONIX BRAND GROUP, INC.",47975556.0,False,115.54035350835747,,False,no identified data cause; [as-of 31d after quarter end: buybacks lower the denominator]
+858655.0,12428013,103,1,HAYNES INTERNATIONAL INC,12418471.0,False,100.07683715652274,,False,no identified data cause
+859598.0,18922786,136,1,SEACOR HOLDINGS INC /NEW/,18577133.0,False,101.86063694543179,,False,no identified data cause; [as-of 31d after quarter end: buybacks lower the denominator]
+860546.0,89244450,223,2,CORPORATE OFFICE PROPERTIES TRUST,87711731.0,False,101.74745040660524,,False,multiple CUSIPs summed (classes/units)
+868611.0,53139073,163,1,SONIC CORP,53018855.0,False,100.2267457492245,,False,no identified data cause
+874499.0,89522437,268,1,GULFPORT ENERGY CORP,85531504.0,False,104.66603860958648,,False,manager-CUSIP in >1 filing
+876427.0,33799691,163,1,MONRO MUFFLER BRAKE INC,31575114.0,False,107.04534906825674,,False,manager-CUSIP in >1 filing; [as-of 31d after quarter end: buybacks lower the denominator]
+878726.0,56044075,150,1,TUESDAY MORNING CORP/DE,43748688.0,False,128.1045845306264,,False,no identified data cause
+879526.0,71166919,170,1,WABASH NATIONAL CORP /DE,68983702.0,False,103.16483015075069,,False,no identified data cause
+881890.0,23632188,140,2,ABAXIS INC,22523000.0,False,104.92469031656529,,False,manager-CUSIP in >1 filing; multiple CUSIPs summed (classes/units)
+884217.0,53464466,178,1,MENS WEARHOUSE INC,48101138.0,False,111.15010626151923,,False,no identified data cause; [as-of 61d after quarter end: buybacks lower the denominator]
+885639.0,206182376,538,1,KOHLS Corp,202009115.0,False,102.06587757191055,,False,manager-CUSIP in >1 filing; [as-of 31d after quarter end: buybacks lower the denominator]
+886137.0,47450681,207,1,FINISH LINE INC /IN/,46676966.0,False,101.65759488309503,,False,no identified data cause; [as-of 61d after quarter end: buybacks lower the denominator]
+886163.0,21960762,174,1,LIGAND PHARMACEUTICALS INC,20117080.0,False,109.1647594978993,,False,no identified data cause
+888504.0,21779919,91,1,LAYNE CHRISTENSEN CO,20179000.0,False,107.93358937509292,,False,no identified data cause; [as-of 31d after quarter end: buybacks lower the denominator]
+890926.0,200410125,189,1,RADIAN GROUP INC,191049937.0,False,104.89934105552727,,False,no identified data cause
+892553.0,31686812,199,1,CHART INDUSTRIES INC,30479152.0,False,103.96224934342004,,False,manager-CUSIP in >1 filing
+893691.0,32072723,92,1,MASONITE INTERNATIONAL CORP,29827751.0,False,107.52645413997186,,False,no identified data cause
+896156.0,29343143,138,1,ETHAN ALLEN INTERIORS INC,28927385.0,False,101.43724709302275,,False,no identified data cause; [as-of 31d after quarter end: buybacks lower the denominator]
+899629.0,64043383,161,1,ACADIA REALTY TRUST,60081109.0,False,106.59487493814403,,False,no identified data cause
+899723.0,30898485,149,1,OM GROUP INC,30817045.0,False,100.26426933536294,,False,no identified data cause; [as-of 31d after quarter end: buybacks lower the denominator]
+899749.0,98146324,183,1,HEALTHCARE REALTY TRUST INC,98119000.0,False,100.02784781744616,,False,manager-CUSIP in >1 filing
+899923.0,95798347,272,1,MYRIAD GENETICS INC,72985000.0,False,131.25758306501336,,False,no identified data cause
+909791.0,30853940,128,1,ULTRATECH INC,28271186.0,False,109.13564078988409,,False,no identified data cause
+910521.0,38195946,282,1,DECKERS OUTDOOR CORP,34636000.0,False,110.27816722485275,,False,manager-CUSIP in >1 filing
+911109.0,46196463,170,1,MOBILE MINI INC,46081000.0,False,100.25056530891257,,False,no identified data cause
+911326.0,35169906,118,1,SYNAGEVA BIOPHARMA CORP,33197000.0,False,105.94302497213603,,False,no identified data cause
+912183.0,108175630,274,2,CUBIST PHARMACEUTICALS INC,76012863.0,False,142.3122689116446,,False,manager-CUSIP in >1 filing; multiple CUSIPs summed (classes/units)
+912728.0,30897256,161,1,FORWARD AIR CORP,30245216.0,False,102.15584507645772,,False,manager-CUSIP in >1 filing
+913077.0,75775209,166,1,AFFYMETRIX INC,73583589.0,False,102.97840867751096,,False,no identified data cause; [as-of 31d after quarter end: buybacks lower the denominator]
+913142.0,43876006,209,1,BELDEN INC.,42816497.0,False,102.47453452345717,,False,no identified data cause; [as-of 31d after quarter end: buybacks lower the denominator]
+915840.0,28470723,120,3,BEAZER HOMES USA INC,27173421.0,False,104.77415780663024,,False,multiple CUSIPs summed (classes/units)
+916540.0,171725954,232,1,DARLING INGREDIENTS INC.,164686825.0,False,104.2742514466473,,False,no identified data cause; [as-of 31d after quarter end: buybacks lower the denominator]
+920522.0,63250989,356,2,ESSEX PROPERTY TRUST INC,63229790.0,False,100.03352691824534,,False,manager-CUSIP in >1 filing; multiple CUSIPs summed (classes/units)
+921082.0,95467513,218,1,HIGHWOODS PROPERTIES INC,91270024.0,False,104.59897874027074,,False,no identified data cause
+921112.0,151123605,273,1,LIBERTY PROPERTY TRUST,149354294.0,False,101.18464019521261,,False,no identified data cause
+922475.0,25194756,128,1,ITT EDUCATIONAL SERVICES INC,23449175.0,False,107.44410411027255,,False,no identified data cause
+929008.0,54399699,211,1,WESCO INTERNATIONAL INC,44481394.0,False,122.2976487652343,,False,no identified data cause; [as-of 31d after quarter end: buybacks lower the denominator]
+929940.0,92312207,258,1,ASPEN TECHNOLOGY INC /DE/,90766389.0,False,101.70307314968761,,False,no identified data cause
+931336.0,101728988,207,1,DEAN FOODS CO,93820727.0,False,108.42911929258446,,False,no identified data cause
+931948.0,121529476,214,1,STILLWATER MINING CO /DE/,120123275.0,False,101.17063158659303,,False,no identified data cause
+933036.0,55811102,184,1,RENT A CENTER INC DE,52901754.0,False,105.49953031803065,,False,no identified data cause; [as-of 31d after quarter end: buybacks lower the denominator]
+935036.0,116135571,175,1,"ACI WORLDWIDE, INC.",114938316.0,False,101.04165002730683,,False,no identified data cause
+936395.0,108260177,232,1,CIENA CORP,106979960.0,False,101.1966886134562,,False,manager-CUSIP in >1 filing; [as-of 31d after quarter end: buybacks lower the denominator]
+941604.0,21833930,225,1,OUTERWALL INC,18894926.0,False,115.5544615522707,,False,no identified data cause
+945436.0,328520188,346,1,"SUNEDISON, INC.",270966015.0,False,121.24036588130802,,False,no identified data cause; [as-of 31d after quarter end: buybacks lower the denominator]
+945764.0,356881027,367,1,DENBURY RESOURCES INC,352562628.0,False,101.22486011194584,,False,no identified data cause; [as-of 31d after quarter end: buybacks lower the denominator]
+949158.0,42097787,101,1,CRAY INC,40723374.0,False,103.3749978574958,,False,no identified data cause
+1005757.0,35643212,163,1,CSG SYSTEMS INTERNATIONAL INC,34527000.0,False,103.23286703159846,,False,no identified data cause
+1008848.0,44267742,171,1,ACORDA THERAPEUTICS INC,41236633.0,False,107.35052495677813,,False,no identified data cause
+1009356.0,66743674,344,1,SALIX PHARMACEUTICALS LTD,63718571.0,False,104.74760019335649,,False,no identified data cause
+1009672.0,23504326,204,1,CARBO CERAMICS INC,23094721.0,False,101.77358713274778,,False,manager-CUSIP in >1 filing
+1013871.0,351190522,388,2,"NRG ENERGY, INC.",337987046.0,False,103.90650356463662,,False,manager-CUSIP in >1 filing; multiple CUSIPs summed (classes/units)
+1014473.0,136693926,351,1,VERISIGN INC/CA,122026000.0,False,112.02032845459165,,False,no identified data cause
+1014507.0,58931399,246,1,"SIRONA DENTAL SYSTEMS, INC.",55364617.0,False,106.44234927155732,,False,manager-CUSIP in >1 filing
+1016125.0,30023934,222,1,ULTIMATE SOFTWARE GROUP INC,28370881.0,False,105.82658324921246,,False,no identified data cause; [as-of 31d after quarter end: buybacks lower the denominator]
+1017480.0,29046022,173,1,HIBBETT SPORTS INC,25000692.0,False,116.18087211345991,,False,no identified data cause; [as-of 61d after quarter end: buybacks lower the denominator]
+1018840.0,79612779,249,1,ABERCROMBIE & FITCH CO /DE/,69335903.0,False,114.82186797221058,,False,no identified data cause; [as-of 61d after quarter end: buybacks lower the denominator]
+1018979.0,18974625,132,1,AMERISAFE INC,18807825.0,False,100.88686490862182,,False,no identified data cause
+1022079.0,145504083,476,1,QUEST DIAGNOSTICS INC,144534244.0,False,100.67100984040849,,False,manager-CUSIP in >1 filing; [as-of 31d after quarter end: buybacks lower the denominator]
+1029800.0,19636164,138,4,URSTADT BIDDLE PROPERTIES INC,9193559.0,False,213.58609870236327,,False,multiple CUSIPs summed (classes/units); [as-of 31d after quarter end: buybacks lower the denominator]
+1030469.0,46608691,136,1,OFG BANCORP,45059988.0,False,103.43698049808626,,False,manager-CUSIP in >1 filing
+1035443.0,73380055,276,3,ALEXANDRIA REAL ESTATE EQUITIES INC,72007833.0,False,101.90565656933461,,False,manager-CUSIP in >1 filing; multiple CUSIPs summed (classes/units); [as-of 31d after quarter end: buybacks lower the denominator]
+1036960.0,121624444,204,1,FAIRCHILD SEMICONDUCTOR INTERNATIONAL INC,118771532.0,False,102.4020166718065,,False,no identified data cause
+1037760.0,74365572,198,1,CEPHEID,70417174.0,False,105.60715202799817,,False,no identified data cause
+1040719.0,40003167,109,1,WALTER INVESTMENT MANAGEMENT CORP,37710133.0,False,106.0806839371264,,False,manager-CUSIP in >1 filing
+1040829.0,54015489,210,1,"Ryman Hospitality Properties, Inc.",51020000.0,False,105.87120540964328,,False,no identified data cause
+1040971.0,101721809,293,2,SL GREEN REALTY CORP,99547000.0,False,102.18470571689755,,False,multiple CUSIPs summed (classes/units)
+1045450.0,59278762,251,4,EPR PROPERTIES,57150674.0,False,103.72364462403365,,False,multiple CUSIPs summed (classes/units); [as-of 31d after quarter end: buybacks lower the denominator]
+1053532.0,110620367,250,3,LaSalle Hotel Properties,104068251.0,False,106.29597974121809,,False,multiple CUSIPs summed (classes/units)
+1057352.0,32994134,207,1,COSTAR GROUP INC,32349264.0,False,101.99346111862081,,False,no identified data cause; [as-of 31d after quarter end: buybacks lower the denominator]
+1060736.0,124778154,193,1,SEATTLE GENETICS INC /WA,123880000.0,False,100.72501937358733,,False,no identified data cause
+1065865.0,201351754,257,1,JANUS CAPITAL GROUP INC,186386184.0,False,108.02933440603087,,False,no identified data cause
+1069878.0,33574274,133,1,TREX CO INC,32003117.0,False,104.90938741998161,,False,no identified data cause
+1073349.0,38627937,142,1,BOTTOMLINE TECHNOLOGIES INC /DE/,37855000.0,False,102.04183595297846,,False,no identified data cause
+1076195.0,39295770,193,1,"LIFE TIME FITNESS, INC.",39123068.0,False,100.44143266064923,,False,no identified data cause
+1077428.0,45905772,202,2,TEXAS CAPITAL BANCSHARES INC/TX,43187458.0,False,106.29422088236822,,False,manager-CUSIP in >1 filing; multiple CUSIPs summed (classes/units); [as-of 31d after quarter end: buybacks lower the denominator]
+1082554.0,52417962,317,1,UNITED THERAPEUTICS Corp,47436015.0,False,110.50245683580293,,False,manager-CUSIP in >1 filing
+1082754.0,72382555,242,1,TEAM HEALTH HOLDINGS INC.,70967000.0,False,101.99466653515015,,False,no identified data cause
+1084048.0,52856097,207,1,"J2 GLOBAL, INC.",46892811.0,False,112.7168448059128,,False,no identified data cause
+1084961.0,35837454,160,1,ENCORE CAPITAL GROUP INC,25720000.0,False,139.33691290824262,,False,manager-CUSIP in >1 filing
+1086909.0,29116611,104,1,"BROADSOFT, INC.",28794606.0,False,101.11828236163399,,False,no identified data cause
+1091171.0,11871399,101,1,BLUE NILE INC,11845000.0,False,100.22287040945545,,False,manager-CUSIP in >1 filing
+1091862.0,89272603,172,1,Chemtura CORP,87810294.0,False,101.66530475344953,,False,manager-CUSIP in >1 filing
+1092699.0,16985708,117,1,SPS COMMERCE INC,16276447.0,False,104.35759106394657,,False,no identified data cause
+1101239.0,56986074,331,2,EQUINIX INC,53322300.0,False,106.87099768764664,,False,multiple CUSIPs summed (classes/units)
+1108109.0,231332656,333,2,COMMUNITY HEALTH SYSTEMS INC,116281977.0,False,198.9411101945747,,False,manager-CUSIP in >1 filing; multiple CUSIPs summed (classes/units)
+1108426.0,81310747,195,1,PNM RESOURCES INC,79653624.0,False,102.0804113068352,,False,no identified data cause
+1111335.0,44800766,242,3,VISTEON CORP,44000000.0,False,101.81992272727274,,False,multiple CUSIPs summed (classes/units)
+1113481.0,67309333,151,1,MEDICINES CO /DE,65346666.0,False,103.00346922060261,,False,no identified data cause
+1122388.0,28829129,109,1,ELLIE MAE INC,28589869.0,False,100.8368698716318,,False,manager-CUSIP in >1 filing
+1124140.0,73657118,173,1,EXACT SCIENCES CORP,71071838.0,False,103.6375589442333,,False,no identified data cause
+1124804.0,182808813,223,1,"ALLSCRIPTS HEALTHCARE SOLUTIONS, INC.",180261934.0,False,101.41287677519315,,False,no identified data cause
+1124827.0,118244878,139,1,UTi WORLDWIDE INC,105457141.0,False,112.1260038710892,,False,no identified data cause; [as-of 31d after quarter end: buybacks lower the denominator]
+1124941.0,54367135,148,1,BEACON ROOFING SUPPLY INC,49392774.0,False,110.07102982310732,,False,manager-CUSIP in >1 filing
+1125920.0,39964195,174,1,SHUTTERFLY INC,38533000.0,False,103.71420600524226,,False,no identified data cause
+1131096.0,46269272,211,1,ATHENAHEALTH INC,38072000.0,False,121.53097289346502,,False,manager-CUSIP in >1 filing
+1137861.0,65159279,150,2,WRIGHT MEDICAL GROUP INC,51069847.0,False,127.58855337866981,,False,multiple CUSIPs summed (classes/units); [as-of 31d after quarter end: buybacks lower the denominator]
+1138723.0,83162221,147,1,ACCURAY INC,77422458.0,False,107.41356338751218,,False,no identified data cause
+1142417.0,35976025,119,1,NEXSTAR BROADCASTING GROUP INC,30889901.0,False,116.46532955868003,,False,no identified data cause; [as-of 31d after quarter end: buybacks lower the denominator]
+1144980.0,30556201,159,1,ASBURY AUTOMOTIVE GROUP INC,29769231.0,False,102.64356845495941,,False,no identified data cause; [as-of 31d after quarter end: buybacks lower the denominator]
+1145197.0,62408355,167,1,INSULET CORP,56040361.0,False,111.36322801346694,,False,no identified data cause
+1158463.0,297345518,315,1,JETBLUE AIRWAYS CORP,291811585.0,False,101.89640620333836,,False,no identified data cause
+1158863.0,36989127,156,1,"WAGEWORKS, INC.",35352343.0,False,104.62991660835606,,False,manager-CUSIP in >1 filing; [as-of 31d after quarter end: buybacks lower the denominator]
+1162194.0,28601188,98,1,FLUIDIGM CORP,28236000.0,False,101.29334183312085,,False,no identified data cause
+1169652.0,24975305,108,1,CHANNELADVISOR CORP,24853614.0,False,100.48963100497174,,False,manager-CUSIP in >1 filing
+1170010.0,219729981,373,1,CARMAX INC,215394966.0,False,102.01258881788351,,False,manager-CUSIP in >1 filing
+1175483.0,85887552,132,6,NEWCASTLE INVESTMENT CORP,66399857.0,False,129.34900145944593,,False,multiple CUSIPs summed (classes/units)
+1177609.0,63059942,152,1,"FIVE BELOW, INC",54371530.0,False,115.97970849817911,,False,no identified data cause; [as-of 31d after quarter end: buybacks lower the denominator]
+1182129.0,65933296,148,1,AUXILIUM PHARMACEUTICALS INC,50839809.0,False,129.68832357336356,,False,no identified data cause
+1196501.0,98322593,169,1,HMS HOLDINGS CORP,87762343.0,False,112.03278039192732,,False,no identified data cause
+1206264.0,61000513,221,1,"TEMPUR SEALY INTERNATIONAL, INC.",60906011.0,False,100.15516038310241,,False,manager-CUSIP in >1 filing; [as-of 31d after quarter end: buybacks lower the denominator]
+1208208.0,79012247,148,1,"DIGITALGLOBE, INC.",75200000.0,False,105.06947739361703,,False,no identified data cause
+1212458.0,38975029,149,1,PROOFPOINT INC,37869000.0,False,102.92067126145396,,False,manager-CUSIP in >1 filing
+1260221.0,53019971,318,1,TransDigm Group INC,52459049.0,False,101.06925689789001,,False,manager-CUSIP in >1 filing; [as-of 31d after quarter end: buybacks lower the denominator]
+1277856.0,48357569,189,1,CARDTRONICS INC,44521555.0,False,108.61608270420923,,False,manager-CUSIP in >1 filing
+1280058.0,49234432,163,1,BLACKBAUD INC,46290675.0,False,106.35928726465968,,False,no identified data cause; [as-of 31d after quarter end: buybacks lower the denominator]
+1282977.0,29473639,160,1,GREENHILL & CO INC,28137583.0,False,104.74829696637411,,False,no identified data cause
+1289236.0,200915386,259,1,BioMed Realty Trust Inc,197442432.0,False,101.75897043245496,,False,no identified data cause; [as-of 31d after quarter end: buybacks lower the denominator]
+1289308.0,48287780,228,1,EnerSys,45357718.0,False,106.45989729906606,,False,no identified data cause; [as-of 31d after quarter end: buybacks lower the denominator]
+1292556.0,47221424,144,1,"Polypore International, Inc.",44653618.0,False,105.750499321242,,False,no identified data cause
+1295810.0,222765180,195,2,"Sunstone Hotel Investors, Inc.",203513475.0,False,109.45967091368274,,False,multiple CUSIPs summed (classes/units)
+1295947.0,54282548,174,1,"Prestige Brands Holdings, Inc.",52172727.0,False,104.0439155116427,,False,no identified data cause; [as-of 31d after quarter end: buybacks lower the denominator]
+1298946.0,215822602,204,1,DiamondRock Hospitality Co,195698858.0,False,110.28301555035134,,False,no identified data cause
+1302343.0,156278764,185,1,"Education Realty Trust, Inc.",142402758.0,False,109.74419751055665,,False,no identified data cause
+1305294.0,92670149,186,1,QLIK TECHNOLOGIES INC,90306246.0,False,102.61765171813255,,False,no identified data cause
+1309108.0,39376112,213,1,WEX Inc.,38870000.0,False,101.30206328788269,,False,manager-CUSIP in >1 filing
+1315657.0,38924575,113,1,XOOM Corp,38443201.0,False,101.25216940181438,,False,no identified data cause
+1315695.0,81778109,259,1,"Rockwood Holdings, Inc.",71241000.0,False,114.7907932230036,,False,no identified data cause
+1322705.0,69171059,175,1,Spansion Inc.,62052782.0,False,111.47132613651391,,False,no identified data cause; [as-of 31d after quarter end: buybacks lower the denominator]
+1323974.0,13164995,184,1,"MWI Veterinary Supply, Inc.",12912000.0,False,101.95937887236678,,False,manager-CUSIP in >1 filing
+1326380.0,135372830,395,1,GameStop Corp.,109300000.0,False,123.85437328453797,,False,manager-CUSIP in >1 filing; [as-of 31d after quarter end: buybacks lower the denominator]
+1333493.0,17828105,95,1,"eHealth, Inc.",17817864.0,False,100.05747602518463,,False,no identified data cause; [as-of 31d after quarter end: buybacks lower the denominator]
+1333513.0,54854540,173,1,"Dealertrack Technologies, Inc",54013423.0,False,101.55723698533232,,False,no identified data cause
+1338042.0,36910773,130,1,"Aegerion Pharmaceuticals, Inc.",28435000.0,False,129.80753648672413,,False,no identified data cause
+1340282.0,66242671,236,1,Rosetta Resources Inc.,61489705.0,False,107.72969393819665,,False,no identified data cause; [as-of 31d after quarter end: buybacks lower the denominator]
+1347178.0,41299596,101,1,Vanda Pharmaceuticals Inc.,33901084.0,False,121.82382132677527,,False,no identified data cause
+1354217.0,52524482,117,1,Volcano Corp,51603000.0,False,101.78571400887546,,False,no identified data cause
+1360530.0,33962803,185,1,"Vitamin Shoppe, Inc.",30870071.0,False,110.01854514685114,,False,manager-CUSIP in >1 filing
+1366684.0,94577919,198,1,HOMEAWAY INC,94284311.0,False,100.31140705901748,,False,CUSIP->CIK conflict
+1368458.0,161537420,198,1,"Sally Beauty Holdings, Inc.",154668000.0,False,104.44139705692193,,False,no identified data cause
+1373670.0,7790368,26,2,BioFuel Energy Corp.,5497106.0,False,141.7176237824048,,False,multiple CUSIPs summed (classes/units)
+1374535.0,28588528,131,1,Altra Industrial Motion Corp.,26761559.0,False,106.82684069339908,,False,no identified data cause
+1379895.0,115050686,165,2,DYNEGY INC.,100382015.0,False,114.6128477297452,,False,manager-CUSIP in >1 filing; multiple CUSIPs summed (classes/units)
+1389050.0,69139452,189,1,EXTERRAN HOLDINGS INC.,68259732.0,False,101.28878326097148,,False,no identified data cause; [as-of 31d after quarter end: buybacks lower the denominator]
+1389072.0,17181060,118,1,"HeartWare International, Inc.",17018000.0,False,100.95816194617464,,False,no identified data cause
+1395942.0,143420880,211,1,"KAR Auction Services, Inc.",140800441.0,False,101.8611014151582,,False,no identified data cause
+1396033.0,31409684,147,1,"Lumber Liquidators Holdings, Inc.",27057543.0,False,116.08476054163528,,False,no identified data cause
+1396814.0,38771686,205,1,"Pacira Pharmaceuticals, Inc.",36021855.0,False,107.63378510073953,,False,no identified data cause
+1398987.0,147507009,247,1,REALOGY HOLDINGS CORP.,146262322.0,False,100.85099633520107,,False,no identified data cause
+1399935.0,48353103,135,1,Francesca's Holdings CORP,42297833.0,False,114.3157924898895,,False,no identified data cause; [as-of 61d after quarter end: buybacks lower the denominator]
+1405073.0,40952242,133,1,Approach Resources Inc,39337147.0,False,104.10577564254977,,False,manager-CUSIP in >1 filing
+1407739.0,77279741,208,3,"DUPONT FABROS TECHNOLOGY, INC.",65852165.0,False,117.35337934599417,,False,multiple CUSIPs summed (classes/units)
+1408198.0,115826376,191,1,MSCI Inc.,112027156.0,False,103.39133843583426,,False,no identified data cause
+1410471.0,18529012,154,1,"IPC The Hospitalist Company, Inc.",17215224.0,False,107.63154751863814,,False,no identified data cause
+1411207.0,454135900,625,1,Allison Transmission Holdings Inc,177527712.0,False,255.81127300283123,,False,manager-CUSIP in >1 filing
+1420302.0,25951254,166,1,"LogMeIn, Inc.",24417181.0,False,106.28276048737976,,False,no identified data cause
+1428336.0,15639659,68,1,HEALTHEQUITY INC,7038000.0,False,222.21737709576584,,False,single holding > 50% of shares out; [as-of 31d after quarter end: buybacks lower the denominator]
+1430592.0,58503994,173,1,"Financial Engines, Inc.",51912000.0,False,112.69840114039143,,False,no identified data cause
+1441849.0,64963507,178,1,CLOUD PEAK ENERGY INC.,61005000.0,False,106.48882386689615,,False,manager-CUSIP in >1 filing
+1453814.0,56560714,193,1,"Medidata Solutions, Inc.",54119000.0,False,104.51175003233615,,False,no identified data cause
+1471261.0,456968596,220,1,"Cobalt International Energy, Inc.",407095514.0,False,112.25095347034456,,False,no identified data cause
+1474098.0,72239677,199,4,Pebblebrook Hotel Trust,67614929.0,False,106.83983266476548,,False,manager-CUSIP in >1 filing; multiple CUSIPs summed (classes/units)
+1474735.0,75895414,239,1,GENERAC HOLDINGS INC.,68868851.0,False,110.2028172359083,,False,manager-CUSIP in >1 filing; [as-of 31d after quarter end: buybacks lower the denominator]
+1475841.0,40035480,93,1,National Bank Holdings Corp,39862824.0,False,100.43312536010995,,False,no identified data cause
+1476150.0,33248695,98,2,Terreno Realty Corp,33094789.0,False,100.46504602280437,,False,manager-CUSIP in >1 filing; multiple CUSIPs summed (classes/units)
+1482512.0,69738361,136,2,"Hudson Pacific Properties, Inc.",66795992.0,False,104.40500831247479,,False,multiple CUSIPs summed (classes/units)
+1483830.0,41687250,45,1,Niska Gas Storage Partners LLC,36647511.0,False,113.75192710904705,,False,single holding > 50% of shares out; [as-of 31d after quarter end: buybacks lower the denominator]
+1487371.0,42440070,82,1,"GenMark Diagnostics, Inc.",41749000.0,False,101.65529713286546,,False,no identified data cause
+1489136.0,44658715,204,2,SemGroup Corp,43614054.0,False,102.39523938774416,,False,multiple CUSIPs summed (classes/units); [as-of 92d after quarter end: buybacks lower the denominator]
+1489979.0,48707125,177,1,"Fresh Market, Inc.",48294776.0,False,100.85381698426347,,False,no identified data cause
+1492298.0,48379293,206,1,"Sabra Health Care REIT, Inc.",47627984.0,False,101.57745286888482,,False,manager-CUSIP in >1 filing
+1499912.0,50812160,115,1,FXCM Inc.,50701418.0,False,100.21841992663796,,True,shares outstanding gap >100d; [as-of 151d after quarter end: buybacks lower the denominator]
+1500217.0,43968574,152,1,"American Assets Trust, Inc.",43614913.0,False,100.81087173096046,,False,no identified data cause; [as-of 31d after quarter end: buybacks lower the denominator]
+1509589.0,42879491,197,1,"Bonanza Creek Energy, Inc.",41242936.0,False,103.96808558925098,,False,no identified data cause
+1510580.0,9664987,62,1,"Kite Pharma, Inc.",5527816.0,False,174.8427769665271,,False,no identified data cause
+1511337.0,139999020,191,1,RLJ Lodging Trust,132084354.0,False,105.99212984756696,,False,no identified data cause
+1524931.0,17898686,91,1,"CHUY'S HOLDINGS, INC.",16440906.0,False,108.8667862951105,,False,no identified data cause
+1526160.0,43080675,122,1,Fleetmatics Group plc,37747243.0,False,114.12932859758791,,False,no identified data cause; [as-of 31d after quarter end: buybacks lower the denominator]
+1528129.0,150951619,156,1,"Laredo Petroleum, Inc.",143685200.0,False,105.05717986264418,,False,no identified data cause; [as-of 31d after quarter end: buybacks lower the denominator]
+1528396.0,71932742,154,1,"Guidewire Software, Inc.",69082261.0,False,104.12621266116349,,False,no identified data cause; [as-of 31d after quarter end: buybacks lower the denominator]
+1528558.0,58590769,115,1,"Rouse Properties, Inc.",57742605.0,False,101.46887034279108,,False,no identified data cause; [as-of 31d after quarter end: buybacks lower the denominator]
+1528849.0,47213933,217,1,Restoration Hardware Holdings Inc,39523759.0,False,119.45709161924603,,False,manager-CUSIP in >1 filing; [as-of 31d after quarter end: buybacks lower the denominator]
+1530950.0,54720947,210,4,"Post Holdings, Inc.",44859942.0,False,121.98176047574916,,False,multiple CUSIPs summed (classes/units); [as-of 31d after quarter end: buybacks lower the denominator]
+1534992.0,27201784,138,1,"Fiesta Restaurant Group, Inc.",26355748.0,False,103.21006256396137,,False,no identified data cause
+1539838.0,57499391,219,1,"Diamondback Energy, Inc.",56680359.0,False,101.44500143338895,,False,no identified data cause
+1544116.0,49173234,175,3,"Durata Therapeutics, Inc.",26787903.0,False,183.56507413066262,,False,manager-CUSIP in >1 filing; multiple CUSIPs summed (classes/units)
+1546640.0,190534170,462,1,ADT Corp,174109318.0,False,109.43364329300285,,False,manager-CUSIP in >1 filing
+1546652.0,127108,7,1,Merk Gold Trust,100000.0,False,127.108,,False,single holding > 50% of shares out; [as-of 31d after quarter end: buybacks lower the denominator]
+1548981.0,33791996,95,1,"American Residential Properties, Inc.",32200480.0,False,104.94252259593647,,False,no identified data cause
+1556593.0,172448249,180,2,New Residential Investment Corp.,141382603.0,False,121.97275007024733,,False,multiple CUSIPs summed (classes/units)
+1561660.0,70190665,125,1,Pattern Energy Group Inc.,69062463.0,False,101.6335965313024,,True,shares outstanding gap >100d; [as-of 151d after quarter end: buybacks lower the denominator]
+1571088.0,4844636,15,1,MergeWorthRx Corp.,3242851.0,False,149.39434466770138,,False,no identified data cause
+1579298.0,75152756,138,1,"Burlington Stores, Inc.",74590114.0,False,100.75431175772167,,False,single holding > 50% of shares out; [as-of 31d after quarter end: buybacks lower the denominator]
+1579877.0,121584625,202,1,CBS OUTDOOR AMERICAS INC.,120010462.0,False,101.31168814265543,,False,CUSIP->CIK conflict
+1580156.0,146958383,89,1,Houghton Mifflin Harcourt Co,141272596.0,False,104.02469209244234,,False,no identified data cause
+1581068.0,247920505,148,1,Brixmor Property Group Inc.,245095327.0,False,101.15268537943199,,False,single holding > 50% of shares out
+1587523.0,90773067,320,1,Knowles Corp,85040539.0,False,106.74093563776682,,False,manager-CUSIP in >1 filing; [as-of 31d after quarter end: buybacks lower the denominator]
+1594590.0,87790091,232,1,PARAGON OFFSHORE PLC,84753393.0,False,103.58298103770312,,False,manager-CUSIP in >1 filing
+1594686.0,158512436,302,1,Washington Prime Group Inc.,155162597.0,False,102.15892171487695,,False,manager-CUSIP in >1 filing
+1596783.0,125646545,81,1,"Catalent, Inc.",123741468.0,False,101.53956230743925,,False,single holding > 50% of shares out
+1597033.0,313862136,82,1,Sabre Corp,264787572.0,False,118.5335601778168,,False,single holding > 50% of shares out
+1599617.0,113474426,424,1,NOW Inc.,107067457.0,False,105.98404891600255,,False,manager-CUSIP in >1 filing
+1602367.0,5557197,51,1,Adeptus Health Inc.,4895521.0,False,113.51594651519214,,False,no identified data cause
+1603969.0,10209924,16,4,Garnero Group Acquisition Co,4707236.0,False,216.8984941481583,,False,multiple CUSIPs summed (classes/units)
+1608638.0,37026196,31,1,"Civitas Solutions, Inc.",36950000.0,False,100.20621380243573,,False,single holding > 50% of shares out

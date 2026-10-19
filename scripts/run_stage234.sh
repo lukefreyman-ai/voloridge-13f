@@ -20,7 +20,11 @@ notes_get() {   # $1 = local path; skip if present and a valid zip
   local free_gb=$(df -g . | awk 'NR==2{print $4}')
   [ "$free_gb" -lt 3 ] && { echo "$(t) STOP: only ${free_gb} GB free, not downloading $name"; return 1; }
   echo "$(t) downloading $name"
-  curl -sS -L -A "$UA" -o "$p.part" "$NOTES_BASE/$name" && unzip -tq "$p.part" >/dev/null 2>&1 && mv "$p.part" "$p" && return 0
+  # resume a partial transfer and retry: these are 300-500 MB files and a single
+  # failed attempt cost 2014Q3 a whole quarter on 2026-10-17
+  curl -sS -L -A "$UA" --retry 5 --retry-delay 10 --retry-all-errors -C - \
+       --connect-timeout 30 -o "$p.part" "$NOTES_BASE/$name" \
+    && unzip -tq "$p.part" >/dev/null 2>&1 && mv "$p.part" "$p" && return 0
   echo "$(t) notes download FAILED: $name"; rm -f "$p.part"; return 1
 }
 gitcommit() {

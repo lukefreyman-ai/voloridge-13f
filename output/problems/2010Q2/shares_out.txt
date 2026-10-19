@@ -1,0 +1,8 @@
+2010Q2 shares outstanding (quarter end 2010-06-30) from 2010q3_notes, 2010q4_notes
+facts loaded 6,959 on 1,438 CIKs | selected 1,717 rows on 1,438 CIKs
+CIKs with class-dimensioned facts (multi-class): 197; undimensioned-only: 1,241
+gap > 100 days flagged: 46 rows; gap distribution (days): {'min': -1034.0, '25%': 0.0, '50%': 0.0, '75%': 31.0, 'max': 153.0}
+by form: {'10-Q': 1503, '10-Q/A': 162, '10-K': 44, '10-K/A': 5, '20-F': 3}
+by XBRL tag (decision 11): {'CommonStockSharesOutstanding': 967, 'EntityCommonStockSharesOutstanding': 750}
+dated exactly at quarter end: 998 of 1,717 (58.1%)
+scale-corrected (fact tagged in thousands, cross-checked against the other tag): 8

@@ -1,0 +1,8 @@
+2013Q2 shares outstanding (quarter end 2013-06-30) from 2013q3_notes, 2013q4_notes
+facts loaded 46,046 on 7,223 CIKs | selected 9,430 rows on 7,223 CIKs
+CIKs with class-dimensioned facts (multi-class): 1,493; undimensioned-only: 5,730
+gap > 100 days flagged: 387 rows; gap distribution (days): {'min': -7121.0, '25%': 0.0, '50%': 0.0, '75%': 31.0, 'max': 184.0}
+by form: {'10-Q': 8389, '10-K': 527, '10-Q/A': 395, '10-K/A': 74, '20-F': 43, '10-QT': 1, '40-F': 1}
+by XBRL tag (decision 11): {'CommonStockSharesOutstanding': 7060, 'EntityCommonStockSharesOutstanding': 2370}
+dated exactly at quarter end: 6,255 of 9,430 (66.3%)
+scale-corrected (fact tagged in thousands, cross-checked against the other tag): 82

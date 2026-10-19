@@ -1,133 +1,165 @@
 # Voloridge 13F institutional ownership, 2010-2014
 
-Reads every SEC Form 13F filing from 2010 Q1 to 2014 Q4 and reports, per company, the
-share of its stock held by institutional investors.
+Reads every SEC **Form 13F** filing from 2010 Q1 through 2014 Q4 and reports, per company and
+quarter, the share of its stock held by institutional investors.
 
 Luke Freyman, UCF FinTech M.S. Research project for Dr. Cuneyt Akcora. Due 2026-11-15.
 
+**Read `CAVEATS.md` before using any number here.** It states what this dataset can and cannot be
+used for, and it is not boilerplate: the panel is not comparable across quarters without
+conditioning, and that is the most important thing to know.
+
 ## Terms
 
-- Form 13F: quarterly SEC report filed by institutional managers holding over $100M in US
+- **Form 13F**: quarterly SEC report filed by institutional managers holding over $100M in US
   stocks. Lists each holding: company, CUSIP, value, share count.
-- CUSIP: 9-character security identifier. First 6 characters identify the issuer, next 2 the
-  share class, last is a check digit.
-- Shares outstanding: total shares a company has issued. The denominator for ownership, taken
-  from the company's own filings.
-- Value: dollar market value of a holding, as the manager reported it.
-- Schedule 13G / 13D: filed when an investor crosses 5% ownership. Names both the CUSIP and
-  the company, so these are the most reliable CUSIP-to-company source.
-- XBRL: machine-readable tagging in SEC filings, universal from 2013.
+- **CUSIP**: 9-character security identifier. First 6 characters identify the issuer, the next 2
+  the share class, the last is a check digit.
+- **Shares outstanding**: total shares a company has issued. The denominator for ownership, taken
+  from the company's own 10-K or 10-Q.
+- **Value**: dollar market value of a holding, as the manager reported it.
+- **Schedule 13G / 13D**: filed when an investor crosses 5% ownership. These name both the CUSIP
+  and the company, which makes them the most reliable CUSIP-to-company source. The limit: a company
+  only appears if someone crossed 5%, so companies with no 5% holder fall through to name matching.
+- **XBRL**: machine-readable tagging in SEC filings, universal from 2013.
 
 ## Scope
 
-74,217 filings, 30,023,434 holdings rows. 7 of the 20 quarters are structured XML.
-The other 13 are free-text documents with no schema: fixed-width tables, inconsistent
-column order, per-filer layouts.
+74,217 filings, 30,023,434 holdings rows, all 20 quarters complete. 7 of the 20 quarters are
+structured XML; the other 13 are free-text documents with no schema, inconsistent column order and
+per-filer layouts. The text era is where the work is.
 
 ## Parse coverage
 
-Share of reported dollar value that parses into usable rows and reconciles with the totals
-the filer declared on its own cover page:
+Share of reported dollar value that parses into usable rows and reconciles with the filer's own
+declared totals:
 
-- Lowest quarter: 2011Q3, 86.3%
-- Highest quarter: pilot_2013Q4, 99.5%
-- All 20 quarters at or above 86.3%
+- Lowest quarter: **2011 Q3 at 86.3%**; highest: **2013 Q4 at 99.5%**
 
-Per quarter: `output/problems/all_quarters_table.csv`, column `pass+classA_plausible%`. That column counts rows
-matching the filer's declared total exactly or within the documented class A tolerance. The
-stricter `pass_value%` column is also present and falls to 13% in 2012 Q2, where several large
-filers report value in thousands rather than units.
+Per quarter: `output/problems/all_quarters_table.csv`, column `pass+classA_plausible%`.
+
+**What that column does and does not count**, because the number is generous and you should know
+why. It counts rows that match the filer's declared total exactly, plus "class A" filings, which
+are ones where the parse is judged right and *the filer's own summary page is wrong* (value stated
+in thousands, entry totals counting distinct CUSIPs rather than rows). It also **excludes from both
+numerator and denominator** filings whose parsed value exceeds 3x the filer's declared total or
+$2tn, on the grounds that those parsed values are corrupt and would dominate a value-weighted
+average. In 2012 Q2 that exclusion is 79% of weighted value. The strict metric with nothing
+excluded, `pass_value%`, is in the same file and bottoms out at **13.3%** in that quarter.
 
 ## Validation against SEC data
 
-2013 Q4 is the earliest quarter with an SEC-published structured 13F data set. Compared row by
-row:
+The SEC publishes its own structured 13F data set from **2013 Q2 onward**, which is seven of these
+twenty quarters. One, 2013 Q4, has been compared row by row:
 
-- Row-level exact match on (CUSIP, shares, value): 1584855/1584855 = 100.000%
-- Filings matching on row count, share total and value total: 4038/4038 = 100.00%
-- Filings with any mismatch: 0
+- Row-level exact match on (CUSIP, shares, value): **1,584,855 / 1,584,855 = 100.000%**
+- Filings matching on row count, share total and value total: **4,038 / 4,038**
+- Filings with any mismatch: **0**
 
-The match holds for filings our own checksum flags as failing, which locates those failures in
-filer-side reporting (value in thousands, entry totals counting distinct CUSIPs rather than
-rows) rather than in the parser. Breakdown: `output/problems/pilot_2013Q4/secds_compare.txt`.
+The match holds even for filings this project's own checksum flags as failing, which locates those
+failures in filer-side reporting rather than in the parser. Detail:
+`output/problems/pilot_2013Q4/secds_compare.txt`.
 
-Text-era quarters have no SEC reference set. Each filing is reconciled against its own declared
-cover-page totals instead.
+**Two honest limits.** Every quarter the SEC data set covers is 100% XML, so this validates none of
+the 13 text-era quarters, which is where the parsing risk lives. And the match key is (CUSIP,
+shares, value); it does not include the SH/PRN or put/call fields that the ownership filter uses.
+The other six available quarters have not been compared yet.
 
-## Ownership results, pilot quarters
+## Ownership results, the two most-checked quarters
 
 | | 2010 Q1 | 2013 Q4 |
 |---|---|---|
-| Holdings rows used | 1,034,768 | 1,289,567 |
+| Holdings rows used | 1,040,762 | 1,289,567 |
 | CUSIP to company, by value | 95.6% | 97.9% |
-| Companies with shares outstanding | 2,488 / 4,967 = 50.1% | 3,937 / 4,633 = 85.0% |
-| Same, by 13F value | 83.9% | 87.6% |
-| Companies over 100% | 127 / 2,488 = 5.1% | 241 / 3,937 = 6.1% |
-| Top 500 by value, over 100% | 14 = 3.5% | 28 = 6.7% |
-| Fund CUSIPs excluded | 1,488 | 1,883 |
+| Companies with shares outstanding | 2,480 / 4,918 = 50.4% | 3,979 / 4,619 = 86.1% |
+| Same, weighted by 13F value | 85.6% | 89.4% |
+| Companies over 100% | 132 / 2,471 = 5.3% | 252 / 3,972 = 6.3% |
+| Top 500 by value, over 100% | 15 / 396 = 3.8% | 25 / 418 = 6.0% |
+| Fund CUSIPs excluded | 1,491 | 1,883 |
 
-Rows used is a subset of rows parsed: common stock only, no puts or calls, CUSIP resolved,
-share count above zero.
+The top-500 denominator is the top-500 companies that *have* a percentage (396 and 418), not 500.
+Across all 20 quarters that rate runs 1.7% to 9.4% and exceeds the project's own 5% review
+threshold in 8 quarters.
 
-Median ownership is not comparable across quarters. It is computed only over companies that
-have a shares-outstanding figure, and that denominator moves from 50% of companies in 2010 Q1
-to 84% in 2012 Q1. Coverage weighted by value is stable at 83-88% across all quarters.
+**Do not compare medians across quarters.** Coverage of the denominator changes underneath them:
+50.4% of companies in 2010 Q1 against 86.1% in 2013 Q4, and institutional ownership is
+size-correlated. Weighted by value, coverage is stable at 85.6% to 90.9%. CUSIP-to-company coverage
+runs 31% to 45% of companies and 78% to 98% of value, with the low end in Q2 and Q3 quarters where
+the 13G/13D map thins. `CAVEATS.md` section 2 has the four reasons the panel shifts.
 
-Ownership above 100% is reported, not capped. Documented causes, annotated per company in
-`output/problems/<quarter>/over_100_companies.csv`:
-
-1. Securities lending. Lent shares can be reported by both the lender and the borrower's buyer.
-2. Timing. Shares outstanding comes from the next 10-K or 10-Q, up to 90 days later; buybacks
-   in between shrink the denominator.
-3. Data cases. Units, rights, or multiple classes mapping to one company. Flagged.
-
-A residual has no identified data cause and is labelled as such.
+**Ownership above 100% is reported, never capped.** Causes are annotated per company in
+`output/problems/<quarter>/over_100_companies.csv`: securities lending (lent shares can be reported
+by both the lender and the borrower's buyer, a real market mechanism, not quantified here), timing,
+and multiple classes or units mapped to one company. A residual carries no identified cause and is
+labelled that way. Correcting the denominator's vintage did not reduce the rate, which is evidence
+the residual is not a vintage artifact.
 
 ## Decisions
 
-- ETFs and investment funds excluded. Their shares outstanding are not comparable to an
-  operating company's. 1,883 CUSIPs in 2013 Q4, about 5% of 13F value.
-- Share classes never summed. Each class CUSIP is measured against that class's own shares
-  outstanding; company-level percentage is null for multi-class companies rather than inferred.
-- CUSIP to company mapping is evidence-first: Schedule 13G and 13D, then exact name matching
-  against the SEC 13(f) securities list. Conflicts flagged, not resolved by guess.
-  The limit of this method: a company only appears in 13G/13D if someone crossed 5% ownership
-  of it, so companies with no 5% holder fall through to name matching or stay unmapped. That is
-  why CUSIP-to-company coverage is 40-45% of companies but 96-98% of dollar value: the companies
-  that fall through are small ones.
-- Every parser rule is backed by a real filing kept as a test fixture, so a fix for one filer's
-  layout cannot silently break another's. See `tests/` and `tests/FIXTURE_REVIEW.md`.
+- **ETFs and investment funds are excluded as securities**, since their shares outstanding are not
+  comparable to an operating company's. Fund managers are correctly retained as holders.
+- **Share classes are measured separately** where class-dimensioned XBRL facts exist. The
+  company-level figure sums the CUSIPs mapped to an issuer against one undimensioned denominator, so
+  6,684 of 67,537 published company figures (9.9%, median 72.7%) combine classes. `n_cusips` in the
+  company file identifies them. This is a documented open decision, not a silent defect.
+- **CUSIP to company mapping is evidence-first**: Schedule 13G and 13D, then exact name matching
+  against the SEC 13(f) list. Conflicts are flagged and resolved by a documented rule, the majority
+  CIK by filing count with ties going to the CIK whose 10-K/10-Q filed nearest the quarter end.
+  CIKs are never merged.
+- **Every parser rule is backed by a real filing kept as a test fixture**, so a fix for one filer's
+  layout cannot silently break another's. `tests/` holds 62 tests over 36 fixtures.
+  `tests/FIXTURE_REVIEW.md` is generated from the parser's own output: it is a readable record of
+  what the parser produced, not independent corroboration of it.
+- **Denominator guards**: XBRL counts tagged in thousands are cross-checked against the other tag
+  and corrected; counts outside [1,000, 100bn] shares are nulled; company figures above 300% are
+  suppressed with a recorded cause. `CAVEATS.md` section 3b explains each.
+
+## Deliverables
+
+```
+output/company_ownership_by_quarter.csv   88,608 company-quarters, 16 columns, 13 MB
+                                          one row per company per quarter, with the quality flags.
+                                          This is the grain the ownership figure actually has and
+                                          what a quantitative user should consume.
+output/institutional_ownership_12col.csv  15,129,195 rows, the project description's 12 columns,
+                                          one row per manager per security. 2.8 GB, via Drive.
+output/deliverable_manifest.json          build time, code commit, per-quarter vintages
+CAVEATS.md                                limitations, in detail
+```
+
+The row-level file repeats the **company-level** percentage on every one of a company's rows. A
+single row's `shares_held / shares_outstanding` is not that column. Never sum or average
+`institutional_ownership_pct` across rows; use the company file.
 
 ## Running
 
-EDGAR requires a contact string. Set your own in `config.yaml` (`user_agent`) before any online run; the cached run below needs nothing.
-
 ```
-python3 -m pytest tests -q
+python3 -m pytest tests -q                                          # 62 tests
 jupyter nbconvert --to notebook --execute --inplace notebook.ipynb
 ```
 
-`notebook.ipynb` is the main deliverable. It imports from `pipeline/` only and runs with
-`EDGAR_OFFLINE=1` against a local filing cache, so output is reproducible without a live SEC
-fetch. Quarters are set in its config cell. `python3 -m pipeline.quarters` lists what each
-quarter still needs.
+`notebook.ipynb` is the main deliverable and produces the final CSV itself. It imports from
+`pipeline/` only and runs with `EDGAR_OFFLINE=1` against a local filing cache, so results are
+reproducible without a live SEC fetch. Its config cell runs the two most-checked quarters by
+default; `python3 -m pipeline.quarters` lists what each of the 20 needs. The cache is about 13 GB
+and is not in this repository.
 
 ## Layout
 
 ```
-pipeline/       parsing and ownership code
-tests/          42 tests, each backed by a real filing fixture
-scripts/        stage drivers and one-off investigations
-data/           CUSIP to CIK maps, name-match review files
-output/         per-quarter metrics and problem reports
+pipeline/       parsing, mapping, shares outstanding, ownership
+tests/          62 tests over 36 real-filing fixtures
+scripts/        stage drivers and report generators
+data/           CUSIP to CIK maps and name-match review files
+output/problems/  per-quarter metrics, problem reports and annotated over-100% cases
 notebook.ipynb
+CAVEATS.md
 ```
-
-Output CSVs and the filing cache are too large for GitHub and are shared by Google Drive. The
-cache is roughly 10 GB; per-quarter ownership CSVs are roughly 40 MB each zipped.
 
 ## Open items
 
-- Shares outstanding for 2010 incomplete, pending a data file.
-- Stages 2-4 complete for 12 of 20 quarters.
-- Four named filers with unusual layouts unparsed, documented.
+- Shares outstanding for 2010 is incomplete (50.4% of companies, 85.6% by value) pending a data file.
+- 974 filings across the 20 quarters yielded no rows, with 1,062 parse errors, all listed by
+  accession in the per-quarter reports. Zero in the seven XML quarters.
+- Six of the seven SEC-validatable quarters have not been compared yet.
+- The panel's cross-quarter comparability is documented in `CAVEATS.md` but not repaired.

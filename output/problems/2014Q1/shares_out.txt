@@ -1,0 +1,8 @@
+2014Q1 shares outstanding (quarter end 2014-03-31) from 2014q2_notes, 2014q3_notes
+facts loaded 48,748 on 7,296 CIKs | selected 9,697 rows on 7,296 CIKs
+CIKs with class-dimensioned facts (multi-class): 1,620; undimensioned-only: 5,676
+gap > 100 days flagged: 340 rows; gap distribution (days): {'min': -3591.0, '25%': 0.0, '50%': 0.0, '75%': 0.0, 'max': 183.0}
+by form: {'10-Q': 8294, '10-K': 622, '10-Q/A': 333, '20-F': 329, '10-K/A': 101, '10-KT': 9, '40-F': 8, '10-QT': 1}
+by XBRL tag (decision 11): {'CommonStockSharesOutstanding': 7354, 'EntityCommonStockSharesOutstanding': 2343}
+dated exactly at quarter end: 6,365 of 9,697 (65.6%)
+scale-corrected (fact tagged in thousands, cross-checked against the other tag): 75

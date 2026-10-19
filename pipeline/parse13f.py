@@ -644,6 +644,11 @@ SUMMARY_ENTRY_RE = re.compile(r"(?:information\s+)?table\s+entry\s+total[^0-9]{0
 SUMMARY_VALUE_RE = re.compile(r"(?:information\s+)?table\s+value(?:\s+total)?[^0-9]{0,40}([\d,]+)(?![A-Za-z])", re.I)
 REPORT_TYPE_RE = re.compile(r"\[\s*[xX]\s*\]\s*(13F\s+(?:HOLDINGS|NOTICE|COMBINATION)\s*(?:REPORT)?)", re.I)
 AMEND_TYPE_RE = re.compile(r"amendment\s+type[^A-Za-z]{0,20}(restatement|new\s+holdings)", re.I)
+# "amendment type" is the XML tag name and never appears on a text-era cover page, which instead
+# carries a checkbox. Without this the text era had NO amendment type at all, so ownership.py
+# defaulted every amendment to RESTATEMENT and deleted the original filing's holdings
+# (decision 12, 2026-10-18; ~131k rows deleted in 2010Q1 alone).
+AMEND_CHECKBOX_RE = re.compile(r"\[\s*[xX]\s*\]\s*(is\s+a\s+restatement|adds\s+new\s+holdings)", re.I)
 OTHER_MGR_COUNT_RE = re.compile(r"number\s+of\s+other\s+included\s+managers[^0-9]{0,40}(\d+)", re.I)
 
 
@@ -666,6 +671,10 @@ def parse_text_summary(text: str, p: Parsed):
     m = AMEND_TYPE_RE.search(flat)
     if m:
         p.amendment_type = re.sub(r"\s+", " ", m.group(1).upper())
+    else:
+        m = AMEND_CHECKBOX_RE.search(flat)          # text-era cover page
+        if m:
+            p.amendment_type = "RESTATEMENT" if "restatement" in m.group(1).lower() else "NEW HOLDINGS"
     m = OTHER_MGR_COUNT_RE.search(flat)
     if m:
         p.other_managers_count = _to_int(m.group(1))

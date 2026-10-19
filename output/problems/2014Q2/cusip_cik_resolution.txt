@@ -1,0 +1,87 @@
+2014Q2: CUSIP->CIK resolution v2 (decisions 2026-10-11), quarter end 2014-06-30, 13(f) list 2014q2
+valid 9-char CUSIPs with a subject CIK: 2,693 (placeholder 000000000 dropped from 2 filings)
+conflicts, raw definition (>1 subject CIK): 45 = 1.67%  -> all flagged conflict_flag=1
+conflicts, TWO-SIDED definition (>=2 filings on each of >=2 CIKs): 5 = 0.19%   [stop condition 2%: not hit]
+1-vs-1 ties among raw conflicts: 17; two-sided or tie resolved by 10-K/10-Q closeness: 18; with no 10-K/10-Q in reach (majority kept): 3
+CUSIPs where the 10-K/10-Q rule chose a CIK other than the majority: 2
+two-sided conflicts (all, by filing count):
+    cusip  subject_cik                company_name  n_links  tenk_date  tenk_gap  chosen
+291005106      1564822         Pinnacle Foods Inc.        2 2014-08-13      44.0   False
+291005106      1001604           EMERITUS CORP\WA\        2 2014-05-08      53.0   False
+291005106      1292426              GFI Group Inc.        1 2014-08-11      42.0    True
+30224P200      1581164 Extended Stay America, Inc.        7 2014-07-31      31.0    True
+30224P200      1507563       ESH Hospitality, Inc.        6 2014-07-31      31.0   False
+65563C105      1057698                NORDION INC.        3        NaT       NaN    True
+65563C105      1200045        NORDION (CANADA) INC        2        NaT       NaN   False
+752182105      1294250        Rand Logistics, Inc.        5 2014-06-12      18.0    True
+752182105      1567233                  JWEST, LLC        2        NaT       NaN   False
+897888103      1349454                TRULIA, INC.        6 2014-08-08      39.0   False
+897888103      1334814                  ZILLOW INC        4 2014-08-06      37.0    True
+
+name match validation on issuers mapped by 13G/13D with a 13(f) list name: exact unique matches 1,536 / 2,593; agreement with the 13G/13D CIK 1,511 / 1,536 = 98.4%
+disagreements (sample 15):
+cusip6  cik_13g  cik_name                   list_name                       name_13g               name_match
+04744L  1133818   1368148                ATHERSYS INC          BIO-PATH HOLDINGS INC      ATHERSYS, INC / NEW
+08861T    87050   1407038             BG MEDICINE INC                   Neonode, Inc        BG Medicine, Inc.
+109043  1354821     14195      BRIGGS & STRATTON CORP                            NaN   BRIGGS & STRATTON CORP
+21870Q  1534866   1490892          CORESITE RLTY CORP                            NaN     CoreSite Realty Corp
+251591    95552    894315 DEVELOPERS DIVERSIFIED RLTY SUPERIOR INDUSTRIES INTERNA...                 DDR CORP
+27033X  1580345   1102541        EARTHLINK HLDGS CORP TriplePoint Venture Growth ... EarthLink Holdings Corp.
+37517Y  1069308   1432150                GIGOPTIX INC       Opexa Therapeutics, Inc.           GigOptix, Inc.
+462044   945841    866609        ION GEOPHYSICAL CORP                      POOL CORP     ION GEOPHYSICAL CORP
+464286  1100663    930667                     ISHARES                  iSHARES TRUST              iSHARES INC
+464287  1100663    930667                     ISHARES                  iSHARES TRUST              iSHARES INC
+464288  1100663    930667                     ISHARES                  iSHARES TRUST              iSHARES INC
+464289  1100663    930667                     ISHARES                  iSHARES TRUST              iSHARES INC
+46429B   930667   1100663                  ISHARES TR                    iSHARES INC            iSHARES TRUST
+46434G  1100663    930667                 ISHARES INC                  iSHARES TRUST              iSHARES INC
+526057    58696    920760                 LENNAR CORP                            NaN        LENNAR CORP /NEW/
+
+unmapped 13F issuers (6-char): 9,380 carrying $18,333.6bn; with a 13(f) list name: 3,918 ($18,255.6bn)
+exact unique name matches added: 2,644 issuers = $15,596.2bn; of these fund CIKs (excluded later): 97 = $318.3bn
+review file (ambiguous + fuzzy, NOT used): 710 rows = $1,714.8bn -> data/2014Q2_name_match_review.csv; by reason: {'fuzzy (token Jaccard >= 0.5)': 647, 'ambiguous: 2 CIKs': 56, 'ambiguous: 3 CIKs': 7}
+coverage of 13F value, all issuers: 13G/13D map 21.4% -> with name matches 88.3%
+largest name-match additions:
+cusip6  company_cik                       company_name  is_fund  value_bn                                 evidence
+037833       320193                          APPLE INC    False    371.23  13(f) list 'APPLE INC' == EDGAR 'APPLE'
+38259P      1288776                        Google Inc.    False    293.53 13(f) list 'GOOGLE INC' == EDGAR 'GOO...
+594918       789019                     MICROSOFT CORP    False    262.55 13(f) list 'MICROSOFT CORP' == EDGAR ...
+30231G        34088                   EXXON MOBIL CORP    False    236.91 13(f) list 'EXXON MOBIL CORP' == EDGA...
+949746        72971           WELLS FARGO & COMPANY/MN    False    231.58 13(f) list 'WELLS FARGO & CO NEW' == ...
+881624       818686 TEVA PHARMACEUTICAL INDUSTRIES LTD    False    226.16 13(f) list 'TEVA PHARMACEUTICAL INDS ...
+478160       200406                  JOHNSON & JOHNSON    False    212.01 13(f) list 'JOHNSON & JOHNSON' == EDG...
+46625H        19617                JPMORGAN CHASE & CO    False    181.09 13(f) list 'JPMORGAN CHASE & CO' == E...
+166764        93410                       CHEVRON CORP    False    172.58 13(f) list 'CHEVRON CORP NEW' == EDGA...
+78462F       884394             SPDR S&P 500 ETF TRUST     True    168.28 13(f) list 'SPDR S&P 500 ETF TR' == E...
+369604        40545                GENERAL ELECTRIC CO    False    152.15 13(f) list 'GENERAL ELECTRIC CO' == E...
+375558       882095                GILEAD SCIENCES INC    False    151.93 13(f) list 'GILEAD SCIENCES INC' == E...
+717081        78003                         PFIZER INC    False    141.08 13(f) list 'PFIZER INC' == EDGAR 'PFI...
+742718        80424                PROCTER & GAMBLE Co    False    138.15 13(f) list 'PROCTER & GAMBLE CO' == E...
+92343V       732712         VERIZON COMMUNICATIONS INC    False    138.15 13(f) list 'VERIZON COMMUNICATIONS IN...
+58933Y       310158                   Merck & Co. Inc.    False    135.97 13(f) list 'MERCK & CO INC NEW' == ED...
+806857        87347              SCHLUMBERGER LTD /NV/    False    132.25 13(f) list 'SCHLUMBERGER LTD' == EDGA...
+458140        50863                         INTEL CORP    False    118.76 13(f) list 'INTEL CORP' == EDGAR 'INTEL'
+191216        21344                       COCA COLA CO    False    118.71 13(f) list 'COCA COLA CO' == EDGAR 'C...
+747525       804328                    QUALCOMM INC/DE    False    117.28 13(f) list 'QUALCOMM INC' == EDGAR 'Q...
+68389X      1341439                        ORACLE CORP    False    117.06 13(f) list 'ORACLE CORP' == EDGAR 'OR...
+023135      1018724                     AMAZON COM INC    False    114.81 13(f) list 'AMAZON COM INC' == EDGAR ...
+060505        70858          BANK OF AMERICA CORP /DE/    False    111.96 13(f) list 'BANK OF AMERICA CORPORATI...
+172967       831001                      CITIGROUP INC    False    107.60 13(f) list 'CITIGROUP INC' == EDGAR '...
+92826C      1403161                          VISA INC.    False    106.92    13(f) list 'VISA INC' == EDGAR 'VISA'
+largest review-file rows (not used):
+cusip6                    list_name                       reason                                       candidates      value_k
+922908           VANGUARD INDEX FDS fuzzy (token Jaccard >= 0.5)               0.50 VANGUARD INDEX FUNDS -> 36405 79507411.601
+90130A   TWENTY FIRST CENTY FOX INC fuzzy (token Jaccard >= 0.5)         0.60 TWENTY FIRST CENTURY FOX -> 1308161 62782364.314
+902973               US BANCORP DEL fuzzy (token Jaccard >= 0.5) 0.67 US BANCORP DE -> 36104|0.50 BANCORP -> 1... 62201518.136
+922042 VANGUARD INTL EQUITY INDEX F fuzzy (token Jaccard >= 0.5)  0.67 VANGUARD INTL EQUITY INDEX FUNDS -> 857489 57864713.051
+828806     SIMON PPTY GROUP INC NEW            ambiguous: 2 CIKs 1022344:SIMON PROPERTY GROUP L P /DE/|1063761... 57730267.559
+585055                MEDTRONIC INC            ambiguous: 2 CIKs        64670:MEDTRONIC INC|1613103:Medtronic plc 56112967.617
+891160      TORONTO DOMINION BK ONT fuzzy (token Jaccard >= 0.5)               0.75 TORONTO DOMINION BK -> 947263 51983547.381
+263534  DU PONT E I DE NEMOURS & CO fuzzy (token Jaccard >= 0.5)               0.50 DUPONT EI DE NEMOURS -> 30554 42648849.923
+N53745  LYONDELLBASELL INDUSTRIES N fuzzy (token Jaccard >= 0.5)              0.67 LYONDELLBASELL INDS -> 1489393 38385840.668
+064058    BANK NEW YORK MELLON CORP fuzzy (token Jaccard >= 0.5) 0.80 BK OF NEW YORK MELLON -> 1390777|0.50 NE... 37648862.027
+723787           PIONEER NAT RES CO fuzzy (token Jaccard >= 0.5)              0.50 PIONEER NATURAL RES -> 1038357 36275908.223
+136385         CANADIAN NAT RES LTD fuzzy (token Jaccard >= 0.5)             0.50 CANADIAN NATURAL RES -> 1017413 35489022.267
+053015 AUTOMATIC DATA PROCESSING IN fuzzy (token Jaccard >= 0.5)           0.75 AUTOMATIC DATA PROCESSING -> 8670 31532627.287
+452308        ILLINOIS TOOL WKS INC fuzzy (token Jaccard >= 0.5)                0.50 ILLINOIS TOOL WORKS -> 49826 29779254.929
+35671D FREEPORT-MCMORAN COPPER & GO fuzzy (token Jaccard >= 0.5)  0.67 FREEPORT MCMORAN COPPER AND GOLD -> 831259 29561188.451

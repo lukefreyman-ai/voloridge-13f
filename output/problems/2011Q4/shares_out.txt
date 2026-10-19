@@ -1,0 +1,8 @@
+2011Q4 shares outstanding (quarter end 2011-12-31) from 2012q1_notes, 2012q2_notes
+facts loaded 49,256 on 7,818 CIKs | selected 10,279 rows on 7,818 CIKs
+CIKs with class-dimensioned facts (multi-class): 1,721; undimensioned-only: 6,097
+gap > 100 days flagged: 348 rows; gap distribution (days): {'min': -3652.0, '25%': 0.0, '50%': 0.0, '75%': 0.0, 'max': 366.0}
+by form: {'10-Q': 6718, '10-K': 2722, '20-F': 315, '10-Q/A': 312, '10-K/A': 172, '40-F': 27, '10-KT': 12, '10-QT': 1}
+by XBRL tag (decision 11): {'CommonStockSharesOutstanding': 7946, 'EntityCommonStockSharesOutstanding': 2333}
+dated exactly at quarter end: 7,452 of 10,279 (72.5%)
+scale-corrected (fact tagged in thousands, cross-checked against the other tag): 149

@@ -1,37 +1,37 @@
 stage,accession,reason,detail
 checksum,0001511144-12-000008,value scale x1000 (dollars vs thousands),rows=333 entry_total=333.0 value_sum=199552 value_total=199712040.0 method=text
 checksum,0000080835-12-000005,"entry count off by >2, unexplained",rows=138 entry_total=141.0 value_sum=558543 value_total=573504.0 method=text
-checksum,0001317613-12-000011,value within 1% (rounding),rows=64 entry_total=64.0 value_sum=370795 value_total=370397.0 method=text
-checksum,0001080434-12-000020,entry off by <=2 and value off >1%,rows=649 entry_total=650.0 value_sum=32190949 value_total=34745733.0 method=text
-checksum,0001031972-12-000015,"value off >1%, unexplained",rows=36 entry_total=36.0 value_sum=112862649183 value_total=347891000.0 method=text
 checksum,0001085146-12-001433,"value off >1%, unexplained",rows=9 entry_total=9.0 value_sum=3485955320539 value_total=24024.0 method=text
+checksum,0001317613-12-000011,value within 1% (rounding),rows=64 entry_total=64.0 value_sum=370795 value_total=370397.0 method=text
 checksum,0000810672-12-000004,"entry count off by >2, unexplained",rows=50 entry_total=61.0 value_sum=180582 value_total=207128745.0 method=text
 checksum,0001144204-12-061957,value scale x1000 (dollars vs thousands),rows=33 entry_total=33.0 value_sum=106101970 value_total=106102.0 method=text
 checksum,0001013536-12-000013,value scale x1000 (dollars vs thousands),rows=507 entry_total=507.0 value_sum=20275277 value_total=20275.0 method=text
+checksum,0001080434-12-000020,entry off by <=2 and value off >1%,rows=649 entry_total=650.0 value_sum=32190949 value_total=34745733.0 method=text
 checksum,0000766351-12-000080,"entry count off by >2, unexplained",rows=946 entry_total=0.0 value_sum=2087635406 value_total=2100862852.0 method=text
 checksum,0000902584-12-000007,"entry count off by >2, unexplained",rows=266 entry_total=303.0 value_sum=6793835 value_total=7880588.0 method=text
+checksum,0001031972-12-000015,"value off >1%, unexplained",rows=36 entry_total=36.0 value_sum=112862649183 value_total=347891000.0 method=text
 checksum,0001093589-12-000004,value scale x1000 (dollars vs thousands),rows=72 entry_total=72.0 value_sum=607098 value_total=607094000.0 method=text
-checksum,0000748054-12-000008,"value off >1%, unexplained",rows=1512 entry_total=1512.0 value_sum=871194862215050 value_total=69202244.0 method=text
 checksum,0000857508-12-000014,value scale x1000 (dollars vs thousands),rows=344 entry_total=344.0 value_sum=1082426 value_total=1082424631.0 method=text
 checksum,0000857538-12-000004,value scale x1000 (dollars vs thousands),rows=347 entry_total=347.0 value_sum=605430 value_total=605429111.0 method=text
 checksum,0001047469-12-010490,entry count off by <=2,rows=700 entry_total=701.0 value_sum=4294017 value_total=4294619.0 method=text
-checksum,0001193125-12-467670,entry total counts distinct CUSIPs not rows,rows=108 entry_total=60.0 value_sum=1399662 value_total=1399662.0 method=text
-checksum,0001140361-12-046854,"value off >1%, unexplained",rows=1083 entry_total=1083.0 value_sum=1839772 value_total=1807977.0 method=text
+checksum,0000748054-12-000008,"value off >1%, unexplained",rows=1512 entry_total=1512.0 value_sum=871194862215050 value_total=69202244.0 method=text
 checksum,0001120926-12-000009,value scale x1000 (dollars vs thousands),rows=154 entry_total=154.0 value_sum=1174224 value_total=1174224733.0 method=text
 checksum,0001006438-12-000007,value scale x1000 (dollars vs thousands),rows=54 entry_total=54.0 value_sum=4020062 value_total=4020058000.0 method=text
 checksum,0000894189-12-006176,"value off >1%, unexplained",rows=6 entry_total=6.0 value_sum=69933 value_total=1199176.0 method=text
 checksum,0001080166-12-000004,entry total counts distinct CUSIPs not rows,rows=97 entry_total=98.0 value_sum=199454 value_total=199943.0 method=text
 checksum,0001055977-12-000006,"entry count off by >2, unexplained",rows=94 entry_total=88.0 value_sum=1248504 value_total=1248356.0 method=text
 checksum,0001144204-12-056094,entry count off by <=2,rows=145 entry_total=146.0 value_sum=4355519 value_total=4355541.0 method=text
+checksum,0001193125-12-467670,entry total counts distinct CUSIPs not rows,rows=108 entry_total=60.0 value_sum=1399662 value_total=1399662.0 method=text
+checksum,0001140361-12-046854,"value off >1%, unexplained",rows=1083 entry_total=1083.0 value_sum=1839772 value_total=1807977.0 method=text
 checksum,0001164508-12-000009,entry total counts distinct CUSIPs not rows,rows=847 entry_total=849.0 value_sum=26925922 value_total=12096626.0 method=text
+checksum,0001562810-12-000012,entry total counts distinct CUSIPs not rows,rows=4 entry_total=5.0 value_sum=136107 value_total=209801.0 method=text
+checksum,0001562810-12-000013,entry total counts distinct CUSIPs not rows,rows=4 entry_total=5.0 value_sum=321941 value_total=441662.0 method=text
 checksum,0000909012-12-000432,entry count off by <=2,rows=58 entry_total=60.0 value_sum=30505 value_total=30504.0 method=text
 checksum,0001193125-12-470192,value scale x1000 (dollars vs thousands),rows=485 entry_total=485.0 value_sum=3811980000 value_total=3811980.0 method=text
 checksum,0001497637-12-000006,entry off by <=2 and value within 1%,rows=58 entry_total=60.0 value_sum=329848 value_total=331903.0 method=text
 checksum,0001144204-12-054494,value scale x1000 (dollars vs thousands),rows=125 entry_total=125.0 value_sum=453181442 value_total=453182.0 method=text
 checksum,0001562810-12-000003,no rows parsed,rows=0 entry_total=1.0 value_sum=0 value_total=nan method=text
 checksum,0001562810-12-000004,no rows parsed,rows=0 entry_total=1.0 value_sum=0 value_total=nan method=text
-checksum,0001562810-12-000012,entry total counts distinct CUSIPs not rows,rows=4 entry_total=5.0 value_sum=136107 value_total=209801.0 method=text
-checksum,0001562810-12-000013,entry total counts distinct CUSIPs not rows,rows=4 entry_total=5.0 value_sum=321941 value_total=441662.0 method=text
 checksum,0001562810-12-000014,entry total counts distinct CUSIPs not rows,rows=4 entry_total=5.0 value_sum=343824 value_total=550939.0 method=text
 checksum,0001562810-12-000015,entry total counts distinct CUSIPs not rows,rows=3 entry_total=4.0 value_sum=203252 value_total=300829.0 method=text
 checksum,0001562810-12-000016,entry total counts distinct CUSIPs not rows,rows=3 entry_total=4.0 value_sum=140071 value_total=329723.0 method=text
@@ -39,105 +39,103 @@ checksum,0001562810-12-000017,entry total counts distinct CUSIPs not rows,rows=3
 checksum,0001562810-12-000018,entry total counts distinct CUSIPs not rows,rows=4 entry_total=5.0 value_sum=294569 value_total=588068.0 method=text
 checksum,0001562810-12-000019,entry total counts distinct CUSIPs not rows,rows=3 entry_total=4.0 value_sum=408693 value_total=732178.0 method=text
 checksum,0001208646-12-000304,value scale x1000 (dollars vs thousands),rows=36 entry_total=36.0 value_sum=1145531998 value_total=1145532.0 method=text
-checksum,0001140022-12-000024,"value off >1%, unexplained",rows=1065 entry_total=1065.0 value_sum=8725489 value_total=9228388.0 method=text
-checksum,0001520601-12-000010,value scale x1000 (dollars vs thousands),rows=180 entry_total=180.0 value_sum=957206 value_total=957208000.0 method=text
 checksum,0001308778-12-000006,entry total counts distinct CUSIPs not rows,rows=191 entry_total=193.0 value_sum=179049 value_total=179145.0 method=text
+checksum,0001140022-12-000024,"value off >1%, unexplained",rows=1065 entry_total=1065.0 value_sum=8725489 value_total=9228388.0 method=text
 checksum,0001518195-12-000004,value scale x1000 (dollars vs thousands),rows=191 entry_total=191.0 value_sum=158825 value_total=159.0 method=text
 checksum,0001156950-12-000005,"value off >1%, unexplained",rows=67 entry_total=67.0 value_sum=1706241 value_total=422109.0 method=text
+checksum,0001520601-12-000010,value scale x1000 (dollars vs thousands),rows=180 entry_total=180.0 value_sum=957206 value_total=957208000.0 method=text
+checksum,0001388168-12-000005,"entry count off by >2, unexplained",rows=125 entry_total=1.0 value_sum=1082880 value_total=836251.0 method=text
 checksum,0000905729-12-000226,entry count off by <=2,rows=125 entry_total=126.0 value_sum=152581 value_total=152642.0 method=text
 checksum,0001398344-12-003544,"entry count off by >2, unexplained",rows=56 entry_total=61.0 value_sum=126603 value_total=127951.0 method=text
-checksum,0001388168-12-000005,"entry count off by >2, unexplained",rows=125 entry_total=1.0 value_sum=1082880 value_total=836251.0 method=text
-checksum,0001193125-12-457210,value scale x1000 (dollars vs thousands),rows=8505 entry_total=8505.0 value_sum=13581760572 value_total=13581760.0 method=text
-checksum,0000904163-12-000004,value scale x1000 (dollars vs thousands),rows=319 entry_total=319.0 value_sum=1182082 value_total=1182.0 method=text
-checksum,0000893750-12-000125,"value off >1%, unexplained",rows=66 entry_total=66.0 value_sum=1545239 value_total=2806656.0 method=text
-checksum,0001193125-12-468106,"entry count off by >2, unexplained",rows=5357 entry_total=3474.0 value_sum=92851692 value_total=92851692.0 method=text
 checksum,0000009015-12-000029,entry total counts distinct CUSIPs not rows,rows=909 entry_total=910.0 value_sum=1965722 value_total=1985701.0 method=text
 checksum,0001079398-12-000009,entry off by <=2 and value within 1%,rows=65 entry_total=66.0 value_sum=45642 value_total=45719.0 method=text
+checksum,0000893750-12-000125,"value off >1%, unexplained",rows=66 entry_total=66.0 value_sum=1545239 value_total=2806656.0 method=text
 checksum,0001088875-12-000020,"value off >1%, unexplained",rows=521 entry_total=521.0 value_sum=28973796 value_total=28.0 method=text
 checksum,0001074027-12-000004,value scale x1000 (dollars vs thousands),rows=84 entry_total=84.0 value_sum=326487 value_total=326489000.0 method=text
 checksum,0000810972-12-000012,"value off >1%, unexplained",rows=1489 entry_total=1489.0 value_sum=4779635 value_total=0.0 method=text
-checksum,0000897423-12-000074,"entry count off by >2, unexplained",rows=176 entry_total=173.0 value_sum=1290883 value_total=1290883.0 method=text
-checksum,0001193125-12-462178,entry count off by <=2,rows=773 entry_total=774.0 value_sum=1788553 value_total=1788556.0 method=text
-checksum,0001096783-12-000006,"value off >1%, unexplained",rows=69 entry_total=nan value_sum=124472 value_total=1132827000.0 method=text
+checksum,0001193125-12-468106,"entry count off by >2, unexplained",rows=5357 entry_total=3474.0 value_sum=92851692 value_total=92851692.0 method=text
 checksum,0001274196-12-000005,"entry count off by >2, unexplained",rows=212 entry_total=220.0 value_sum=535993 value_total=553339.0 method=text
 checksum,0000911274-12-000004,entry total counts distinct CUSIPs not rows,rows=121 entry_total=120.0 value_sum=206883 value_total=206883.0 method=text
 checksum,0001140361-12-043645,"value off >1%, unexplained",rows=149 entry_total=149.0 value_sum=327256 value_total=323429.0 method=text
+checksum,0000897423-12-000074,"entry count off by >2, unexplained",rows=176 entry_total=173.0 value_sum=1290883 value_total=1290883.0 method=text
+checksum,0001193125-12-462178,entry count off by <=2,rows=773 entry_total=774.0 value_sum=1788553 value_total=1788556.0 method=text
+checksum,0001096783-12-000006,"value off >1%, unexplained",rows=69 entry_total=nan value_sum=124472 value_total=1132827000.0 method=text
 checksum,0000893838-12-000083,"entry count off by >2, unexplained",rows=3087 entry_total=7.0 value_sum=9431414 value_total=9432944.0 method=text
 checksum,0000893838-12-000084,no rows parsed,rows=0 entry_total=3.0 value_sum=0 value_total=0.0 method=text
 checksum,0001509445-12-000004,value scale x1000 (dollars vs thousands),rows=10 entry_total=11.0 value_sum=86487 value_total=88407000.0 method=text
 checksum,0001521536-12-001138,"value off >1%, unexplained",rows=1 entry_total=1.0 value_sum=1 value_total=3677.0 method=text
+checksum,0001193125-12-457210,value scale x1000 (dollars vs thousands),rows=8505 entry_total=8505.0 value_sum=13581760572 value_total=13581760.0 method=text
+checksum,0000904163-12-000004,value scale x1000 (dollars vs thousands),rows=319 entry_total=319.0 value_sum=1182082 value_total=1182.0 method=text
 checksum,0001079738-12-000005,"entry count off by >2, unexplained",rows=52 entry_total=1.0 value_sum=163883 value_total=163881.0 method=text
 checksum,0000918504-12-000005,"entry count off by >2, unexplained",rows=100 entry_total=1.0 value_sum=231734 value_total=nan method=text
 checksum,0001086364-12-003080,value within 1% (rounding),rows=4160 entry_total=4160.0 value_sum=98772622 value_total=99101900.0 method=text
-checksum,0000811393-12-000006,"entry count off by >2, unexplained",rows=588 entry_total=294.0 value_sum=264046 value_total=132023.0 method=text
-checksum,0000312069-12-000119,"entry count off by >2, unexplained",rows=14557 entry_total=73848622.0 value_sum=73848622 value_total=14557.0 method=text
-checksum,0000950156-12-000076,entry off by <=2 and value within 1%,rows=68 entry_total=70.0 value_sum=89458 value_total=89785.0 method=text
-checksum,0001053055-12-000004,entry total counts distinct CUSIPs not rows,rows=208 entry_total=207.0 value_sum=606480 value_total=606480.0 method=text
 checksum,0001121477-12-000005,entry total counts distinct CUSIPs not rows,rows=671 entry_total=672.0 value_sum=156100 value_total=156109.0 method=text
 checksum,0001015086-12-000008,entry count off by <=2,rows=288 entry_total=289.0 value_sum=1390482 value_total=1390490.0 method=text
-checksum,0001193125-12-419536,"entry count off by >2, unexplained",rows=275 entry_total=279.0 value_sum=803171 value_total=805547.0 method=text
-checksum,0000070858-12-000379,"value off >1%, unexplained",rows=16850 entry_total=16850.0 value_sum=1643588152360 value_total=195511327000.0 method=text
-checksum,0000315080-12-000006,"entry count off by >2, unexplained",rows=455 entry_total=429.0 value_sum=1037663 value_total=897636.0 method=text
 checksum,0001085146-12-001221,entry count off by <=2,rows=61 entry_total=63.0 value_sum=5420705 value_total=5420936.0 method=text
 checksum,0001228242-12-000011,no rows parsed,rows=0 entry_total=619.0 value_sum=0 value_total=nan method=text
-checksum,0001193125-12-470920,"value off >1%, unexplained",rows=161 entry_total=161.0 value_sum=14516177 value_total=8799347.0 method=text
-checksum,0001193125-12-470163,value scale x1000 (dollars vs thousands),rows=43 entry_total=44.0 value_sum=3822821910 value_total=3847821.0 method=text
+checksum,0000950156-12-000076,entry off by <=2 and value within 1%,rows=68 entry_total=70.0 value_sum=89458 value_total=89785.0 method=text
+checksum,0001053055-12-000004,entry total counts distinct CUSIPs not rows,rows=208 entry_total=207.0 value_sum=606480 value_total=606480.0 method=text
 checksum,0001089212-12-000008,value scale x1000 (dollars vs thousands),rows=106 entry_total=106.0 value_sum=1263591 value_total=1263589000.0 method=text
 checksum,0001047339-12-000005,"entry count off by >2, unexplained",rows=130 entry_total=134.0 value_sum=211106 value_total=212143.0 method=text
 checksum,0001106544-12-000008,entry total counts distinct CUSIPs not rows,rows=48 entry_total=49.0 value_sum=433253 value_total=183364024.0 method=text
+checksum,0001193125-12-470920,"value off >1%, unexplained",rows=161 entry_total=161.0 value_sum=14516177 value_total=8799347.0 method=text
+checksum,0001193125-12-470163,value scale x1000 (dollars vs thousands),rows=43 entry_total=44.0 value_sum=3822821910 value_total=3847821.0 method=text
 checksum,0001398344-12-003373,"entry count off by >2, unexplained",rows=187 entry_total=191.0 value_sum=197065 value_total=197151.0 method=text
 checksum,0001521536-12-001111,entry total counts distinct CUSIPs not rows,rows=11 entry_total=12.0 value_sum=175646 value_total=175646.0 method=text
 checksum,0001352764-12-000009,entry total counts distinct CUSIPs not rows,rows=124 entry_total=125.0 value_sum=942876 value_total=975306.0 method=text
 checksum,0001388142-12-000008,entry total counts distinct CUSIPs not rows,rows=41 entry_total=43.0 value_sum=161073 value_total=175262.0 method=text
 checksum,0001482852-12-000005,"value off >1%, unexplained",rows=23 entry_total=23.0 value_sum=2369365 value_total=208081.0 method=text
 checksum,0001455126-12-000005,no rows parsed,rows=0 entry_total=22.0 value_sum=0 value_total=1970.0 method=text
-checksum,0000934729-12-000038,entry total counts distinct CUSIPs not rows,rows=11293 entry_total=3318.0 value_sum=54089561 value_total=54089561.0 method=text
+checksum,0000811393-12-000006,"entry count off by >2, unexplained",rows=588 entry_total=294.0 value_sum=264046 value_total=132023.0 method=text
+checksum,0000312069-12-000119,"entry count off by >2, unexplained",rows=14557 entry_total=73848622.0 value_sum=73848622 value_total=14557.0 method=text
 checksum,0001352859-12-000005,value scale x1000 (dollars vs thousands),rows=137 entry_total=137.0 value_sum=119506 value_total=119507000.0 method=text
 checksum,0001455176-12-000008,"entry count off by >2, unexplained",rows=105 entry_total=90.0 value_sum=254926 value_total=254926.0 method=text
 checksum,0001193125-12-470965,entry off by <=2 and value within 1%,rows=153 entry_total=152.0 value_sum=864882 value_total=859543.0 method=text
 checksum,0001483472-12-000007,"entry count off by >2, unexplained",rows=102 entry_total=109.0 value_sum=95432 value_total=96355.0 method=text
 checksum,0001398344-12-003595,no rows parsed,rows=0 entry_total=246.0 value_sum=0 value_total=289524.0 method=text
+checksum,0001193125-12-419536,"entry count off by >2, unexplained",rows=275 entry_total=279.0 value_sum=803171 value_total=805547.0 method=text
+checksum,0000070858-12-000379,"value off >1%, unexplained",rows=16850 entry_total=16850.0 value_sum=1643588152360 value_total=195511327000.0 method=text
+checksum,0000315080-12-000006,"entry count off by >2, unexplained",rows=455 entry_total=429.0 value_sum=1037663 value_total=897636.0 method=text
 checksum,0001144204-12-062386,"entry count off by >2, unexplained",rows=49 entry_total=55.0 value_sum=239005 value_total=235250.0 method=text
 checksum,0001317829-12-000007,entry total counts distinct CUSIPs not rows,rows=38 entry_total=39.0 value_sum=9015 value_total=9116.0 method=text
 checksum,0001047469-12-010544,"entry count off by >2, unexplained",rows=322 entry_total=307.0 value_sum=607137 value_total=569776.0 method=text
 checksum,0001080381-12-000009,entry count off by <=2,rows=236 entry_total=238.0 value_sum=196903 value_total=nan method=text
 checksum,0001279936-12-000003,"value off >1%, unexplained",rows=32 entry_total=32.0 value_sum=2326957 value_total=2175329.0 method=text
-checksum,0000860828-12-000006,value scale x1000 (dollars vs thousands),rows=104 entry_total=104.0 value_sum=296919091 value_total=296919.0 method=text
-checksum,0001193125-12-461779,"entry count off by >2, unexplained",rows=1230 entry_total=1256.0 value_sum=7545679 value_total=7953460.0 method=text
-checksum,0001140361-12-046687,entry count off by <=2,rows=829 entry_total=831.0 value_sum=30716032 value_total=30715255.0 method=text
-checksum,0001019687-12-003943,"entry count off by >2, unexplained",rows=59 entry_total=67.0 value_sum=245157 value_total=248565.0 method=text
-checksum,0001074273-12-000004,value scale x1000 (dollars vs thousands),rows=58 entry_total=58.0 value_sum=186022710 value_total=186023.0 method=text
-checksum,0001193125-12-425615,entry count off by <=2,rows=688 entry_total=689.0 value_sum=800702 value_total=801023.0 method=text
-checksum,0000945621-12-000232,value scale x1000 (dollars vs thousands),rows=1488 entry_total=1488.0 value_sum=2478739 value_total=2478739000.0 method=text
+checksum,0000934729-12-000038,entry total counts distinct CUSIPs not rows,rows=11293 entry_total=3318.0 value_sum=54089561 value_total=54089561.0 method=text
 checksum,0001168889-12-000007,"entry count off by >2, unexplained",rows=97 entry_total=89.0 value_sum=165377 value_total=155463.0 method=text
 checksum,0001140361-12-047458,"entry count off by >2, unexplained",rows=286 entry_total=290.0 value_sum=427862 value_total=437841.0 method=text
+checksum,0000860828-12-000006,value scale x1000 (dollars vs thousands),rows=104 entry_total=104.0 value_sum=296919091 value_total=296919.0 method=text
+checksum,0001193125-12-461779,"entry count off by >2, unexplained",rows=1230 entry_total=1256.0 value_sum=7545679 value_total=7953460.0 method=text
 checksum,0001106832-12-000005,"value off >1%, unexplained",rows=292 entry_total=292.0 value_sum=2805602 value_total=2703926.0 method=text
 checksum,0000898432-12-001199,"value off >1%, unexplained",rows=65 entry_total=65.0 value_sum=420127 value_total=520130.0 method=text
 checksum,0001144204-12-065037,entry total counts distinct CUSIPs not rows,rows=7 entry_total=6.0 value_sum=14916 value_total=14916.0 method=text
 checksum,0000899140-12-000621,entry total counts distinct CUSIPs not rows,rows=14 entry_total=15.0 value_sum=289725 value_total=344537.0 method=text
+checksum,0001074273-12-000004,value scale x1000 (dollars vs thousands),rows=58 entry_total=58.0 value_sum=186022710 value_total=186023.0 method=text
+checksum,0001193125-12-425615,entry count off by <=2,rows=688 entry_total=689.0 value_sum=800702 value_total=801023.0 method=text
+checksum,0000945621-12-000232,value scale x1000 (dollars vs thousands),rows=1488 entry_total=1488.0 value_sum=2478739 value_total=2478739000.0 method=text
 checksum,0000019475-12-000004,value scale x1000 (dollars vs thousands),rows=82 entry_total=82.0 value_sum=465378 value_total=465378000.0 method=text
 checksum,0000763563-12-000150,"entry count off by >2, unexplained",rows=438 entry_total=219.0 value_sum=793490 value_total=396745.0 method=text
 checksum,0001193125-12-418533,entry total counts distinct CUSIPs not rows,rows=249 entry_total=250.0 value_sum=784129 value_total=785094.0 method=text
 checksum,0001276460-12-000005,"entry count off by >2, unexplained",rows=96 entry_total=102.0 value_sum=804721 value_total=807270.0 method=text
-checksum,0001483499-12-000005,value scale x1000 (dollars vs thousands),rows=166 entry_total=86.0 value_sum=398649 value_total=398.0 method=text
-checksum,0001340807-12-000019,"value off >1%, unexplained",rows=73 entry_total=73.0 value_sum=22565263 value_total=451821.0 method=text
-checksum,0001526411-12-000008,"entry count off by >2, unexplained",rows=353 entry_total=361.0 value_sum=939929 value_total=939922.0 method=text
 checksum,0001163648-12-000014,value within 1% (rounding),rows=311 entry_total=311.0 value_sum=10086158 value_total=10062825.0 method=text
 checksum,0001324659-12-000014,entry total counts distinct CUSIPs not rows,rows=309 entry_total=310.0 value_sum=364234 value_total=364257.0 method=text
-checksum,0001083190-12-000006,"value off >1%, unexplained",rows=999 entry_total=999.0 value_sum=3146437298498 value_total=5436962.0 method=text
-checksum,0000909012-12-000409,"entry count off by >2, unexplained",rows=469 entry_total=1.0 value_sum=157609290 value_total=216822.0 method=text
-checksum,0001080071-12-000009,value within 1% (rounding),rows=134 entry_total=134.0 value_sum=143872 value_total=142977.0 method=text
+checksum,0001140361-12-046687,entry count off by <=2,rows=829 entry_total=831.0 value_sum=30716032 value_total=30715255.0 method=text
+checksum,0001019687-12-003943,"entry count off by >2, unexplained",rows=59 entry_total=67.0 value_sum=245157 value_total=248565.0 method=text
 checksum,0001140804-12-000018,"entry count off by >2, unexplained",rows=470 entry_total=277674437.0 value_sum=9100709341 value_total=9100709329.0 method=text
 checksum,0000884548-12-000008,"entry count off by >2, unexplained",rows=138 entry_total=108.0 value_sum=281294 value_total=281294.0 method=text
 checksum,0001193125-12-423065,value scale x1000 (dollars vs thousands),rows=138 entry_total=138.0 value_sum=405585 value_total=405655120.0 method=text
 checksum,0001141455-12-000006,value scale x1000 (dollars vs thousands),rows=87 entry_total=87.0 value_sum=315373 value_total=315373000.0 method=text
 checksum,0001193125-12-491525,value scale x1000 (dollars vs thousands),rows=647 entry_total=648.0 value_sum=109455 value_total=109767000.0 method=text
-checksum,0001086364-12-003087,value within 1% (rounding),rows=10802 entry_total=10802.0 value_sum=122105331 value_total=122368594.0 method=text
-checksum,0001086364-12-003083,value within 1% (rounding),rows=8164 entry_total=8164.0 value_sum=39564644 value_total=39777553.0 method=text
+checksum,0001083190-12-000006,"value off >1%, unexplained",rows=999 entry_total=999.0 value_sum=3146437298498 value_total=5436962.0 method=text
+checksum,0000909012-12-000409,"entry count off by >2, unexplained",rows=469 entry_total=1.0 value_sum=157609290 value_total=216822.0 method=text
+checksum,0001080071-12-000009,value within 1% (rounding),rows=134 entry_total=134.0 value_sum=143872 value_total=142977.0 method=text
 checksum,0001166880-12-000009,"entry count off by >2, unexplained",rows=73 entry_total=171.0 value_sum=120964 value_total=241397.0 method=text
 checksum,0000891118-12-000012,value scale x1000 (dollars vs thousands),rows=35 entry_total=35.0 value_sum=405679000 value_total=405664.0 method=text
 checksum,0001144204-12-055131,value scale x1000 (dollars vs thousands),rows=74 entry_total=74.0 value_sum=248543327 value_total=248543.0 method=text
 checksum,0001015247-12-000010,"entry count off by >2, unexplained",rows=282 entry_total=285.0 value_sum=384015 value_total=387659.0 method=text
+checksum,0001483499-12-000005,value scale x1000 (dollars vs thousands),rows=166 entry_total=86.0 value_sum=398649 value_total=398.0 method=text
+checksum,0001340807-12-000019,"value off >1%, unexplained",rows=73 entry_total=73.0 value_sum=22565263 value_total=451821.0 method=text
+checksum,0001526411-12-000008,"entry count off by >2, unexplained",rows=353 entry_total=361.0 value_sum=939929 value_total=939922.0 method=text
 checksum,0001441646-12-000004,entry total counts distinct CUSIPs not rows,rows=111 entry_total=112.0 value_sum=67092 value_total=67095.0 method=text
 checksum,0001388549-12-000011,"entry count off by >2, unexplained",rows=472 entry_total=1442.0 value_sum=537570299 value_total=609786.0 method=text
 checksum,0000351262-12-000005,"value off >1%, unexplained",rows=37 entry_total=37.0 value_sum=80217 value_total=81420.0 method=text
@@ -145,101 +143,103 @@ checksum,0001193125-12-470988,"entry count off by >2, unexplained",rows=518 entr
 checksum,0001520683-12-000004,value within 1% (rounding),rows=98 entry_total=98.0 value_sum=107901 value_total=108020.0 method=text
 checksum,0001166564-12-000008,"value off >1%, unexplained",rows=25 entry_total=25.0 value_sum=611836 value_total=411718.0 method=text
 checksum,0001353198-12-000010,entry total counts distinct CUSIPs not rows,rows=41 entry_total=40.0 value_sum=241196 value_total=241195.0 method=text
-checksum,0001080628-12-000006,value scale x1000 (dollars vs thousands),rows=133 entry_total=133.0 value_sum=503322 value_total=503387000.0 method=text
-checksum,0001193125-12-469419,value scale x1000 (dollars vs thousands),rows=323 entry_total=323.0 value_sum=21696796 value_total=21696796000.0 method=text
-checksum,0001193125-12-459167,"entry count off by >2, unexplained",rows=5607 entry_total=5612.0 value_sum=11956052 value_total=11954312.0 method=text
 checksum,0001542166-12-000004,value scale x1000 (dollars vs thousands),rows=40 entry_total=40.0 value_sum=146472 value_total=146493410.0 method=text
 checksum,0000918006-12-000005,entry total counts distinct CUSIPs not rows,rows=332 entry_total=333.0 value_sum=657768 value_total=657991.0 method=text
 checksum,0001546927-12-000074,"value off >1%, unexplained",rows=46 entry_total=46.0 value_sum=1807649 value_total=839308.0 method=text
 checksum,0001419186-12-000012,entry total counts distinct CUSIPs not rows,rows=797 entry_total=799.0 value_sum=1440622 value_total=1443744.0 method=text
 checksum,0001193125-12-469435,"entry count off by >2, unexplained",rows=95 entry_total=110.0 value_sum=268115 value_total=267832.0 method=text
+checksum,0000732812-12-000069,entry total counts distinct CUSIPs not rows,rows=165 entry_total=164.0 value_sum=14698192 value_total=14698150.0 method=text
+checksum,0000909518-12-000350,value scale x1000 (dollars vs thousands),rows=3 entry_total=3.0 value_sum=266151968 value_total=266151.0 method=text
 checksum,0001434845-12-000004,entry total counts distinct CUSIPs not rows,rows=71 entry_total=72.0 value_sum=148330 value_total=148848.0 method=text
 checksum,0001510870-12-000004,"value off >1%, unexplained",rows=52 entry_total=52.0 value_sum=146571 value_total=50728.0 method=text
 checksum,0001162044-12-001142,entry count off by <=2,rows=358 entry_total=359.0 value_sum=105305 value_total=105286.0 method=text
-checksum,0000732812-12-000069,entry total counts distinct CUSIPs not rows,rows=165 entry_total=164.0 value_sum=14698192 value_total=14698150.0 method=text
-checksum,0000909518-12-000350,value scale x1000 (dollars vs thousands),rows=3 entry_total=3.0 value_sum=266151968 value_total=266151.0 method=text
 checksum,0000902664-12-001450,"value off >1%, unexplained",rows=31 entry_total=31.0 value_sum=291108 value_total=1249233.0 method=text
 checksum,0001054522-12-000006,entry total counts distinct CUSIPs not rows,rows=254 entry_total=255.0 value_sum=324070 value_total=323434.0 method=text
 checksum,0001140361-12-046962,"entry count off by >2, unexplained",rows=13 entry_total=25.0 value_sum=4803024 value_total=231988.0 method=text
 checksum,0001399794-12-000009,"entry count off by >2, unexplained",rows=172 entry_total=158.0 value_sum=843866 value_total=843866.0 method=text
+checksum,0001080628-12-000006,value scale x1000 (dollars vs thousands),rows=133 entry_total=133.0 value_sum=503322 value_total=503387000.0 method=text
+checksum,0001193125-12-469419,value scale x1000 (dollars vs thousands),rows=323 entry_total=323.0 value_sum=21696796 value_total=21696796000.0 method=text
+checksum,0001193125-12-459167,"entry count off by >2, unexplained",rows=5607 entry_total=5612.0 value_sum=11956052 value_total=11954312.0 method=text
 checksum,0001510669-12-000008,"entry count off by >2, unexplained",rows=51 entry_total=55.0 value_sum=987648 value_total=1035363.0 method=text
 checksum,0000910472-12-003434,"value off >1%, unexplained",rows=287 entry_total=287.0 value_sum=198308 value_total=191304.0 method=text
+checksum,0001086364-12-003087,value within 1% (rounding),rows=10802 entry_total=10802.0 value_sum=122105331 value_total=122368594.0 method=text
+checksum,0001086364-12-003083,value within 1% (rounding),rows=8164 entry_total=8164.0 value_sum=39564644 value_total=39777553.0 method=text
 checksum,0000890163-12-000060,"entry count off by >2, unexplained",rows=262 entry_total=275.0 value_sum=207852 value_total=207190.0 method=text
 checksum,0001317172-12-000084,value scale x1000 (dollars vs thousands),rows=7 entry_total=7.0 value_sum=18727 value_total=18729376.0 method=text
-checksum,0001193125-12-470805,entry count off by <=2,rows=7693 entry_total=7694.0 value_sum=56128689 value_total=56102115.0 method=text
 checksum,0001323119-12-000004,value scale x1000 (dollars vs thousands),rows=222 entry_total=222.0 value_sum=777525 value_total=777520000.0 method=text
 checksum,0001036325-12-000085,"value off >1%, unexplained",rows=275 entry_total=275.0 value_sum=42176373 value_total=42.0 method=text
 checksum,0001144204-12-057279,entry count off by <=2,rows=351 entry_total=352.0 value_sum=532298 value_total=532376.0 method=text
+checksum,0000767684-12-000008,value scale x1000 (dollars vs thousands),rows=136 entry_total=136.0 value_sum=674758 value_total=674758000.0 method=text
+checksum,0000893738-12-000004,value scale x1000 (dollars vs thousands),rows=60 entry_total=60.0 value_sum=122818 value_total=122818000.0 method=text
 checksum,0001193125-12-473442,value scale x1000 (dollars vs thousands),rows=136 entry_total=136.0 value_sum=2542964 value_total=2542.0 method=text
 checksum,0001422219-12-000008,entry total counts distinct CUSIPs not rows,rows=134 entry_total=135.0 value_sum=901869 value_total=907981.0 method=text
 checksum,0001193125-12-470019,"entry count off by >2, unexplained",rows=623 entry_total=635.0 value_sum=2284297 value_total=2313386.0 method=text
 checksum,0001058217-12-000015,value scale x1000 (dollars vs thousands),rows=42 entry_total=42.0 value_sum=20258 value_total=20080391.0 method=text
 checksum,0001080107-12-000008,value scale x1000 (dollars vs thousands),rows=3817 entry_total=3817.0 value_sum=1838146 value_total=1838146000.0 method=text
 checksum,0001140771-12-000008,value scale x1000 (dollars vs thousands),rows=689 entry_total=689.0 value_sum=627955 value_total=627955000.0 method=text
-checksum,0000903423-12-000540,value within 1% (rounding),rows=7325 entry_total=7325.0 value_sum=21726536 value_total=21843966.0 method=text
-checksum,0001140361-12-047512,"entry count off by >2, unexplained",rows=14961 entry_total=15155.0 value_sum=89389779 value_total=79940635.0 method=text
-checksum,0000909012-12-000445,"value off >1%, unexplained",rows=176 entry_total=176.0 value_sum=668 value_total=736.0 method=text
-checksum,0000767684-12-000008,value scale x1000 (dollars vs thousands),rows=136 entry_total=136.0 value_sum=674758 value_total=674758000.0 method=text
-checksum,0000893738-12-000004,value scale x1000 (dollars vs thousands),rows=60 entry_total=60.0 value_sum=122818 value_total=122818000.0 method=text
 checksum,0000936936-12-000004,"entry count off by >2, unexplained",rows=89 entry_total=82.0 value_sum=170569 value_total=137686000.0 method=text
 checksum,0000814375-12-000042,value scale x1000 (dollars vs thousands),rows=99 entry_total=99.0 value_sum=3413888 value_total=3329.0 method=text
 checksum,0001110443-12-000017,"value off >1%, unexplained",rows=140 entry_total=140.0 value_sum=153407 value_total=156414.0 method=text
 checksum,0001534805-12-000008,"entry count off by >2, unexplained",rows=3 entry_total=488.0 value_sum=81914 value_total=548535.0 method=text
+checksum,0001086521-12-000016,"entry count off by >2, unexplained",rows=1526 entry_total=1850.0 value_sum=6427633 value_total=6526562.0 method=text
+checksum,0001086521-12-000015,"entry count off by >2, unexplained",rows=1526 entry_total=1850.0 value_sum=6427633 value_total=6526562.0 method=text
+checksum,0000354204-12-001359,"value off >1%, unexplained",rows=3664 entry_total=3664.0 value_sum=86437342 value_total=89891224.0 method=text
+checksum,0001085146-12-001331,entry total counts distinct CUSIPs not rows,rows=146 entry_total=126.0 value_sum=1007869 value_total=978268.0 method=text
 checksum,0001481986-12-000010,entry total counts distinct CUSIPs not rows,rows=184 entry_total=186.0 value_sum=12150654 value_total=3204619.0 method=text
 checksum,0001193125-12-469692,value scale x1000 (dollars vs thousands),rows=78 entry_total=85.0 value_sum=3723049 value_total=3723049000.0 method=text
 checksum,0001193125-12-435205,entry total counts distinct CUSIPs not rows,rows=51 entry_total=52.0 value_sum=156175 value_total=156175.0 method=text
 checksum,0000920112-12-000109,entry total counts distinct CUSIPs not rows,rows=461 entry_total=342.0 value_sum=406935529 value_total=407352652.0 method=text
-checksum,0000354204-12-001359,"value off >1%, unexplained",rows=3664 entry_total=3664.0 value_sum=86437342 value_total=89891224.0 method=text
-checksum,0001085146-12-001331,entry total counts distinct CUSIPs not rows,rows=146 entry_total=126.0 value_sum=1007869 value_total=978268.0 method=text
-checksum,0001086521-12-000016,"entry count off by >2, unexplained",rows=1526 entry_total=1850.0 value_sum=6427633 value_total=6526562.0 method=text
-checksum,0001086521-12-000015,"entry count off by >2, unexplained",rows=1526 entry_total=1850.0 value_sum=6427633 value_total=6526562.0 method=text
 checksum,0001546927-12-000070,"value off >1%, unexplained",rows=6 entry_total=6.0 value_sum=16615430 value_total=273451.0 method=text
+checksum,0001193125-12-470805,entry count off by <=2,rows=7693 entry_total=7694.0 value_sum=56128689 value_total=56102115.0 method=text
 checksum,0000883511-12-000004,"entry count off by >2, unexplained",rows=31 entry_total=1.0 value_sum=373455 value_total=nan method=text
 checksum,0001435346-12-000011,entry total counts distinct CUSIPs not rows,rows=146 entry_total=145.0 value_sum=710306 value_total=710297.0 method=text
+checksum,0000903423-12-000540,value within 1% (rounding),rows=7325 entry_total=7325.0 value_sum=21726536 value_total=21843966.0 method=text
+checksum,0001140361-12-047512,"entry count off by >2, unexplained",rows=14961 entry_total=15155.0 value_sum=89389779 value_total=79940635.0 method=text
+checksum,0000909012-12-000445,"value off >1%, unexplained",rows=176 entry_total=176.0 value_sum=668 value_total=736.0 method=text
 checksum,0001479844-12-000005,"entry count off by >2, unexplained",rows=885 entry_total=910.0 value_sum=810898 value_total=824566.0 method=text
 checksum,0001193125-12-442809,value scale x1000 (dollars vs thousands),rows=340 entry_total=340.0 value_sum=2918411768 value_total=2918412.0 method=text
 checksum,0001144204-12-062269,value scale x1000 (dollars vs thousands),rows=27 entry_total=27.0 value_sum=687221625 value_total=687221.0 method=text
 checksum,0001384042-12-000009,"entry count off by >2, unexplained",rows=666 entry_total=205.0 value_sum=269521 value_total=270320.0 method=text
 checksum,0001308527-12-000007,"value off >1%, unexplained",rows=167 entry_total=167.0 value_sum=10208930910 value_total=714729534.0 method=text
 checksum,0001047469-12-010299,entry total counts distinct CUSIPs not rows,rows=87 entry_total=66.0 value_sum=48649 value_total=48652.0 method=text
-checksum,0001350639-12-000008,"entry count off by >2, unexplained",rows=20 entry_total=61.0 value_sum=144440 value_total=241814.0 method=text
-checksum,0001278573-12-000006,entry total counts distinct CUSIPs not rows,rows=98 entry_total=99.0 value_sum=757626 value_total=758687.0 method=text
 checksum,0000790502-12-000051,"entry count off by >2, unexplained",rows=642 entry_total=652.0 value_sum=12556882 value_total=12662872.0 method=text
 checksum,0001079161-12-000009,value scale x1000 (dollars vs thousands),rows=128 entry_total=128.0 value_sum=1200977028 value_total=1200975.0 method=text
-checksum,0001013538-12-000008,"value off >1%, unexplained",rows=57 entry_total=57.0 value_sum=1218990 value_total=121898.0 method=text
+checksum,0001350639-12-000008,"entry count off by >2, unexplained",rows=20 entry_total=61.0 value_sum=144440 value_total=241814.0 method=text
+checksum,0001278573-12-000006,entry total counts distinct CUSIPs not rows,rows=98 entry_total=99.0 value_sum=757626 value_total=758687.0 method=text
 checksum,0001140361-12-047237,"value off >1%, unexplained",rows=102 entry_total=102.0 value_sum=3413120 value_total=3178688.0 method=text
-checksum,0000945631-12-000012,value scale x1000 (dollars vs thousands),rows=65 entry_total=65.0 value_sum=13057616 value_total=13057617000.0 method=text
-checksum,0001193125-12-462772,entry count off by <=2,rows=792 entry_total=793.0 value_sum=535602 value_total=535651.0 method=text
-checksum,0000911088-12-000014,entry total counts distinct CUSIPs not rows,rows=148 entry_total=149.0 value_sum=3463721 value_total=3465120.0 method=text
-checksum,0001260824-12-000008,"value off >1%, unexplained",rows=127 entry_total=127.0 value_sum=570689 value_total=16905.0 method=text
-checksum,0001082970-12-000009,value scale x1000 (dollars vs thousands),rows=501 entry_total=502.0 value_sum=4203704 value_total=4203721227.0 method=text
+checksum,0001013538-12-000008,"value off >1%, unexplained",rows=57 entry_total=57.0 value_sum=1218990 value_total=121898.0 method=text
 checksum,0001386088-12-000004,no rows parsed,rows=0 entry_total=36.0 value_sum=0 value_total=3642231.0 method=text
 checksum,0001313926-12-000006,value scale x1000 (dollars vs thousands),rows=25 entry_total=25.0 value_sum=1923547 value_total=1923548447.0 method=text
 checksum,0001542164-12-000006,"entry count off by >2, unexplained",rows=3 entry_total=20.0 value_sum=40786 value_total=296757.0 method=text
+checksum,0001260824-12-000008,"value off >1%, unexplained",rows=127 entry_total=127.0 value_sum=570689 value_total=16905.0 method=text
+checksum,0001082970-12-000009,value scale x1000 (dollars vs thousands),rows=501 entry_total=502.0 value_sum=4203704 value_total=4203721227.0 method=text
+checksum,0001321711-12-000054,value scale x1000 (dollars vs thousands),rows=34 entry_total=34.0 value_sum=675708000 value_total=675705.0 method=text
+checksum,0001193125-12-462772,entry count off by <=2,rows=792 entry_total=793.0 value_sum=535602 value_total=535651.0 method=text
+checksum,0000911088-12-000014,entry total counts distinct CUSIPs not rows,rows=148 entry_total=149.0 value_sum=3463721 value_total=3465120.0 method=text
+checksum,0000945631-12-000012,value scale x1000 (dollars vs thousands),rows=65 entry_total=65.0 value_sum=13057616 value_total=13057617000.0 method=text
 checksum,0001107799-12-000004,"entry count off by >2, unexplained",rows=84 entry_total=328.0 value_sum=21860 value_total=82402.0 method=text
 checksum,0001398344-12-003509,"value off >1%, unexplained",rows=89 entry_total=89.0 value_sum=259948 value_total=248946.0 method=text
 checksum,0001141911-12-000012,"entry count off by >2, unexplained",rows=60 entry_total=63.0 value_sum=194422 value_total=254285.0 method=text
-checksum,0001321711-12-000054,value scale x1000 (dollars vs thousands),rows=34 entry_total=34.0 value_sum=675708000 value_total=675705.0 method=text
 checksum,0001344717-12-000004,"value off >1%, unexplained",rows=565 entry_total=565.0 value_sum=1573631745 value_total=1573.0 method=text
 checksum,0001193125-12-434619,entry total counts distinct CUSIPs not rows,rows=123 entry_total=125.0 value_sum=309095 value_total=310291.0 method=text
 checksum,0001387366-12-000004,value within 1% (rounding),rows=44 entry_total=44.0 value_sum=190834 value_total=191104.0 method=text
 checksum,0001116247-12-000004,value scale x1000 (dollars vs thousands),rows=298 entry_total=305.0 value_sum=180609 value_total=180606030.0 method=text
 checksum,0001140361-12-044108,"entry count off by >2, unexplained",rows=122 entry_total=126.0 value_sum=282304 value_total=284236.0 method=text
 checksum,0000870156-12-000047,value scale x1000 (dollars vs thousands),rows=598 entry_total=600.0 value_sum=536960512 value_total=537499.0 method=text
-checksum,0001172661-12-001129,"value off >1%, unexplained",rows=136 entry_total=136.0 value_sum=11139889 value_total=22631386.0 method=text
-checksum,0000894579-12-000307,entry off by <=2 and value within 1%,rows=675 entry_total=677.0 value_sum=5914196 value_total=5940560.0 method=text
-checksum,0001014909-12-000025,"entry count off by >2, unexplained",rows=487 entry_total=466790430.0 value_sum=3916910 value_total=3916917.0 method=text
-checksum,0000948046-12-000118,entry count off by <=2,rows=20099 entry_total=20098.0 value_sum=103592145 value_total=103592145.0 method=text
-checksum,0000934999-12-000008,"entry count off by >2, unexplained",rows=191 entry_total=196.0 value_sum=31219678 value_total=3017100.0 method=text
 checksum,0001079373-12-000004,entry total counts distinct CUSIPs not rows,rows=104 entry_total=105.0 value_sum=244198 value_total=247150.0 method=text
 checksum,0000764532-12-000015,"entry count off by >2, unexplained",rows=63 entry_total=69.0 value_sum=11194447 value_total=13505888.0 method=text
-checksum,0000930413-12-006076,value scale x1000 (dollars vs thousands),rows=102 entry_total=102.0 value_sum=134551067 value_total=134551.0 method=text
-checksum,0001061187-12-000004,value scale x1000 (dollars vs thousands),rows=126 entry_total=126.0 value_sum=220058 value_total=220055981.0 method=text
+checksum,0001172661-12-001129,"value off >1%, unexplained",rows=136 entry_total=136.0 value_sum=11139889 value_total=22631386.0 method=text
+checksum,0000894579-12-000307,entry off by <=2 and value within 1%,rows=675 entry_total=677.0 value_sum=5914196 value_total=5940560.0 method=text
 checksum,0001193125-12-413393,"entry count off by >2, unexplained",rows=221 entry_total=211.0 value_sum=341897 value_total=329017.0 method=text
 checksum,0001047469-12-009396,entry count off by <=2,rows=618 entry_total=619.0 value_sum=183945 value_total=183945.0 method=text
+checksum,0000930413-12-006076,value scale x1000 (dollars vs thousands),rows=102 entry_total=102.0 value_sum=134551067 value_total=134551.0 method=text
+checksum,0001061187-12-000004,value scale x1000 (dollars vs thousands),rows=126 entry_total=126.0 value_sum=220058 value_total=220055981.0 method=text
 checksum,0000728083-12-000030,entry total counts distinct CUSIPs not rows,rows=906 entry_total=907.0 value_sum=13747741 value_total=13748561.0 method=text
 checksum,0001193125-12-469986,entry count off by <=2,rows=1884 entry_total=1885.0 value_sum=1093741101 value_total=1093741101.0 method=text
 checksum,0000712534-12-000048,value scale x1000 (dollars vs thousands),rows=229 entry_total=229.0 value_sum=253188 value_total=253188000.0 method=text
+checksum,0001014909-12-000025,"entry count off by >2, unexplained",rows=487 entry_total=466790430.0 value_sum=3916910 value_total=3916917.0 method=text
+checksum,0000948046-12-000118,entry count off by <=2,rows=20099 entry_total=20098.0 value_sum=103592145 value_total=103592145.0 method=text
+checksum,0000934999-12-000008,"entry count off by >2, unexplained",rows=191 entry_total=196.0 value_sum=31219678 value_total=3017100.0 method=text
 checksum,0000810716-12-000008,entry total counts distinct CUSIPs not rows,rows=89 entry_total=88.0 value_sum=14492462 value_total=373290.0 method=text
 checksum,0001055954-12-000004,"value off >1%, unexplained",rows=47 entry_total=47.0 value_sum=159457 value_total=164990.0 method=text
 checksum,0000036644-12-000007,entry count off by <=2,rows=690 entry_total=692.0 value_sum=1058008 value_total=nan method=text
@@ -258,62 +258,61 @@ checksum,0001193125-12-470239,"entry count off by >2, unexplained",rows=55 entry
 checksum,0001082327-12-000010,entry total counts distinct CUSIPs not rows,rows=666 entry_total=667.0 value_sum=1176982505 value_total=1176982477.0 method=text
 checksum,0001521422-12-000022,value scale x1000 (dollars vs thousands),rows=103 entry_total=1.0 value_sum=3732180 value_total=3732179000.0 method=text
 checksum,0001343231-12-000005,value scale x1000 (dollars vs thousands),rows=44 entry_total=44.0 value_sum=627234 value_total=627235637.0 method=text
+checksum,0001317601-12-000008,entry total counts distinct CUSIPs not rows,rows=36 entry_total=32.0 value_sum=609864 value_total=609864.0 method=text
+checksum,0001455125-12-000010,no rows parsed,rows=0 entry_total=32.0 value_sum=0 value_total=4491.0 method=text
+checksum,0001072843-12-000004,value scale x1000 (dollars vs thousands),rows=47 entry_total=47.0 value_sum=326047492 value_total=326047.0 method=text
 checksum,0001003279-12-000007,"value off >1%, unexplained",rows=202 entry_total=202.0 value_sum=374583725 value_total=157210.0 method=text
 checksum,0000038777-12-000226,value within 1% (rounding),rows=3266 entry_total=3266.0 value_sum=154530578 value_total=154722793.0 method=text
-checksum,0001072843-12-000004,value scale x1000 (dollars vs thousands),rows=47 entry_total=47.0 value_sum=326047492 value_total=326047.0 method=text
 checksum,0001390043-12-000005,value scale x1000 (dollars vs thousands),rows=96 entry_total=96.0 value_sum=115707 value_total=115706425.0 method=text
 checksum,0001398344-12-003547,entry total counts distinct CUSIPs not rows,rows=37 entry_total=38.0 value_sum=96431 value_total=96776.0 method=text
 checksum,0000850529-12-000008,value scale x1000 (dollars vs thousands),rows=514 entry_total=514.0 value_sum=36134394 value_total=36134394000.0 method=text
-checksum,0001317601-12-000008,entry total counts distinct CUSIPs not rows,rows=36 entry_total=32.0 value_sum=609864 value_total=609864.0 method=text
-checksum,0001455125-12-000010,no rows parsed,rows=0 entry_total=32.0 value_sum=0 value_total=4491.0 method=text
 checksum,0001381859-12-000004,value scale x1000 (dollars vs thousands),rows=85 entry_total=85.0 value_sum=184617 value_total=184613000.0 method=text
 checksum,0001416856-12-000006,entry count off by <=2,rows=169 entry_total=170.0 value_sum=161748 value_total=161748.0 method=text
 checksum,0001119254-12-000004,"entry count off by >2, unexplained",rows=145 entry_total=148.0 value_sum=310586 value_total=311988.0 method=text
 checksum,0001536726-12-000004,entry total counts distinct CUSIPs not rows,rows=8 entry_total=9.0 value_sum=106794 value_total=125890.0 method=text
-checksum,0001466697-12-000013,"entry count off by >2, unexplained",rows=231 entry_total=193.0 value_sum=165444 value_total=140695.0 method=text
-checksum,0001408324-12-000009,value scale x1000 (dollars vs thousands),rows=91 entry_total=nan value_sum=60963 value_total=62598000.0 method=text
-checksum,0001193125-12-470966,"entry count off by >2, unexplained",rows=426 entry_total=118583113.0 value_sum=3793713 value_total=3793705.0 method=text
 checksum,0001513193-12-000009,entry off by <=2 and value off >1%,rows=85 entry_total=87.0 value_sum=1714809 value_total=431528.0 method=text
 checksum,0001470876-12-000008,entry count off by <=2,rows=647 entry_total=648.0 value_sum=546149 value_total=546472.0 method=text
-checksum,0001537720-12-000011,"entry count off by >2, unexplained",rows=2526 entry_total=2615.0 value_sum=238945 value_total=252605.0 method=text
 checksum,0001082917-12-000007,value scale x1000 (dollars vs thousands),rows=191 entry_total=191.0 value_sum=1847364 value_total=1847364971.0 method=text
 checksum,0001056488-12-000009,entry total counts distinct CUSIPs not rows,rows=127 entry_total=128.0 value_sum=100659 value_total=100768.0 method=text
-checksum,0000040417-12-000085,value scale x1000 (dollars vs thousands),rows=56 entry_total=56.0 value_sum=940608 value_total=940605714.0 method=text
 checksum,0001427263-12-000006,entry total counts distinct CUSIPs not rows,rows=76 entry_total=75.0 value_sum=83936 value_total=83265.0 method=text
 checksum,0001535645-12-000005,entry total counts distinct CUSIPs not rows,rows=3 entry_total=1.0 value_sum=268028 value_total=268028.0 method=text
 checksum,0001140361-12-046895,entry total counts distinct CUSIPs not rows,rows=217 entry_total=218.0 value_sum=4298361 value_total=4260663.0 method=text
+checksum,0000040417-12-000085,value scale x1000 (dollars vs thousands),rows=56 entry_total=56.0 value_sum=940608 value_total=940605714.0 method=text
+checksum,0001466697-12-000013,"entry count off by >2, unexplained",rows=231 entry_total=193.0 value_sum=165444 value_total=140695.0 method=text
+checksum,0001408324-12-000009,value scale x1000 (dollars vs thousands),rows=91 entry_total=nan value_sum=60963 value_total=62598000.0 method=text
+checksum,0001193125-12-470966,"entry count off by >2, unexplained",rows=426 entry_total=118583113.0 value_sum=3793713 value_total=3793705.0 method=text
+checksum,0001537720-12-000011,"entry count off by >2, unexplained",rows=2526 entry_total=2615.0 value_sum=238945 value_total=252605.0 method=text
 checksum,0000807249-12-000342,entry total counts distinct CUSIPs not rows,rows=129 entry_total=131.0 value_sum=389175 value_total=389416.0 method=text
 checksum,0000930413-12-006107,entry off by <=2 and value off >1%,rows=1260 entry_total=1259.0 value_sum=13597420882843 value_total=5095813.0 method=text
 checksum,0001080374-12-000026,entry total counts distinct CUSIPs not rows,rows=96 entry_total=95.0 value_sum=355313 value_total=355313.0 method=text
 checksum,0001106191-12-000005,entry total counts distinct CUSIPs not rows,rows=141 entry_total=143.0 value_sum=3862552 value_total=4026597.0 method=text
 checksum,0000315498-12-000004,value scale x1000 (dollars vs thousands),rows=481 entry_total=483.0 value_sum=1660109 value_total=1660323000.0 method=text
 checksum,0001144204-12-060753,value scale x1000 (dollars vs thousands),rows=51 entry_total=51.0 value_sum=45111989 value_total=45112.0 method=text
-checksum,0001144204-12-059993,"entry count off by >2, unexplained",rows=508 entry_total=518.0 value_sum=4022251 value_total=4024251.0 method=text
-checksum,0001076809-12-000005,"entry count off by >2, unexplained",rows=42 entry_total=70769378.0 value_sum=422946436 value_total=422946437.0 method=text
-checksum,0001085146-12-001478,"value off >1%, unexplained",rows=632 entry_total=632.0 value_sum=2495185 value_total=1864120.0 method=text
-checksum,0001085146-12-001479,"value off >1%, unexplained",rows=224 entry_total=224.0 value_sum=5818170 value_total=1966719.0 method=text
-checksum,0000732857-12-000007,value scale x1000 (dollars vs thousands),rows=217 entry_total=217.0 value_sum=697679 value_total=697679000.0 method=text
 checksum,0001158583-12-000005,"entry count off by >2, unexplained",rows=37 entry_total=64.0 value_sum=302829 value_total=333086.0 method=text
 checksum,0000883803-12-000005,"entry count off by >2, unexplained",rows=168 entry_total=172.0 value_sum=217181 value_total=217183.0 method=text
 checksum,0001321993-12-000010,"entry count off by >2, unexplained",rows=158 entry_total=189.0 value_sum=219960 value_total=240670.0 method=text
 checksum,0000923116-12-000006,value scale x1000 (dollars vs thousands),rows=59 entry_total=60.0 value_sum=213673 value_total=229288000.0 method=text
 checksum,0001046192-12-000008,value scale x1000 (dollars vs thousands),rows=614 entry_total=614.0 value_sum=14711882 value_total=14711882000.0 method=text
 checksum,0001162170-12-000005,entry total counts distinct CUSIPs not rows,rows=178 entry_total=179.0 value_sum=2130538 value_total=2133247.0 method=text
+checksum,0001144204-12-059993,"entry count off by >2, unexplained",rows=508 entry_total=518.0 value_sum=4022251 value_total=4024251.0 method=text
 checksum,0001555829-12-000005,value within 1% (rounding),rows=29 entry_total=29.0 value_sum=422249 value_total=422967.0 method=text
+checksum,0001076809-12-000005,"entry count off by >2, unexplained",rows=42 entry_total=70769378.0 value_sum=422946436 value_total=422946437.0 method=text
+checksum,0001085146-12-001478,"value off >1%, unexplained",rows=632 entry_total=632.0 value_sum=2495185 value_total=1864120.0 method=text
+checksum,0001085146-12-001479,"value off >1%, unexplained",rows=224 entry_total=224.0 value_sum=5818170 value_total=1966719.0 method=text
+checksum,0000732857-12-000007,value scale x1000 (dollars vs thousands),rows=217 entry_total=217.0 value_sum=697679 value_total=697679000.0 method=text
 checksum,0001085146-12-001187,"value off >1%, unexplained",rows=88 entry_total=88.0 value_sum=112084 value_total=1308886.0 method=text
 checksum,0001427372-12-000008,"entry count off by >2, unexplained",rows=18 entry_total=15.0 value_sum=230079 value_total=234366.0 method=text
 checksum,0001542161-12-000009,entry total counts distinct CUSIPs not rows,rows=38 entry_total=39.0 value_sum=42630 value_total=59309.0 method=text
-checksum,0000897101-12-001715,value scale x1000 (dollars vs thousands),rows=319 entry_total=319.0 value_sum=187286081 value_total=187286.0 method=text
-checksum,0000932540-12-000043,value within 1% (rounding),rows=4704 entry_total=4704.0 value_sum=2234087 value_total=2236394.0 method=text
-checksum,0001085146-12-001407,"value off >1%, unexplained",rows=55 entry_total=55.0 value_sum=94385105929638 value_total=1024023.0 method=text
-checksum,0000903064-12-000016,value scale x1000 (dollars vs thousands),rows=171 entry_total=171.0 value_sum=440061 value_total=440061000.0 method=text
 checksum,0001315867-12-000008,entry total counts distinct CUSIPs not rows,rows=245 entry_total=246.0 value_sum=242542 value_total=242781.0 method=text
+checksum,0000897101-12-001715,value scale x1000 (dollars vs thousands),rows=319 entry_total=319.0 value_sum=187286081 value_total=187286.0 method=text
 checksum,0001353326-12-000008,value within 1% (rounding),rows=44 entry_total=44.0 value_sum=366353 value_total=367995.0 method=text
 checksum,0001479228-12-000008,"entry count off by >2, unexplained",rows=92 entry_total=7561597.0 value_sum=347188894 value_total=347188888.0 method=text
-checksum,0001144204-12-062543,entry total counts distinct CUSIPs not rows,rows=127 entry_total=128.0 value_sum=31280 value_total=31628.0 method=text
 checksum,0001171592-12-000005,value scale x1000 (dollars vs thousands),rows=33 entry_total=33.0 value_sum=421092937 value_total=421093.0 method=text
 checksum,0000924166-12-000008,value scale x1000 (dollars vs thousands),rows=133 entry_total=133.0 value_sum=386599 value_total=386599000.0 method=text
 checksum,0000932141-12-000005,entry total counts distinct CUSIPs not rows,rows=93 entry_total=95.0 value_sum=406229 value_total=406232.0 method=text
+checksum,0000932540-12-000043,value within 1% (rounding),rows=4704 entry_total=4704.0 value_sum=2234087 value_total=2236394.0 method=text
+checksum,0001085146-12-001407,"value off >1%, unexplained",rows=55 entry_total=55.0 value_sum=94385105929638 value_total=1024023.0 method=text
+checksum,0001144204-12-062543,entry total counts distinct CUSIPs not rows,rows=127 entry_total=128.0 value_sum=31280 value_total=31628.0 method=text
 checksum,0001055963-12-000009,entry total counts distinct CUSIPs not rows,rows=121 entry_total=122.0 value_sum=380076 value_total=380198.0 method=text
 checksum,0001011443-12-000018,entry count off by <=2,rows=868 entry_total=867.0 value_sum=4720418 value_total=4720418.0 method=text
 checksum,0001379995-12-000008,value scale x1000 (dollars vs thousands),rows=153 entry_total=153.0 value_sum=215481 value_total=215481000.0 method=text
@@ -325,129 +324,127 @@ checksum,0001144204-12-062053,entry total counts distinct CUSIPs not rows,rows=1
 checksum,0001047469-12-009331,no rows parsed,rows=0 entry_total=2.0 value_sum=0 value_total=151999.0 method=text
 checksum,0001047469-12-009332,no rows parsed,rows=0 entry_total=2.0 value_sum=0 value_total=244036.0 method=text
 checksum,0000891092-12-006226,"entry count off by >2, unexplained",rows=52 entry_total=433.0 value_sum=2 value_total=2491588.0 method=text
-checksum,0000908551-12-000006,entry total counts distinct CUSIPs not rows,rows=693 entry_total=691.0 value_sum=6084675 value_total=0.0 method=text
-checksum,0000740272-12-000007,value scale x1000 (dollars vs thousands),rows=184 entry_total=184.0 value_sum=2635353 value_total=2635353000.0 method=text
-checksum,0000919185-12-000005,entry count off by <=2,rows=1017 entry_total=1016.0 value_sum=7421371 value_total=7421371.0 method=text
+checksum,0001393944-12-000010,value within 1% (rounding),rows=369 entry_total=369.0 value_sum=163933 value_total=164099.0 method=text
 checksum,0001140361-12-042615,"entry count off by >2, unexplained",rows=91 entry_total=99.0 value_sum=332612 value_total=339460.0 method=text
 checksum,0000769963-12-000012,"entry count off by >2, unexplained",rows=449 entry_total=452.0 value_sum=214266 value_total=218113.0 method=text
-checksum,0001393944-12-000010,value within 1% (rounding),rows=369 entry_total=369.0 value_sum=163933 value_total=164099.0 method=text
+checksum,0001140361-12-044429,"value off >1%, unexplained",rows=45 entry_total=45.0 value_sum=1954382 value_total=149318.0 method=text
+checksum,0001095449-12-000098,"value off >1%, unexplained",rows=121 entry_total=121.0 value_sum=481976 value_total=1012879.0 method=text
 checksum,0001193125-12-465461,"entry count off by >2, unexplained",rows=13 entry_total=16.0 value_sum=849015 value_total=902382.0 method=text
 checksum,0001193125-12-442725,value scale x1000 (dollars vs thousands),rows=25 entry_total=25.0 value_sum=249974820 value_total=249975.0 method=text
 checksum,0001385642-12-000014,"value off >1%, unexplained",rows=47 entry_total=47.0 value_sum=133069 value_total=29330.0 method=text
-checksum,0001140361-12-044429,"value off >1%, unexplained",rows=45 entry_total=45.0 value_sum=1954382 value_total=149318.0 method=text
-checksum,0001095449-12-000098,"value off >1%, unexplained",rows=121 entry_total=121.0 value_sum=481976 value_total=1012879.0 method=text
+checksum,0000903064-12-000016,value scale x1000 (dollars vs thousands),rows=171 entry_total=171.0 value_sum=440061 value_total=440061000.0 method=text
+checksum,0000908551-12-000006,entry total counts distinct CUSIPs not rows,rows=693 entry_total=691.0 value_sum=6084675 value_total=0.0 method=text
+checksum,0000740272-12-000007,value scale x1000 (dollars vs thousands),rows=184 entry_total=184.0 value_sum=2635353 value_total=2635353000.0 method=text
+checksum,0000919185-12-000005,entry count off by <=2,rows=1017 entry_total=1016.0 value_sum=7421371 value_total=7421371.0 method=text
 checksum,0001541211-12-000005,"entry count off by >2, unexplained",rows=123 entry_total=267.0 value_sum=2341 value_total=6436514.0 method=text
-checksum,0001541496-12-000012,no rows parsed,rows=0 entry_total=56.0 value_sum=0 value_total=111292.0 method=text
-checksum,0001389191-12-000007,no rows parsed,rows=0 entry_total=366.0 value_sum=0 value_total=4771571.0 method=text
-checksum,0001047469-12-010456,no rows parsed,rows=0 entry_total=1.0 value_sum=0 value_total=15722.0 method=text
 checksum,0001519113-12-000004,"entry count off by >2, unexplained",rows=912 entry_total=927.0 value_sum=89675 value_total=105317.0 method=text
 checksum,0001519418-12-000018,value scale x1000 (dollars vs thousands),rows=659 entry_total=659.0 value_sum=5605646 value_total=5605644000.0 method=text
 checksum,0001385925-12-000013,"entry count off by >2, unexplained",rows=310 entry_total=336.0 value_sum=144293 value_total=147412.0 method=text
+checksum,0001541496-12-000012,no rows parsed,rows=0 entry_total=56.0 value_sum=0 value_total=111292.0 method=text
+checksum,0001389191-12-000007,no rows parsed,rows=0 entry_total=366.0 value_sum=0 value_total=4771571.0 method=text
+checksum,0001047469-12-010456,no rows parsed,rows=0 entry_total=1.0 value_sum=0 value_total=15722.0 method=text
 checksum,0001085146-12-001272,"value off >1%, unexplained",rows=34 entry_total=34.0 value_sum=114248114413590 value_total=635838.0 method=text
 checksum,0001193125-12-466011,no rows parsed,rows=0 entry_total=64.0 value_sum=0 value_total=204641.0 method=text
 checksum,0001380137-12-000004,entry total counts distinct CUSIPs not rows,rows=182 entry_total=183.0 value_sum=257532 value_total=257581.0 method=text
 checksum,0000866361-12-000004,"entry count off by >2, unexplained",rows=121 entry_total=1.0 value_sum=1649521 value_total=nan method=text
-checksum,0001286295-12-000005,entry total counts distinct CUSIPs not rows,rows=125 entry_total=124.0 value_sum=1920402 value_total=1920402.0 method=text
 checksum,0001382646-12-000008,value scale x1000 (dollars vs thousands),rows=95 entry_total=95.0 value_sum=189951 value_total=189951000.0 method=text
 checksum,0001428948-12-000006,entry total counts distinct CUSIPs not rows,rows=41 entry_total=42.0 value_sum=584306 value_total=587856.0 method=text
+checksum,0001286295-12-000005,entry total counts distinct CUSIPs not rows,rows=125 entry_total=124.0 value_sum=1920402 value_total=1920402.0 method=text
 checksum,0001328450-12-000007,value scale x1000 (dollars vs thousands),rows=374 entry_total=374.0 value_sum=169766 value_total=169766000.0 method=text
-checksum,0001144204-12-062049,value scale x1000 (dollars vs thousands),rows=89 entry_total=89.0 value_sum=178852000 value_total=178852.0 method=text
-checksum,0001334952-12-000004,"entry count off by >2, unexplained",rows=73 entry_total=81.0 value_sum=113420 value_total=116241.0 method=text
-checksum,0000873630-12-000006,"entry count off by >2, unexplained",rows=6502 entry_total=6140.0 value_sum=20341548 value_total=18169562.0 method=text
 checksum,0001140361-12-046828,"entry count off by >2, unexplained",rows=559 entry_total=570.0 value_sum=604353 value_total=204169.0 method=text
 checksum,0001522760-12-000009,"entry count off by >2, unexplained",rows=52 entry_total=61.0 value_sum=26325 value_total=32751.0 method=text
 checksum,0001055544-12-000004,value scale x1000 (dollars vs thousands),rows=110 entry_total=110.0 value_sum=228392 value_total=228509000.0 method=text
 checksum,0001427271-12-000006,value within 1% (rounding),rows=745 entry_total=745.0 value_sum=279350 value_total=279723.0 method=text
 checksum,0001010549-12-001226,value scale x1000 (dollars vs thousands),rows=1873 entry_total=1886.0 value_sum=6952849004 value_total=6589453.0 method=text
-checksum,0000919530-12-000008,value scale x1000 (dollars vs thousands),rows=138 entry_total=138.0 value_sum=413673 value_total=429320133.0 method=text
 checksum,0000919574-12-006261,entry total counts distinct CUSIPs not rows,rows=861 entry_total=860.0 value_sum=6490103 value_total=6490103.0 method=text
 checksum,0000812295-12-000147,"value off >1%, unexplained",rows=1267 entry_total=1267.0 value_sum=203526639 value_total=92750900.0 method=text
+checksum,0001144204-12-062049,value scale x1000 (dollars vs thousands),rows=89 entry_total=89.0 value_sum=178852000 value_total=178852.0 method=text
+checksum,0001334952-12-000004,"entry count off by >2, unexplained",rows=73 entry_total=81.0 value_sum=113420 value_total=116241.0 method=text
+checksum,0000919530-12-000008,value scale x1000 (dollars vs thousands),rows=138 entry_total=138.0 value_sum=413673 value_total=429320133.0 method=text
 checksum,0001171200-12-000959,entry total counts distinct CUSIPs not rows,rows=81 entry_total=80.0 value_sum=5583766 value_total=5583766.0 method=text
 checksum,0001085825-12-000011,"entry count off by >2, unexplained",rows=333 entry_total=7122705.0 value_sum=441450 value_total=441450.0 method=text
 checksum,0001127544-12-000008,value scale x1000 (dollars vs thousands),rows=101 entry_total=101.0 value_sum=148312 value_total=148314000.0 method=text
+checksum,0000884589-12-000017,value scale x1000 (dollars vs thousands),rows=734 entry_total=734.0 value_sum=4028640 value_total=4028640000.0 method=text
+checksum,0000873630-12-000006,"entry count off by >2, unexplained",rows=6502 entry_total=6140.0 value_sum=20341548 value_total=18169562.0 method=text
+checksum,0001193125-12-450848,"entry count off by >2, unexplained",rows=2268 entry_total=2271.0 value_sum=4507734 value_total=4857143.0 method=text
 checksum,0000909518-12-000345,value scale x1000 (dollars vs thousands),rows=1 entry_total=1.0 value_sum=31279188 value_total=31279.0 method=text
 checksum,0001520770-12-000008,entry off by <=2 and value off >1%,rows=63 entry_total=64.0 value_sum=80753 value_total=85787.0 method=text
-checksum,0001193125-12-450848,"entry count off by >2, unexplained",rows=2268 entry_total=2271.0 value_sum=4507734 value_total=4857143.0 method=text
-checksum,0000884589-12-000017,value scale x1000 (dollars vs thousands),rows=734 entry_total=734.0 value_sum=4028640 value_total=4028640000.0 method=text
-checksum,0001140361-12-046973,entry count off by <=2,rows=198 entry_total=199.0 value_sum=328943 value_total=329251.0 method=text
+checksum,0001193125-12-470666,entry total counts distinct CUSIPs not rows,rows=20 entry_total=22.0 value_sum=137976 value_total=142911.0 method=text
 checksum,0001089877-12-000022,"value off >1%, unexplained",rows=2076 entry_total=2076.0 value_sum=11337396 value_total=24617969.0 method=text
 checksum,0001193125-12-467725,entry total counts distinct CUSIPs not rows,rows=603 entry_total=604.0 value_sum=8817497 value_total=8818339.0 method=text
-checksum,0001193125-12-470666,entry total counts distinct CUSIPs not rows,rows=20 entry_total=22.0 value_sum=137976 value_total=142911.0 method=text
+checksum,0001437749-12-010530,entry count off by <=2,rows=85 entry_total=83.0 value_sum=73173 value_total=73174.0 method=text
 checksum,0001532292-12-000006,no rows parsed,rows=0 entry_total=1.0 value_sum=0 value_total=85991.0 method=text
 checksum,0001047469-12-010502,value scale x1000 (dollars vs thousands),rows=96 entry_total=96.0 value_sum=609232279 value_total=609232.0 method=text
-checksum,0001437749-12-010530,entry count off by <=2,rows=85 entry_total=83.0 value_sum=73173 value_total=73174.0 method=text
 checksum,0001405086-12-000404,"value off >1%, unexplained",rows=42 entry_total=42.0 value_sum=73640 value_total=339334.0 method=text
-checksum,0000909518-12-000339,no rows parsed,rows=0 entry_total=1.0 value_sum=0 value_total=nan method=text
 checksum,0001354821-12-000014,entry total counts distinct CUSIPs not rows,rows=468 entry_total=308.0 value_sum=5011738 value_total=5009691.0 method=text
+checksum,0000909518-12-000339,no rows parsed,rows=0 entry_total=1.0 value_sum=0 value_total=nan method=text
 checksum,0000909518-12-000338,value scale x1000 (dollars vs thousands),rows=9 entry_total=9.0 value_sum=2837910 value_total=2837911857.0 method=text
-checksum,0001144204-12-062121,"value off >1%, unexplained",rows=4389 entry_total=nan value_sum=2381778 value_total=2481778.0 method=text
 checksum,0000060086-12-000024,value scale x1000 (dollars vs thousands),rows=209 entry_total=209.0 value_sum=14867126 value_total=14867.0 method=text
+checksum,0001140361-12-046973,entry count off by <=2,rows=198 entry_total=199.0 value_sum=328943 value_total=329251.0 method=text
+checksum,0001144204-12-062121,"value off >1%, unexplained",rows=4389 entry_total=nan value_sum=2381778 value_total=2481778.0 method=text
 checksum,0000887211-12-000015,"entry count off by >2, unexplained",rows=155 entry_total=190.0 value_sum=5076028 value_total=2558526.0 method=text
 checksum,0001087767-12-000004,entry total counts distinct CUSIPs not rows,rows=57 entry_total=58.0 value_sum=51761 value_total=nan method=text
 checksum,0000930413-12-006095,value scale x1000 (dollars vs thousands),rows=1019 entry_total=1019.0 value_sum=44010495501 value_total=44010496.0 method=text
 checksum,0000909012-12-000448,"entry count off by >2, unexplained",rows=164 entry_total=1.0 value_sum=384780119 value_total=384780179.0 method=text
+checksum,0001193125-12-417811,value scale x1000 (dollars vs thousands),rows=188 entry_total=188.0 value_sum=112887 value_total=112.0 method=text
+checksum,0001172661-12-001165,no rows parsed,rows=0 entry_total=0.0 value_sum=0 value_total=9.0 method=text
+checksum,0001534417-12-000007,entry total counts distinct CUSIPs not rows,rows=38 entry_total=40.0 value_sum=112059 value_total=112059.0 method=text
 checksum,0001535315-12-000008,value scale x1000 (dollars vs thousands),rows=112 entry_total=112.0 value_sum=210755 value_total=210755000.0 method=text
 checksum,0001492162-12-000007,"entry count off by >2, unexplained",rows=47 entry_total=52.0 value_sum=186198 value_total=187459.0 method=text
 checksum,0001193125-12-491519,value scale x1000 (dollars vs thousands),rows=416 entry_total=417.0 value_sum=103696 value_total=103897000.0 method=text
-checksum,0000932974-12-000004,"entry count off by >2, unexplained",rows=617 entry_total=645.0 value_sum=2846294 value_total=2846363.0 method=text
-checksum,0001177206-12-000008,"entry count off by >2, unexplained",rows=1392 entry_total=1433.0 value_sum=6653749 value_total=6653749.0 method=text
-checksum,0000022657-12-000005,"entry count off by >2, unexplained",rows=161 entry_total=1.0 value_sum=507401 value_total=510504.0 method=text
-checksum,0001455845-12-000008,value within 1% (rounding),rows=916 entry_total=916.0 value_sum=718313 value_total=712608.0 method=text
-checksum,0001050470-12-000038,"entry count off by >2, unexplained",rows=1039 entry_total=1154.0 value_sum=32597800 value_total=32597800.0 method=text
-checksum,0001172661-12-001165,no rows parsed,rows=0 entry_total=0.0 value_sum=0 value_total=9.0 method=text
-checksum,0001534417-12-000007,entry total counts distinct CUSIPs not rows,rows=38 entry_total=40.0 value_sum=112059 value_total=112059.0 method=text
-checksum,0001193125-12-417811,value scale x1000 (dollars vs thousands),rows=188 entry_total=188.0 value_sum=112887 value_total=112.0 method=text
 checksum,0001193125-12-469577,entry total counts distinct CUSIPs not rows,rows=2983 entry_total=871.0 value_sum=1795490 value_total=1795490.0 method=text
 checksum,0001313294-12-000008,entry total counts distinct CUSIPs not rows,rows=233 entry_total=234.0 value_sum=633980 value_total=nan method=text
 checksum,0001193125-12-470892,value scale x1000 (dollars vs thousands),rows=13 entry_total=13.0 value_sum=265086339 value_total=265086.0 method=text
 checksum,0001140361-12-046908,entry off by <=2 and value within 1%,rows=39 entry_total=40.0 value_sum=96024736 value_total=96228015.0 method=text
 checksum,0001057395-12-000008,"entry count off by >2, unexplained",rows=69 entry_total=191.0 value_sum=101198 value_total=286094.0 method=text
 checksum,0001193125-12-470904,"entry count off by >2, unexplained",rows=1910 entry_total=1947.0 value_sum=1935287 value_total=1950778.0 method=text
-checksum,0001085146-12-001260,"entry count off by >2, unexplained",rows=151 entry_total=1.0 value_sum=2179309 value_total=nan method=text
-checksum,0001193125-12-472412,entry count off by <=2,rows=2250 entry_total=2251.0 value_sum=39278293 value_total=39278870.0 method=text
-checksum,0001040197-12-000010,entry total counts distinct CUSIPs not rows,rows=250 entry_total=252.0 value_sum=445741 value_total=447265.0 method=text
-checksum,0001193125-12-470566,"entry count off by >2, unexplained",rows=372 entry_total=375.0 value_sum=6754251 value_total=6758323.0 method=text
-checksum,0000019617-12-000323,value scale x1000 (dollars vs thousands),rows=26618 entry_total=26618.0 value_sum=277319058 value_total=277318978599.0 method=text
-checksum,0001208646-12-000336,"entry count off by >2, unexplained",rows=180 entry_total=184.0 value_sum=1769144140 value_total=1817266427.0 method=text
+checksum,0000932974-12-000004,"entry count off by >2, unexplained",rows=617 entry_total=645.0 value_sum=2846294 value_total=2846363.0 method=text
+checksum,0001177206-12-000008,"entry count off by >2, unexplained",rows=1392 entry_total=1433.0 value_sum=6653749 value_total=6653749.0 method=text
+checksum,0000022657-12-000005,"entry count off by >2, unexplained",rows=161 entry_total=1.0 value_sum=507401 value_total=510504.0 method=text
+checksum,0001455845-12-000008,value within 1% (rounding),rows=916 entry_total=916.0 value_sum=718313 value_total=712608.0 method=text
+checksum,0001050470-12-000038,"entry count off by >2, unexplained",rows=1039 entry_total=1154.0 value_sum=32597800 value_total=32597800.0 method=text
 checksum,0001519964-12-000004,"value off >1%, unexplained",rows=12 entry_total=12.0 value_sum=109646 value_total=114030.0 method=text
 checksum,0001281011-12-000004,"entry count off by >2, unexplained",rows=107 entry_total=126.0 value_sum=140870 value_total=152433.0 method=text
 checksum,0001094499-12-000013,"entry count off by >2, unexplained",rows=99 entry_total=106.0 value_sum=990894 value_total=1109960.0 method=text
 checksum,0001080493-12-000014,"entry count off by >2, unexplained",rows=558 entry_total=562.0 value_sum=9035588 value_total=360791.0 method=text
 checksum,0001193125-12-454716,entry off by <=2 and value within 1%,rows=126 entry_total=127.0 value_sum=2337311 value_total=2341219.0 method=text
 checksum,0001056519-12-000004,"entry count off by >2, unexplained",rows=80 entry_total=8.0 value_sum=186971 value_total=186970.0 method=text
+checksum,0001140361-12-047043,"value off >1%, unexplained",rows=152 entry_total=152.0 value_sum=268414 value_total=223414.0 method=text
+checksum,0001085146-12-001260,"entry count off by >2, unexplained",rows=151 entry_total=1.0 value_sum=2179309 value_total=nan method=text
+checksum,0001193125-12-472412,entry count off by <=2,rows=2250 entry_total=2251.0 value_sum=39278293 value_total=39278870.0 method=text
+checksum,0001040197-12-000010,entry total counts distinct CUSIPs not rows,rows=250 entry_total=252.0 value_sum=445741 value_total=447265.0 method=text
 checksum,0001145443-12-001299,value scale x1000 (dollars vs thousands),rows=2847 entry_total=2847.0 value_sum=34808969 value_total=34809.0 method=text
 checksum,0001213206-12-000030,value within 1% (rounding),rows=83 entry_total=83.0 value_sum=129147 value_total=130065.0 method=text
-checksum,0001140361-12-047043,"value off >1%, unexplained",rows=152 entry_total=152.0 value_sum=268414 value_total=223414.0 method=text
-checksum,0001047469-12-009514,value scale x1000 (dollars vs thousands),rows=72 entry_total=72.0 value_sum=152727 value_total=152727000.0 method=text
 checksum,0001019056-12-001145,"value off >1%, unexplained",rows=237 entry_total=237.0 value_sum=25740 value_total=1136168.0 method=text
 checksum,0001398344-12-003308,"value off >1%, unexplained",rows=380 entry_total=380.0 value_sum=284437 value_total=249849.0 method=text
 checksum,0001047469-12-010457,value within 1% (rounding),rows=168 entry_total=168.0 value_sum=139389 value_total=140176.0 method=text
+checksum,0001047469-12-009514,value scale x1000 (dollars vs thousands),rows=72 entry_total=72.0 value_sum=152727 value_total=152727000.0 method=text
 checksum,0000045319-12-000004,entry off by <=2 and value within 1%,rows=267 entry_total=269.0 value_sum=1436290 value_total=1439080.0 method=text
 checksum,0000919497-12-000012,value within 1% (rounding),rows=185 entry_total=185.0 value_sum=314324 value_total=311873.0 method=text
-checksum,0001016538-12-000010,"entry count off by >2, unexplained",rows=15 entry_total=1.0 value_sum=432336 value_total=432336.0 method=text
-checksum,0000846788-12-000008,entry total counts distinct CUSIPs not rows,rows=154 entry_total=155.0 value_sum=361093 value_total=361095.0 method=text
-checksum,0000883487-12-000005,value scale x1000 (dollars vs thousands),rows=44 entry_total=44.0 value_sum=30239 value_total=30239000.0 method=text
-checksum,0001193125-12-431030,"value off >1%, unexplained",rows=2732 entry_total=2732.0 value_sum=11415939 value_total=0.0 method=text
 checksum,0000898432-12-001163,entry total counts distinct CUSIPs not rows,rows=74 entry_total=75.0 value_sum=274805 value_total=250962.0 method=text
 checksum,0001044321-12-000179,"entry count off by >2, unexplained",rows=144 entry_total=194.0 value_sum=653244 value_total=697192.0 method=text
 checksum,0001144204-12-062497,"value off >1%, unexplained",rows=30 entry_total=30.0 value_sum=10177618 value_total=10616800.0 method=text
 checksum,0001376474-12-000380,"entry count off by >2, unexplained",rows=16 entry_total=10.0 value_sum=289049 value_total=28191125.0 method=text
 checksum,0001193125-12-466980,value scale x1000 (dollars vs thousands),rows=2034 entry_total=2034.0 value_sum=120942873136 value_total=120942873.0 method=text
+checksum,0001016538-12-000010,"entry count off by >2, unexplained",rows=15 entry_total=1.0 value_sum=432336 value_total=432336.0 method=text
+checksum,0000846788-12-000008,entry total counts distinct CUSIPs not rows,rows=154 entry_total=155.0 value_sum=361093 value_total=361095.0 method=text
+checksum,0000883487-12-000005,value scale x1000 (dollars vs thousands),rows=44 entry_total=44.0 value_sum=30239 value_total=30239000.0 method=text
+checksum,0001193125-12-431030,"value off >1%, unexplained",rows=2732 entry_total=2732.0 value_sum=11415939 value_total=0.0 method=text
 checksum,0000829407-12-000004,entry total counts distinct CUSIPs not rows,rows=227 entry_total=228.0 value_sum=465892 value_total=466302.0 method=text
 checksum,0000936941-12-000006,value scale x1000 (dollars vs thousands),rows=97 entry_total=97.0 value_sum=322514 value_total=322517000.0 method=text
 checksum,0001058217-12-000013,value scale x1000 (dollars vs thousands),rows=151 entry_total=151.0 value_sum=561805 value_total=561805000.0 method=text
 checksum,0001499266-12-000007,no rows parsed,rows=0 entry_total=66.0 value_sum=0 value_total=71815960.0 method=text
 checksum,0001193125-12-468835,"value off >1%, unexplained",rows=94 entry_total=94.0 value_sum=1833823 value_total=1883823.0 method=text
-checksum,0001473438-12-000005,value scale x1000 (dollars vs thousands),rows=336 entry_total=336.0 value_sum=222359 value_total=222363520.0 method=text
-checksum,0001547584-12-000005,entry total counts distinct CUSIPs not rows,rows=2 entry_total=0.0 value_sum=29861 value_total=29861.0 method=text
-checksum,0001371726-12-000004,"entry count off by >2, unexplained",rows=614 entry_total=622.0 value_sum=209810 value_total=209340.0 method=text
+checksum,0001140361-12-047401,"entry count off by >2, unexplained",rows=272 entry_total=275.0 value_sum=1152393 value_total=904015.0 method=text
+checksum,0001424196-12-000012,entry total counts distinct CUSIPs not rows,rows=35 entry_total=36.0 value_sum=424113 value_total=424115.0 method=text
 checksum,0000910472-12-003430,entry total counts distinct CUSIPs not rows,rows=187 entry_total=188.0 value_sum=273950 value_total=273950.0 method=text
 checksum,0001318757-12-000004,"entry count off by >2, unexplained",rows=97 entry_total=103.0 value_sum=504327 value_total=574891.0 method=text
 checksum,0001325091-12-000004,"entry count off by >2, unexplained",rows=558 entry_total=571.0 value_sum=1041141 value_total=1077043.0 method=text
-checksum,0001140361-12-047401,"entry count off by >2, unexplained",rows=272 entry_total=275.0 value_sum=1152393 value_total=904015.0 method=text
-checksum,0001424196-12-000012,entry total counts distinct CUSIPs not rows,rows=35 entry_total=36.0 value_sum=424113 value_total=424115.0 method=text
 checksum,0000950103-12-006104,"value off >1%, unexplained",rows=4 entry_total=4.0 value_sum=40229 value_total=133099.0 method=text
 checksum,0001511915-12-000004,"value off >1%, unexplained",rows=105 entry_total=nan value_sum=1056879 value_total=245420000.0 method=text
+checksum,0001473438-12-000005,value scale x1000 (dollars vs thousands),rows=336 entry_total=336.0 value_sum=222359 value_total=222363520.0 method=text
+checksum,0001547584-12-000005,entry total counts distinct CUSIPs not rows,rows=2 entry_total=0.0 value_sum=29861 value_total=29861.0 method=text
+checksum,0001371726-12-000004,"entry count off by >2, unexplained",rows=614 entry_total=622.0 value_sum=209810 value_total=209340.0 method=text
 checksum,0001512575-12-000005,"entry count off by >2, unexplained",rows=749 entry_total=753.0 value_sum=25710186 value_total=25770693.0 method=text
 checksum,0001410588-12-000004,value scale x1000 (dollars vs thousands),rows=84 entry_total=84.0 value_sum=78119 value_total=78117939.0 method=text
 checksum,0001520415-12-000011,"entry count off by >2, unexplained",rows=345 entry_total=350.0 value_sum=306668 value_total=306668.0 method=text
@@ -455,39 +452,40 @@ checksum,0001513122-12-000006,value scale x1000 (dollars vs thousands),rows=34 e
 checksum,0001308555-12-000012,value scale x1000 (dollars vs thousands),rows=30 entry_total=30.0 value_sum=141353 value_total=141353000.0 method=text
 checksum,0001462160-12-000004,value scale x1000 (dollars vs thousands),rows=734 entry_total=734.0 value_sum=36314136 value_total=36314132826.0 method=text
 checksum,0000939791-12-000004,value within 1% (rounding),rows=46 entry_total=46.0 value_sum=88234 value_total=88520.0 method=text
+checksum,0001193125-12-470566,"entry count off by >2, unexplained",rows=372 entry_total=375.0 value_sum=6754251 value_total=6758323.0 method=text
+checksum,0000019617-12-000323,value scale x1000 (dollars vs thousands),rows=26618 entry_total=26618.0 value_sum=277319058 value_total=277318978599.0 method=text
+checksum,0001208646-12-000336,"entry count off by >2, unexplained",rows=180 entry_total=184.0 value_sum=1769144140 value_total=1817266427.0 method=text
 checksum,0001047469-12-009265,"entry count off by >2, unexplained",rows=276 entry_total=256.0 value_sum=3505407 value_total=3165360.0 method=text
 checksum,0000071210-12-000004,value scale x1000 (dollars vs thousands),rows=372 entry_total=372.0 value_sum=826319 value_total=826319000.0 method=text
-checksum,0001141781-12-000009,"value off >1%, unexplained",rows=173 entry_total=173.0 value_sum=269826 value_total=928438.0 method=text
-checksum,0000314969-12-000008,value scale x1000 (dollars vs thousands),rows=1499 entry_total=1499.0 value_sum=34407073 value_total=34407073000.0 method=text
 checksum,0001105344-12-000006,entry total counts distinct CUSIPs not rows,rows=87 entry_total=88.0 value_sum=335076 value_total=335139.0 method=text
 checksum,0000072760-12-000030,value scale x1000 (dollars vs thousands),rows=5 entry_total=5.0 value_sum=63611694 value_total=63612.0 method=text
-checksum,0001398344-12-003194,"entry count off by >2, unexplained",rows=64 entry_total=102.0 value_sum=216854 value_total=289740.0 method=text
+checksum,0001141781-12-000009,"value off >1%, unexplained",rows=173 entry_total=173.0 value_sum=269826 value_total=928438.0 method=text
 checksum,0001103887-12-000008,"value off >1%, unexplained",rows=8 entry_total=8.0 value_sum=2112665 value_total=181865.0 method=text
 checksum,0000909012-12-000441,no rows parsed,rows=0 entry_total=137.0 value_sum=0 value_total=13921417493.0 method=text
+checksum,0001398344-12-003194,"entry count off by >2, unexplained",rows=64 entry_total=102.0 value_sum=216854 value_total=289740.0 method=text
+checksum,0000314969-12-000008,value scale x1000 (dollars vs thousands),rows=1499 entry_total=1499.0 value_sum=34407073 value_total=34407073000.0 method=text
 checksum,0001535679-12-000009,entry total counts distinct CUSIPs not rows,rows=52 entry_total=51.0 value_sum=129625 value_total=127946.0 method=text
 checksum,0001482010-12-000006,"entry count off by >2, unexplained",rows=172 entry_total=164.0 value_sum=169665 value_total=169665.0 method=text
 checksum,0001512914-12-000004,entry count off by <=2,rows=153 entry_total=154.0 value_sum=224380 value_total=224531.0 method=text
 checksum,0001374170-12-000030,no rows parsed,rows=0 entry_total=2108.0 value_sum=0 value_total=148373930.0 method=text
+checksum,0000949509-12-000039,entry total counts distinct CUSIPs not rows,rows=193 entry_total=194.0 value_sum=216601757 value_total=5826438.0 method=text
+checksum,0001073724-12-000004,value scale x1000 (dollars vs thousands),rows=6 entry_total=6.0 value_sum=23060 value_total=23060000.0 method=text
+checksum,0000073980-12-000009,value scale x1000 (dollars vs thousands),rows=290 entry_total=290.0 value_sum=251263650 value_total=251263.0 method=text
 checksum,0001342857-12-000042,value scale x1000 (dollars vs thousands),rows=667 entry_total=667.0 value_sum=303150 value_total=303165000.0 method=text
 checksum,0001144969-12-000022,value scale x1000 (dollars vs thousands),rows=7 entry_total=7.0 value_sum=2749529 value_total=2749529000.0 method=text
 checksum,0001193125-12-467410,"entry count off by >2, unexplained",rows=1 entry_total=1365.0 value_sum=1782155 value_total=12400380720.0 method=text
 checksum,0001423442-12-000011,value scale x1000 (dollars vs thousands),rows=1141 entry_total=1141.0 value_sum=4175780 value_total=4176341212.0 method=text
-checksum,0000949509-12-000039,entry total counts distinct CUSIPs not rows,rows=193 entry_total=194.0 value_sum=216601757 value_total=5826438.0 method=text
-checksum,0001073724-12-000004,value scale x1000 (dollars vs thousands),rows=6 entry_total=6.0 value_sum=23060 value_total=23060000.0 method=text
-checksum,0000073980-12-000009,value scale x1000 (dollars vs thousands),rows=290 entry_total=290.0 value_sum=251263650 value_total=251263.0 method=text
-checksum,0001448574-12-000004,entry off by <=2 and value off >1%,rows=239 entry_total=241.0 value_sum=4667022 value_total=2400376.0 method=text
-checksum,0000799003-12-000008,entry total counts distinct CUSIPs not rows,rows=42 entry_total=43.0 value_sum=84779 value_total=85093.0 method=text
-checksum,0001065441-12-000005,entry total counts distinct CUSIPs not rows,rows=1809 entry_total=1810.0 value_sum=13537879 value_total=13539689.0 method=text
-checksum,0000728889-12-001758,entry off by <=2 and value within 1%,rows=1088 entry_total=1090.0 value_sum=57592539 value_total=57952539.0 method=text
 checksum,0001085146-12-001440,"value off >1%, unexplained",rows=93 entry_total=93.0 value_sum=722437129977724 value_total=9992295.0 method=text
 checksum,0001005607-12-000008,"entry count off by >2, unexplained",rows=106 entry_total=110.0 value_sum=241516 value_total=242338.0 method=text
 checksum,0001102256-12-000007,entry total counts distinct CUSIPs not rows,rows=131 entry_total=72.0 value_sum=133563639 value_total=133563634.0 method=text
 checksum,0000903783-12-000009,entry total counts distinct CUSIPs not rows,rows=167 entry_total=87.0 value_sum=202286 value_total=191501.0 method=text
 checksum,0001193125-12-471569,no rows parsed,rows=0 entry_total=31.0 value_sum=0 value_total=234705.0 method=text
+checksum,0000728889-12-001758,entry off by <=2 and value within 1%,rows=1088 entry_total=1090.0 value_sum=57592539 value_total=57952539.0 method=text
 checksum,0001450791-12-000261,"value off >1%, unexplained",rows=104 entry_total=104.0 value_sum=18430000 value_total=546406.0 method=text
 checksum,0001018674-12-000004,no rows parsed,rows=0 entry_total=320.0 value_sum=0 value_total=559778.0 method=text
 checksum,0001127990-12-000008,entry off by <=2 and value within 1%,rows=218 entry_total=217.0 value_sum=1432983 value_total=1424125.0 method=text
 checksum,0001426318-12-000008,"entry count off by >2, unexplained",rows=45 entry_total=63671463.0 value_sum=2251575595 value_total=2251575594.0 method=text
+checksum,0001065441-12-000005,entry total counts distinct CUSIPs not rows,rows=1809 entry_total=1810.0 value_sum=13537879 value_total=13539689.0 method=text
 checksum,0001436871-12-000015,entry count off by <=2,rows=689 entry_total=690.0 value_sum=858887 value_total=858887.0 method=text
 checksum,0001193125-12-470402,value scale x1000 (dollars vs thousands),rows=62 entry_total=62.0 value_sum=2248182887 value_total=2248182.0 method=text
 checksum,0001108893-12-000004,value scale x1000 (dollars vs thousands),rows=31 entry_total=33.0 value_sum=388745 value_total=389574000.0 method=text
@@ -497,106 +495,105 @@ checksum,0001055975-12-000011,value scale x1000 (dollars vs thousands),rows=109 
 checksum,0001193125-12-446034,"entry count off by >2, unexplained",rows=3495 entry_total=818766945.0 value_sum=28868411 value_total=27635356.0 method=text
 checksum,0001144204-12-053991,value scale x1000 (dollars vs thousands),rows=479 entry_total=481.0 value_sum=1125976117 value_total=1126724.0 method=text
 checksum,0001144204-12-060780,entry total counts distinct CUSIPs not rows,rows=101 entry_total=100.0 value_sum=5863070 value_total=5863070.0 method=text
-checksum,0001193125-12-453281,no rows parsed,rows=0 entry_total=1606.0 value_sum=0 value_total=14765877.0 method=text
 checksum,0001144204-12-055447,value scale x1000 (dollars vs thousands),rows=177 entry_total=177.0 value_sum=268965035 value_total=268965.0 method=text
 checksum,0001034524-12-000005,"entry count off by >2, unexplained",rows=17 entry_total=1.0 value_sum=4175087 value_total=nan method=text
 checksum,0001166134-12-000018,"entry count off by >2, unexplained",rows=24 entry_total=35.0 value_sum=60817 value_total=60818.0 method=text
+checksum,0001193125-12-453281,no rows parsed,rows=0 entry_total=1606.0 value_sum=0 value_total=14765877.0 method=text
 checksum,0000722885-12-000076,"value off >1%, unexplained",rows=16 entry_total=16.0 value_sum=39525 value_total=1754.0 method=text
+checksum,0001448574-12-000004,entry off by <=2 and value off >1%,rows=239 entry_total=241.0 value_sum=4667022 value_total=2400376.0 method=text
+checksum,0000799003-12-000008,entry total counts distinct CUSIPs not rows,rows=42 entry_total=43.0 value_sum=84779 value_total=85093.0 method=text
 checksum,0001142031-12-000020,value scale x1000 (dollars vs thousands),rows=74 entry_total=74.0 value_sum=1228738 value_total=1228735000.0 method=text
 checksum,0000894205-12-000009,"entry count off by >2, unexplained",rows=15 entry_total=49.0 value_sum=101215 value_total=306544.0 method=text
-checksum,0001006435-12-000008,entry total counts distinct CUSIPs not rows,rows=121 entry_total=58.0 value_sum=118122795 value_total=118122792.0 method=text
-checksum,0001034886-12-000008,entry off by <=2 and value off >1%,rows=258 entry_total=260.0 value_sum=500078 value_total=505569.0 method=text
-checksum,0001193125-12-447878,"value off >1%, unexplained",rows=3150 entry_total=3150.0 value_sum=16783242626 value_total=42920613.0 method=text
 checksum,0001140361-12-046466,value scale x1000 (dollars vs thousands),rows=123 entry_total=122.0 value_sum=11978521 value_total=11978521000.0 method=text
 checksum,0001388443-12-000006,"entry count off by >2, unexplained",rows=39 entry_total=55.0 value_sum=14488739 value_total=97487.0 method=text
 checksum,0001301542-12-000009,entry total counts distinct CUSIPs not rows,rows=563 entry_total=565.0 value_sum=631480 value_total=631491.0 method=text
 checksum,0001534259-12-000005,entry total counts distinct CUSIPs not rows,rows=56 entry_total=58.0 value_sum=63411 value_total=63828.0 method=text
-checksum,0001140361-12-043681,"entry count off by >2, unexplained",rows=123 entry_total=136.0 value_sum=415262832 value_total=434221027.0 method=text
 checksum,0001534259-12-000006,entry total counts distinct CUSIPs not rows,rows=47 entry_total=49.0 value_sum=70665 value_total=71550.0 method=text
 checksum,0001534259-12-000008,entry total counts distinct CUSIPs not rows,rows=70 entry_total=72.0 value_sum=181510 value_total=182382.0 method=text
 checksum,0001080132-12-000004,value scale x1000 (dollars vs thousands),rows=80 entry_total=80.0 value_sum=97143 value_total=97143193.0 method=text
+checksum,0001006435-12-000008,entry total counts distinct CUSIPs not rows,rows=121 entry_total=58.0 value_sum=118122795 value_total=118122792.0 method=text
+checksum,0001034886-12-000008,entry off by <=2 and value off >1%,rows=258 entry_total=260.0 value_sum=500078 value_total=505569.0 method=text
+checksum,0001193125-12-447878,"value off >1%, unexplained",rows=3150 entry_total=3150.0 value_sum=16783242626 value_total=42920613.0 method=text
+checksum,0001140361-12-043681,"entry count off by >2, unexplained",rows=123 entry_total=136.0 value_sum=415262832 value_total=434221027.0 method=text
 checksum,0001381055-12-000008,entry count off by <=2,rows=159 entry_total=160.0 value_sum=81307 value_total=81353.0 method=text
 checksum,0001297731-12-000004,"entry count off by >2, unexplained",rows=2 entry_total=194.0 value_sum=952 value_total=492834.0 method=text
 checksum,0001535227-12-000007,entry total counts distinct CUSIPs not rows,rows=135 entry_total=114.0 value_sum=80194 value_total=80194.0 method=text
-checksum,0000898417-12-000057,"value off >1%, unexplained",rows=543 entry_total=543.0 value_sum=58558321914783 value_total=15028779.0 method=text
-checksum,0000315297-12-000025,entry total counts distinct CUSIPs not rows,rows=2283 entry_total=2284.0 value_sum=12228123 value_total=12228198.0 method=text
-checksum,0001007280-12-000009,"entry count off by >2, unexplained",rows=1359 entry_total=1363.0 value_sum=127076615096635 value_total=18194037.0 method=text
-checksum,0001140334-12-000004,entry total counts distinct CUSIPs not rows,rows=182 entry_total=184.0 value_sum=679041 value_total=679060.0 method=text
-checksum,0001356783-12-000004,value scale x1000 (dollars vs thousands),rows=237 entry_total=237.0 value_sum=1046751 value_total=1055.0 method=text
-checksum,0001144204-12-062127,entry count off by <=2,rows=86 entry_total=87.0 value_sum=71427 value_total=71446.0 method=text
 checksum,0000910662-12-000325,value within 1% (rounding),rows=234 entry_total=234.0 value_sum=1979385 value_total=1985262.0 method=text
 checksum,0001144969-12-000023,"value off >1%, unexplained",rows=55 entry_total=55.0 value_sum=7952183382346 value_total=1410309000.0 method=text
-checksum,0001193125-12-435144,value scale x1000 (dollars vs thousands),rows=135 entry_total=31249214.0 value_sum=1125550423 value_total=1168183.0 method=text
-checksum,0001515072-12-000010,"entry count off by >2, unexplained",rows=90 entry_total=195132.0 value_sum=195132 value_total=nan method=text
+checksum,0001356783-12-000004,value scale x1000 (dollars vs thousands),rows=237 entry_total=237.0 value_sum=1046751 value_total=1055.0 method=text
 checksum,0001534691-12-000009,entry off by <=2 and value within 1%,rows=52 entry_total=53.0 value_sum=62617314 value_total=62415700.0 method=text
+checksum,0001144204-12-062127,entry count off by <=2,rows=86 entry_total=87.0 value_sum=71427 value_total=71446.0 method=text
 checksum,0001483914-12-000005,"value off >1%, unexplained",rows=10 entry_total=10.0 value_sum=9421000 value_total=11281.0 method=text
 checksum,0000894579-12-000323,entry total counts distinct CUSIPs not rows,rows=26 entry_total=25.0 value_sum=109844 value_total=109844.0 method=text
 checksum,0001280511-12-000004,"entry count off by >2, unexplained",rows=280 entry_total=287.0 value_sum=280007 value_total=285445.0 method=text
 checksum,0001208646-12-000334,no rows parsed,rows=0 entry_total=2.0 value_sum=0 value_total=174214.0 method=text
 checksum,0000909518-12-000349,"value off >1%, unexplained",rows=2 entry_total=2.0 value_sum=174852 value_total=147852.0 method=text
+checksum,0001193125-12-435144,value scale x1000 (dollars vs thousands),rows=135 entry_total=31249214.0 value_sum=1125550423 value_total=1168183.0 method=text
+checksum,0001515072-12-000010,"entry count off by >2, unexplained",rows=90 entry_total=195132.0 value_sum=195132 value_total=nan method=text
+checksum,0000898417-12-000057,"value off >1%, unexplained",rows=543 entry_total=543.0 value_sum=58558321914783 value_total=15028779.0 method=text
+checksum,0000315297-12-000025,entry total counts distinct CUSIPs not rows,rows=2283 entry_total=2284.0 value_sum=12228123 value_total=12228198.0 method=text
+checksum,0001007280-12-000009,"entry count off by >2, unexplained",rows=1359 entry_total=1363.0 value_sum=127076615096635 value_total=18194037.0 method=text
+checksum,0001140334-12-000004,entry total counts distinct CUSIPs not rows,rows=182 entry_total=184.0 value_sum=679041 value_total=679060.0 method=text
 checksum,0001281761-12-000005,entry count off by <=2,rows=1699 entry_total=1698.0 value_sum=6841364 value_total=6840499.0 method=text
 checksum,0001388028-12-000005,value scale x1000 (dollars vs thousands),rows=57 entry_total=57.0 value_sum=224302 value_total=224302000.0 method=text
 checksum,0001080298-12-000005,entry total counts distinct CUSIPs not rows,rows=192 entry_total=193.0 value_sum=879132849 value_total=879132849.0 method=text
-checksum,0001323953-12-000028,entry total counts distinct CUSIPs not rows,rows=14 entry_total=16.0 value_sum=223247 value_total=239458.0 method=text
-checksum,0001193125-12-465940,entry count off by <=2,rows=482 entry_total=483.0 value_sum=548023 value_total=547955.0 method=text
+checksum,0001332905-12-000011,value scale x1000 (dollars vs thousands),rows=447 entry_total=449.0 value_sum=1123532 value_total=1123.0 method=text
 checksum,0001115418-12-000042,entry total counts distinct CUSIPs not rows,rows=2885 entry_total=2886.0 value_sum=26733127 value_total=26733330.0 method=text
 checksum,0001135428-12-000514,value scale x1000 (dollars vs thousands),rows=267 entry_total=267.0 value_sum=955578 value_total=955578000.0 method=text
 checksum,0001112325-12-000026,"value off >1%, unexplained",rows=126 entry_total=126.0 value_sum=376567026047 value_total=3050582.0 method=text
-checksum,0001332905-12-000011,value scale x1000 (dollars vs thousands),rows=447 entry_total=449.0 value_sum=1123532 value_total=1123.0 method=text
+checksum,0001323953-12-000028,entry total counts distinct CUSIPs not rows,rows=14 entry_total=16.0 value_sum=223247 value_total=239458.0 method=text
+checksum,0001193125-12-465940,entry count off by <=2,rows=482 entry_total=483.0 value_sum=548023 value_total=547955.0 method=text
 checksum,0001089710-12-000004,entry total counts distinct CUSIPs not rows,rows=110 entry_total=111.0 value_sum=106482 value_total=106482.0 method=text
+checksum,0001475150-12-000005,value scale x1000 (dollars vs thousands),rows=41 entry_total=41.0 value_sum=489620344 value_total=489620.0 method=text
+checksum,0001462284-12-000008,"entry count off by >2, unexplained",rows=872 entry_total=845.0 value_sum=2192799 value_total=1935697.0 method=text
+checksum,0001144204-12-055618,entry total counts distinct CUSIPs not rows,rows=155 entry_total=157.0 value_sum=110884 value_total=110895.0 method=text
+checksum,0001389307-12-000010,entry total counts distinct CUSIPs not rows,rows=53 entry_total=51.0 value_sum=159837493 value_total=159837491.0 method=text
 checksum,0001242972-12-000009,"entry count off by >2, unexplained",rows=72 entry_total=371.0 value_sum=30058 value_total=944996.0 method=text
 checksum,0001242972-12-000010,"entry count off by >2, unexplained",rows=81 entry_total=380.0 value_sum=29576 value_total=1027656.0 method=text
 checksum,0001242972-12-000011,"entry count off by >2, unexplained",rows=77 entry_total=394.0 value_sum=27422 value_total=1010054.0 method=text
 checksum,0001242972-12-000012,"entry count off by >2, unexplained",rows=86 entry_total=434.0 value_sum=28702 value_total=1104467.0 method=text
 checksum,0000918893-12-000009,value scale x1000 (dollars vs thousands),rows=58 entry_total=nan value_sum=146129 value_total=146128901.0 method=text
+checksum,0001546927-12-000066,"entry count off by >2, unexplained",rows=122 entry_total=145.0 value_sum=14535 value_total=299045.0 method=text
+checksum,0001387304-12-000008,"entry count off by >2, unexplained",rows=8 entry_total=55.0 value_sum=16718 value_total=437448.0 method=text
 checksum,0001242972-12-000005,"entry count off by >2, unexplained",rows=82 entry_total=421.0 value_sum=29597 value_total=349191.0 method=text
 checksum,0001242972-12-000006,"entry count off by >2, unexplained",rows=83 entry_total=415.0 value_sum=31852 value_total=362744.0 method=text
 checksum,0001242972-12-000007,"entry count off by >2, unexplained",rows=78 entry_total=425.0 value_sum=28274 value_total=404255.0 method=text
 checksum,0001242972-12-000008,"entry count off by >2, unexplained",rows=69 entry_total=369.0 value_sum=24833 value_total=674678.0 method=text
-checksum,0001475150-12-000005,value scale x1000 (dollars vs thousands),rows=41 entry_total=41.0 value_sum=489620344 value_total=489620.0 method=text
-checksum,0001462284-12-000008,"entry count off by >2, unexplained",rows=872 entry_total=845.0 value_sum=2192799 value_total=1935697.0 method=text
-checksum,0001144204-12-055618,entry total counts distinct CUSIPs not rows,rows=155 entry_total=157.0 value_sum=110884 value_total=110895.0 method=text
-checksum,0001389307-12-000010,entry total counts distinct CUSIPs not rows,rows=53 entry_total=51.0 value_sum=159837493 value_total=159837491.0 method=text
-checksum,0001546927-12-000066,"entry count off by >2, unexplained",rows=122 entry_total=145.0 value_sum=14535 value_total=299045.0 method=text
-checksum,0001387304-12-000008,"entry count off by >2, unexplained",rows=8 entry_total=55.0 value_sum=16718 value_total=437448.0 method=text
 checksum,0001397290-12-000007,value within 1% (rounding),rows=130 entry_total=130.0 value_sum=159930 value_total=159573.0 method=text
 checksum,0001331693-12-000004,entry total counts distinct CUSIPs not rows,rows=20 entry_total=21.0 value_sum=135133 value_total=140111.0 method=text
-checksum,0000909012-12-000410,"entry count off by >2, unexplained",rows=194 entry_total=197.0 value_sum=6347972 value_total=6348974.0 method=text
 checksum,0001193125-12-470714,entry count off by <=2,rows=66 entry_total=68.0 value_sum=283585 value_total=283585.0 method=text
+checksum,0000909012-12-000410,"entry count off by >2, unexplained",rows=194 entry_total=197.0 value_sum=6347972 value_total=6348974.0 method=text
 checksum,0001090413-12-000005,"entry count off by >2, unexplained",rows=85 entry_total=8676938.0 value_sum=593212 value_total=593256.0 method=text
 checksum,0001193125-12-469623,"entry count off by >2, unexplained",rows=264 entry_total=525.0 value_sum=17232468979 value_total=26073271.0 method=text
 checksum,0001193125-12-473557,value scale x1000 (dollars vs thousands),rows=307 entry_total=307.0 value_sum=6442953 value_total=6442.0 method=text
 checksum,0001398344-12-003487,entry total counts distinct CUSIPs not rows,rows=26 entry_total=27.0 value_sum=113811 value_total=114866.0 method=text
-checksum,0001085256-12-000032,entry total counts distinct CUSIPs not rows,rows=288 entry_total=290.0 value_sum=11443694 value_total=12523086.0 method=text
-checksum,0001193125-12-448442,"value off >1%, unexplained",rows=12803 entry_total=12803.0 value_sum=43480714 value_total=0.0 method=text
-checksum,0001144969-12-000024,value scale x1000 (dollars vs thousands),rows=75 entry_total=75.0 value_sum=673883 value_total=673883000.0 method=text
+checksum,0001303159-12-000006,entry total counts distinct CUSIPs not rows,rows=9 entry_total=10.0 value_sum=610597 value_total=610597.0 method=text
 checksum,0000919574-12-006512,entry total counts distinct CUSIPs not rows,rows=54 entry_total=45.0 value_sum=2790088 value_total=2790088.0 method=text
 checksum,0001264128-12-000065,entry count off by <=2,rows=125 entry_total=126.0 value_sum=2667758 value_total=2667758.0 method=text
 checksum,0000092230-12-000103,"value off >1%, unexplained",rows=619 entry_total=619.0 value_sum=47126055 value_total=4712605500.0 method=text
-checksum,0001303159-12-000006,entry total counts distinct CUSIPs not rows,rows=9 entry_total=10.0 value_sum=610597 value_total=610597.0 method=text
-checksum,0001068829-12-000018,value scale x1000 (dollars vs thousands),rows=42 entry_total=42.0 value_sum=3413379 value_total=3413379389.0 method=text
-checksum,0001008895-12-000004,entry total counts distinct CUSIPs not rows,rows=83 entry_total=84.0 value_sum=202189 value_total=nan method=text
 checksum,0000908195-12-000005,value scale x1000 (dollars vs thousands),rows=255 entry_total=255.0 value_sum=752609 value_total=752698907.0 method=text
 checksum,0001456048-12-000004,"entry count off by >2, unexplained",rows=614 entry_total=622.0 value_sum=209810 value_total=209340.0 method=text
-checksum,0001171843-12-003962,entry off by <=2 and value off >1%,rows=121 entry_total=122.0 value_sum=198380 value_total=208950.0 method=text
+checksum,0001068829-12-000018,value scale x1000 (dollars vs thousands),rows=42 entry_total=42.0 value_sum=3413379 value_total=3413379389.0 method=text
 checksum,0001047469-12-009839,value scale x1000 (dollars vs thousands),rows=380 entry_total=380.0 value_sum=2204448953 value_total=2204449.0 method=text
 checksum,0001082509-12-000005,entry total counts distinct CUSIPs not rows,rows=79 entry_total=78.0 value_sum=308715 value_total=308715.0 method=text
-checksum,0000844150-12-000014,value scale x1000 (dollars vs thousands),rows=1611 entry_total=1611.0 value_sum=6787798 value_total=6787796535.0 method=text
-checksum,0000863748-12-000008,"value off >1%, unexplained",rows=535 entry_total=535.0 value_sum=2847441719 value_total=2887165184.0 method=text
-checksum,0001193125-12-465426,"value off >1%, unexplained",rows=50 entry_total=50.0 value_sum=826153 value_total=1012366.0 method=text
-checksum,0001193125-12-462539,"entry count off by >2, unexplained",rows=1046 entry_total=746.0 value_sum=356155 value_total=356155.0 method=text
-checksum,0001144204-12-062821,"entry count off by >2, unexplained",rows=59 entry_total=159156.0 value_sum=159156654 value_total=nan method=text
-checksum,0000807985-12-000046,"value off >1%, unexplained",rows=84 entry_total=84.0 value_sum=22812481 value_total=23271019.0 method=text
+checksum,0001171843-12-003962,entry off by <=2 and value off >1%,rows=121 entry_total=122.0 value_sum=198380 value_total=208950.0 method=text
+checksum,0001008895-12-000004,entry total counts distinct CUSIPs not rows,rows=83 entry_total=84.0 value_sum=202189 value_total=nan method=text
 checksum,0000900169-12-000005,value scale x1000 (dollars vs thousands),rows=42 entry_total=42.0 value_sum=314372 value_total=314372000.0 method=text
 checksum,0001134319-12-000010,value scale x1000 (dollars vs thousands),rows=37 entry_total=37.0 value_sum=79583 value_total=79582088.0 method=text
 checksum,0001218761-12-000004,"value off >1%, unexplained",rows=35 entry_total=35.0 value_sum=1534946 value_total=1.0 method=text
+checksum,0001085256-12-000032,entry total counts distinct CUSIPs not rows,rows=288 entry_total=290.0 value_sum=11443694 value_total=12523086.0 method=text
+checksum,0001193125-12-448442,"value off >1%, unexplained",rows=12803 entry_total=12803.0 value_sum=43480714 value_total=0.0 method=text
+checksum,0001144969-12-000024,value scale x1000 (dollars vs thousands),rows=75 entry_total=75.0 value_sum=673883 value_total=673883000.0 method=text
+checksum,0001144204-12-062821,"entry count off by >2, unexplained",rows=59 entry_total=159156.0 value_sum=159156654 value_total=nan method=text
+checksum,0000807985-12-000046,"value off >1%, unexplained",rows=84 entry_total=84.0 value_sum=22812481 value_total=23271019.0 method=text
+checksum,0001193125-12-462539,"entry count off by >2, unexplained",rows=1046 entry_total=746.0 value_sum=356155 value_total=356155.0 method=text
 checksum,0000904454-12-000644,value scale x1000 (dollars vs thousands),rows=12 entry_total=12.0 value_sum=316271000 value_total=316272.0 method=text
 checksum,0001383838-12-000013,"value off >1%, unexplained",rows=17 entry_total=17.0 value_sum=2098620454848 value_total=100762.0 method=text
 checksum,0001193125-12-491522,value scale x1000 (dollars vs thousands),rows=2332 entry_total=2333.0 value_sum=493959 value_total=495129000.0 method=text
-checksum,0001171520-12-000976,entry total counts distinct CUSIPs not rows,rows=66 entry_total=65.0 value_sum=83723 value_total=nan method=text
-checksum,0000891092-12-006867,"value off >1%, unexplained",rows=121 entry_total=121.0 value_sum=377264992 value_total=41656.0 method=text
 checksum,0000919533-12-000004,"value off >1%, unexplained",rows=62 entry_total=62.0 value_sum=111188 value_total=11115.0 method=text
 checksum,0000948905-12-000003,"value off >1%, unexplained",rows=1250 entry_total=1250.0 value_sum=6038687 value_total=4157673.0 method=text
+checksum,0001171520-12-000976,entry total counts distinct CUSIPs not rows,rows=66 entry_total=65.0 value_sum=83723 value_total=nan method=text
+checksum,0000891092-12-006867,"value off >1%, unexplained",rows=121 entry_total=121.0 value_sum=377264992 value_total=41656.0 method=text
 checksum,0001056868-12-000008,value scale x1000 (dollars vs thousands),rows=53 entry_total=52.0 value_sum=217034 value_total=206295000.0 method=text
 checksum,0001047469-12-010476,"entry count off by >2, unexplained",rows=209 entry_total=214.0 value_sum=1818702 value_total=1907161.0 method=text
 checksum,0001316617-12-000011,value scale x1000 (dollars vs thousands),rows=423 entry_total=432.0 value_sum=3570989 value_total=3613.0 method=text
@@ -605,81 +602,82 @@ checksum,0001426327-12-000008,"entry count off by >2, unexplained",rows=26 entry
 checksum,0000943440-12-001147,"value off >1%, unexplained",rows=44 entry_total=44.0 value_sum=221782 value_total=211779.0 method=text
 checksum,0001443689-12-000013,"value off >1%, unexplained",rows=48 entry_total=48.0 value_sum=7225044 value_total=2977874.0 method=text
 checksum,0001509550-12-000010,entry total counts distinct CUSIPs not rows,rows=54 entry_total=55.0 value_sum=95215 value_total=95213.0 method=text
-checksum,0001002672-12-000009,"entry count off by >2, unexplained",rows=137 entry_total=164.0 value_sum=91827 value_total=249285.0 method=text
-checksum,0001193125-12-466409,"value off >1%, unexplained",rows=3620 entry_total=3620.0 value_sum=654383975 value_total=676544855.0 method=text
 checksum,0001555909-12-000004,"entry count off by >2, unexplained",rows=267 entry_total=277.0 value_sum=185328374 value_total=185328362.0 method=text
-checksum,0001269107-12-000010,"value off >1%, unexplained",rows=16 entry_total=16.0 value_sum=3120156 value_total=1145787.0 method=text
 checksum,0001353968-12-000008,entry total counts distinct CUSIPs not rows,rows=5 entry_total=6.0 value_sum=106501 value_total=126377.0 method=text
 checksum,0001333792-12-000005,"entry count off by >2, unexplained",rows=20 entry_total=70.0 value_sum=34516 value_total=136128.0 method=text
 checksum,0001513227-12-000005,"value off >1%, unexplained",rows=28 entry_total=28.0 value_sum=110777 value_total=130748.0 method=text
 checksum,0001532618-12-000005,entry off by <=2 and value within 1%,rows=33 entry_total=35.0 value_sum=126745 value_total=127449.0 method=text
+checksum,0000844150-12-000014,value scale x1000 (dollars vs thousands),rows=1611 entry_total=1611.0 value_sum=6787798 value_total=6787796535.0 method=text
+checksum,0000863748-12-000008,"value off >1%, unexplained",rows=535 entry_total=535.0 value_sum=2847441719 value_total=2887165184.0 method=text
+checksum,0001193125-12-465426,"value off >1%, unexplained",rows=50 entry_total=50.0 value_sum=826153 value_total=1012366.0 method=text
+checksum,0001269107-12-000010,"value off >1%, unexplained",rows=16 entry_total=16.0 value_sum=3120156 value_total=1145787.0 method=text
 checksum,0001506222-12-000005,"entry count off by >2, unexplained",rows=15 entry_total=268.0 value_sum=80731 value_total=186.0 method=text
 checksum,0001505708-12-000004,"entry count off by >2, unexplained",rows=614 entry_total=1.0 value_sum=12529770 value_total=12529770.0 method=text
 checksum,0001521536-12-001142,value scale x1000 (dollars vs thousands),rows=21 entry_total=21.0 value_sum=685 value_total=693966.0 method=text
 checksum,0001438574-12-000005,"value off >1%, unexplained",rows=126 entry_total=126.0 value_sum=1775446 value_total=113148.0 method=text
 checksum,0001482970-12-000006,value within 1% (rounding),rows=42 entry_total=42.0 value_sum=154744 value_total=155118.0 method=text
+checksum,0001002672-12-000009,"entry count off by >2, unexplained",rows=137 entry_total=164.0 value_sum=91827 value_total=249285.0 method=text
+checksum,0001193125-12-466409,"value off >1%, unexplained",rows=3620 entry_total=3620.0 value_sum=654383975 value_total=676544855.0 method=text
+checksum,0001055980-12-000004,"entry count off by >2, unexplained",rows=34 entry_total=240.0 value_sum=50772 value_total=324585000.0 method=text
 checksum,0001519676-12-000004,no rows parsed,rows=0 entry_total=25.0 value_sum=0 value_total=117343.0 method=text
 checksum,0001140361-12-045787,"entry count off by >2, unexplained",rows=396 entry_total=401.0 value_sum=126528 value_total=127648.0 method=text
-checksum,0001055980-12-000004,"entry count off by >2, unexplained",rows=34 entry_total=240.0 value_sum=50772 value_total=324585000.0 method=text
 checksum,0001512901-12-000008,value scale x1000 (dollars vs thousands),rows=90 entry_total=90.0 value_sum=465515 value_total=465516000.0 method=text
 checksum,0001193125-12-428104,"value off >1%, unexplained",rows=21 entry_total=21.0 value_sum=44268 value_total=0.0 method=text
 checksum,0001172661-12-001192,"value off >1%, unexplained",rows=53 entry_total=53.0 value_sum=114468109980506 value_total=1245974.0 method=text
 checksum,0001193125-12-412285,entry off by <=2 and value within 1%,rows=219 entry_total=218.0 value_sum=133836 value_total=132993.0 method=text
 checksum,0001111830-12-000821,entry total counts distinct CUSIPs not rows,rows=1509 entry_total=1510.0 value_sum=1814511 value_total=1814753.0 method=text
-checksum,0000930413-12-006131,"entry count off by >2, unexplained",rows=2999 entry_total=3042.0 value_sum=29342380 value_total=29672991.0 method=text
-checksum,0000714142-12-000005,"entry count off by >2, unexplained",rows=2720 entry_total=2244.0 value_sum=965042142 value_total=9350831.0 method=text
-checksum,0001144204-12-059943,entry total counts distinct CUSIPs not rows,rows=2 entry_total=3.0 value_sum=202085 value_total=227432.0 method=text
-checksum,0000796848-12-000006,value within 1% (rounding),rows=2523 entry_total=2523.0 value_sum=12722874 value_total=12695359.0 method=text
 checksum,0000884535-12-000004,value scale x1000 (dollars vs thousands),rows=76 entry_total=72.0 value_sum=300118 value_total=300116294.0 method=text
-checksum,0001290668-12-000008,"entry count off by >2, unexplained",rows=82 entry_total=1.0 value_sum=2904623 value_total=nan method=text
-checksum,0000816788-12-000004,value scale x1000 (dollars vs thousands),rows=35 entry_total=nan value_sum=25960 value_total=25960000.0 method=text
 checksum,0000866780-12-000004,"entry count off by >2, unexplained",rows=104 entry_total=1.0 value_sum=154480 value_total=0.0 method=text
 checksum,0001336657-12-000007,entry total counts distinct CUSIPs not rows,rows=57 entry_total=56.0 value_sum=30296 value_total=30296.0 method=text
 checksum,0001278249-12-000008,entry total counts distinct CUSIPs not rows,rows=380 entry_total=190.0 value_sum=1153764038 value_total=576882005.0 method=text
+checksum,0000930413-12-006131,"entry count off by >2, unexplained",rows=2999 entry_total=3042.0 value_sum=29342380 value_total=29672991.0 method=text
+checksum,0000714142-12-000005,"entry count off by >2, unexplained",rows=2720 entry_total=2244.0 value_sum=965042142 value_total=9350831.0 method=text
+checksum,0001144204-12-059943,entry total counts distinct CUSIPs not rows,rows=2 entry_total=3.0 value_sum=202085 value_total=227432.0 method=text
 checksum,0001112179-12-000004,value scale x1000 (dollars vs thousands),rows=56 entry_total=56.0 value_sum=119257 value_total=119255667.0 method=text
 checksum,0000884541-12-000004,entry count off by <=2,rows=267 entry_total=268.0 value_sum=563884 value_total=563966.0 method=text
+checksum,0000796848-12-000006,value within 1% (rounding),rows=2523 entry_total=2523.0 value_sum=12722874 value_total=12695359.0 method=text
+checksum,0001193125-12-466905,"value off >1%, unexplained",rows=2023 entry_total=2023.0 value_sum=13091852 value_total=12747435.0 method=text
+checksum,0000930413-12-006130,"entry count off by >2, unexplained",rows=3018 entry_total=3063.0 value_sum=112405283 value_total=113916708.0 method=text
 checksum,0001527488-12-000012,entry total counts distinct CUSIPs not rows,rows=171 entry_total=115.0 value_sum=1099989 value_total=1099989.0 method=text
 checksum,0001140361-12-044971,"entry count off by >2, unexplained",rows=982 entry_total=1113.0 value_sum=10527185 value_total=9637316.0 method=text
 checksum,0000909012-12-000418,"entry count off by >2, unexplained",rows=296 entry_total=301.0 value_sum=3172168 value_total=3195211.0 method=text
-checksum,0001193125-12-466905,"value off >1%, unexplained",rows=2023 entry_total=2023.0 value_sum=13091852 value_total=12747435.0 method=text
-checksum,0000930413-12-006130,"entry count off by >2, unexplained",rows=3018 entry_total=3063.0 value_sum=112405283 value_total=113916708.0 method=text
+checksum,0001144204-12-059947,"entry count off by >2, unexplained",rows=6 entry_total=9.0 value_sum=487888 value_total=804972.0 method=text
+checksum,0001382078-12-000004,entry total counts distinct CUSIPs not rows,rows=74 entry_total=75.0 value_sum=8266248 value_total=3497359.0 method=text
+checksum,0001290668-12-000008,"entry count off by >2, unexplained",rows=82 entry_total=1.0 value_sum=2904623 value_total=nan method=text
+checksum,0000816788-12-000004,value scale x1000 (dollars vs thousands),rows=35 entry_total=nan value_sum=25960 value_total=25960000.0 method=text
 checksum,0001083323-12-000004,"entry count off by >2, unexplained",rows=132 entry_total=149.0 value_sum=101648653 value_total=nan method=text
 checksum,0001134008-12-000008,entry total counts distinct CUSIPs not rows,rows=978 entry_total=699.0 value_sum=433789448 value_total=433789438.0 method=text
 checksum,0001140361-12-043490,entry off by <=2 and value within 1%,rows=187 entry_total=189.0 value_sum=102329 value_total=102997.0 method=text
 checksum,0000036146-12-000145,"entry count off by >2, unexplained",rows=343 entry_total=333.0 value_sum=380699 value_total=368115.0 method=text
-checksum,0001144204-12-059947,"entry count off by >2, unexplained",rows=6 entry_total=9.0 value_sum=487888 value_total=804972.0 method=text
-checksum,0001382078-12-000004,entry total counts distinct CUSIPs not rows,rows=74 entry_total=75.0 value_sum=8266248 value_total=3497359.0 method=text
 checksum,0001144204-12-059949,"entry count off by >2, unexplained",rows=1 entry_total=6.0 value_sum=4173 value_total=123376.0 method=text
-checksum,0001483532-12-000004,"entry count off by >2, unexplained",rows=4 entry_total=9.0 value_sum=25 value_total=81572.0 method=text
-checksum,0001059187-12-000008,value scale x1000 (dollars vs thousands),rows=481 entry_total=481.0 value_sum=1109208 value_total=1109209000.0 method=text
 checksum,0000909012-12-000440,no rows parsed,rows=0 entry_total=116.0 value_sum=0 value_total=6053294588.0 method=text
 checksum,0001502149-12-000018,"entry count off by >2, unexplained",rows=554 entry_total=559.0 value_sum=377416 value_total=378161.0 method=text
 checksum,0001345471-12-000107,"value off >1%, unexplained",rows=12 entry_total=12.0 value_sum=3297734 value_total=3512849.0 method=text
 checksum,0001441888-12-000005,value scale x1000 (dollars vs thousands),rows=219 entry_total=221.0 value_sum=544627 value_total=544642000.0 method=text
-checksum,0001294223-12-000012,"entry count off by >2, unexplained",rows=3680 entry_total=3694.0 value_sum=30494428 value_total=29132928.0 method=text
+checksum,0001483532-12-000004,"entry count off by >2, unexplained",rows=4 entry_total=9.0 value_sum=25 value_total=81572.0 method=text
+checksum,0001059187-12-000008,value scale x1000 (dollars vs thousands),rows=481 entry_total=481.0 value_sum=1109208 value_total=1109209000.0 method=text
 checksum,0000894135-12-000007,value scale x1000 (dollars vs thousands),rows=94 entry_total=94.0 value_sum=1654964 value_total=1652182000.0 method=text
-checksum,0000908695-12-000272,"value off >1%, unexplained",rows=1224 entry_total=1224.0 value_sum=4489998 value_total=20354534.0 method=text
 checksum,0001193125-12-467360,value scale x1000 (dollars vs thousands),rows=17 entry_total=17.0 value_sum=146593 value_total=146593000.0 method=text
-checksum,0000036104-12-000075,"entry count off by >2, unexplained",rows=3158 entry_total=5192.0 value_sum=13168871 value_total=20551334.0 method=text
-checksum,0000909518-12-000346,value scale x1000 (dollars vs thousands),rows=124 entry_total=124.0 value_sum=517979713 value_total=517980.0 method=text
+checksum,0001294223-12-000012,"entry count off by >2, unexplained",rows=3680 entry_total=3694.0 value_sum=30494428 value_total=29132928.0 method=text
 checksum,0001534561-12-000010,"entry count off by >2, unexplained",rows=41 entry_total=0.0 value_sum=198912 value_total=198912.0 method=text
 checksum,0000891092-12-006800,no rows parsed,rows=0 entry_total=2852.0 value_sum=0 value_total=814106564.0 method=text
 checksum,0001425845-12-000009,entry total counts distinct CUSIPs not rows,rows=282 entry_total=283.0 value_sum=282995318 value_total=283015889.0 method=text
 checksum,0001533964-12-000005,"entry count off by >2, unexplained",rows=636 entry_total=711.0 value_sum=1080733 value_total=1652414.0 method=text
 checksum,0001417889-12-000005,entry total counts distinct CUSIPs not rows,rows=69 entry_total=70.0 value_sum=521041 value_total=521503.0 method=text
-checksum,0001047469-12-010546,"value off >1%, unexplained",rows=446 entry_total=446.0 value_sum=272589 value_total=284050.0 method=text
+checksum,0000908695-12-000272,"value off >1%, unexplained",rows=1224 entry_total=1224.0 value_sum=4489998 value_total=20354534.0 method=text
+checksum,0001132556-12-000010,no rows parsed,rows=0 entry_total=129.0 value_sum=0 value_total=275215.0 method=text
+checksum,0000920440-12-000004,"entry count off by >2, unexplained",rows=28 entry_total=63.0 value_sum=641176430 value_total=nan method=text
 checksum,0001193125-12-471029,"value off >1%, unexplained",rows=480 entry_total=480.0 value_sum=2532513 value_total=278859753.0 method=text
 checksum,0001433658-12-000009,"entry count off by >2, unexplained",rows=363 entry_total=633.0 value_sum=583715 value_total=377438.0 method=text
 checksum,0001193125-12-470653,"entry count off by >2, unexplained",rows=864 entry_total=894.0 value_sum=43106638 value_total=44878987.0 method=text
-checksum,0001132556-12-000010,no rows parsed,rows=0 entry_total=129.0 value_sum=0 value_total=275215.0 method=text
-checksum,0000920440-12-000004,"entry count off by >2, unexplained",rows=28 entry_total=63.0 value_sum=641176430 value_total=nan method=text
 checksum,0001135428-12-000526,"value off >1%, unexplained",rows=55 entry_total=55.0 value_sum=2728767 value_total=2926421.0 method=text
 checksum,0001397424-12-000008,"value off >1%, unexplained",rows=211 entry_total=211.0 value_sum=120159931112 value_total=1064506.0 method=text
 checksum,0001468686-12-000007,"entry count off by >2, unexplained",rows=40 entry_total=1.0 value_sum=272955 value_total=281281.0 method=text
+checksum,0000036104-12-000075,"entry count off by >2, unexplained",rows=3158 entry_total=5192.0 value_sum=13168871 value_total=20551334.0 method=text
+checksum,0000909518-12-000346,value scale x1000 (dollars vs thousands),rows=124 entry_total=124.0 value_sum=517979713 value_total=517980.0 method=text
 checksum,0001082045-12-000005,value scale x1000 (dollars vs thousands),rows=86 entry_total=85.0 value_sum=969708 value_total=969495000.0 method=text
 checksum,0000859804-12-000007,value scale x1000 (dollars vs thousands),rows=20 entry_total=20.0 value_sum=1567589 value_total=1567588920.0 method=text
-checksum,0001193125-12-466721,entry count off by <=2,rows=14539 entry_total=14540.0 value_sum=82329479 value_total=82336559.0 method=text
-checksum,0000861177-12-000023,value scale x1000 (dollars vs thousands),rows=4897 entry_total=4897.0 value_sum=69094814 value_total=69094803706.0 method=text
+checksum,0001047469-12-010546,"value off >1%, unexplained",rows=446 entry_total=446.0 value_sum=272589 value_total=284050.0 method=text
 checksum,0001047469-12-010282,value scale x1000 (dollars vs thousands),rows=3623 entry_total=3623.0 value_sum=4989169142 value_total=4989169.0 method=text
 checksum,0000912160-12-000004,no rows parsed,rows=0 entry_total=88.0 value_sum=0 value_total=394997.0 method=text
 checksum,0000949471-12-000013,value scale x1000 (dollars vs thousands),rows=398 entry_total=398.0 value_sum=10752739 value_total=10752739000.0 method=text
@@ -700,45 +698,46 @@ checksum,0001318259-12-000007,"entry count off by >2, unexplained",rows=19 entry
 checksum,0001193125-12-466884,value scale x1000 (dollars vs thousands),rows=31 entry_total=31.0 value_sum=746493 value_total=746509880.0 method=text
 checksum,0001398344-12-003262,"entry count off by >2, unexplained",rows=348 entry_total=354.0 value_sum=142617 value_total=142613.0 method=text
 checksum,0000899140-12-000627,entry total counts distinct CUSIPs not rows,rows=423 entry_total=422.0 value_sum=3508186 value_total=3508104.0 method=text
-checksum,0001389215-12-000004,"entry count off by >2, unexplained",rows=2918 entry_total=2914.0 value_sum=4136685 value_total=4142204.0 method=text
+checksum,0001193125-12-466721,entry count off by <=2,rows=14539 entry_total=14540.0 value_sum=82329479 value_total=82336559.0 method=text
+checksum,0000861177-12-000023,value scale x1000 (dollars vs thousands),rows=4897 entry_total=4897.0 value_sum=69094814 value_total=69094803706.0 method=text
 checksum,0001394096-12-000004,"entry count off by >2, unexplained",rows=88 entry_total=102.0 value_sum=162748 value_total=165571.0 method=text
 checksum,0000842782-12-000008,value scale x1000 (dollars vs thousands),rows=226 entry_total=226.0 value_sum=630495 value_total=630495000.0 method=text
 checksum,0001193125-12-436685,"value off >1%, unexplained",rows=284 entry_total=284.0 value_sum=152350 value_total=149767.0 method=text
+checksum,0001389215-12-000004,"entry count off by >2, unexplained",rows=2918 entry_total=2914.0 value_sum=4136685 value_total=4142204.0 method=text
 checksum,0001080434-12-000022,entry count off by <=2,rows=637 entry_total=638.0 value_sum=32338669 value_total=32338935.0 method=text
 checksum,0000902584-12-000008,entry count off by <=2,rows=321 entry_total=323.0 value_sum=8025439 value_total=8029098.0 method=text
 checksum,0001536727-12-000004,"entry count off by >2, unexplained",rows=23 entry_total=18.0 value_sum=211803 value_total=169469.0 method=text
-checksum,0001042063-12-000009,value within 1% (rounding),rows=42 entry_total=42.0 value_sum=197895 value_total=195944.0 method=text
-checksum,0000902219-12-000604,value within 1% (rounding),rows=4414 entry_total=4414.0 value_sum=278832447 value_total=277186558.0 method=text
 checksum,0001562810-12-000005,no rows parsed,rows=0 entry_total=1.0 value_sum=0 value_total=nan method=text
 checksum,0001193125-12-485629,"entry count off by >2, unexplained",rows=5357 entry_total=3474.0 value_sum=92585944 value_total=92585944.0 method=text
-checksum,0001047469-12-010574,entry total counts distinct CUSIPs not rows,rows=58 entry_total=59.0 value_sum=228267 value_total=228658.0 method=text
 checksum,0001085146-12-001490,entry total counts distinct CUSIPs not rows,rows=147 entry_total=127.0 value_sum=1048347 value_total=1018746.0 method=text
 checksum,0000938077-12-000018,value within 1% (rounding),rows=202 entry_total=202.0 value_sum=183056 value_total=182254.0 method=text
+checksum,0001042063-12-000009,value within 1% (rounding),rows=42 entry_total=42.0 value_sum=197895 value_total=195944.0 method=text
+checksum,0000902219-12-000604,value within 1% (rounding),rows=4414 entry_total=4414.0 value_sum=278832447 value_total=277186558.0 method=text
 checksum,0000790502-12-000052,"entry count off by >2, unexplained",rows=642 entry_total=652.0 value_sum=12556882 value_total=12662872.0 method=text
 checksum,0001140361-12-048036,"value off >1%, unexplained",rows=92 entry_total=92.0 value_sum=3398810 value_total=3008090.0 method=text
 checksum,0001140361-12-044683,"entry count off by >2, unexplained",rows=120 entry_total=124.0 value_sum=97787 value_total=99719.0 method=text
 checksum,0001193125-12-478358,no rows parsed,rows=0 entry_total=1.0 value_sum=0 value_total=3889.0 method=text
-checksum,0001513193-12-000013,"value off >1%, unexplained",rows=68 entry_total=68.0 value_sum=1706130 value_total=421998.0 method=text
-checksum,0000070858-12-000402,value scale x1000 (dollars vs thousands),rows=17216 entry_total=17216.0 value_sum=197562505 value_total=197562505000.0 method=text
-checksum,0001086364-12-003010,value within 1% (rounding),rows=4244 entry_total=4244.0 value_sum=94029975 value_total=94432771.0 method=text
-checksum,0001193125-12-480443,value scale x1000 (dollars vs thousands),rows=43 entry_total=44.0 value_sum=3822821910 value_total=3847821.0 method=text
-checksum,0001193125-12-418435,"entry count off by >2, unexplained",rows=470 entry_total=516.0 value_sum=20865806 value_total=20885437.0 method=text
 checksum,0001537720-12-000012,"entry count off by >2, unexplained",rows=1987 entry_total=2035.0 value_sum=238945 value_total=252605.0 method=text
 checksum,0001513193-12-000012,"value off >1%, unexplained",rows=81 entry_total=81.0 value_sum=1744014 value_total=459882.0 method=text
 checksum,0000040417-12-000087,value scale x1000 (dollars vs thousands),rows=55 entry_total=55.0 value_sum=971553 value_total=971550000.0 method=text
 checksum,0000932540-12-000042,value within 1% (rounding),rows=4722 entry_total=4722.0 value_sum=2028594 value_total=2030918.0 method=text
 checksum,0001427372-12-000009,"value off >1%, unexplained",rows=18 entry_total=18.0 value_sum=230079 value_total=234366.0 method=text
 checksum,0000897101-12-001777,entry total counts distinct CUSIPs not rows,rows=414 entry_total=415.0 value_sum=244561 value_total=245879.0 method=text
+checksum,0001439805-12-000008,entry count off by <=2,rows=139 entry_total=141.0 value_sum=813839 value_total=814153.0 method=text
 checksum,0000897101-12-001786,"value off >1%, unexplained",rows=350 entry_total=350.0 value_sum=222905 value_total=181780.0 method=text
 checksum,0000897101-12-001790,"value off >1%, unexplained",rows=328 entry_total=328.0 value_sum=199625 value_total=191346.0 method=text
-checksum,0001439805-12-000008,entry count off by <=2,rows=139 entry_total=141.0 value_sum=813839 value_total=814153.0 method=text
-checksum,0001086364-12-003004,value within 1% (rounding),rows=10888 entry_total=10888.0 value_sum=114553376 value_total=114725729.0 method=text
+checksum,0001047469-12-010574,entry total counts distinct CUSIPs not rows,rows=58 entry_total=59.0 value_sum=228267 value_total=228658.0 method=text
+checksum,0001513193-12-000013,"value off >1%, unexplained",rows=68 entry_total=68.0 value_sum=1706130 value_total=421998.0 method=text
+checksum,0000070858-12-000402,value scale x1000 (dollars vs thousands),rows=17216 entry_total=17216.0 value_sum=197562505 value_total=197562505000.0 method=text
+checksum,0001086364-12-003010,value within 1% (rounding),rows=4244 entry_total=4244.0 value_sum=94029975 value_total=94432771.0 method=text
+checksum,0001193125-12-480443,value scale x1000 (dollars vs thousands),rows=43 entry_total=44.0 value_sum=3822821910 value_total=3847821.0 method=text
+checksum,0001193125-12-418435,"entry count off by >2, unexplained",rows=470 entry_total=516.0 value_sum=20865806 value_total=20885437.0 method=text
+checksum,0001541496-12-000016,no rows parsed,rows=0 entry_total=56.0 value_sum=0 value_total=118515.0 method=text
 checksum,0001041885-12-000052,no rows parsed,rows=0 entry_total=69328.0 value_sum=0 value_total=1413258.0 method=text
 checksum,0001041885-12-000054,no rows parsed,rows=0 entry_total=69328.0 value_sum=0 value_total=1413258.0 method=text
 checksum,0000812295-12-000143,"value off >1%, unexplained",rows=1359 entry_total=1359.0 value_sum=337397356 value_total=100244692.0 method=text
 checksum,0000812295-12-000144,"value off >1%, unexplained",rows=1309 entry_total=1309.0 value_sum=449141228 value_total=98817643.0 method=text
 checksum,0000812295-12-000145,"value off >1%, unexplained",rows=1233 entry_total=1233.0 value_sum=283573987 value_total=81473895.0 method=text
-checksum,0001541496-12-000016,no rows parsed,rows=0 entry_total=56.0 value_sum=0 value_total=118515.0 method=text
 checksum,0001373442-12-000003,"entry count off by >2, unexplained",rows=147 entry_total=1114.0 value_sum=140106 value_total=140106.0 method=text
 checksum,0001141781-12-000010,"value off >1%, unexplained",rows=173 entry_total=173.0 value_sum=891047 value_total=928438.0 method=text
 checksum,0001145443-12-001321,value scale x1000 (dollars vs thousands),rows=2399 entry_total=2399.0 value_sum=34282394 value_total=34282.0 method=text
@@ -749,6 +748,7 @@ checksum,0001144204-12-062669,entry count off by <=2,rows=87 entry_total=88.0 va
 checksum,0001541399-12-000006,"value off >1%, unexplained",rows=54 entry_total=54.0 value_sum=155418 value_total=310982.0 method=text
 checksum,0001475150-12-000006,value scale x1000 (dollars vs thousands),rows=41 entry_total=41.0 value_sum=488894583 value_total=488895.0 method=text
 checksum,0000092230-12-000123,"value off >1%, unexplained",rows=562 entry_total=562.0 value_sum=44955569 value_total=4495556900.0 method=text
+checksum,0001086364-12-003004,value within 1% (rounding),rows=10888 entry_total=10888.0 value_sum=114553376 value_total=114725729.0 method=text
 checksum,0001134813-12-000030,"entry count off by >2, unexplained",rows=894 entry_total=898.0 value_sum=1967426 value_total=1973373.0 method=text
 checksum,0001134813-12-000039,entry off by <=2 and value within 1%,rows=923 entry_total=924.0 value_sum=389744 value_total=390139.0 method=text
 checksum,0000092230-12-000124,"value off >1%, unexplained",rows=680 entry_total=680.0 value_sum=49097547 value_total=4909754700.0 method=text
@@ -762,6 +762,11 @@ checksum,0001505708-12-000005,"entry count off by >2, unexplained",rows=625 entr
 checksum,0001521536-12-001141,value scale x1000 (dollars vs thousands),rows=1 entry_total=1.0 value_sum=7 value_total=7407.0 method=text
 checksum,0001521536-12-001190,"value off >1%, unexplained",rows=1 entry_total=1.0 value_sum=6 value_total=6917.0 method=text
 checksum,0001521536-12-001191,value scale x1000 (dollars vs thousands),rows=1 entry_total=1.0 value_sum=34 value_total=34542.0 method=text
+checksum,0000884535-12-000005,value scale x1000 (dollars vs thousands),rows=76 entry_total=77.0 value_sum=386017 value_total=389483818.0 method=text
+checksum,0001083323-12-000007,"entry count off by >2, unexplained",rows=129 entry_total=149.0 value_sum=107553675 value_total=nan method=text
+checksum,0000920440-12-000005,"entry count off by >2, unexplained",rows=28 entry_total=63.0 value_sum=641176430 value_total=nan method=text
+checksum,0001135428-12-000528,entry count off by <=2,rows=75 entry_total=76.0 value_sum=1813089 value_total=1813089.0 method=text
+checksum,0001397424-12-000010,"value off >1%, unexplained",rows=211 entry_total=211.0 value_sum=120159931112 value_total=1064506.0 method=text
 checksum,0000315297-12-000033,"value off >1%, unexplained",rows=2623 entry_total=2623.0 value_sum=16074241 value_total=16418653.0 method=text
 checksum,0000315297-12-000034,"value off >1%, unexplained",rows=2644 entry_total=2644.0 value_sum=15814112 value_total=16161997.0 method=text
 checksum,0000315297-12-000035,"value off >1%, unexplained",rows=2669 entry_total=2669.0 value_sum=14817504 value_total=15148260.0 method=text
@@ -770,11 +775,6 @@ checksum,0000315297-12-000037,"value off >1%, unexplained",rows=2672 entry_total
 checksum,0000315297-12-000038,"value off >1%, unexplained",rows=2705 entry_total=2705.0 value_sum=14028490 value_total=14235070.0 method=text
 checksum,0000315297-12-000039,"value off >1%, unexplained",rows=2726 entry_total=2726.0 value_sum=13745384 value_total=13957690.0 method=text
 checksum,0000315297-12-000040,"value off >1%, unexplained",rows=2760 entry_total=2760.0 value_sum=13236963 value_total=13429149.0 method=text
-checksum,0000884535-12-000005,value scale x1000 (dollars vs thousands),rows=76 entry_total=77.0 value_sum=386017 value_total=389483818.0 method=text
-checksum,0001083323-12-000007,"entry count off by >2, unexplained",rows=129 entry_total=149.0 value_sum=107553675 value_total=nan method=text
-checksum,0000920440-12-000005,"entry count off by >2, unexplained",rows=28 entry_total=63.0 value_sum=641176430 value_total=nan method=text
-checksum,0001135428-12-000528,entry count off by <=2,rows=75 entry_total=76.0 value_sum=1813089 value_total=1813089.0 method=text
-checksum,0001397424-12-000010,"value off >1%, unexplained",rows=211 entry_total=211.0 value_sum=120159931112 value_total=1064506.0 method=text
 checksum,0001193125-12-490705,entry count off by <=2,rows=14595 entry_total=14596.0 value_sum=82329451 value_total=82336559.0 method=text
 checksum,0001132716-12-000017,entry total counts distinct CUSIPs not rows,rows=10 entry_total=9.0 value_sum=320344 value_total=108288.0 method=text
 parse,0001144204-12-059456,"no holdings parsed (text, cusip-lines=1)",text
@@ -798,8 +798,8 @@ parse,0001193125-12-456254,"no holdings parsed (text, cusip-lines=1)",text
 parse,0001352269-12-000005,"no holdings parsed (text, cusip-lines=0)",text
 parse,0001454335-12-000011,"no holdings parsed (text, cusip-lines=0)",text
 parse,0001193125-12-469321,"no holdings parsed (text, cusip-lines=0)",text
-parse,0000354204-12-001362,"no holdings parsed (text, cusip-lines=0)",text
 parse,0001534424-12-000291,"no holdings parsed (text, cusip-lines=0)",text
+parse,0000354204-12-001362,"no holdings parsed (text, cusip-lines=0)",text
 parse,0001386088-12-000004,"no holdings parsed (text, cusip-lines=6)",text
 parse,0000354204-12-001363,"no holdings parsed (text, cusip-lines=0)",text
 parse,0000902664-12-001464,"no holdings parsed (text, cusip-lines=0)",text
@@ -809,18 +809,18 @@ parse,0000897423-12-000070,"no holdings parsed (text, cusip-lines=1)",text
 parse,0001047469-12-009331,"no holdings parsed (text, cusip-lines=2)",text
 parse,0001047469-12-009332,"no holdings parsed (text, cusip-lines=2)",text
 parse,0000922423-12-000245,"no holdings parsed (text, cusip-lines=0)",text
+parse,0001388648-12-000009,"no holdings parsed (text, cusip-lines=0)",text
 parse,0001541496-12-000012,"no holdings parsed (text, cusip-lines=56)",text
 parse,0001389191-12-000007,"no holdings parsed (text, cusip-lines=365)",text
 parse,0001047469-12-010456,"no holdings parsed (text, cusip-lines=1)",text
-parse,0001388648-12-000009,"no holdings parsed (text, cusip-lines=0)",text
 parse,0001193125-12-466011,"no holdings parsed (text, cusip-lines=64)",text
 parse,0001018825-12-000010,"no holdings parsed (text, cusip-lines=983)",text
 parse,0001041885-12-000051,"no holdings parsed (text, cusip-lines=0)",text
-parse,0001421104-12-000010,"no holdings parsed (text, cusip-lines=0)",text
 parse,0000897423-12-000071,"no holdings parsed (text, cusip-lines=1)",text
 parse,0001532292-12-000006,"no holdings parsed (text, cusip-lines=0)",text
-parse,0000909518-12-000339,"no holdings parsed (text, cusip-lines=1)",text
 parse,0000897423-12-000072,"no holdings parsed (text, cusip-lines=1)",text
+parse,0000909518-12-000339,"no holdings parsed (text, cusip-lines=1)",text
+parse,0001421104-12-000010,"no holdings parsed (text, cusip-lines=0)",text
 parse,0001140361-12-046373,"no holdings parsed (text, cusip-lines=0)",text
 parse,0001172661-12-001165,"no holdings parsed (text, cusip-lines=0)",text
 parse,0000314986-12-000004,"no holdings parsed (text, cusip-lines=0)",text
@@ -834,8 +834,8 @@ parse,0000902664-12-001278,"no holdings parsed (text, cusip-lines=0)",text
 parse,0001018674-12-000004,"no holdings parsed (text, cusip-lines=246)",text
 parse,0001193125-12-453281,"no holdings parsed (text, cusip-lines=1593)",text
 parse,0001140361-12-046779,"no holdings parsed (text, cusip-lines=0)",text
-parse,0001172661-12-001063,"no holdings parsed (text, cusip-lines=0)",text
 parse,0001263568-12-000005,"no holdings parsed (text, cusip-lines=0)",text
+parse,0001172661-12-001063,"no holdings parsed (text, cusip-lines=0)",text
 parse,0001208646-12-000334,"no holdings parsed (text, cusip-lines=2)",text
 parse,0001049050-12-000004,"no holdings parsed (text, cusip-lines=0)",text
 parse,0001512756-12-000005,"no holdings parsed (text, cusip-lines=0)",text
@@ -850,12 +850,12 @@ parse,0000905718-12-000262,"no holdings parsed (text, cusip-lines=0)",text
 parse,0001193125-12-423418,"no holdings parsed (text, cusip-lines=0)",text
 parse,0000909012-12-000440,"no holdings parsed (text, cusip-lines=116)",text
 parse,0000891092-12-006800,"no holdings parsed (text, cusip-lines=82)",text
-parse,0001479847-12-000010,"no holdings parsed (text, cusip-lines=0)",text
 parse,0001132556-12-000010,"no holdings parsed (text, cusip-lines=129)",text
+parse,0001479847-12-000010,"no holdings parsed (text, cusip-lines=0)",text
 parse,0000912160-12-000004,"no holdings parsed (text, cusip-lines=16)",text
 parse,0001535669-12-000010,"no holdings parsed (text, cusip-lines=1)",text
 parse,0001562810-12-000005,"no holdings parsed (text, cusip-lines=0)",text
 parse,0001193125-12-478358,"no holdings parsed (text, cusip-lines=1)",text
+parse,0001541496-12-000016,"no holdings parsed (text, cusip-lines=56)",text
 parse,0001041885-12-000052,"no holdings parsed (text, cusip-lines=0)",text
 parse,0001041885-12-000054,"no holdings parsed (text, cusip-lines=0)",text
-parse,0001541496-12-000016,"no holdings parsed (text, cusip-lines=56)",text

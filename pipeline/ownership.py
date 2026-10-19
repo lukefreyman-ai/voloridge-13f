@@ -42,7 +42,7 @@ REQUIRED = ["quarter_end", "company_name", "company_cik", "cusip", "manager_cik"
 TRACEABILITY = ["shares_outstanding_evidence", "cusip_issuer", "map_source", "list_desc", "excluded_from_ownership",
                 "class_shares_outstanding", "class_ownership_pct", "class_match", "multi_class_flag", "map_conflict",
                 "map_conflict_two_sided", "multi_filing_flag", "dup_amendment_flag", "debt_cusip_flag", "adr_flag",
-                "over_100_flag", "over_100_cause", "n_rows"]
+                "over_100_flag", "over_100_cause", "n_rows", "pct_suppressed_cause"]
 OUTPUT_COLUMNS = REQUIRED + TRACEABILITY
 
 
@@ -53,9 +53,34 @@ def output_path(label: str) -> Path:
 def write_output(mc: pd.DataFrame, label: str) -> Path:
     """Write the per-quarter deliverable: the 12 spec columns first, then the traceability columns."""
     Path("output").mkdir(exist_ok=True)
+    # the stated grain is one row per manager x security x quarter: enforce it rather than claim it
+    # CIKs and share counts are integers: "732717.0" breaks every join a consumer attempts
+    for col, typ in (("company_cik", "Int64"), ("manager_cik", "Int64"),
+                     ("shares_held", "Int64"), ("shares_outstanding", "Int64")):
+        if col in mc:
+            mc[col] = pd.to_numeric(mc[col], errors="coerce").round().astype(typ)
+    dup = mc.duplicated(["cusip", "manager_cik"], keep=False)
+    if dup.any():
+        ex = mc.loc[dup, ["manager_name", "cusip", "shares_held"]].head(6).to_string(index=False)
+        raise ValueError(f"{label}: {int(dup.sum())} duplicate (cusip, manager_cik) rows would be "
+                         f"published, which double counts holdings. Examples:\n{ex}")
     p = output_path(label)
     mc[OUTPUT_COLUMNS].to_csv(p, index=False)
     return p
+
+
+# decision 12 thresholds: a US listed company with 13F holders has more than a thousand shares
+# outstanding and fewer than a hundred billion. Outside that the XBRL fact is a unit error.
+MIN_SHARES_OUT = 1_000
+MAX_SHARES_OUT = 100_000_000_000
+# Relative ceiling (2026-10-18). An absolute floor cannot catch a denominator tagged in THOUSANDS:
+# Simon Property shows 8,000 shares outstanding and Abercrombie 87,846, both above the floor and
+# both 1000x too small, giving 7,249% and 4,672%. The cross-check in shares_out.py only fires when
+# both XBRL tags exist. Measured over 67,672 company-quarters: p99 = 118%, p99.5 = 147%, p99.9 =
+# 395%. Securities lending can plausibly double-report a holding; it cannot produce 300%. Above
+# this ceiling the denominator is wrong, so the figure is suppressed with a recorded cause rather
+# than published. 135 company-quarters (0.199%) are affected.
+MAX_OWNERSHIP_PCT = 300.0
 
 
 def select_filings(f: pd.DataFrame, period: str) -> tuple[pd.DataFrame, list[str]]:
@@ -77,7 +102,15 @@ def select_filings(f: pd.DataFrame, period: str) -> tuple[pd.DataFrame, list[str
                 chosen = [pd.DataFrame([a])]     # replaces everything before it
                 if a["atype"] == "":
                     notes.append(f"manager {cik}: amendment {a['accession']} has no amendment type; treated as RESTATEMENT")
-            else:                                # NEW HOLDINGS (or an amendment with no original): append
+            elif a["atype"] == "":
+                # blank type AND no original (the original was a 13F NOTICE, filtered above).
+                # Appending every such amendment double-counted 9,886 holdings across 10 quarters
+                # (decision 12, 2026-10-18). Amendments are sorted by filed date, so this keeps the
+                # latest and nothing is counted twice.
+                chosen = [pd.DataFrame([a])]
+                notes.append(f"manager {cik}: amendment {a['accession']} has no amendment type and no "
+                             f"original for the period; kept as the only filing")
+            else:                                # explicit NEW HOLDINGS: genuinely additive
                 chosen.append(pd.DataFrame([a]))
         keep.extend(chosen)
     sel = pd.concat(keep, ignore_index=True) if keep else f.iloc[0:0]
@@ -122,7 +155,8 @@ def run(label: str, qend: str, period: str):
     v9 = sc.groupby("cusip")["value_norm"].sum(); v6 = sc.groupby(sc["cusip"].str[:6])["value_norm"].sum()
     # per manager x CUSIP
     mc = rows.groupby(["accession", "cusip"], as_index=False).agg(shares_held=("shares", "sum"), n_rows=("shares", "size"))
-    mc = mc.merge(sel[["accession", "manager_cik", "manager_name", "value_scale_flag"]] if "value_scale_flag" in sel else sel[["accession", "manager_cik", "manager_name"]], on="accession")
+    _selcols = ["accession", "manager_cik", "manager_name", "filed_date"] + (["value_scale_flag"] if "value_scale_flag" in sel else [])
+    mc = mc.merge(sel[_selcols], on="accession", validate="m:1")
     mc["cusip6"] = mc["cusip"].str[:6]
     m6 = m.drop_duplicates("cusip6").set_index("cusip6")      # map is sorted: most 13G/13D links first within an issuer
     mc["company_cik"] = mc["cusip6"].map(m6["company_cik"]); mc["company_name"] = mc["cusip6"].map(m6["company_name"])
@@ -145,6 +179,11 @@ def run(label: str, qend: str, period: str):
     mc["multi_filing_flag"] = mc.set_index(["manager_cik", "cusip"]).index.map(dup).values > 1
     # FLAGS ONLY (2026-10-11 stop-condition analysis; see ownership_whatif.txt): nothing is excluded by these.
     mc["debt_cusip_flag"] = mc["cusip"].str[6].str.isalpha()           # CUSIP issue number starting with a letter = fixed income
+    # decision 12 (2026-10-18): issue number 9 marks a derivative or non-standard line. These passed
+    # every filter when the filer left put_call blank and the check digit happened to validate:
+    # 1,453 rows / 636,173,041 shares in 2010Q3, and 74% of the multi-CUSIP companies owed their
+    # extra CUSIP to one. A derivative line is not a share holding.
+    mc["derivative_cusip_flag"] = mc["cusip"].str[6] == "9"
     sl9 = seclist.drop_duplicates("cusip").set_index("cusip")["issuer_desc"]
     mc["list_desc"] = mc["cusip"].map(sl9).fillna("")
     mc["adr_flag"] = mc["list_desc"].str.contains(r"\bADR|\bADS|SPON ADR|SP ADR", regex=True)
@@ -174,8 +213,29 @@ def run(label: str, qend: str, period: str):
     mc = mc[~drop_orig].copy()
     dup = mc.groupby(["manager_cik", "cusip"])["accession"].nunique()
     mc["multi_filing_flag"] = mc.set_index(["manager_cik", "cusip"]).index.map(dup).values > 1
+    # ---- decision 12 (2026-10-18): enforce the spec grain, one row per manager x security x quarter.
+    # A manager CIK can have more than one selected filing: additive NEW HOLDINGS amendments, or
+    # separate filings covering different sub-advisers. The old output carried one row per ACCESSION
+    # x CUSIP, so 9,886 rows across 10 quarters double counted holdings, including byte-identical
+    # duplicate filings. Exact repeats are dropped; genuinely different reports are summed, which is
+    # what "total shares reported by institutional investors" means.
+    mc = mc.sort_values(["manager_cik", "cusip", "filed_date", "accession"])
+    exact = mc.duplicated(["manager_cik", "cusip", "shares_held"], keep="first")
+    n_exact = int(exact.sum())
+    mc = mc[~exact].copy()
+    g = mc.groupby(["manager_cik", "cusip"])
+    n_summed = int((g["accession"].transform("nunique") > 1).sum())
+    mc["shares_held"] = g["shares_held"].transform("sum")
+    mc["n_rows"] = g["n_rows"].transform("sum")
+    mc["n_source_filings"] = g["accession"].transform("nunique")
+    mc = mc.drop_duplicates(["manager_cik", "cusip"], keep="last").copy()
+    out.append(f"\nGRAIN (decision 12): collapsed to one row per manager x security. Exact duplicate "
+               f"reports dropped: {n_exact:,}; rows summed across a manager's multiple filings: "
+               f"{n_summed:,}; final rows {len(mc):,}")
     # (i) + (iii) exclusions from the ownership figure; rows are kept in the output
-    mc["excluded_from_ownership"] = np.where(mc["debt_cusip_flag"], "debt_cusip", np.where(mc["adr_flag"], "adr", ""))
+    mc["excluded_from_ownership"] = np.where(mc["debt_cusip_flag"], "debt_cusip",
+                                    np.where(mc["derivative_cusip_flag"], "derivative_cusip",
+                                    np.where(mc["adr_flag"], "adr", "")))
     own = mc[mc["excluded_from_ownership"] == ""]
     dv = v9.reindex(mc.loc[mc["debt_cusip_flag"]].drop_duplicates("cusip")["cusip"]).fillna(0).sum()
     av = v9.reindex(mc.loc[mc["adr_flag"]].drop_duplicates("cusip")["cusip"]).fillna(0).sum()
@@ -193,11 +253,41 @@ def run(label: str, qend: str, period: str):
     cls1 = cls[cls["letter"].notna()].drop_duplicates(["cik", "letter"]).set_index(["cik", "letter"])
     so_shares = und["shares"]
     so_src = und["shares_outstanding_source"]; so_date = und["shares_outstanding_date"]; so_gap = und["gap_flag"]; so_ev = und["evidence"]
+    # ---- decision 12 plausibility gates (2026-10-18). Published values of 25,208,955,300% came from
+    # XBRL scale/unit errors in the denominator (CSX = 1 share) and dollars-reported-as-shares in the
+    # numerator (one manager filed 111,580,102,484 Microsoft shares against 8.4bn outstanding).
+    # Neither is a market fact; both are measurement failures and are excluded, not published.
+    so_plaus = so_shares.where((so_shares >= MIN_SHARES_OUT) & (so_shares <= MAX_SHARES_OUT))
+    n_so_bad = int(so_shares.notna().sum() - so_plaus.notna().sum())
+    mc["so_implausible_flag"] = mc["company_cik"].map(so_shares).notna() & mc["company_cik"].map(so_plaus).isna()
+    # a single manager cannot hold more of a company than exists
+    held_vs_out = mc["shares_held"] / mc["company_cik"].map(so_plaus)
+    mc["impossible_holding_flag"] = held_vs_out > 1.0
+    mc["excluded_from_ownership"] = np.where(mc["excluded_from_ownership"] != "", mc["excluded_from_ownership"],
+                                   np.where(mc["so_implausible_flag"], "shares_outstanding_implausible",
+                                   np.where(mc["impossible_holding_flag"], "holding_exceeds_shares_outstanding", "")))
+    so_shares = so_plaus
+    own = mc[mc["excluded_from_ownership"] == ""]
+    out.append(f"\nPLAUSIBILITY GATES (decision 12): shares outstanding outside "
+               f"[{MIN_SHARES_OUT:,.0f}, {MAX_SHARES_OUT:,.0f}] nulled: {n_so_bad:,} companies / "
+               f"{int(mc['so_implausible_flag'].sum()):,} rows; single holdings exceeding shares "
+               f"outstanding excluded: {int(mc['impossible_holding_flag'].sum()):,} rows / "
+               f"{mc.loc[mc['impossible_holding_flag'], 'company_cik'].nunique():,} companies")
     # company level
     comp = own.groupby("company_cik", dropna=False).agg(shares_held_total=("shares_held", "sum"), n_managers=("manager_cik", "nunique"), n_cusips=("cusip", "nunique"), company_name=("company_name", "first")).reset_index()
     comp["shares_outstanding"] = comp["company_cik"].map(so_shares)
     comp["multi_class_flag"] = comp["shares_outstanding"].isna() & comp["company_cik"].isin(cls_n.index)
     comp["institutional_ownership_pct"] = np.where(comp["multi_class_flag"], np.nan, comp["shares_held_total"] / comp["shares_outstanding"] * 100)
+    # relative ceiling: suppress, do not publish, a figure whose denominator must be wrong
+    _imp = comp["institutional_ownership_pct"] > MAX_OWNERSHIP_PCT
+    comp["pct_suppressed_cause"] = np.where(~_imp, "",
+                                   np.where(comp["n_cusips"] > 1, "multi_cusip_classes_summed",
+                                            "shares_outstanding_scale_suspect"))
+    comp.loc[_imp, "institutional_ownership_pct"] = np.nan
+    out.append(f"\nOWNERSHIP CEILING (decision 12): figures above {MAX_OWNERSHIP_PCT:.0f}% suppressed "
+               f"as denominator errors: {int(_imp.sum()):,} companies "
+               f"({int((comp['pct_suppressed_cause'] == 'multi_cusip_classes_summed').sum()):,} multi-CUSIP, "
+               f"{int((comp['pct_suppressed_cause'] == 'shares_outstanding_scale_suspect').sum()):,} scale-suspect)")
     comp["so_gap_flag"] = comp["company_cik"].map(so_gap)
     # per-class figure per CUSIP
     mc["class_letter"] = mc["list_desc"].str.upper().str.extract(r"\bCL(?:ASS)?\s*([A-C])\b", expand=False)
@@ -227,6 +317,7 @@ def run(label: str, qend: str, period: str):
     mc["institutional_ownership_pct"] = mc["company_cik"].map(comp.set_index("company_cik")["institutional_ownership_pct"])
     mc.loc[mc["excluded_from_ownership"] != "", "institutional_ownership_pct"] = np.nan
     mc["multi_class_flag"] = mc["company_cik"].map(comp.set_index("company_cik")["multi_class_flag"]).fillna(False)
+    mc["pct_suppressed_cause"] = mc["company_cik"].map(comp.set_index("company_cik")["pct_suppressed_cause"]).fillna("")
     mc = mc.rename(columns={"accession": "form_13f_accession_number"})
     mc["cusip_issuer"] = mc["cusip6"]
     mc["over_100_flag"] = False; mc["over_100_cause"] = ""

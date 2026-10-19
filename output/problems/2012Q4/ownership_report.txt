@@ -1,0 +1,116 @@
+2012Q4 ownership, quarter end 2012-12-31, period_of_report 20121231; shares outstanding: XBRL + regex fallback (11 companies)
+filings for the period: 3,573; after amendment/duplicate resolution: 3,420 ({'13F-HR': 3267, '13F-HR/A': 153}); notes: 36 (first 5 below)
+  manager 897378: amendment 0000897378-13-000002 has no amendment type; treated as RESTATEMENT
+  manager 948046: amendment 0000948046-13-000048 has no amendment type; treated as RESTATEMENT
+  manager 948046: amendment 0000948046-13-000051 has no amendment type; treated as RESTATEMENT
+  manager 1009022: amendment 0001009022-13-000005 has no amendment type; treated as RESTATEMENT
+  manager 1047644: amendment 0001047469-13-001598 has no amendment type; treated as RESTATEMENT
+holdings rows used: 1,196,181 (SH, no put/call, resolved CUSIP, shares > 0)
+
+FUNDS EXCLUDED (decision 2): 1,775 CUSIPs on 554 CIKs, 73,369 manager-CUSIP rows, $1,112.6bn of 13F value = 1.9% of the selected filings' value
+        cusips  value_bn
+reason                  
+F1        1457     673.3
+F2          38      64.5
+F3         280     374.8
+largest excluded:
+    cusip  company_cik                     company_name                                   reason  value_bn
+78462F103     884394.0           SPDR S&P 500 ETF TRUST          F1 1940-Act/UIT forms (485BPOS)     139.3
+83413U100    1418076.0               Solar Capital Ltd.              F1 1940-Act/UIT forms (497)     120.4
+78463V107    1222333.0                  SPDR GOLD TRUST         F2 SIC 6221 commodity pool/trust      48.9
+922042858          NaN                              NaN F3 13(f) list ETF/ETN/unit (MSCI EMR ...      41.0
+74348T102    1287032.0            PROSPECT CAPITAL CORP              F1 1940-Act/UIT forms (497)      37.8
+78464A763    1064642.0                SPDR SERIES TRUST          F1 1940-Act/UIT forms (485APOS)      36.9
+464287234    1159508.0 DEUTSCHE BANK AKTIENGESELLSCHAFT F3 13(f) list ETF/ETN/unit (MSCI EMER...      35.9
+464287465    1159508.0 DEUTSCHE BANK AKTIENGESELLSCHAFT F3 13(f) list ETF/ETN/unit (MSCI EAFE...      26.5
+464287655    1159508.0 DEUTSCHE BANK AKTIENGESELLSCHAFT F3 13(f) list ETF/ETN/unit (RUSSELL 2...      21.4
+464287242    1159508.0 DEUTSCHE BANK AKTIENGESELLSCHAFT F3 13(f) list ETF/ETN/unit (IBOXX INV...      18.8
+464287200    1159508.0 DEUTSCHE BANK AKTIENGESELLSCHAFT F3 13(f) list ETF/ETN/unit (CORE S&P5...      14.2
+81369Y308    1064641.0         SELECT SECTOR SPDR TRUST          F1 1940-Act/UIT forms (485BPOS)      12.2
+
+GRAIN (decision 12): collapsed to one row per manager x security. Exact duplicate reports dropped: 947; rows summed across a manager's multiple filings: 0; final rows 747,663
+
+FIXES (Luke 2026-10-12): debt-pattern CUSIPs excluded from ownership (rows kept): 2,432 rows / 773 CUSIPs / $22.8bn; ADR/ADS excluded from the main figure: 36,849 rows / 381 CUSIPs on 274 companies / $869.1bn; NEW HOLDINGS amendments duplicating >= 90% of the original treated as restatements: 7 amendments, 7 original filings / 4,027 rows dropped
+
+PLAUSIBILITY GATES (decision 12): shares outstanding outside [1,000, 100,000,000,000] nulled: 101 companies / 3,244 rows; single holdings exceeding shares outstanding excluded: 391 rows / 15 companies
+
+OWNERSHIP CEILING (decision 12): figures above 300% suppressed as denominator errors: 5 companies (2 multi-CUSIP, 3 scale-suspect)
+
+SHARE CLASSES (never summed): multi-class companies (class-dimensioned facts only) 264; their CUSIPs: matched to a class 200 ($3,123.6bn), unmatched 139 ($875.6bn); company-level pct is null for all 264
+largest per-class figures:
+           company_name     cusip list_desc  cusip_shares_held  class_shares_outstanding  class_ownership_pct  value_bn
+       APOLLO GROUP INC 037604105      CL A        106759786.0               112064000.0                 95.3     190.6
+             ZILLOW INC 98954A107      CL A         27995367.0                26414414.0                106.0     174.6
+          HUB GROUP INC 443320106      CL A         35464079.0                36767485.0                 96.5     173.9
+     WHITEWAVE FOODS Co 966244105  COM CL A         26823324.0                23000000.0                116.6     151.8
+      LENNAR CORP /NEW/ 526057104      CL A        176614578.0               160676634.0                109.9     149.6
+          LINKEDIN CORP 53578A108  COM CL A         82390376.0                88829278.0                 92.8     148.4
+WILEY JOHN & SONS, INC. 968223206      CL A         42111863.0                49197181.0                 85.6     145.6
+      Hyatt Hotels Corp 448579102  COM CL A         47678546.0                46631778.0                102.2     120.4
+
+CUSIP->CIK coverage among OPERATING companies (6-char issuers, funds removed: 697 incl. 106 unmapped by name token only): 4,918 / 11,553 = 42.6%; by value 93.5%; by map source: {'SC 13G': 3973, 'name_exact': 538, 'SC 13D': 407}
+shares outstanding (XBRL + regex fallback (11 companies)): companies with a figure 3,904 / 4,612 = 84.6%; by 13F value 89.9%; gap > 100 days flagged: 22; multi-class null: 264
+
+ownership pct distribution (n=3,899): {'count': 3899.0, 'mean': 56.4, 'std': 34.3, 'min': 0.0, '5%': 1.0, '25%': 26.0, '50%': 61.6, '75%': 85.2, '95%': 100.9, 'max': 269.6}
+histogram: {'0': 0, '0-5': 362, '5-25': 582, '25-50': 657, '50-75': 818, '75-90': 796, '90-100': 466, '100-150': 205, '>150': 13}
+companies over 100%: 218 / 3,899 = 5.6%
+large companies (top 500 by 13F value) with a pct: 434; over 100%: 36 = 8.3%  [stop condition at 5%]
+Note: companies with 'no identified data cause' can still exceed 100% through securities lending (the lender and the
+borrower's buyer both report the same shares on 13F); that is a possible explanation, not a measured cause.
+over-100% causes (combinations; [..] = annotation):
+no identified data cause                                                      82
+manager-CUSIP in >1 filing                                                    68
+multiple CUSIPs summed (classes/units)                                        28
+manager-CUSIP in >1 filing; multiple CUSIPs summed (classes/units)            13
+CUSIP->CIK conflict                                                            8
+manager-CUSIP in >1 filing; CUSIP->CIK conflict                                6
+single holding > 50% of shares out                                             4
+CUSIP->CIK conflict; multiple CUSIPs summed (classes/units)                    4
+single holding > 50% of shares out; multiple CUSIPs summed (classes/units)     2
+manager-CUSIP in >1 filing; single holding > 50% of shares out                 2
+manager-CUSIP in >1 filing; shares outstanding gap >100d                       1
+  with the as-of date after quarter end: 57 of 218
+largest over-100% companies:
+ company_cik                   company_name  n_managers  shares_held_total  shares_outstanding  institutional_ownership_pct  value_bn                                               over_100_cause
+   1270400.0              VIRGIN MEDIA INC.         257          310233242         269300000.0                        115.2     211.8                                   manager-CUSIP in >1 filing
+   1441849.0         CLOUD PEAK ENERGY INC.         187           62388006          61114157.0                        102.1     190.5                                   manager-CUSIP in >1 filing
+   1168195.0                 SOURCEFIRE INC         207           34285781          30346395.0                        113.0     184.9                                   manager-CUSIP in >1 filing
+   1045450.0                 EPR PROPERTIES         213           52405802          46819177.0                        111.9     184.8 multiple CUSIPs summed (classes/units); [as-of 59d after ...
+    353230.0                   OMNICARE INC         287          111945793         104638271.0                        107.0     177.9 manager-CUSIP in >1 filing; [as-of 31d after quarter end:...
+    807884.0 CASH AMERICA INTERNATIONAL INC         176           31184950          28811280.0                        108.2     171.3 no identified data cause; [as-of 59d after quarter end: b...
+     19584.0                    CHEMED CORP         169           19221697          19162469.0                        100.3     158.1 manager-CUSIP in >1 filing; [as-of 31d after quarter end:...
+   1407739.0 DUPONT FABROS TECHNOLOGY, INC.         177           75916034          63340929.0                        119.9     154.3                       multiple CUSIPs summed (classes/units)
+   1115222.0       DUN & BRADSTREET CORP/NW         311           42546724          40873622.0                        104.1     144.7 no identified data cause; [as-of 31d after quarter end: b...
+   1084961.0       ENCORE CAPITAL GROUP INC         148           25852972          23191000.0                        111.5     134.1                                     no identified data cause
+    916076.0  MARTIN MARIETTA MATERIALS INC         268           49381765          46002000.0                        107.3     131.5                                     no identified data cause
+   1012140.0       ONYX PHARMACEUTICALS INC         234           70692134          67479518.0                        104.8     128.5                                   manager-CUSIP in >1 filing
+   1014473.0                VERISIGN INC/CA         340          168123078         153392000.0                        109.6     127.1                                     no identified data cause
+   1206264.0 TEMPUR PEDIC INTERNATIONAL INC         202           61000741          59786878.0                        102.0     114.5 no identified data cause; [as-of 31d after quarter end: b...
+     16058.0    CACI INTERNATIONAL INC /DE/         194           24941631          23011448.0                        108.4     111.4 manager-CUSIP in >1 filing; [as-of 31d after quarter end:...
+   1360530.0           Vitamin Shoppe, Inc.         179           32849827          30170627.0                        108.9     111.0                                   manager-CUSIP in >1 filing
+    929008.0        WESCO INTERNATIONAL INC         219           53254026          44087890.0                        120.8     108.8 manager-CUSIP in >1 filing; [as-of 59d after quarter end:...
+    703351.0      BRINKER INTERNATIONAL INC         254           72266626          71893411.0                        100.5      99.9                                   manager-CUSIP in >1 filing
+    933036.0           RENT A CENTER INC DE         226           61095280          58210812.0                        105.0      95.7 manager-CUSIP in >1 filing; [as-of 59d after quarter end:...
+   1468516.0                       AOL Inc.         292           78603581          76600000.0                        102.6      91.7                                     no identified data cause
+
+NO COMPANY-LEVEL FIGURE: 708 companies carrying $5,289.8bn = 10.1% of mapped operating value; causes:
+                                                                                                   companies  value_bn
+cause                                                                                                                 
+class-dimensioned facts only: company pct null by rule, per-class pct given (class_ownership_pct)        264    4000.6
+regex fallback tried: no 10-K filed within the window                                                    427    1257.9
+regex fallback tried: as-of more than 45 days from filing date                                             2      24.0
+regex fallback tried: no match                                                                            15       7.1
+largest without shares outstanding:
+ company_cik                 company_name  n_managers  value_bn                                    cause
+    929887.0             APOLLO GROUP INC         244    190.62 class-dimensioned facts only: company...
+   1334814.0                   ZILLOW INC         112    174.58 class-dimensioned facts only: company...
+    940942.0                HUB GROUP INC         146    173.94 class-dimensioned facts only: company...
+    891103.0          IAC/INTERACTIVECORP         284    172.34 class-dimensioned facts only: company...
+   1555365.0           WHITEWAVE FOODS Co         102    151.82 class-dimensioned facts only: company...
+    920760.0            LENNAR CORP /NEW/         408    149.84 class-dimensioned facts only: company...
+   1271024.0                LINKEDIN CORP         332    148.42 class-dimensioned facts only: company...
+    107140.0      WILEY JOHN & SONS, INC.         229    145.64 class-dimensioned facts only: company...
+   1135017.0 KINDER MORGAN MANAGEMENT LLC         337    133.36 class-dimensioned facts only: company...
+   1468174.0            Hyatt Hotels Corp         148    120.43 class-dimensioned facts only: company...
+     43920.0                    GREIF INC         189    114.78 class-dimensioned facts only: company...
+     24545.0      MOLSON COORS BREWING CO         421    113.01 class-dimensioned facts only: company...
