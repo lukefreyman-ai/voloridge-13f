@@ -27,8 +27,9 @@ A repair is proposed ONLY for the two scale labels, only when the factor is >= 1
 millions tagging error, never a 10x corporate action), and only when the result is plausible AND
 lands within 1.5x of the level the rest of the series agrees on. Nothing here is merged into the
 published denominator: `python3 -m pipeline.continuity` writes the report and
-cache/parsed/shares_out_continuity.parquet, and pipeline/ownership.py does not read it until Luke
-approves the merge (decision 14 in STATUS.md).
+cache/parsed/shares_out_continuity.parquet, and pipeline/ownership.py does not read it. Whether to
+merge the proposed repairs into the denominator is an open decision, recorded in the project's
+handoff notes.
 
   python3 -m pipeline.continuity              # all 20 quarters -> report + parquet
   python3 -m pipeline.continuity --quiet      # write the files, print only the summary line
