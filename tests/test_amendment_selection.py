@@ -139,3 +139,60 @@ def test_ownership_ceiling_sits_above_lending_and_below_the_unit_errors():
     assert MAX_OWNERSHIP_PCT >= 200, "must not suppress plausible securities-lending cases"
     assert MAX_OWNERSHIP_PCT <= 1000, "must still catch the thousands-scale denominators"
     assert 147 < MAX_OWNERSHIP_PCT, "p99.5 of the real distribution must survive the ceiling"
+
+
+# ---- cases found by verification on 2026-10-19, each of which shipped wrong data
+
+def test_parenthesis_checkbox_and_singular_holding_are_read():
+    """BNY Mellon 2011Q1, accession 0001390777-11-000128: the cover page reads
+    "( X ) adds new holding" - parentheses, and "holding" singular. The first version of the
+    regex accepted only "[X] adds new holdings", so this amendment defaulted to RESTATEMENT and
+    replaced BNY Mellon's entire 20,336-row book with a single row."""
+    (path,) = glob.glob(str(FIX / "text_amendment_paren_checkbox_singular_2011__*.txt.gz"))
+    raw = gzip.open(path).read().decode("utf-8", "replace")
+    p = parse_submission(raw)
+    assert p.amendment_type == "NEW HOLDINGS", f"got {p.amendment_type!r}"
+
+
+def mc_rows(*rows):
+    """rows: (manager_cik, cusip, shares_held, accession, filed_date)"""
+    return pd.DataFrame([{"manager_cik": m, "cusip": c, "shares_held": sh, "accession": a,
+                          "filed_date": fd, "n_rows": 1} for m, c, sh, a, fd in rows])
+
+
+def test_a_restated_holding_is_replaced_not_added():
+    """The Aristotle Capital 2014Q4 failure: the filer labelled a full restatement NEW HOLDINGS,
+    the original and the amendment both reported the security, and the two were summed. Published
+    376m shares against a corrected book of 194m."""
+    from pipeline.ownership import collapse_to_grain
+
+    out, n = collapse_to_grain(mc_rows(
+        (1, "037833100", 182_419_878, "orig", "2015-02-13"),
+        (1, "037833100", 193_718_101, "amend", "2015-03-20"),
+    ))
+    assert len(out) == 1
+    assert out.iloc[0]["shares_held"] == 193_718_101, "the later report must win, not the sum"
+    assert out.iloc[0]["shares_held"] != 182_419_878 + 193_718_101
+    assert out.iloc[0]["n_source_filings"] == 2
+    assert n == 2
+
+
+def test_a_genuinely_additive_amendment_still_adds_its_own_securities():
+    from pipeline.ownership import collapse_to_grain
+
+    out, _ = collapse_to_grain(mc_rows(
+        (1, "037833100", 100, "orig", "2015-02-13"),
+        (1, "02079K305", 200, "amend", "2015-03-20"),      # a security only in the amendment
+    ))
+    assert len(out) == 2
+    assert set(out["shares_held"]) == {100, 200}
+
+
+def test_exact_duplicate_filings_do_not_double_count():
+    from pipeline.ownership import collapse_to_grain
+
+    out, _ = collapse_to_grain(mc_rows(
+        (1, "003009107", 1_862_160, "a", "2010-10-20"),
+        (1, "003009107", 1_862_160, "b", "2010-10-21"),     # byte-identical refiling
+    ))
+    assert len(out) == 1 and out.iloc[0]["shares_held"] == 1_862_160

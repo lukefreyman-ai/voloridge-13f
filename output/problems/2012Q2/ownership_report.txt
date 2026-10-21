@@ -1,18 +1,18 @@
 2012Q2 ownership, quarter end 2012-06-30, period_of_report 20120630; shares outstanding: XBRL + regex fallback (13 companies)
-filings for the period: 3,405; after amendment/duplicate resolution: 3,245 ({'13F-HR': 3088, '13F-HR/A': 157}); notes: 44 (first 5 below)
+filings for the period: 3,405; after amendment/duplicate resolution: 3,248 ({'13F-HR': 3091, '13F-HR/A': 157}); notes: 34 (first 5 below)
   manager 769963: amendment 0000769963-12-000010 has no amendment type; treated as RESTATEMENT
   manager 790502: amendment 0000790502-12-000045 has no amendment type; treated as RESTATEMENT
   manager 883487: amendment 0000883487-12-000004 has no amendment type; treated as RESTATEMENT
   manager 883790: amendment 0000883790-12-000004 has no amendment type; treated as RESTATEMENT
   manager 898419: amendment 0000898417-12-000055 has no amendment type; treated as RESTATEMENT
-holdings rows used: 1,160,421 (SH, no put/call, resolved CUSIP, shares > 0)
+holdings rows used: 1,160,582 (SH, no put/call, resolved CUSIP, shares > 0)
 
-FUNDS EXCLUDED (decision 2): 1,494 CUSIPs on 309 CIKs, 57,368 manager-CUSIP rows, $1,063.5bn of 13F value = 1.8% of the selected filings' value
+FUNDS EXCLUDED (decision 2): 1,494 CUSIPs on 309 CIKs, 57,369 manager-CUSIP rows, $1,063.6bn of 13F value = 1.8% of the selected filings' value
         cusips  value_bn
 reason                  
 F1        1151     704.9
 F2          53      57.5
-F3         290     301.1
+F3         290     301.2
 largest excluded:
     cusip  company_cik                     company_name                                   reason  value_bn
 83413U100    1418076.0               Solar Capital Ltd.              F1 1940-Act/UIT forms (497)     154.5
@@ -28,59 +28,59 @@ largest excluded:
 81369Y407    1064641.0         SELECT SECTOR SPDR TRUST          F1 1940-Act/UIT forms (485BPOS)      23.4
 464287242    1159508.0 DEUTSCHE BANK AKTIENGESELLSCHAFT F3 13(f) list ETF/ETN/unit (IBOXX INV...      17.7
 
-GRAIN (decision 12): collapsed to one row per manager x security. Exact duplicate reports dropped: 63; rows summed across a manager's multiple filings: 972; final rows 738,554
+GRAIN: one row per manager x security. Where a manager filed the same security more than once the latest filing wins, never summed: 1,098 rows superseded; final rows 738,662
 
-FIXES (Luke 2026-10-12): debt-pattern CUSIPs excluded from ownership (rows kept): 7,796 rows / 6,014 CUSIPs / $26.4bn; ADR/ADS excluded from the main figure: 36,700 rows / 385 CUSIPs on 257 companies / $669.6bn; NEW HOLDINGS amendments duplicating >= 90% of the original treated as restatements: 5 amendments, 5 original filings / 2,755 rows dropped
+FIXES (Luke 2026-10-12): debt-pattern CUSIPs excluded from ownership (rows kept): 7,796 rows / 6,014 CUSIPs / $26.4bn; ADR/ADS excluded from the main figure: 36,700 rows / 385 CUSIPs on 257 companies / $669.6bn; NEW HOLDINGS amendments duplicating >= 90% of the original treated as restatements: 6 amendments, 6 original filings / 2,807 rows dropped
 
-PLAUSIBILITY GATES (decision 12): shares outstanding outside [1,000, 100,000,000,000] nulled: 109 companies / 3,820 rows; single holdings exceeding shares outstanding excluded: 174 rows / 17 companies
+PLAUSIBILITY GATES (decision 12): shares outstanding outside [1,000, 35,000,000,000] nulled: 114 companies / 1,939 rows; single holdings exceeding shares outstanding excluded: 232 rows / 20 companies
 
-OWNERSHIP CEILING (decision 12): figures above 300% suppressed as denominator errors: 5 companies (2 multi-CUSIP, 3 scale-suspect)
+OWNERSHIP CEILING (decision 12): figures above 300% suppressed as denominator errors: 7 companies (2 multi-CUSIP, 5 scale-suspect)
 
-SHARE CLASSES (never summed): multi-class companies (class-dimensioned facts only) 222; their CUSIPs: matched to a class 181 ($2,486.0bn), unmatched 101 ($1,010.6bn); company-level pct is null for all 222
+SHARE CLASSES (never summed): multi-class companies (class-dimensioned facts only) 222; their CUSIPs: matched to a class 181 ($2,486.0bn), unmatched 101 ($1,011.2bn); company-level pct is null for all 222
 largest per-class figures:
                 company_name     cusip    list_desc  cusip_shares_held  class_shares_outstanding  class_ownership_pct  value_bn
-                  EZCORP INC 302301106 CL A NON VTG         41326475.0              4.822370e+07                 85.7     199.1
-     WILEY JOHN & SONS, INC. 968223206         CL A         42460612.0              5.052719e+07                 84.0     189.4
-               HUB GROUP INC 443320106         CL A         35705747.0              3.711125e+07                 96.2     187.2
-                   GREIF INC 397624107         CL A         20683712.0              2.521260e+07                 82.0     170.7
-           LENNAR CORP /NEW/ 526057104         CL A        171958925.0              1.580144e+08                108.8     157.8
-               LINKEDIN CORP 53578A108     COM CL A         69875328.0              7.974450e+07                 87.6     154.2
-          Under Armour, Inc. 904311107         CL A         38887970.0              8.249940e+10                  0.0     153.1
-Scripps Networks Interact... 811065101     CL A COM         78035059.0              1.146755e+08                 68.0     112.3
+                  EZCORP INC 302301106 CL A NON VTG         41326475.0                48223698.0                 85.7     199.1
+     WILEY JOHN & SONS, INC. 968223206         CL A         42460612.0                50527188.0                 84.0     189.4
+               HUB GROUP INC 443320106         CL A         35705747.0                37111252.0                 96.2     187.2
+                   GREIF INC 397624107         CL A         20683712.0                25212598.0                 82.0     170.7
+           LENNAR CORP /NEW/ 526057104         CL A        171958925.0               158014450.0                108.8     157.8
+               LINKEDIN CORP 53578A108     COM CL A         69575683.0                79744503.0                 87.2     154.2
+          Under Armour, Inc. 904311107         CL A         38887970.0                82662728.0                 47.0     153.1
+Scripps Networks Interact... 811065101     CL A COM         77783037.0               114675475.0                 67.8     112.3
 
 CUSIP->CIK coverage among OPERATING companies (6-char issuers, funds removed: 559 incl. 220 unmapped by name token only): 4,377 / 14,308 = 30.6%; by value 84.7%; by map source: {'name_exact': 2555, 'SC 13G': 1222, 'SC 13D': 600}
-shares outstanding (XBRL + regex fallback (13 companies)): companies with a figure 3,447 / 4,066 = 84.8%; by 13F value 88.2%; gap > 100 days flagged: 17; multi-class null: 222
+shares outstanding (XBRL + regex fallback (13 companies)): companies with a figure 3,451 / 4,070 = 84.8%; by 13F value 88.3%; gap > 100 days flagged: 19; multi-class null: 222
 
-ownership pct distribution (n=3,442): {'count': 3442.0, 'mean': 57.4, 'std': 34.0, 'min': 0.0, '5%': 1.8, '25%': 27.4, '50%': 63.1, '75%': 85.3, '95%': 100.9, 'max': 288.4}
-histogram: {'0': 0, '0-5': 281, '5-25': 520, '25-50': 572, '50-75': 725, '75-90': 734, '90-100': 408, '100-150': 191, '>150': 11}
-companies over 100%: 202 / 3,442 = 5.9%
-large companies (top 500 by 13F value) with a pct: 425; over 100%: 40 = 9.4%  [stop condition at 5%]
+ownership pct distribution (n=3,444): {'count': 3444.0, 'mean': 57.8, 'std': 33.9, 'min': 0.0, '5%': 2.6, '25%': 28.4, '50%': 63.4, '75%': 85.3, '95%': 101.3, 'max': 288.4}
+histogram: {'0': 0, '0-5': 259, '5-25': 524, '25-50': 574, '50-75': 732, '75-90': 739, '90-100': 411, '100-150': 193, '>150': 12}
+companies over 100%: 205 / 3,444 = 6.0%
+large companies (top 500 by 13F value) with a pct: 429; over 100%: 40 = 9.3%  [stop condition at 5%]
 Note: companies with 'no identified data cause' can still exceed 100% through securities lending (the lender and the
 borrower's buyer both report the same shares on 13F); that is a possible explanation, not a measured cause.
 over-100% causes (combinations; [..] = annotation):
-no identified data cause                                                      140
+no identified data cause                                                      143
 multiple CUSIPs summed (classes/units)                                         34
-manager-CUSIP in >1 filing                                                     15
-single holding > 50% of shares out                                              6
+manager-CUSIP in >1 filing                                                     14
+single holding > 50% of shares out                                              7
 manager-CUSIP in >1 filing; multiple CUSIPs summed (classes/units)              3
 single holding > 50% of shares out; multiple CUSIPs summed (classes/units)      2
 CUSIP->CIK conflict; multiple CUSIPs summed (classes/units)                     1
 manager-CUSIP in >1 filing; single holding > 50% of shares out                  1
-  with the as-of date after quarter end: 64 of 202
+  with the as-of date after quarter end: 69 of 205
 largest over-100% companies:
  company_cik                   company_name  n_managers  shares_held_total  shares_outstanding  institutional_ownership_pct  value_bn                                               over_100_cause
    1289308.0                        EnerSys         215           49222128          48017521.0                        102.5     194.5                                     no identified data cause
     914329.0                         FEI CO         205           40079905          38075000.0                        105.3     193.5                                     no identified data cause
     807884.0 CASH AMERICA INTERNATIONAL INC         199           33683794          30235164.0                        111.4     190.2                                     no identified data cause
    1009356.0      SALIX PHARMACEUTICALS LTD         230           59552922          58231700.0                        102.3     186.0                                     no identified data cause
-    908255.0                 BORGWARNER INC         410          120404681         114441115.0                        105.2     175.9 manager-CUSIP in >1 filing; [as-of 31d after quarter end:...
+    908255.0                 BORGWARNER INC         410          118418873         114441115.0                        103.5     175.9 manager-CUSIP in >1 filing; [as-of 31d after quarter end:...
     750199.0            ENERGY PARTNERS LTD         130           39185761          39103674.0                        100.2     168.6                                     no identified data cause
    1014473.0                VERISIGN INC/CA         308          160076512         156667000.0                        102.2     160.8                                     no identified data cause
    1270400.0              VIRGIN MEDIA INC.         221          302922727         273600000.0                        110.7     158.9                                     no identified data cause
    1071739.0                   CENTENE CORP         197           53820440          51557064.0                        104.4     158.7                                     no identified data cause
    1071993.0          CONTANGO OIL & GAS CO         177           36143588          15292448.0                        236.3     147.9                       multiple CUSIPs summed (classes/units)
-   1091171.0                  BLUE NILE INC          98           17519004          12418446.0                        141.1     142.6                                     no identified data cause
-     19584.0                    CHEMED CORP         173           19467245          19099057.0                        101.9     139.3                                     no identified data cause
+   1091171.0                  BLUE NILE INC          98           17519004          12418446.0                        141.1     142.6 no identified data cause; [as-of 31d after quarter end: b...
+     19584.0                    CHEMED CORP         174           19480045          19099057.0                        102.0     139.3                                     no identified data cause
     703351.0      BRINKER INTERNATIONAL INC         251           75456003          74342115.0                        101.5     122.9                                     no identified data cause
     929008.0        WESCO INTERNATIONAL INC         222           52030630          43725849.0                        119.0     119.7 no identified data cause; [as-of 31d after quarter end: b...
     353230.0                   OMNICARE INC         254          113713629         111548672.0                        101.9     117.4                                     no identified data cause
@@ -90,11 +90,11 @@ largest over-100% companies:
      16058.0    CACI INTERNATIONAL INC /DE/         210           28469023          22666506.0                        125.6     111.5 no identified data cause; [as-of 62d after quarter end: b...
    1309108.0            Wright Express CORP         186           40640094          38774000.0                        104.8     110.6                                     no identified data cause
 
-NO COMPANY-LEVEL FIGURE: 619 companies carrying $5,540.5bn = 11.8% of mapped operating value; causes:
+NO COMPANY-LEVEL FIGURE: 619 companies carrying $5,541.2bn = 11.7% of mapped operating value; causes:
                                                                                                    companies  value_bn
 cause                                                                                                                 
-class-dimensioned facts only: company pct null by rule, per-class pct given (class_ownership_pct)        222    3497.6
-regex fallback tried: no 10-K filed within the window                                                    384    2042.1
+class-dimensioned facts only: company pct null by rule, per-class pct given (class_ownership_pct)        222    3498.2
+regex fallback tried: no 10-K filed within the window                                                    384    2042.2
 regex fallback tried: no match                                                                            13       0.8
 largest without shares outstanding:
  company_cik                    company_name  n_managers  value_bn                                    cause

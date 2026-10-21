@@ -5,6 +5,7 @@ company_cik,shares_held_total,n_managers,n_cusips,company_name,shares_outstandin
 19584.0,22080863,192,1,CHEMED CORP,17539101.0,False,125.89506725572765,,False,no identified data cause
 23194.0,52554989,169,1,COMSTOCK RESOURCES INC,47837224.0,False,109.86212117994138,,False,no identified data cause
 26780.0,163637542,236,1,DANA HOLDING CORP,157148833.0,False,104.12902143536758,,False,no identified data cause
+33992.0,2032632,16,1,"KINGSTONE COMPANIES, INC.",726657.0,False,279.72372109537235,,False,single holding > 50% of shares out
 40888.0,66112141,159,1,GENCORP INC,56800000.0,False,116.39461443661972,,False,no identified data cause; [as-of 61d after quarter end: buybacks lower the denominator]
 61004.0,3248879,10,2,LGL GROUP INC,2594784.0,False,125.2080712691307,,False,multiple CUSIPs summed (classes/units)
 70318.0,97977715,282,2,TENET HEALTHCARE CORP,97653460.0,False,100.33204660643872,,False,multiple CUSIPs summed (classes/units); [as-of 30d after quarter end: buybacks lower the denominator]
@@ -139,7 +140,7 @@ company_cik,shares_held_total,n_managers,n_cusips,company_name,shares_outstandin
 1065865.0,193657039,224,1,JANUS CAPITAL GROUP INC,190376952.0,False,101.72294333192183,,False,no identified data cause
 1068875.0,52360325,174,1,"BLUCORA, INC.",42203000.0,False,124.06777954173873,,False,no identified data cause
 1070750.0,774741837,390,1,"HOST HOTELS & RESORTS, INC.",755300000.0,False,102.57405494505494,,False,no identified data cause
-1073349.0,39368478,146,1,BOTTOMLINE TECHNOLOGIES INC /DE/,37376000.0,False,105.3309021832192,,False,manager-CUSIP in >1 filing; CUSIP->CIK conflict
+1073349.0,39300218,146,1,BOTTOMLINE TECHNOLOGIES INC /DE/,37376000.0,False,105.14827161815067,,False,manager-CUSIP in >1 filing; CUSIP->CIK conflict
 1076195.0,47210759,196,1,"LIFE TIME FITNESS, INC.",41277944.0,False,114.37284521729086,,False,no identified data cause
 1077428.0,46473369,207,2,TEXAS CAPITAL BANCSHARES INC/TX,43060293.0,False,107.92627212267227,,False,multiple CUSIPs summed (classes/units); [as-of 30d after quarter end: buybacks lower the denominator]
 1077771.0,113172512,207,1,UMPQUA HOLDINGS CORP,112319525.0,False,100.75942895947966,,False,no identified data cause
@@ -148,7 +149,7 @@ company_cik,shares_held_total,n_managers,n_cusips,company_name,shares_outstandin
 1082554.0,66205731,304,1,UNITED THERAPEUTICS Corp,49658547.0,False,133.3219254280638,,False,no identified data cause
 1082754.0,70687801,205,1,TEAM HEALTH HOLDINGS INC.,70148000.0,False,100.76951730626675,,False,no identified data cause
 1084048.0,50996495,196,1,"J2 GLOBAL, INC.",46680714.0,False,109.24531916971108,,False,no identified data cause
-1084961.0,32872360,177,1,ENCORE CAPITAL GROUP INC,25749000.0,False,127.66460833430425,,False,manager-CUSIP in >1 filing
+1084961.0,32835576,177,1,ENCORE CAPITAL GROUP INC,25749000.0,False,127.52175230106025,,False,manager-CUSIP in >1 filing
 1086909.0,29170300,116,1,"BROADSOFT, INC.",28571267.0,False,102.0966273564277,,False,no identified data cause
 1087432.0,100245756,174,1,INTERMUNE INC,98879000.0,False,101.38225103409218,,False,no identified data cause
 1091171.0,12699319,101,1,BLUE NILE INC,12522000.0,False,101.41605973486662,,False,no identified data cause
@@ -183,7 +184,7 @@ company_cik,shares_held_total,n_managers,n_cusips,company_name,shares_outstandin
 1177609.0,60360640,149,1,"FIVE BELOW, INC",54267222.0,False,111.228542341821,,False,no identified data cause; [as-of 30d after quarter end: buybacks lower the denominator]
 1180262.0,103438179,300,1,HERBALIFE LTD.,101300000.0,False,102.11073938795656,,False,no identified data cause
 1182129.0,56860735,162,1,AUXILIUM PHARMACEUTICALS INC,50253317.0,False,113.14822263374178,,False,no identified data cause
-1185348.0,54865200,263,1,PORTFOLIO RECOVERY ASSOCIATES INC,50060005.0,False,109.5988703956382,,False,no identified data cause
+1185348.0,54865200,263,1,PORTFOLIO RECOVERY ASSOCIATES INC,50060005.0,False,109.5988703956382,,False,no identified data cause; [as-of 30d after quarter end: buybacks lower the denominator]
 1196501.0,90532823,166,1,HMS HOLDINGS CORP,87664117.0,False,103.27238338578144,,False,no identified data cause
 1208208.0,80150518,157,1,"DIGITALGLOBE, INC.",75400000.0,False,106.30042175066312,,False,no identified data cause
 1261694.0,54699325,143,1,TESSERA TECHNOLOGIES INC,53344000.0,False,102.54072622975406,,False,no identified data cause
@@ -212,7 +213,7 @@ company_cik,shares_held_total,n_managers,n_cusips,company_name,shares_outstandin
 1349454.0,42022909,118,1,"TRULIA, INC.",36917277.0,False,113.8299257553584,,False,no identified data cause
 1354217.0,57862337,112,1,Volcano Corp,51203000.0,False,113.00575552213739,,False,no identified data cause
 1360530.0,33977784,163,1,"Vitamin Shoppe, Inc.",30678625.0,False,110.75393372421351,,False,no identified data cause
-1364100.0,101220896,95,1,"Cal Dive International, Inc.",98740728.0,False,102.51179837361539,,False,no identified data cause
+1364100.0,101220896,95,1,"Cal Dive International, Inc.",98740728.0,False,102.51179837361539,,False,no identified data cause; [as-of 30d after quarter end: buybacks lower the denominator]
 1365135.0,551874525,547,1,Western Union CO,538900000.0,False,102.40759417331601,,False,no identified data cause
 1368458.0,171615371,214,1,"Sally Beauty Holdings, Inc.",162151000.0,False,105.83676388058045,,False,no identified data cause
 1374535.0,28514981,135,1,Altra Industrial Motion Corp.,26836964.0,False,106.2526334946084,,False,no identified data cause

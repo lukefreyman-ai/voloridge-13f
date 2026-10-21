@@ -4,7 +4,7 @@ company_cik,shares_held_total,n_managers,n_cusips,company_name,shares_outstandin
 46619.0,25013235,112,2,HEICO CORP,13126005.0,False,190.56243693340053,,True,shares outstanding gap >100d; multiple CUSIPs summed (classes/units); [as-of 123d after quarter end: buybacks lower the denominator]
 57055.0,14187568,57,2,KV PHARMACEUTICAL CO /DE/,12111835.0,False,117.13805546393259,,True,shares outstanding gap >100d; multiple CUSIPs summed (classes/units)
 67472.0,134036556,276,2,MOLEX INC,95560076.0,False,140.2641789443533,,True,manager-CUSIP in >1 filing; shares outstanding gap >100d; multiple CUSIPs summed (classes/units); [as-of 123d after quarter end: buybacks lower the denominator]
-69499.0,323615727,442,2,MYLAN INC.,309360933.0,False,104.6078196951908,,False,multiple CUSIPs summed (classes/units); [as-of 31d after quarter end: buybacks lower the denominator]
+69499.0,323656332,443,2,MYLAN INC.,309360933.0,False,104.6209451404777,,False,multiple CUSIPs summed (classes/units); [as-of 31d after quarter end: buybacks lower the denominator]
 77776.0,68759372,151,1,PHH CORP,55492224.0,False,123.90812089275786,,False,no identified data cause
 97210.0,186783288,284,1,"TERADYNE, INC",181162000.0,False,103.10290679060729,,False,no identified data cause
 100517.0,168593393,208,2,UAL CORP /DE/,168361795.0,False,100.13755971180991,,False,multiple CUSIPs summed (classes/units)
@@ -14,7 +14,7 @@ company_cik,shares_held_total,n_managers,n_cusips,company_name,shares_outstandin
 350077.0,59945057,228,1,WMS INDUSTRIES INC /DE/,57770804.0,False,103.76358445695163,,True,shares outstanding gap >100d; [as-of 123d after quarter end: buybacks lower the denominator]
 350907.0,59757749,204,1,THORATEC CORP,58453000.0,False,102.23213350897302,,False,no identified data cause
 357020.0,101773425,118,1,LTX-CREDENCE CORP,49209608.0,False,206.8161668753793,,True,shares outstanding gap >100d; [as-of 102d after quarter end: buybacks lower the denominator]
-706688.0,77248172,180,2,AARON'S INC,69368754.0,False,111.35874229483782,,False,multiple CUSIPs summed (classes/units); [as-of 31d after quarter end: buybacks lower the denominator]
+706688.0,77248172,180,2,AARON'S INC,69368754.0,False,111.35874229483782,,False,manager-CUSIP in >1 filing; multiple CUSIPs summed (classes/units); [as-of 31d after quarter end: buybacks lower the denominator]
 711404.0,52953918,177,1,COOPER COMPANIES INC,45663989.0,False,115.96428424157162,,False,no identified data cause; [as-of 62d after quarter end: buybacks lower the denominator]
 719739.0,43280864,185,1,SVB FINANCIAL GROUP,41886197.0,False,103.3296577390399,,False,manager-CUSIP in >1 filing
 722104.0,70487948,149,1,SAVIENT PHARMACEUTICALS INC,67592000.0,False,104.28445378151261,,False,no identified data cause
@@ -26,7 +26,7 @@ company_cik,shares_held_total,n_managers,n_cusips,company_name,shares_outstandin
 792977.0,27364196,98,1,AMAG PHARMACEUTICALS INC.,21044872.0,False,130.02785666741048,,False,no identified data cause
 803649.0,141410614,170,4,HRPT PROPERTIES TRUST,64596310.0,False,218.91438380922997,,False,multiple CUSIPs summed (classes/units)
 807884.0,30203479,183,1,CASH AMERICA INTERNATIONAL INC,29387499.0,False,102.77662280822196,,False,no identified data cause
-811156.0,245007746,284,2,CMS ENERGY CORP,228300000.0,False,107.318329391152,,False,multiple CUSIPs summed (classes/units)
+811156.0,245097447,285,2,CMS ENERGY CORP,228300000.0,False,107.35762023653088,,False,multiple CUSIPs summed (classes/units)
 811596.0,21108737,109,1,KAISER ALUMINUM CORP,19216413.0,False,109.84743614742251,,False,no identified data cause
 812011.0,39737581,105,1,VAIL RESORTS INC,35977813.0,False,110.4502405413025,,True,shares outstanding gap >100d; [as-of 153d after quarter end: buybacks lower the denominator]
 814547.0,42307276,149,1,FAIR ISAAC CORP,42271000.0,False,100.08581770007807,,False,no identified data cause
@@ -42,7 +42,7 @@ company_cik,shares_held_total,n_managers,n_cusips,company_name,shares_outstandin
 879526.0,50623246,130,1,WABASH NATIONAL CORP /DE,31109898.0,False,162.72392149919617,,True,shares outstanding gap >100d
 882235.0,109658129,227,1,LINCARE HOLDINGS INC,98086492.0,False,111.79738082589394,,False,manager-CUSIP in >1 filing; [as-of 31d after quarter end: buybacks lower the denominator]
 884217.0,53952406,148,1,MENS WEARHOUSE INC,52683462.0,False,102.40861923614663,,False,no identified data cause; [as-of 62d after quarter end: buybacks lower the denominator]
-892025.0,35030097,176,1,MARTEK BIOSCIENCES CORP,33480468.0,False,104.62845680651776,,False,manager-CUSIP in >1 filing; [as-of 31d after quarter end: buybacks lower the denominator]
+892025.0,35028997,176,1,MARTEK BIOSCIENCES CORP,33480468.0,False,104.62517130883595,,False,manager-CUSIP in >1 filing; [as-of 31d after quarter end: buybacks lower the denominator]
 896262.0,34786445,237,1,AMEDISYS INC,28757389.0,False,120.96524131589277,,False,manager-CUSIP in >1 filing
 903127.0,49743319,146,3,POST PROPERTIES INC,48691000.0,False,102.16121870571564,,False,multiple CUSIPs summed (classes/units)
 912242.0,135260436,228,1,MACERICH CO,130204445.0,False,103.8831170471945,,False,manager-CUSIP in >1 filing
@@ -50,9 +50,10 @@ company_cik,shares_held_total,n_managers,n_cusips,company_name,shares_outstandin
 912728.0,30681551,129,1,FORWARD AIR CORP,28988000.0,False,105.84224851662758,,False,no identified data cause
 915912.0,88685278,318,1,AVALONBAY COMMUNITIES INC,85162865.0,False,104.13609030179998,,False,manager-CUSIP in >1 filing; [as-of 31d after quarter end: buybacks lower the denominator]
 916076.0,47820092,232,1,MARTIN MARIETTA MATERIALS INC,45523432.0,False,105.04500627281352,,False,no identified data cause; [as-of 31d after quarter end: buybacks lower the denominator]
-916235.0,36140652,125,1,SONIC SOLUTIONS/CA/,30636131.0,False,117.96741566355098,,False,no identified data cause
+916235.0,36240652,126,1,SONIC SOLUTIONS/CA/,30636131.0,False,118.29382763770006,,False,no identified data cause
 920033.0,18499037,166,1,BANK JOS A CLOTHIERS INC /DE/,18351162.0,False,100.80580728348427,,False,no identified data cause
 920522.0,30949142,194,1,ESSEX PROPERTY TRUST INC,28849779.0,False,107.27687723361763,,False,manager-CUSIP in >1 filing
+920527.0,60815354,169,1,PSS WORLD MEDICAL INC,56453817.0,False,107.72584960907072,,False,no identified data cause; [as-of 31d after quarter end: buybacks lower the denominator]
 921082.0,71688423,183,2,HIGHWOODS PROPERTIES INC,71614985.0,False,100.10254557757709,,False,multiple CUSIPs summed (classes/units)
 921547.0,10985391,12,1,HERITAGE OAKS BANCORP,7771952.0,False,141.3466140809928,,True,shares outstanding gap >100d
 922475.0,38199844,280,1,ITT EDUCATIONAL SERVICES INC,33590086.0,False,113.72356712632413,,False,no identified data cause

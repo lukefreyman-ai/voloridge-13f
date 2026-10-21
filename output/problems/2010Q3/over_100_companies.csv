@@ -57,7 +57,7 @@ company_cik,shares_held_total,n_managers,n_cusips,company_name,shares_outstandin
 1045450.0,74956343.0,205,5,ENTERTAINMENT PROPERTIES TRUST,46536130.0,False,161.07128590194327,,False,single holding > 50% of shares out; multiple CUSIPs summed (classes/units); [as-of 31d after quarter end: buybacks lower the denominator]
 1046568.0,82120103.0,191,1,CAREER EDUCATION CORP,81264576.0,False,101.05276744445206,,False,no identified data cause
 1048477.0,113391276.0,170,1,BIOMARIN PHARMACEUTICAL INC,102464509.0,False,110.66395292051807,,False,no identified data cause
-1051251.0,65009080.0,214,1,J CREW GROUP INC,63922171.0,False,101.70036308685448,,False,no identified data cause; [as-of 31d after quarter end: buybacks lower the denominator]
+1051251.0,65039080.0,215,1,J CREW GROUP INC,63922171.0,False,101.74729515992189,,False,no identified data cause; [as-of 31d after quarter end: buybacks lower the denominator]
 1053532.0,77411413.0,192,4,LaSalle Hotel Properties,73059600.0,False,105.95652453613214,,False,multiple CUSIPs summed (classes/units)
 1054833.0,149437266.0,278,1,COVENTRY HEALTH CARE INC,148443000.0,False,100.66979648754067,,False,no identified data cause
 1060749.0,149247458.0,155,1,"KNIGHT CAPITAL GROUP, INC.",97607000.0,False,152.90651080352845,,False,single holding > 50% of shares out
@@ -68,7 +68,7 @@ company_cik,shares_held_total,n_managers,n_cusips,company_name,shares_outstandin
 1098277.0,41897542.0,132,1,WEBSENSE INC,41762816.0,False,100.32259797806738,,False,no identified data cause; [as-of 31d after quarter end: buybacks lower the denominator]
 1100682.0,64859110.0,199,1,CHARLES RIVER LABORATORIES INTERNATIONAL INC,57712482.0,False,112.38315829147669,,False,no identified data cause
 1101215.0,71039319.0,247,1,ALLIANCE DATA SYSTEMS CORP,51995538.0,False,136.6257985444828,,False,no identified data cause; [as-of 31d after quarter end: buybacks lower the denominator]
-1101239.0,48182488.0,248,1,EQUINIX INC,45994363.0,False,104.75737646372012,,False,no identified data cause
+1101239.0,48200488.0,249,1,EQUINIX INC,45994363.0,False,104.79651169427002,,False,no identified data cause
 1102934.0,23695445.0,127,1,CABOT MICROELECTRONICS CORP,22939516.0,False,103.29531364131658,,False,no identified data cause; [as-of 31d after quarter end: buybacks lower the denominator]
 1104349.0,17116098.0,153,1,CAPELLA EDUCATION CO,16531000.0,False,103.53939870546247,,False,no identified data cause
 1106942.0,38879333.0,138,1,BLACKBOARD INC,34370838.0,False,113.11721000226996,,False,no identified data cause
@@ -83,7 +83,7 @@ company_cik,shares_held_total,n_managers,n_cusips,company_name,shares_outstandin
 1182129.0,56078300.0,110,1,AUXILIUM PHARMACEUTICALS INC,47714394.0,False,117.52910452975678,,False,no identified data cause; [as-of 31d after quarter end: buybacks lower the denominator]
 1185348.0,17500239.0,177,1,PORTFOLIO RECOVERY ASSOCIATES INC,17061000.0,False,102.57452083699665,,False,no identified data cause
 1206264.0,69788205.0,185,1,TEMPUR PEDIC INTERNATIONAL INC,68165595.0,False,102.3803943910414,,False,no identified data cause; [as-of 31d after quarter end: buybacks lower the denominator]
-1269238.0,100817999.0,202,1,CTRIP COM INTERNATIONAL LTD,35885163.0,False,280.9461921630396,,False,no identified data cause; [as-of 92d after quarter end: buybacks lower the denominator]
+1269238.0,100827999.0,203,1,CTRIP COM INTERNATIONAL LTD,35885163.0,False,280.97405883317293,,False,no identified data cause; [as-of 92d after quarter end: buybacks lower the denominator]
 1280058.0,44027366.0,124,1,BLACKBAUD INC,43888778.0,False,100.3157709244035,,False,no identified data cause; [as-of 31d after quarter end: buybacks lower the denominator]
 1289308.0,49383360.0,137,1,EnerSys,49152397.0,False,100.46989163112431,,False,no identified data cause
 1297996.0,108053802.0,264,2,"Digital Realty Trust, Inc.",90461804.0,False,119.44687948075854,,False,multiple CUSIPs summed (classes/units); [as-of 31d after quarter end: buybacks lower the denominator]

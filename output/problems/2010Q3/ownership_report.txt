@@ -1,13 +1,13 @@
 2010Q3 ownership, quarter end 2010-09-30, period_of_report 20100930; shares outstanding: XBRL + regex fallback (268 companies)
-filings for the period: 2,962; after amendment/duplicate resolution: 2,843 ({'13F-HR': 2741, '13F-HR/A': 102}); notes: 31 (first 5 below)
+filings for the period: 2,962; after amendment/duplicate resolution: 2,844 ({'13F-HR': 2742, '13F-HR/A': 102}); notes: 21 (first 5 below)
   manager 10742: amendment 0000010742-10-000012 has no amendment type; treated as RESTATEMENT
   manager 314969: amendment 0000314969-10-000016 has no amendment type; treated as RESTATEMENT
   manager 354204: amendment 0000354204-10-001441 has no amendment type; treated as RESTATEMENT
   manager 909450: amendment 0000909450-10-000046 has no amendment type; treated as RESTATEMENT
   manager 919086: amendment 0000722885-10-000048 has no amendment type; treated as RESTATEMENT
-holdings rows used: 1,014,503 (SH, no put/call, resolved CUSIP, shares > 0)
+holdings rows used: 1,014,616 (SH, no put/call, resolved CUSIP, shares > 0)
 
-FUNDS EXCLUDED (decision 2): 1,194 CUSIPs on 300 CIKs, 41,678 manager-CUSIP rows, $552.1bn of 13F value = 4.4% of the selected filings' value
+FUNDS EXCLUDED (decision 2): 1,194 CUSIPs on 300 CIKs, 41,680 manager-CUSIP rows, $552.1bn of 13F value = 4.4% of the selected filings' value
         cusips  value_bn
 reason                  
 F1         928     427.3
@@ -28,11 +28,11 @@ largest excluded:
 464287242    1100663.0            iSHARES TRUST          F1 1940-Act/UIT forms (485APOS)       8.4
 464287200    1100663.0            iSHARES TRUST          F1 1940-Act/UIT forms (485APOS)       8.2
 
-GRAIN (decision 12): collapsed to one row per manager x security. Exact duplicate reports dropped: 0; rows summed across a manager's multiple filings: 0; final rows 660,492
+GRAIN: one row per manager x security. Where a manager filed the same security more than once the latest filing wins, never summed: 24 rows superseded; final rows 660,591
 
-FIXES (Luke 2026-10-12): debt-pattern CUSIPs excluded from ownership (rows kept): 6,306 rows / 4,517 CUSIPs / $131.7bn; ADR/ADS excluded from the main figure: 33,249 rows / 370 CUSIPs on 237 companies / $528.5bn; NEW HOLDINGS amendments duplicating >= 90% of the original treated as restatements: 2 amendments, 2 original filings / 20 rows dropped
+FIXES (Luke 2026-10-12): debt-pattern CUSIPs excluded from ownership (rows kept): 6,306 rows / 4,517 CUSIPs / $131.7bn; ADR/ADS excluded from the main figure: 33,253 rows / 370 CUSIPs on 237 companies / $528.5bn; NEW HOLDINGS amendments duplicating >= 90% of the original treated as restatements: 2 amendments, 2 original filings / 20 rows dropped
 
-PLAUSIBILITY GATES (decision 12): shares outstanding outside [1,000, 100,000,000,000] nulled: 12 companies / 1,233 rows; single holdings exceeding shares outstanding excluded: 183 rows / 8 companies
+PLAUSIBILITY GATES (decision 12): shares outstanding outside [1,000, 35,000,000,000] nulled: 13 companies / 1,411 rows; single holdings exceeding shares outstanding excluded: 183 rows / 8 companies
 
 OWNERSHIP CEILING (decision 12): figures above 300% suppressed as denominator errors: 4 companies (1 multi-CUSIP, 3 scale-suspect)
 
@@ -49,11 +49,11 @@ UNITED PARCEL SERVICE INC 911312106      CL B        473597922.0               7
                  CBS CORP 124857202      CL B        565223335.0               631131396.0                 89.6       9.1
 
 CUSIP->CIK coverage among OPERATING companies (6-char issuers, funds removed: 533 incl. 213 unmapped by name token only): 4,492 / 13,776 = 32.6%; by value 79.8%; by map source: {'name_exact': 2625, 'SC 13G': 1186, 'SC 13D': 681}
-shares outstanding (XBRL + regex fallback (268 companies)): companies with a figure 1,472 / 4,233 = 34.8%; by 13F value 85.8%; gap > 100 days flagged: 59; multi-class null: 65
+shares outstanding (XBRL + regex fallback (268 companies)): companies with a figure 1,471 / 4,232 = 34.8%; by 13F value 85.8%; gap > 100 days flagged: 58; multi-class null: 65
 
-ownership pct distribution (n=1,468): {'count': 1468.0, 'mean': 70.1, 'std': 27.6, 'min': 0.0, '5%': 9.3, '25%': 59.6, '50%': 76.6, '75%': 88.2, '95%': 102.0, 'max': 280.9}
-histogram: {'0': 0, '0-5': 49, '5-25': 89, '25-50': 142, '50-75': 396, '75-90': 487, '90-100': 212, '100-150': 88, '>150': 5}
-companies over 100%: 93 / 1,468 = 6.3%
+ownership pct distribution (n=1,467): {'count': 1467.0, 'mean': 70.2, 'std': 27.5, 'min': 0.0, '5%': 9.7, '25%': 59.6, '50%': 76.6, '75%': 88.2, '95%': 102.0, 'max': 281.0}
+histogram: {'0': 0, '0-5': 47, '5-25': 89, '25-50': 142, '50-75': 396, '75-90': 488, '90-100': 212, '100-150': 88, '>150': 5}
+companies over 100%: 93 / 1,467 = 6.3%
 large companies (top 500 by 13F value) with a pct: 403; over 100%: 14 = 3.5%  [stop condition at 5%]
 Note: companies with 'no identified data cause' can still exceed 100% through securities lending (the lender and the
 borrower's buyer both report the same shares on 13F); that is a possible explanation, not a measured cause.
@@ -71,13 +71,13 @@ largest over-100% companies:
    1297996.0  Digital Realty Trust, Inc.         264        108053802.0          90461804.0                        119.4       6.7 multiple CUSIPs summed (classes/units); [as-of 31d after ...
    1166126.0           J C PENNEY CO INC         322        237306225.0         236596234.0                        100.3       6.5 no identified data cause; [as-of 61d after quarter end: b...
     827054.0    MICROCHIP TECHNOLOGY INC         402        189340289.0         186824448.0                        101.3       6.0 no identified data cause; [as-of 31d after quarter end: b...
-   1101239.0                 EQUINIX INC         248         48182488.0          45994363.0                        104.8       6.0                                     no identified data cause
+   1101239.0                 EQUINIX INC         249         48200488.0          45994363.0                        104.8       6.0                                     no identified data cause
     912242.0                 MACERICH CO         238        133241955.0         130217772.0                        102.3       5.7                                     no identified data cause
    1441634.0      Avago Technologies LTD         114        253024573.0         239888231.0                        105.5       5.7 no identified data cause; [as-of 31d after quarter end: b...
     873364.0                CEPHALON INC         342         85407829.0          75212508.0                        113.6       5.6                                     no identified data cause
    1034054.0     SBA COMMUNICATIONS CORP         249        126294667.0         114926000.0                        109.9       5.4                                     no identified data cause
    1101215.0  ALLIANCE DATA SYSTEMS CORP         247         71039319.0          51995538.0                        136.6       5.3 no identified data cause; [as-of 31d after quarter end: b...
-   1269238.0 CTRIP COM INTERNATIONAL LTD         202        100817999.0          35885163.0                        280.9       4.8 no identified data cause; [as-of 92d after quarter end: b...
+   1269238.0 CTRIP COM INTERNATIONAL LTD         203        100827999.0          35885163.0                        281.0       4.8 no identified data cause; [as-of 92d after quarter end: b...
     811156.0             CMS ENERGY CORP         297        237592765.0         229600000.0                        103.5       4.4                                     no identified data cause
     704051.0              LEGG MASON INC         309        179645861.0         152999988.0                        117.4       4.1 multiple CUSIPs summed (classes/units); [as-of 31d after ...
     874716.0  IDEXX LABORATORIES INC /DE         236         60134088.0          57503819.0                        104.6       3.7 no identified data cause; [as-of 31d after quarter end: b...
@@ -87,10 +87,10 @@ largest over-100% companies:
     882235.0        LINCARE HOLDINGS INC         201        105374583.0          97615722.0                        107.9       3.0 no identified data cause; [as-of 31d after quarter end: b...
    1013934.0       STRAYER EDUCATION INC         205         16638963.0          13589014.0                        122.4       2.9                                     no identified data cause
 
-NO COMPANY-LEVEL FIGURE: 2,761 companies carrying $1,300.9bn = 14.2% of mapped operating value; causes:
+NO COMPANY-LEVEL FIGURE: 2,761 companies carrying $1,301.0bn = 14.2% of mapped operating value; causes:
                                                                                                    companies  value_bn
 cause                                                                                                                 
-regex fallback tried: no 10-K filed within the window                                                   2423     905.4
+regex fallback tried: no 10-K filed within the window                                                   2423     905.5
 class-dimensioned facts only: company pct null by rule, per-class pct given (class_ownership_pct)         65     343.5
 regex fallback tried: no match                                                                           266      49.3
 regex fallback tried: as-of more than 45 days from filing date                                             7       2.2

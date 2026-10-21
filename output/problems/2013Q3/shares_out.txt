@@ -2,7 +2,7 @@
 facts loaded 47,066 on 7,254 CIKs | selected 10,282 rows on 7,254 CIKs
 CIKs with class-dimensioned facts (multi-class): 1,908; undimensioned-only: 5,346
 gap > 100 days flagged: 586 rows; gap distribution (days): {'min': -6636.0, '25%': 0.0, '50%': 0.0, '75%': 31.0, 'max': 853.0}
-by form: {'10-Q': 8130, '10-K': 1528, '10-Q/A': 332, '20-F': 170, '10-K/A': 73, '40-F': 41, '10-KT': 8}
-by XBRL tag (decision 11): {'CommonStockSharesOutstanding': 7874, 'EntityCommonStockSharesOutstanding': 2408}
-dated exactly at quarter end: 6,335 of 10,282 (61.6%)
-scale-corrected (fact tagged in thousands, cross-checked against the other tag): 66
+by form: {'10-Q': 8129, '10-K': 1529, '10-Q/A': 332, '20-F': 170, '10-K/A': 73, '40-F': 41, '10-KT': 8}
+by XBRL tag (decision 11): {'CommonStockSharesOutstanding': 7840, 'EntityCommonStockSharesOutstanding': 2442}
+dated exactly at quarter end: 6,306 of 10,282 (61.3%)
+scale-corrected (fact tagged in thousands, cross-checked against the other tag): 39

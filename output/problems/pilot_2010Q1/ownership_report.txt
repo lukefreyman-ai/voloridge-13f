@@ -1,22 +1,22 @@
 pilot_2010Q1 ownership, quarter end 2010-03-31, period_of_report 20100331; shares outstanding: XBRL + regex fallback (1,245 companies)
-filings for the period: 3,006; after amendment/duplicate resolution: 2,870 ({'13F-HR': 2748, '13F-HR/A': 122}); notes: 58 (first 5 below)
+filings for the period: 3,006; after amendment/duplicate resolution: 2,872 ({'13F-HR': 2750, '13F-HR/A': 122}); notes: 47 (first 5 below)
   manager 49205: amendment 0000049205-10-000013 has no amendment type and no original for the period; kept as the only filing
   manager 728575: amendment 0000728575-10-000013 has no amendment type; treated as RESTATEMENT
   manager 744126: amendment 0001047469-10-005420 has no amendment type; treated as RESTATEMENT
   manager 837592: amendment 0000837592-10-000007 has no amendment type; treated as RESTATEMENT
   manager 893879: amendment 0000893879-10-000008 has no amendment type; treated as RESTATEMENT
-holdings rows used: 1,040,762 (SH, no put/call, resolved CUSIP, shares > 0)
+holdings rows used: 1,040,801 (SH, no put/call, resolved CUSIP, shares > 0)
 
-FUNDS EXCLUDED (decision 2): 1,491 CUSIPs on 535 CIKs, 46,832 manager-CUSIP rows, $655.6bn of 13F value = 5.1% of the selected filings' value
+FUNDS EXCLUDED (decision 2): 1,491 CUSIPs on 535 CIKs, 46,840 manager-CUSIP rows, $655.7bn of 13F value = 5.1% of the selected filings' value
         cusips  value_bn
 reason                  
-F1        1348     579.1
+F1        1348     579.2
 F2          44      43.5
 F3          99      33.0
 largest excluded:
     cusip  company_cik                             company_name                                  reason  value_bn
 73935X575    1209466.0   POWERSHARES EXCHANGE TRADED FUND TRUST          F1 1940-Act/UIT forms (485BXT)     109.3
-78462F103     884394.0                   SPDR S&P 500 ETF TRUST         F1 1940-Act/UIT forms (485BPOS)      77.0
+78462F103     884394.0                   SPDR S&P 500 ETF TRUST         F1 1940-Act/UIT forms (485BPOS)      77.1
 78463V107    1222333.0                          SPDR GOLD TRUST        F2 SIC 6221 commodity pool/trust      35.3
 464287655    1100663.0                            iSHARES TRUST         F1 1940-Act/UIT forms (485APOS)      24.2
 464287465    1100663.0                            iSHARES TRUST         F1 1940-Act/UIT forms (485APOS)      21.7
@@ -28,15 +28,15 @@ largest excluded:
 922042858     857489.0 VANGUARD INTERNATIONAL EQUITY INDEX F...         F1 1940-Act/UIT forms (485BPOS)      11.4
 464287200    1100663.0                            iSHARES TRUST         F1 1940-Act/UIT forms (485APOS)       8.4
 
-GRAIN (decision 12): collapsed to one row per manager x security. Exact duplicate reports dropped: 68; rows summed across a manager's multiple filings: 128; final rows 665,457
+GRAIN: one row per manager x security. Where a manager filed the same security more than once the latest filing wins, never summed: 264 rows superseded; final rows 665,479
 
-FIXES (Luke 2026-10-12): debt-pattern CUSIPs excluded from ownership (rows kept): 5,309 rows / 3,869 CUSIPs / $22.1bn; ADR/ADS excluded from the main figure: 34,424 rows / 366 CUSIPs on 262 companies / $545.2bn; NEW HOLDINGS amendments duplicating >= 90% of the original treated as restatements: 3 amendments, 2 original filings / 904 rows dropped
+FIXES (Luke 2026-10-12): debt-pattern CUSIPs excluded from ownership (rows kept): 5,309 rows / 3,869 CUSIPs / $22.1bn; ADR/ADS excluded from the main figure: 34,426 rows / 366 CUSIPs on 262 companies / $545.2bn; NEW HOLDINGS amendments duplicating >= 90% of the original treated as restatements: 3 amendments, 2 original filings / 904 rows dropped
 
-PLAUSIBILITY GATES (decision 12): shares outstanding outside [1,000, 100,000,000,000] nulled: 12 companies / 2,807 rows; single holdings exceeding shares outstanding excluded: 84 rows / 13 companies
+PLAUSIBILITY GATES (decision 12): shares outstanding outside [1,000, 35,000,000,000] nulled: 10 companies / 1,792 rows; single holdings exceeding shares outstanding excluded: 165 rows / 14 companies
 
-OWNERSHIP CEILING (decision 12): figures above 300% suppressed as denominator errors: 9 companies (4 multi-CUSIP, 5 scale-suspect)
+OWNERSHIP CEILING (decision 12): figures above 300% suppressed as denominator errors: 10 companies (5 multi-CUSIP, 5 scale-suspect)
 
-SHARE CLASSES (never summed): multi-class companies (class-dimensioned facts only) 57; their CUSIPs: matched to a class 50 ($376.5bn), unmatched 42 ($109.0bn); company-level pct is null for all 57
+SHARE CLASSES (never summed): multi-class companies (class-dimensioned facts only) 57; their CUSIPs: matched to a class 50 ($376.5bn), unmatched 42 ($109.1bn); company-level pct is null for all 57
 largest per-class figures:
              company_name     cusip   list_desc  cusip_shares_held  class_shares_outstanding  class_ownership_pct  value_bn
              COMCAST CORP 20030N101        CL A       1529344453.0              2066301346.0                 74.0     103.3
@@ -49,17 +49,17 @@ UNITED PARCEL SERVICE INC 911312106        CL B        473221464.0              
   MOLSON COORS BREWING CO 60871R209        CL B        126147038.0               160500000.0                 78.6       5.3
 
 CUSIP->CIK coverage among OPERATING companies (6-char issuers, funds removed: 654 incl. 91 unmapped by name token only): 5,216 / 13,171 = 39.6%; by value 95.6%; by map source: {'SC 13G': 3950, 'SC 13D': 674, 'name_exact': 592}
-shares outstanding (XBRL + regex fallback (1,245 companies)): companies with a figure 2,480 / 4,918 = 50.4%; by 13F value 85.6%; gap > 100 days flagged: 333; multi-class null: 57
+shares outstanding (XBRL + regex fallback (1,245 companies)): companies with a figure 2,482 / 4,920 = 50.4%; by 13F value 85.6%; gap > 100 days flagged: 336; multi-class null: 57
 
-ownership pct distribution (n=2,471): {'count': 2471.0, 'mean': 60.2, 'std': 33.0, 'min': 0.0, '5%': 2.2, '25%': 32.8, '50%': 68.0, '75%': 85.4, '95%': 100.6, 'max': 293.1}
-histogram: {'0': 0, '0-5': 164, '5-25': 319, '25-50': 385, '50-75': 593, '75-90': 582, '90-100': 296, '100-150': 123, '>150': 9}
-companies over 100%: 132 / 2,471 = 5.3%
-large companies (top 500 by 13F value) with a pct: 396; over 100%: 15 = 3.8%  [stop condition at 5%]
+ownership pct distribution (n=2,472): {'count': 2472.0, 'mean': 60.3, 'std': 32.9, 'min': 0.0, '5%': 2.2, '25%': 32.9, '50%': 68.0, '75%': 85.5, '95%': 100.6, 'max': 293.1}
+histogram: {'0': 0, '0-5': 162, '5-25': 319, '25-50': 385, '50-75': 595, '75-90': 582, '90-100': 296, '100-150': 124, '>150': 9}
+companies over 100%: 133 / 2,472 = 5.4%
+large companies (top 500 by 13F value) with a pct: 398; over 100%: 15 = 3.8%  [stop condition at 5%]
 Note: companies with 'no identified data cause' can still exceed 100% through securities lending (the lender and the
 borrower's buyer both report the same shares on 13F); that is a possible explanation, not a measured cause.
 over-100% causes (combinations; [..] = annotation):
 no identified data cause                                                      73
-shares outstanding gap >100d                                                  22
+shares outstanding gap >100d                                                  23
 multiple CUSIPs summed (classes/units)                                        18
 CUSIP->CIK conflict                                                            6
 single holding > 50% of shares out                                             4
@@ -68,7 +68,7 @@ single holding > 50% of shares out; multiple CUSIPs summed (classes/units)     2
 manager-CUSIP in >1 filing                                                     1
 manager-CUSIP in >1 filing; multiple CUSIPs summed (classes/units)             1
 shares outstanding gap >100d; CUSIP->CIK conflict                              1
-  with the as-of date after quarter end: 37 of 132
+  with the as-of date after quarter end: 38 of 133
 largest over-100% companies:
  company_cik                  company_name  n_managers  shares_held_total  shares_outstanding  institutional_ownership_pct  value_bn                                               over_100_cause
      29534.0           DOLLAR GENERAL CORP          82          399808493         340816996.0                        117.3      10.1                           single holding > 50% of shares out
@@ -92,7 +92,7 @@ largest over-100% companies:
     912242.0                   MACERICH CO         237          103075462          96667689.0                        106.6       4.0                                     no identified data cause
     922475.0  ITT EDUCATIONAL SERVICES INC         267           35047808          33590086.0                        104.3       3.9 no identified data cause; [as-of 91d after quarter end: b...
 
-NO COMPANY-LEVEL FIGURE: 2,438 companies carrying $1,609.2bn = 14.4% of mapped operating value; causes:
+NO COMPANY-LEVEL FIGURE: 2,438 companies carrying $1,609.4bn = 14.4% of mapped operating value; causes:
                                                                                                    companies  value_bn
 cause                                                                                                                 
 regex fallback tried: no 10-K filed within the window                                                    959     758.1
@@ -106,7 +106,7 @@ largest without shares outstanding:
    1403161.0                       VISA INC.         712     37.67 class-dimensioned facts only: company...
     311337.0               SUNCOR ENERGY INC         420     30.95 regex fallback tried: no 10-K filed w...
    1090727.0       UNITED PARCEL SERVICE INC         753     30.71 class-dimensioned facts only: company...
-   1070235.0          RESEARCH IN MOTION LTD         488     24.82 regex fallback tried: no 10-K filed w...
+   1070235.0          RESEARCH IN MOTION LTD         489     24.82 regex fallback tried: no 10-K filed w...
     756894.0               BARRICK GOLD CORP         470     24.74 regex fallback tried: no 10-K filed w...
     855931.0 POTASH CORP OF SASKATCHEWAN INC         474     23.91 regex fallback tried: as-of more than...
    1017413.0  CANADIAN NATURAL RESOURCES LTD         318     23.75 regex fallback tried: no 10-K filed w...

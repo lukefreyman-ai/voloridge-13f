@@ -1,8 +1,8 @@
 pilot_2013Q4 shares outstanding (quarter end 2013-12-31) from 2014q1_notes, 2014q2_notes
 facts loaded 50,025 on 7,358 CIKs | selected 10,540 rows on 7,358 CIKs
 CIKs with class-dimensioned facts (multi-class): 2,027; undimensioned-only: 5,331
-gap > 100 days flagged: 582 rows; gap distribution (days): {'min': -6728.0, '25%': 0.0, '50%': 0.0, '75%': 0.0, 'max': 761.0}
-by form: {'10-Q': 6727, '10-K': 2934, '20-F': 445, '10-Q/A': 249, '10-K/A': 121, '40-F': 48, '10-KT': 12, '10-QT': 4}
-by XBRL tag (decision 11): {'CommonStockSharesOutstanding': 8477, 'EntityCommonStockSharesOutstanding': 2063}
-dated exactly at quarter end: 7,493 of 10,540 (71.1%)
-scale-corrected (fact tagged in thousands, cross-checked against the other tag): 101
+gap > 100 days flagged: 583 rows; gap distribution (days): {'min': -6728.0, '25%': 0.0, '50%': 0.0, '75%': 0.0, 'max': 761.0}
+by form: {'10-Q': 6710, '10-K': 2950, '20-F': 445, '10-Q/A': 249, '10-K/A': 122, '40-F': 48, '10-KT': 12, '10-QT': 4}
+by XBRL tag (decision 11): {'CommonStockSharesOutstanding': 8443, 'EntityCommonStockSharesOutstanding': 2097}
+dated exactly at quarter end: 7,462 of 10,540 (70.8%)
+scale-corrected (fact tagged in thousands, cross-checked against the other tag): 34

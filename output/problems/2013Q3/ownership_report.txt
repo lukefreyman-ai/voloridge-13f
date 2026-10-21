@@ -24,39 +24,39 @@ largest excluded:
 464287614    1159508.0 DEUTSCHE BANK AKTIENGESELLSCHAFT F3 13(f) list ETF/ETN/unit (RUS 1000 ...      11.4
 921943858          NaN                              NaN F3 13(f) list ETF/ETN/unit (FTSE DEV ...      10.3
 
-GRAIN (decision 12): collapsed to one row per manager x security. Exact duplicate reports dropped: 468; rows summed across a manager's multiple filings: 1,188; final rows 802,804
+GRAIN: one row per manager x security. Where a manager filed the same security more than once the latest filing wins, never summed: 2,124 rows superseded; final rows 802,804
 
 FIXES (Luke 2026-10-12): debt-pattern CUSIPs excluded from ownership (rows kept): 2,414 rows / 1,227 CUSIPs / $74.1bn; ADR/ADS excluded from the main figure: 37,656 rows / 369 CUSIPs on 253 companies / $555.6bn; NEW HOLDINGS amendments duplicating >= 90% of the original treated as restatements: 8 amendments, 8 original filings / 6,600 rows dropped
 
-PLAUSIBILITY GATES (decision 12): shares outstanding outside [1,000, 100,000,000,000] nulled: 88 companies / 623 rows; single holdings exceeding shares outstanding excluded: 36 rows / 7 companies
+PLAUSIBILITY GATES (decision 12): shares outstanding outside [1,000, 35,000,000,000] nulled: 91 companies / 1,841 rows; single holdings exceeding shares outstanding excluded: 73 rows / 8 companies
 
-OWNERSHIP CEILING (decision 12): figures above 300% suppressed as denominator errors: 5 companies (4 multi-CUSIP, 1 scale-suspect)
+OWNERSHIP CEILING (decision 12): figures above 300% suppressed as denominator errors: 6 companies (4 multi-CUSIP, 2 scale-suspect)
 
 SHARE CLASSES (never summed): multi-class companies (class-dimensioned facts only) 243; their CUSIPs: matched to a class 195 ($777.1bn), unmatched 108 ($189.6bn); company-level pct is null for all 243
 largest per-class figures:
              company_name     cusip list_desc  cusip_shares_held  class_shares_outstanding  class_ownership_pct  value_bn
-   BERKSHIRE HATHAWAY INC 084670702  CL B NEW        742998166.0              1168868098.0                 63.6      86.7
-                VISA INC. 92826C839  COM CL A        440088146.0               508000000.0                 86.6      85.3
-             COMCAST CORP 20030N101      CL A       1744036915.0              2136124018.0                 81.6      80.8
-           MASTERCARD INC 57636Q104      CL A         91836551.0               115796250.0                 79.3      63.9
-             Facebook Inc 30303M102      CL A       1101881828.0              1869000000.0                 59.0      55.9
-UNITED PARCEL SERVICE INC 911312106      CL B        499903809.0               715769524.0                 69.8      47.5
-              Viacom Inc. 92553P201      CL B        346869153.0               398200000.0                 87.1      29.8
+   BERKSHIRE HATHAWAY INC 084670702  CL B NEW        742969393.0              1168868098.0                 63.6      86.7
+                VISA INC. 92826C839  COM CL A        440016679.0               508000000.0                 86.6      85.3
+             COMCAST CORP 20030N101      CL A       1742056151.0              2136124018.0                 81.6      80.8
+           MASTERCARD INC 57636Q104      CL A         91823385.0               115796250.0                 79.3      63.9
+             Facebook Inc 30303M102      CL A       1101815676.0              1869000000.0                 59.0      55.9
+UNITED PARCEL SERVICE INC 911312106      CL B        499140875.0               715769524.0                 69.7      47.5
+              Viacom Inc. 92553P201      CL B        346591942.0               398200000.0                 87.0      29.8
                  CBS CORP 124857202      CL B        480864598.0               560843520.0                 85.7      27.1
 
 CUSIP->CIK coverage among OPERATING companies (6-char issuers, funds removed: 513 incl. 232 unmapped by name token only): 4,320 / 11,784 = 36.7%; by value 88.7%; by map source: {'name_exact': 2429, 'SC 13G': 1206, 'SC 13D': 685}
 shares outstanding (XBRL + regex fallback (3 companies)): companies with a figure 3,448 / 4,033 = 85.5%; by 13F value 90.2%; gap > 100 days flagged: 21; multi-class null: 243
 
-ownership pct distribution (n=3,443): {'count': 3443.0, 'mean': 59.5, 'std': 34.4, 'min': 0.0, '5%': 2.1, '25%': 30.2, '50%': 67.0, '75%': 87.3, '95%': 101.3, 'max': 286.7}
-histogram: {'0': 0, '0-5': 265, '5-25': 487, '25-50': 546, '50-75': 687, '75-90': 761, '90-100': 491, '100-150': 192, '>150': 14}
-companies over 100%: 206 / 3,443 = 6.0%
-large companies (top 500 by 13F value) with a pct: 415; over 100%: 24 = 5.8%  [stop condition at 5%]
+ownership pct distribution (n=3,442): {'count': 3442.0, 'mean': 59.6, 'std': 34.3, 'min': 0.0, '5%': 2.4, '25%': 30.3, '50%': 67.0, '75%': 87.3, '95%': 101.3, 'max': 286.7}
+histogram: {'0': 0, '0-5': 257, '5-25': 489, '25-50': 546, '50-75': 694, '75-90': 763, '90-100': 486, '100-150': 193, '>150': 14}
+companies over 100%: 207 / 3,442 = 6.0%
+large companies (top 500 by 13F value) with a pct: 414; over 100%: 24 = 5.8%  [stop condition at 5%]
 Note: companies with 'no identified data cause' can still exceed 100% through securities lending (the lender and the
 borrower's buyer both report the same shares on 13F); that is a possible explanation, not a measured cause.
 over-100% causes (combinations; [..] = annotation):
-no identified data cause                                                                   140
-multiple CUSIPs summed (classes/units)                                                      30
-manager-CUSIP in >1 filing                                                                  20
+no identified data cause                                                                   141
+multiple CUSIPs summed (classes/units)                                                      31
+manager-CUSIP in >1 filing                                                                  19
 single holding > 50% of shares out                                                           5
 manager-CUSIP in >1 filing; multiple CUSIPs summed (classes/units)                           3
 manager-CUSIP in >1 filing; single holding > 50% of shares out                               2
@@ -65,20 +65,20 @@ manager-CUSIP in >1 filing; CUSIP->CIK conflict; multiple CUSIPs summed (classes
 CUSIP->CIK conflict; multiple CUSIPs summed (classes/units)                                  1
 CUSIP->CIK conflict                                                                          1
 shares outstanding gap >100d                                                                 1
-  with the as-of date after quarter end: 61 of 206
+  with the as-of date after quarter end: 62 of 207
 largest over-100% companies:
  company_cik                             company_name  n_managers  shares_held_total  shares_outstanding  institutional_ownership_pct  value_bn                                               over_100_cause
    1108524.0                       SALESFORCE COM INC         499          603976274         603000000.0                        100.2      34.6 no identified data cause; [as-of 31d after quarter end: b...
-    103379.0                                 V F CORP         584          113634694         109805011.0                        103.5      22.8                                   manager-CUSIP in >1 filing
+    103379.0                                 V F CORP         584          113220793         109805011.0                        103.1      22.8                                   manager-CUSIP in >1 filing
    1174746.0             INTERCONTINENTALEXCHANGE INC         398           80677783          72885000.0                        110.7      15.0                                     no identified data cause
-    874766.0 HARTFORD FINANCIAL SERVICES GROUP INC/DE         534          465488256         447083233.0                        104.1      14.7 manager-CUSIP in >1 filing; multiple CUSIPs summed (class...
+    874766.0 HARTFORD FINANCIAL SERVICES GROUP INC/DE         534          462507656         447083233.0                        103.5      14.7 manager-CUSIP in >1 filing; multiple CUSIPs summed (class...
    1101215.0               ALLIANCE DATA SYSTEMS CORP         422           61260995          48712675.0                        125.8      13.3 no identified data cause; [as-of 31d after quarter end: b...
    1101239.0                              EQUINIX INC         336           71719725          49776739.0                        144.1      13.1                       multiple CUSIPs summed (classes/units)
-    827054.0                 MICROCHIP TECHNOLOGY INC         500          230504584         198362359.0                        116.2      12.3                                   manager-CUSIP in >1 filing
+    827054.0                 MICROCHIP TECHNOLOGY INC         500          228255932         198362359.0                        115.1      12.3                                   manager-CUSIP in >1 filing
    1014473.0                          VERISIGN INC/CA         348          160250232         137654000.0                        116.4      11.5                                     no identified data cause
    1110803.0                             ILLUMINA INC         344          139341416         126396050.0                        110.2      11.4                                     no identified data cause
    1034054.0                  SBA COMMUNICATIONS CORP         328          139284757         128387897.0                        108.5      11.3 no identified data cause; [as-of 31d after quarter end: b...
-    707549.0                        LAM RESEARCH CORP         401          171601630         162217000.0                        105.8      11.2                                   manager-CUSIP in >1 filing
+    707549.0                        LAM RESEARCH CORP         401          171390645         162217000.0                        105.7      11.2                                   manager-CUSIP in >1 filing
    1392522.0            Freescale Semiconductor, Ltd.         126          667854189         258000000.0                        258.9      11.1                           single holding > 50% of shares out
    1004434.0          AFFILIATED MANAGERS GROUP, INC.         412           53523064          52978842.0                        101.0       9.8 multiple CUSIPs summed (classes/units); [as-of 31d after ...
    1022079.0                    QUEST DIAGNOSTICS INC         419          145557705         145426953.0                        100.1       9.1 no identified data cause; [as-of 31d after quarter end: b...

@@ -195,6 +195,7 @@ company_cik,shares_held_total,n_managers,n_cusips,company_name,shares_outstandin
 1410471.0,17852822,139,1,"IPC The Hospitalist Company, Inc.",16827409.0,False,106.0937069990989,,False,no identified data cause
 1423221.0,38538902,110,1,Quanex Building Products CORP,37064965.0,False,103.97663130128412,,False,no identified data cause; [as-of 62d after quarter end: buybacks lower the denominator]
 1431897.0,17430004,110,1,"Annie's, Inc.",16889060.0,False,103.20292544404484,,False,no identified data cause
+1434868.0,433255,4,1,"Esperion Therapeutics, Inc.",372079.0,False,116.44166964542477,,False,no identified data cause
 1441849.0,62365511,165,1,CLOUD PEAK ENERGY INC.,60836000.0,False,102.51415444802419,,False,no identified data cause
 1469510.0,77372683,118,2,Resolute Energy Corp,76856653.0,False,100.6714187775,,False,multiple CUSIPs summed (classes/units)
 1474098.0,61291995,153,4,Pebblebrook Hotel Trust,61179028.0,False,100.1846498770788,,False,multiple CUSIPs summed (classes/units)

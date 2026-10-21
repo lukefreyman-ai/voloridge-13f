@@ -1,146 +1,146 @@
 {
-  "built": "2026-10-19T21:30:28.673424+00:00",
-  "code_commit": "7f4e29bdf730cbe1e224f23a5e24ac96143ea7d0",
+  "built": "2026-10-19T23:41:23.994895+00:00",
+  "code_commit": "ec945b75d1360720a51b289d101b81bd3b4cd792",
   "quarters": [
     {
       "label": "pilot_2010Q1",
       "file": "output/pilot_2010Q1_institutional_ownership.csv",
-      "bytes": 207137918,
-      "modified": "2026-10-19T20:53:36.862940+00:00",
-      "sha256_first_1mb": "2c47b04f4c84629b"
+      "bytes": 208507910,
+      "modified": "2026-10-19T23:24:57.320160+00:00",
+      "sha256_first_1mb": "6fde5b951364ebda"
     },
     {
       "label": "2010Q2",
       "file": "output/2010Q2_institutional_ownership.csv",
-      "bytes": 180713792,
-      "modified": "2026-10-19T20:38:52.557107+00:00",
-      "sha256_first_1mb": "608efa361a2b16fb"
+      "bytes": 182104957,
+      "modified": "2026-10-19T23:25:22.976061+00:00",
+      "sha256_first_1mb": "d01cb0c4b121e8fa"
     },
     {
       "label": "2010Q3",
       "file": "output/2010Q3_institutional_ownership.csv",
-      "bytes": 175420030,
-      "modified": "2026-10-19T20:39:05.530406+00:00",
-      "sha256_first_1mb": "5fb06eb90f2bb66c"
+      "bytes": 176757428,
+      "modified": "2026-10-19T23:25:45.991888+00:00",
+      "sha256_first_1mb": "e9a5f08bdd5d24dc"
     },
     {
       "label": "2010Q4",
       "file": "output/2010Q4_institutional_ownership.csv",
-      "bytes": 216240085,
-      "modified": "2026-10-19T20:39:19.705770+00:00",
-      "sha256_first_1mb": "fdb382dfc9165c70"
+      "bytes": 217679434,
+      "modified": "2026-10-19T23:26:23.498038+00:00",
+      "sha256_first_1mb": "31b721bb3bbf965b"
     },
     {
       "label": "2011Q1",
       "file": "output/2011Q1_institutional_ownership.csv",
-      "bytes": 207146274,
-      "modified": "2026-10-19T20:39:33.673751+00:00",
-      "sha256_first_1mb": "21e86eb65330c495"
+      "bytes": 209966624,
+      "modified": "2026-10-19T23:26:46.428671+00:00",
+      "sha256_first_1mb": "1088904cafd2116d"
     },
     {
       "label": "2011Q2",
       "file": "output/2011Q2_institutional_ownership.csv",
-      "bytes": 200389814,
-      "modified": "2026-10-19T20:39:48.432973+00:00",
-      "sha256_first_1mb": "30f1a6080bded439"
+      "bytes": 201774317,
+      "modified": "2026-10-19T23:27:10.949145+00:00",
+      "sha256_first_1mb": "cf5d45f12e938883"
     },
     {
       "label": "2011Q3",
       "file": "output/2011Q3_institutional_ownership.csv",
-      "bytes": 200620063,
-      "modified": "2026-10-19T20:40:02.978712+00:00",
-      "sha256_first_1mb": "074cf60f63c00c6d"
+      "bytes": 202023062,
+      "modified": "2026-10-19T23:27:38.600469+00:00",
+      "sha256_first_1mb": "10df34ecd9c307fb"
     },
     {
       "label": "2011Q4",
       "file": "output/2011Q4_institutional_ownership.csv",
-      "bytes": 214055582,
-      "modified": "2026-10-19T20:40:17.228701+00:00",
-      "sha256_first_1mb": "2a3c541587ee157c"
+      "bytes": 215419132,
+      "modified": "2026-10-19T23:28:06.944531+00:00",
+      "sha256_first_1mb": "184054360ace11be"
     },
     {
       "label": "2012Q1",
       "file": "output/2012Q1_institutional_ownership.csv",
-      "bytes": 218229915,
-      "modified": "2026-10-19T20:40:32.145276+00:00",
-      "sha256_first_1mb": "69c9d32e6e6b849c"
+      "bytes": 219655734,
+      "modified": "2026-10-19T23:28:37.466248+00:00",
+      "sha256_first_1mb": "d24db5318fa8055e"
     },
     {
       "label": "2012Q2",
       "file": "output/2012Q2_institutional_ownership.csv",
-      "bytes": 210774383,
-      "modified": "2026-10-19T20:40:47.148184+00:00",
-      "sha256_first_1mb": "cfd534fa6a91ceb9"
+      "bytes": 212419106,
+      "modified": "2026-10-19T23:29:11.581441+00:00",
+      "sha256_first_1mb": "7dba3c6263e7731e"
     },
     {
       "label": "2012Q3",
       "file": "output/2012Q3_institutional_ownership.csv",
-      "bytes": 210829439,
-      "modified": "2026-10-19T20:41:02.463265+00:00",
-      "sha256_first_1mb": "377084ebc1c9c147"
+      "bytes": 212419206,
+      "modified": "2026-10-19T23:29:46.546610+00:00",
+      "sha256_first_1mb": "d6791b66c73671aa"
     },
     {
       "label": "2012Q4",
       "file": "output/2012Q4_institutional_ownership.csv",
-      "bytes": 225648853,
-      "modified": "2026-10-19T20:41:17.983651+00:00",
-      "sha256_first_1mb": "1173c797643d9d07"
+      "bytes": 227204011,
+      "modified": "2026-10-19T23:30:22.011200+00:00",
+      "sha256_first_1mb": "23d9d692aa329296"
     },
     {
       "label": "2013Q1",
       "file": "output/2013Q1_institutional_ownership.csv",
-      "bytes": 227683132,
-      "modified": "2026-10-19T20:41:34.077304+00:00",
-      "sha256_first_1mb": "28466159cfb80965"
+      "bytes": 229224443,
+      "modified": "2026-10-19T23:30:57.830506+00:00",
+      "sha256_first_1mb": "fcc14b9f33bb1c3a"
     },
     {
       "label": "2013Q2",
       "file": "output/2013Q2_institutional_ownership.csv",
-      "bytes": 223501536,
-      "modified": "2026-10-19T20:41:50.915398+00:00",
-      "sha256_first_1mb": "9e74a2bfd0bc24ee"
+      "bytes": 224975082,
+      "modified": "2026-10-19T23:31:34.073504+00:00",
+      "sha256_first_1mb": "3c7da7f212794360"
     },
     {
       "label": "2013Q3",
       "file": "output/2013Q3_institutional_ownership.csv",
-      "bytes": 230799646,
-      "modified": "2026-10-19T20:42:07.771517+00:00",
-      "sha256_first_1mb": "f956611f56521a20"
+      "bytes": 232334610,
+      "modified": "2026-10-19T23:32:11.248742+00:00",
+      "sha256_first_1mb": "12b3985bf6d05bb0"
     },
     {
       "label": "pilot_2013Q4",
       "file": "output/pilot_2013Q4_institutional_ownership.csv",
-      "bytes": 251189310,
-      "modified": "2026-10-19T20:53:32.659960+00:00",
-      "sha256_first_1mb": "d63d9b3ed116c519"
+      "bytes": 252893339,
+      "modified": "2026-10-19T23:32:47.712384+00:00",
+      "sha256_first_1mb": "829f68e783ae6534"
     },
     {
       "label": "2014Q1",
       "file": "output/2014Q1_institutional_ownership.csv",
-      "bytes": 256139660,
-      "modified": "2026-10-19T20:42:42.265151+00:00",
-      "sha256_first_1mb": "aa58d59fcec78f42"
+      "bytes": 257832445,
+      "modified": "2026-10-19T23:33:21.492894+00:00",
+      "sha256_first_1mb": "d2dc95fbfd1f1955"
     },
     {
       "label": "2014Q2",
       "file": "output/2014Q2_institutional_ownership.csv",
-      "bytes": 251815396,
-      "modified": "2026-10-19T20:43:00.016982+00:00",
-      "sha256_first_1mb": "471ae0f93276a1d4"
+      "bytes": 253535116,
+      "modified": "2026-10-19T23:33:54.797421+00:00",
+      "sha256_first_1mb": "c6b2ea991b551e16"
     },
     {
       "label": "2014Q3",
       "file": "output/2014Q3_institutional_ownership.csv",
-      "bytes": 252771814,
-      "modified": "2026-10-19T20:43:17.127671+00:00",
-      "sha256_first_1mb": "33f91c336a030c07"
+      "bytes": 254563375,
+      "modified": "2026-10-19T23:34:30.356610+00:00",
+      "sha256_first_1mb": "fd1dfbda4f8a32c2"
     },
     {
       "label": "2014Q4",
       "file": "output/2014Q4_institutional_ownership.csv",
-      "bytes": 273750134,
-      "modified": "2026-10-19T20:43:34.959409+00:00",
-      "sha256_first_1mb": "4ae20b6e183db3b9"
+      "bytes": 275523886,
+      "modified": "2026-10-19T23:35:06.851502+00:00",
+      "sha256_first_1mb": "ca69777487ec2ff0"
     }
   ],
   "quarter_count": 20,

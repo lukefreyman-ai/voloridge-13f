@@ -4,11 +4,11 @@ company_cik,shares_held_total,n_managers,n_cusips,company_name,shares_outstandin
 29534.0,399808493,82,1,DOLLAR GENERAL CORP,340816996.0,False,117.30884835332567,,False,single holding > 50% of shares out
 57055.0,18542985,76,2,KV PHARMACEUTICAL CO /DE/,12111835.0,False,153.0980648266757,,False,multiple CUSIPs summed (classes/units)
 69499.0,321161250,456,2,MYLAN INC.,309360933.0,False,103.81441731687562,,True,shares outstanding gap >100d; multiple CUSIPs summed (classes/units); [as-of 122d after quarter end: buybacks lower the denominator]
-77776.0,65162826,167,1,PHH CORP,54774639.0,False,118.96532261946993,,False,manager-CUSIP in >1 filing
+77776.0,65155343,167,1,PHH CORP,54774639.0,False,118.95166118757989,,False,manager-CUSIP in >1 filing
 85974.0,46015827,156,1,RYLAND GROUP INC,44107262.0,False,104.32709924275055,,True,shares outstanding gap >100d; [as-of 122d after quarter end: buybacks lower the denominator]
 93451.0,18238453,107,1,STERLING BANCORP,18115987.0,False,100.67601064187117,,False,no identified data cause
 97210.0,183263799,256,1,"TERADYNE, INC",174908000.0,False,104.77725375626044,,False,no identified data cause
-100517.0,179466743,188,2,UAL CORP /DE/,167610620.0,False,107.07361084876364,,False,manager-CUSIP in >1 filing; multiple CUSIPs summed (classes/units)
+100517.0,179035595,188,2,UAL CORP /DE/,167610620.0,False,106.81637893827968,,False,manager-CUSIP in >1 filing; multiple CUSIPs summed (classes/units)
 313143.0,26012400,185,1,HAEMONETICS CORP,25440856.0,False,102.24655962833955,,False,no identified data cause
 350698.0,160940797,209,1,"AUTONATION, INC.",149300000.0,False,107.79691694574683,,False,single holding > 50% of shares out; [as-of 91d after quarter end: buybacks lower the denominator]
 350907.0,59030071,184,1,THORATEC CORP,57043000.0,False,103.4834615991445,,False,no identified data cause
@@ -52,6 +52,7 @@ company_cik,shares_held_total,n_managers,n_cusips,company_name,shares_outstandin
 916076.0,48370167,237,1,MARTIN MARIETTA MATERIALS INC,45523432.0,False,106.25334003815881,,True,shares outstanding gap >100d; [as-of 122d after quarter end: buybacks lower the denominator]
 920033.0,19580643,167,1,BANK JOS A CLOTHIERS INC /DE/,18351162.0,False,106.69974468101802,,False,CUSIP->CIK conflict
 920522.0,31088419,189,1,ESSEX PROPERTY TRUST INC,28849779.0,False,107.75964349674913,,False,no identified data cause
+920527.0,62761091,163,1,PSS WORLD MEDICAL INC,56453817.0,False,111.17244915432379,,True,shares outstanding gap >100d; [as-of 122d after quarter end: buybacks lower the denominator]
 921082.0,72536955,175,2,HIGHWOODS PROPERTIES INC,71285303.0,False,101.75583457925401,,False,multiple CUSIPs summed (classes/units)
 922475.0,35047808,267,1,ITT EDUCATIONAL SERVICES INC,33590086.0,False,104.33973881460143,,False,no identified data cause; [as-of 91d after quarter end: buybacks lower the denominator]
 929008.0,47420869,164,1,WESCO INTERNATIONAL INC,42416796.0,False,111.79738563940566,,False,no identified data cause
@@ -73,7 +74,7 @@ company_cik,shares_held_total,n_managers,n_cusips,company_name,shares_outstandin
 1030469.0,28801068,113,1,ORIENTAL FINANCIAL GROUP INC,24179686.0,False,119.11266341506668,,False,no identified data cause
 1034054.0,128954710,238,1,SBA COMMUNICATIONS CORP,117082000.0,False,110.14050836166105,,False,no identified data cause
 1035443.0,55447235,218,3,ALEXANDRIA REAL ESTATE EQUITIES INC,49996702.0,False,110.901785081744,,True,shares outstanding gap >100d; multiple CUSIPs summed (classes/units); [as-of 122d after quarter end: buybacks lower the denominator]
-1035884.0,94828719,213,1,COMMSCOPE INC,94217797.0,False,100.64841465142726,,False,no identified data cause
+1035884.0,95320319,214,1,COMMSCOPE INC,94217797.0,False,101.17018443978264,,False,no identified data cause
 1039889.0,26752910,157,1,P F CHANGS CHINA BISTRO INC,22933862.0,False,116.65244170388746,,False,no identified data cause
 1040971.0,83079834,233,3,SL GREEN REALTY CORP,80875000.0,False,102.72622442040185,,False,multiple CUSIPs summed (classes/units)
 1041859.0,28296968,166,1,CHILDRENS PLACE RETAIL STORES INC,27474774.0,False,102.99254144911257,,False,no identified data cause

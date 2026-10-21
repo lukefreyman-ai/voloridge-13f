@@ -102,3 +102,56 @@ def test_a_normal_difference_between_the_two_tags_is_left_alone():
     pick = select(f, QEND)
     assert pick.iloc[0]["shares"] == 100_000_000
     assert bool(pick.iloc[0]["scale_corrected"]) is False
+
+
+def test_a_reverse_split_must_not_trigger_a_scale_correction():
+    """Fibrocell 2012Q4 fired at exactly 25.000x on its 1-for-25 reverse split. A corporate action
+    is a real change in the share count, not a units error, and 17 of 173 corrections in 2012Q2
+    were of this kind."""
+    f = facts(
+        (1, BALANCE_TAG, "2012-12-31", 1_000_000, "10-K", "a"),    # post-split, correct
+        (1, COVER_TAG, "2013-02-14", 25_000_000, "10-K", "b"),     # pre-split restatement
+    )
+    pick = select(f, "2012-12-31")
+    assert pick.iloc[0]["shares"] == 1_000_000, "a 25x ratio is a corporate action, not thousands"
+    assert bool(pick.iloc[0]["scale_corrected"]) is False
+
+
+def test_a_correction_that_would_publish_an_impossible_count_is_refused():
+    """Oracle 2012Q2 shipped 4.819e15 shares because the rule took the larger value
+    unconditionally and the OTHER fact was the broken one."""
+    f = facts(
+        (2, BALANCE_TAG, "2012-06-30", 4_905_000_000, "10-Q", "a"),      # correct
+        (2, COVER_TAG, "2012-06-30", 4_819_056_000_000_000, "10-Q", "b"),  # 1000x too big
+    )
+    pick = select(f, "2012-06-30")
+    assert pick.iloc[0]["shares"] == 4_905_000_000
+    assert bool(pick.iloc[0]["scale_corrected"]) is False
+
+
+def test_a_real_correction_carries_the_provenance_of_the_value_published():
+    """1,540 of 1,622 corrected rows named a source that did not contain the published value, and
+    1,024 reported gap_days = 0 for a value dated a median 59 days after the quarter end."""
+    f = facts(
+        (320193, BALANCE_TAG, "2014-03-31", 861_745, "10-Q", "balance_acc"),
+        (320193, COVER_TAG, "2014-04-18", 861_381_000, "10-Q", "cover_acc"),
+    )
+    pick = select(f, "2014-03-31")
+    r = pick.iloc[0]
+    assert r["shares"] == 861_381_000
+    assert r["adsh"] == "cover_acc", "the source must name the filing the value came from"
+    assert r["tag"] == COVER_TAG
+    assert r["shares_outstanding_date"] == "2014-04-18", "the date must be the published value's"
+    assert r["gap_days"] == 18
+
+
+def test_a_denominator_that_is_a_thousand_times_too_large_is_also_corrected():
+    """Pentair published 9.84e10 shares against a real ~1e8, reporting 0.078% ownership instead of
+    about 78%. The first version of the rule only looked for too-small values."""
+    f = facts(
+        (77360, BALANCE_TAG, "2013-12-31", 98_419_310_000, "10-K", "a"),   # 1000x too large
+        (77360, COVER_TAG, "2014-02-14", 98_419_310, "10-K", "b"),         # correct
+    )
+    pick = select(f, QEND)
+    assert pick.iloc[0]["shares"] == 98_419_310
+    assert bool(pick.iloc[0]["scale_corrected"]) is True

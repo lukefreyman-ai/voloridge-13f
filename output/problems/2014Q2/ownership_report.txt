@@ -24,33 +24,33 @@ largest excluded:
 464287614    1100663.0          iSHARES TRUST          F1 1940-Act/UIT forms (485APOS)      14.1
 922908553          NaN                    NaN    F3 13(f) list ETF/ETN/unit (REIT ETF)      13.8
 
-GRAIN (decision 12): collapsed to one row per manager x security. Exact duplicate reports dropped: 2,352; rows summed across a manager's multiple filings: 828; final rows 881,549
+GRAIN: one row per manager x security. Where a manager filed the same security more than once the latest filing wins, never summed: 5,532 rows superseded; final rows 881,549
 
 FIXES (Luke 2026-10-12): debt-pattern CUSIPs excluded from ownership (rows kept): 2,116 rows / 1,015 CUSIPs / $140.2bn; ADR/ADS excluded from the main figure: 40,751 rows / 375 CUSIPs on 256 companies / $810.7bn; NEW HOLDINGS amendments duplicating >= 90% of the original treated as restatements: 7 amendments, 7 original filings / 1,563 rows dropped
 
-PLAUSIBILITY GATES (decision 12): shares outstanding outside [1,000, 100,000,000,000] nulled: 74 companies / 524 rows; single holdings exceeding shares outstanding excluded: 8 rows / 5 companies
+PLAUSIBILITY GATES (decision 12): shares outstanding outside [1,000, 35,000,000,000] nulled: 75 companies / 1,333 rows; single holdings exceeding shares outstanding excluded: 27 rows / 6 companies
 
-OWNERSHIP CEILING (decision 12): figures above 300% suppressed as denominator errors: 10 companies (8 multi-CUSIP, 2 scale-suspect)
+OWNERSHIP CEILING (decision 12): figures above 300% suppressed as denominator errors: 11 companies (8 multi-CUSIP, 3 scale-suspect)
 
 SHARE CLASSES (never summed): multi-class companies (class-dimensioned facts only) 252; their CUSIPs: matched to a class 201 ($1,113.9bn), unmatched 112 ($256.7bn); company-level pct is null for all 252
 largest per-class figures:
              company_name     cusip list_desc  cusip_shares_held  class_shares_outstanding  class_ownership_pct  value_bn
-              Google Inc. 38259P706      CL C        225623361.0               338209995.0                 66.7     130.3
-              Google Inc. 38259P508      CL A        218726602.0               283014000.0                 77.3     128.6
-             COMCAST CORP 20030N101      CL A       1845537980.0              2149576442.0                 85.9      99.8
-   BERKSHIRE HATHAWAY INC 084670702  CL B NEW        769129548.0              1186184337.0                 64.8      97.6
-                VISA INC. 92826C839  COM CL A        444503003.0               496000000.0                 89.6      93.8
-             Facebook Inc 30303M102      CL A       1307724670.0              2013000000.0                 65.0      88.6
-           MASTERCARD INC 57636Q104      CL A        847519236.0              1115642807.0                 76.0      62.5
-UNITED PARCEL SERVICE INC 911312106      CL B        487377890.0               706356536.0                 69.0      50.5
+              Google Inc. 38259P706      CL C        225586451.0               338209995.0                 66.7     130.3
+              Google Inc. 38259P508      CL A        218689391.0               283014000.0                 77.3     128.6
+             COMCAST CORP 20030N101      CL A       1845036833.0              2149576442.0                 85.8      99.8
+   BERKSHIRE HATHAWAY INC 084670702  CL B NEW        768900864.0              1186184337.0                 64.8      97.6
+                VISA INC. 92826C839  COM CL A        443619409.0               496000000.0                 89.4      93.8
+             Facebook Inc 30303M102      CL A       1307495670.0              2013000000.0                 65.0      88.6
+           MASTERCARD INC 57636Q104      CL A        847494079.0              1115642807.0                 76.0      62.5
+UNITED PARCEL SERVICE INC 911312106      CL B        487240101.0               706356536.0                 69.0      50.5
 
 CUSIP->CIK coverage among OPERATING companies (6-char issuers, funds removed: 517 incl. 227 unmapped by name token only): 4,438 / 11,854 = 37.4%; by value 88.4%; by map source: {'name_exact': 2520, 'SC 13G': 1210, 'SC 13D': 708}
-shares outstanding (XBRL + regex fallback (9 companies)): companies with a figure 3,490 / 4,142 = 84.3%; by 13F value 88.0%; gap > 100 days flagged: 16; multi-class null: 252
+shares outstanding (XBRL + regex fallback (9 companies)): companies with a figure 3,489 / 4,141 = 84.3%; by 13F value 88.0%; gap > 100 days flagged: 16; multi-class null: 252
 
-ownership pct distribution (n=3,480): {'count': 3480.0, 'mean': 60.1, 'std': 33.9, 'min': 0.0, '5%': 2.0, '25%': 31.5, '50%': 67.3, '75%': 87.5, '95%': 102.5, 'max': 292.6}
-histogram: {'0': 0, '0-5': 269, '5-25': 466, '25-50': 542, '50-75': 715, '75-90': 759, '90-100': 495, '100-150': 224, '>150': 10}
-companies over 100%: 234 / 3,480 = 6.7%
-large companies (top 500 by 13F value) with a pct: 408; over 100%: 17 = 4.2%  [stop condition at 5%]
+ownership pct distribution (n=3,478): {'count': 3478.0, 'mean': 60.2, 'std': 33.9, 'min': 0.0, '5%': 2.1, '25%': 31.6, '50%': 67.3, '75%': 87.5, '95%': 102.5, 'max': 292.6}
+histogram: {'0': 0, '0-5': 265, '5-25': 466, '25-50': 543, '50-75': 716, '75-90': 759, '90-100': 495, '100-150': 224, '>150': 10}
+companies over 100%: 234 / 3,478 = 6.7%
+large companies (top 500 by 13F value) with a pct: 407; over 100%: 17 = 4.2%  [stop condition at 5%]
 Note: companies with 'no identified data cause' can still exceed 100% through securities lending (the lender and the
 borrower's buyer both report the same shares on 13F); that is a possible explanation, not a measured cause.
 over-100% causes (combinations; [..] = annotation):
@@ -64,16 +64,16 @@ single holding > 50% of shares out; multiple CUSIPs summed (classes/units)      
 shares outstanding gap >100d                                                    1
 manager-CUSIP in >1 filing; CUSIP->CIK conflict                                 1
 manager-CUSIP in >1 filing; single holding > 50% of shares out                  1
-  with the as-of date after quarter end: 65 of 234
+  with the as-of date after quarter end: 67 of 234
 largest over-100% companies:
  company_cik                      company_name  n_managers  shares_held_total  shares_outstanding  institutional_ownership_pct  value_bn                                               over_100_cause
-    103379.0                          V F CORP         674          435097672         430890659.0                        101.0      27.5                                   manager-CUSIP in >1 filing
-    106535.0                   WEYERHAEUSER CO         609          586939921         586697717.0                        100.0      19.7 manager-CUSIP in >1 filing; multiple CUSIPs summed (class...
+    103379.0                          V F CORP         674          435076558         430890659.0                        101.0      27.5                                   manager-CUSIP in >1 filing
+    106535.0                   WEYERHAEUSER CO         609          586796469         586697717.0                        100.0      19.7 manager-CUSIP in >1 filing; multiple CUSIPs summed (class...
    1101215.0        ALLIANCE DATA SYSTEMS CORP         451           57617745          55528310.0                        103.8      16.5 manager-CUSIP in >1 filing; [as-of 31d after quarter end:...
    1101239.0                       EQUINIX INC         339           58995012          53194103.0                        110.9      14.7 manager-CUSIP in >1 filing; multiple CUSIPs summed (class...
    1034054.0           SBA COMMUNICATIONS CORP         375          136024944         129006538.0                        105.4      14.0 manager-CUSIP in >1 filing; [as-of 31d after quarter end:...
     794323.0        LEVEL 3 COMMUNICATIONS INC         316          263958756         237457271.0                        111.2      11.7 manager-CUSIP in >1 filing; multiple CUSIPs summed (class...
-    827054.0          MICROCHIP TECHNOLOGY INC         583          203021965         200401106.0                        101.3      11.5                                   manager-CUSIP in >1 filing
+    827054.0          MICROCHIP TECHNOLOGY INC         583          203011752         200401106.0                        101.3      11.5                                   manager-CUSIP in >1 filing
    1040971.0              SL GREEN REALTY CORP         283          100599256          99188000.0                        101.4      11.4 manager-CUSIP in >1 filing; multiple CUSIPs summed (class...
     885639.0                        KOHLS Corp         528          205157475         204668449.0                        100.2      10.9 manager-CUSIP in >1 filing; [as-of 31d after quarter end:...
     353230.0                      OMNICARE INC         338          101546516          97852076.0                        103.8       9.1                                   manager-CUSIP in >1 filing
@@ -85,7 +85,7 @@ largest over-100% companies:
    1082554.0          UNITED THERAPEUTICS Corp         300           51779534          47230528.0                        109.6       7.6                                     no identified data cause
     912183.0        CUBIST PHARMACEUTICALS INC         290          109327263          75570915.0                        144.7       7.5                       multiple CUSIPs summed (classes/units)
     945436.0                   SUNEDISON, INC.         345          307786127         268885414.0                        114.5       7.1 manager-CUSIP in >1 filing; [as-of 31d after quarter end:...
-   1014473.0                   VERISIGN INC/CA         351          141526955         125993000.0                        112.3       6.9                                   manager-CUSIP in >1 filing
+   1014473.0                   VERISIGN INC/CA         351          141490573         125993000.0                        112.3       6.9                                   manager-CUSIP in >1 filing
     723612.0           AVIS BUDGET GROUP, INC.         256          113843909         104034977.0                        109.4       6.8 manager-CUSIP in >1 filing; [as-of 31d after quarter end:...
 
 NO COMPANY-LEVEL FIGURE: 652 companies carrying $2,029.9bn = 12.0% of mapped operating value; causes:

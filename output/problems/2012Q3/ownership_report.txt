@@ -1,13 +1,13 @@
 2012Q3 ownership, quarter end 2012-09-30, period_of_report 20120930; shares outstanding: XBRL + regex fallback (2 companies)
-filings for the period: 3,361; after amendment/duplicate resolution: 3,250 ({'13F-HR': 3141, '13F-HR/A': 109}); notes: 28 (first 5 below)
-  manager 837286: amendment 0000837286-12-000007 has no amendment type; treated as RESTATEMENT
+filings for the period: 3,361; after amendment/duplicate resolution: 3,252 ({'13F-HR': 3143, '13F-HR/A': 109}); notes: 19 (first 5 below)
   manager 860580: amendment 0000860580-12-000005 has no amendment type; treated as RESTATEMENT
   manager 908758: amendment 0000908758-12-000089 has no amendment type; treated as RESTATEMENT
   manager 915287: amendment 0000915287-12-000010 has no amendment type; treated as RESTATEMENT
   manager 915287: amendment 0000915287-12-000012 has no amendment type; treated as RESTATEMENT
-holdings rows used: 1,151,710 (SH, no put/call, resolved CUSIP, shares > 0)
+  manager 920440: amendment 0000920440-12-000005 has no amendment type; treated as RESTATEMENT
+holdings rows used: 1,151,876 (SH, no put/call, resolved CUSIP, shares > 0)
 
-FUNDS EXCLUDED (decision 2): 1,420 CUSIPs on 289 CIKs, 57,496 manager-CUSIP rows, $1,263.0bn of 13F value = 2.2% of the selected filings' value
+FUNDS EXCLUDED (decision 2): 1,420 CUSIPs on 289 CIKs, 57,514 manager-CUSIP rows, $1,263.1bn of 13F value = 2.2% of the selected filings' value
         cusips  value_bn
 reason                  
 F1        1018     702.1
@@ -28,20 +28,20 @@ largest excluded:
 464287465    1159508.0 DEUTSCHE BANK AKTIENGESELLSCHAFT F3 13(f) list ETF/ETN/unit (MSCI EAFE...      24.7
 464287242    1159508.0 DEUTSCHE BANK AKTIENGESELLSCHAFT F3 13(f) list ETF/ETN/unit (IBOXX INV...      20.0
 
-GRAIN (decision 12): collapsed to one row per manager x security. Exact duplicate reports dropped: 73; rows summed across a manager's multiple filings: 460; final rows 737,343
+GRAIN: one row per manager x security. Where a manager filed the same security more than once the latest filing wins, never summed: 606 rows superseded; final rows 737,362
 
-FIXES (Luke 2026-10-12): debt-pattern CUSIPs excluded from ownership (rows kept): 2,523 rows / 792 CUSIPs / $34.9bn; ADR/ADS excluded from the main figure: 35,837 rows / 382 CUSIPs on 254 companies / $702.8bn; NEW HOLDINGS amendments duplicating >= 90% of the original treated as restatements: 1 amendments, 1 original filings / 638 rows dropped
+FIXES (Luke 2026-10-12): debt-pattern CUSIPs excluded from ownership (rows kept): 2,523 rows / 792 CUSIPs / $34.9bn; ADR/ADS excluded from the main figure: 35,837 rows / 382 CUSIPs on 254 companies / $702.9bn; NEW HOLDINGS amendments duplicating >= 90% of the original treated as restatements: 2 amendments, 2 original filings / 767 rows dropped
 
-PLAUSIBILITY GATES (decision 12): shares outstanding outside [1,000, 100,000,000,000] nulled: 109 companies / 3,024 rows; single holdings exceeding shares outstanding excluded: 67 rows / 20 companies
+PLAUSIBILITY GATES (decision 12): shares outstanding outside [1,000, 35,000,000,000] nulled: 115 companies / 2,796 rows; single holdings exceeding shares outstanding excluded: 134 rows / 22 companies
 
-OWNERSHIP CEILING (decision 12): figures above 300% suppressed as denominator errors: 8 companies (5 multi-CUSIP, 3 scale-suspect)
+OWNERSHIP CEILING (decision 12): figures above 300% suppressed as denominator errors: 9 companies (5 multi-CUSIP, 4 scale-suspect)
 
-SHARE CLASSES (never summed): multi-class companies (class-dimensioned facts only) 222; their CUSIPs: matched to a class 179 ($2,629.8bn), unmatched 106 ($952.9bn); company-level pct is null for all 222
+SHARE CLASSES (never summed): multi-class companies (class-dimensioned facts only) 222; their CUSIPs: matched to a class 179 ($2,629.9bn), unmatched 106 ($952.9bn); company-level pct is null for all 222
 largest per-class figures:
            company_name     cusip    list_desc  cusip_shares_held  class_shares_outstanding  class_ownership_pct  value_bn
              EZCORP INC 302301106 CL A NON VTG         41224603.0                48255536.0                 85.4     194.6
       LENNAR CORP /NEW/ 526057104         CL A        168768765.0               159580731.0                105.8     192.2
-WILEY JOHN & SONS, INC. 968223206         CL A         43912761.0                50628592.0                 86.7     177.8
+WILEY JOHN & SONS, INC. 968223206         CL A         43908321.0                50628592.0                 86.7     177.8
           LINKEDIN CORP 53578A108     COM CL A         77554425.0                87176511.0                 89.0     175.6
           HUB GROUP INC 443320106         CL A         36195640.0                37105441.0                 97.5     153.5
      Under Armour, Inc. 904311107         CL A         77604324.0                83045895.0                 93.4     138.1
@@ -49,23 +49,23 @@ WILEY JOHN & SONS, INC. 968223206         CL A         43912761.0               
               GREIF INC 397624107         CL A         20435061.0                25283465.0                 80.8     117.6
 
 CUSIP->CIK coverage among OPERATING companies (6-char issuers, funds removed: 546 incl. 225 unmapped by name token only): 4,329 / 11,799 = 36.7%; by value 85.3%; by map source: {'name_exact': 2590, 'SC 13G': 1063, 'SC 13D': 676}
-shares outstanding (XBRL + regex fallback (2 companies)): companies with a figure 3,449 / 4,027 = 85.6%; by 13F value 88.5%; gap > 100 days flagged: 21; multi-class null: 222
+shares outstanding (XBRL + regex fallback (2 companies)): companies with a figure 3,452 / 4,030 = 85.7%; by 13F value 88.5%; gap > 100 days flagged: 21; multi-class null: 222
 
-ownership pct distribution (n=3,441): {'count': 3441.0, 'mean': 57.0, 'std': 34.0, 'min': 0.0, '5%': 1.8, '25%': 27.0, '50%': 62.4, '75%': 84.9, '95%': 100.2, 'max': 293.7}
-histogram: {'0': 0, '0-5': 286, '5-25': 516, '25-50': 577, '50-75': 740, '75-90': 732, '90-100': 413, '100-150': 166, '>150': 11}
-companies over 100%: 177 / 3,441 = 5.1%
-large companies (top 500 by 13F value) with a pct: 424; over 100%: 30 = 7.1%  [stop condition at 5%]
+ownership pct distribution (n=3,443): {'count': 3443.0, 'mean': 57.5, 'std': 33.7, 'min': 0.0, '5%': 2.6, '25%': 28.0, '50%': 63.0, '75%': 85.0, '95%': 100.5, 'max': 293.7}
+histogram: {'0': 0, '0-5': 260, '5-25': 520, '25-50': 582, '50-75': 749, '75-90': 736, '90-100': 414, '100-150': 171, '>150': 11}
+companies over 100%: 182 / 3,443 = 5.3%
+large companies (top 500 by 13F value) with a pct: 425; over 100%: 31 = 7.3%  [stop condition at 5%]
 Note: companies with 'no identified data cause' can still exceed 100% through securities lending (the lender and the
 borrower's buyer both report the same shares on 13F); that is a possible explanation, not a measured cause.
 over-100% causes (combinations; [..] = annotation):
-no identified data cause                                                      131
-multiple CUSIPs summed (classes/units)                                         34
+no identified data cause                                                      135
+multiple CUSIPs summed (classes/units)                                         35
 manager-CUSIP in >1 filing                                                      5
 single holding > 50% of shares out                                              4
 CUSIP->CIK conflict; multiple CUSIPs summed (classes/units)                     1
 single holding > 50% of shares out; CUSIP->CIK conflict                         1
 single holding > 50% of shares out; multiple CUSIPs summed (classes/units)      1
-  with the as-of date after quarter end: 48 of 177
+  with the as-of date after quarter end: 53 of 182
 largest over-100% companies:
  company_cik                        company_name  n_managers  shares_held_total  shares_outstanding  institutional_ownership_pct  value_bn                                               over_100_cause
    1071739.0                        CENTENE CORP         210           52503024          51632704.0                        101.7     196.8                                     no identified data cause
@@ -89,7 +89,7 @@ largest over-100% companies:
     730464.0                           DEVRY INC         203           64394104          63782000.0                        101.0     102.3                                     no identified data cause
     929008.0             WESCO INTERNATIONAL INC         218           52968362          43746966.0                        121.1      99.4 no identified data cause; [as-of 31d after quarter end: b...
 
-NO COMPANY-LEVEL FIGURE: 578 companies carrying $5,336.8bn = 11.5% of mapped operating value; causes:
+NO COMPANY-LEVEL FIGURE: 578 companies carrying $5,336.9bn = 11.5% of mapped operating value; causes:
                                                                                                    companies  value_bn
 cause                                                                                                                 
 class-dimensioned facts only: company pct null by rule, per-class pct given (class_ownership_pct)        222    3583.6

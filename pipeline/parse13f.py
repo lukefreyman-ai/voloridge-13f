@@ -648,7 +648,13 @@ AMEND_TYPE_RE = re.compile(r"amendment\s+type[^A-Za-z]{0,20}(restatement|new\s+h
 # carries a checkbox. Without this the text era had NO amendment type at all, so ownership.py
 # defaulted every amendment to RESTATEMENT and deleted the original filing's holdings
 # (decision 12, 2026-10-18; ~131k rows deleted in 2010Q1 alone).
-AMEND_CHECKBOX_RE = re.compile(r"\[\s*[xX]\s*\]\s*(is\s+a\s+restatement|adds\s+new\s+holdings)", re.I)
+# Three real layouts, found by verification on 2026-10-19: brackets [X], parentheses (X) and pipes
+# |X|; "adds new holding entries" (singular) as often as "holdings"; and "add" as well as "adds".
+# The first version accepted only "[X] adds new holdings", which left 105 amendments across the 13
+# text quarters still defaulting to RESTATEMENT. One of them, accession 0001390777-11-000128,
+# replaced Bank of New York Mellon's entire 20,336-row 2011Q1 book with a single row.
+AMEND_CHECKBOX_RE = re.compile(
+    r"[\[\(\|]\s*[xX]\s*[\]\)\|]\s*(is\s+a\s+restatement|adds?\s+new\s+holding)", re.I)
 OTHER_MGR_COUNT_RE = re.compile(r"number\s+of\s+other\s+included\s+managers[^0-9]{0,40}(\d+)", re.I)
 
 

@@ -1,8 +1,8 @@
 pilot_2010Q1 shares outstanding (quarter end 2010-03-31) from 2010q2_notes, 2010q3_notes
 facts loaded 4,437 on 1,359 CIKs | selected 1,592 rows on 1,359 CIKs
 CIKs with class-dimensioned facts (multi-class): 167; undimensioned-only: 1,192
-gap > 100 days flagged: 363 rows; gap distribution (days): {'min': -455.0, '25%': -90.0, '50%': 0.0, '75%': 91.0, 'max': 153.0}
+gap > 100 days flagged: 366 rows; gap distribution (days): {'min': -455.0, '25%': -90.0, '50%': 0.0, '75%': 91.0, 'max': 153.0}
 by form: {'10-Q': 1443, '10-Q/A': 106, '10-K': 24, '20-F': 18, '10-K/A': 1}
-by XBRL tag (decision 11): {'CommonStockSharesOutstanding': 870, 'EntityCommonStockSharesOutstanding': 722}
-dated exactly at quarter end: 362 of 1,592 (22.7%)
-scale-corrected (fact tagged in thousands, cross-checked against the other tag): 10
+by XBRL tag (decision 11): {'CommonStockSharesOutstanding': 863, 'EntityCommonStockSharesOutstanding': 729}
+dated exactly at quarter end: 360 of 1,592 (22.6%)
+scale-corrected (fact tagged in thousands, cross-checked against the other tag): 7

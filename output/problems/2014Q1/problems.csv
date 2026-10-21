@@ -2,10 +2,10 @@ stage,accession,reason,detail
 checksum,0000950123-14-005856,entry total counts distinct CUSIPs not rows,rows=2 entry_total=1.0 value_sum=31222 value_total=31222.0 method=xml
 checksum,0001134152-14-000004,value scale x1000 (dollars vs thousands),rows=128 entry_total=130.0 value_sum=338730696 value_total=338730.0 method=xml
 checksum,0001104659-14-035686,value scale x1000 (dollars vs thousands),rows=941 entry_total=941.0 value_sum=2689711584 value_total=2689711.0 method=xml
-checksum,0001144204-14-031109,"empty filing (single placeholder row, totals zero)",rows=1 entry_total=0.0 value_sum=0 value_total=0.0 method=xml
 checksum,0001104659-14-039311,"entry count off by >2, unexplained",rows=48 entry_total=36.0 value_sum=4080315 value_total=4080315.0 method=xml
 checksum,0001038661-14-000002,entry total counts distinct CUSIPs not rows,rows=115 entry_total=116.0 value_sum=312015 value_total=312017.0 method=xml
 checksum,0001031972-14-000002,entry total counts distinct CUSIPs not rows,rows=38 entry_total=39.0 value_sum=466716 value_total=466716.0 method=xml
+checksum,0001144204-14-031109,"empty filing (single placeholder row, totals zero)",rows=1 entry_total=0.0 value_sum=0 value_total=0.0 method=xml
 checksum,0001093589-14-000002,"entry count off by >2, unexplained",rows=94 entry_total=103.0 value_sum=974386 value_total=1032864.0 method=xml
 checksum,0001398344-14-002574,"value off >1%, unexplained",rows=14 entry_total=14.0 value_sum=17768 value_total=8997.0 method=xml
 checksum,0001053013-14-000004,entry total counts distinct CUSIPs not rows,rows=241 entry_total=126.0 value_sum=123475 value_total=123468.0 method=xml
@@ -19,9 +19,9 @@ checksum,0001426771-14-000002,entry total counts distinct CUSIPs not rows,rows=2
 checksum,0001389256-14-000002,entry total counts distinct CUSIPs not rows,rows=132 entry_total=131.0 value_sum=318950 value_total=318710.0 method=xml
 checksum,0001599950-14-000002,entry total counts distinct CUSIPs not rows,rows=379 entry_total=380.0 value_sum=115947 value_total=116619.0 method=xml
 checksum,0001451318-14-000004,"empty filing (single placeholder row, totals zero)",rows=1 entry_total=0.0 value_sum=0 value_total=0.0 method=xml
-checksum,0001600151-14-000002,entry total counts distinct CUSIPs not rows,rows=111 entry_total=112.0 value_sum=107728 value_total=107728.0 method=xml
 checksum,0000950123-14-005917,"entry count off by >2, unexplained",rows=3552 entry_total=3142.0 value_sum=83196600 value_total=83196600.0 method=xml
 checksum,0001348183-14-000002,entry total counts distinct CUSIPs not rows,rows=286 entry_total=287.0 value_sum=162487 value_total=162487.0 method=xml
+checksum,0001600151-14-000002,entry total counts distinct CUSIPs not rows,rows=111 entry_total=112.0 value_sum=107728 value_total=107728.0 method=xml
 checksum,0000950123-14-006345,"empty filing (single placeholder row, totals zero)",rows=1 entry_total=0.0 value_sum=0 value_total=0.0 method=xml
 checksum,0001478997-14-000002,value within 1% (rounding),rows=43 entry_total=43.0 value_sum=44875 value_total=45038.0 method=xml
 checksum,0001140361-14-021132,"empty filing (single placeholder row, totals zero)",rows=1 entry_total=0.0 value_sum=0 value_total=0.0 method=xml
@@ -72,9 +72,9 @@ checksum,0001144204-14-031201,"empty filing (single placeholder row, totals zero
 checksum,0001161670-14-000002,"entry count off by >2, unexplained",rows=88 entry_total=85.0 value_sum=879244 value_total=858635.0 method=xml
 checksum,0001009027-14-000002,"empty filing (single placeholder row, totals zero)",rows=1 entry_total=0.0 value_sum=0 value_total=0.0 method=xml
 checksum,0000950123-14-006326,"empty filing (single placeholder row, totals zero)",rows=1 entry_total=0.0 value_sum=0 value_total=0.0 method=xml
+checksum,0000950123-14-006390,"value off >1%, unexplained",rows=205 entry_total=205.0 value_sum=337781 value_total=333779.0 method=xml
 checksum,0001140361-14-020810,"empty filing (single placeholder row, totals zero)",rows=1 entry_total=0.0 value_sum=0 value_total=0.0 method=xml
 checksum,0000950123-14-006190,"entry count off by >2, unexplained",rows=9808 entry_total=3266.0 value_sum=13054732 value_total=13054972.0 method=xml
-checksum,0000950123-14-006390,"value off >1%, unexplained",rows=205 entry_total=205.0 value_sum=337781 value_total=333779.0 method=xml
 checksum,0001334199-14-000004,value scale x1000 (dollars vs thousands),rows=30 entry_total=30.0 value_sum=196668732 value_total=196668.0 method=xml
 checksum,0001510870-14-000002,entry total counts distinct CUSIPs not rows,rows=47 entry_total=48.0 value_sum=76948 value_total=1730.0 method=xml
 checksum,0001566728-14-000002,value within 1% (rounding),rows=330 entry_total=330.0 value_sum=232259 value_total=232000.0 method=xml
@@ -94,8 +94,8 @@ checksum,0000905729-14-000160,entry total counts distinct CUSIPs not rows,rows=1
 checksum,0000950103-14-003388,"empty filing (single placeholder row, totals zero)",rows=1 entry_total=0.0 value_sum=0 value_total=0.0 method=xml
 checksum,0000893738-14-000003,value scale x1000 (dollars vs thousands),rows=64 entry_total=64.0 value_sum=146444 value_total=146444000.0 method=xml
 checksum,0001003297-14-000251,entry off by <=2 and value within 1%,rows=724 entry_total=725.0 value_sum=3404798 value_total=3415382.0 method=xml
-checksum,0000726854-14-000021,entry count off by <=2,rows=436 entry_total=438.0 value_sum=163996 value_total=163996.0 method=xml
 checksum,0001353098-14-000002,entry total counts distinct CUSIPs not rows,rows=107 entry_total=108.0 value_sum=258744 value_total=258744.0 method=xml
+checksum,0000726854-14-000021,entry count off by <=2,rows=436 entry_total=438.0 value_sum=163996 value_total=163996.0 method=xml
 checksum,0001437749-14-008706,value scale x1000 (dollars vs thousands),rows=4 entry_total=4.0 value_sum=129220418 value_total=129220.0 method=xml
 checksum,0001172779-14-000002,"entry count off by >2, unexplained",rows=65 entry_total=62.0 value_sum=208783 value_total=189040.0 method=xml
 checksum,0000938077-14-000003,entry total counts distinct CUSIPs not rows,rows=216 entry_total=217.0 value_sum=152091 value_total=152091.0 method=xml
@@ -108,8 +108,8 @@ checksum,0001062993-14-002810,"entry count off by >2, unexplained",rows=959 entr
 checksum,0001308527-14-000002,"value off >1%, unexplained",rows=73 entry_total=73.0 value_sum=227040 value_total=2939610.0 method=xml
 checksum,0001035912-14-000004,summary totals zero but holdings present (filer omitted totals),rows=113 entry_total=0.0 value_sum=152108 value_total=0.0 method=xml
 checksum,0001144204-14-030850,"empty filing (single placeholder row, totals zero)",rows=1 entry_total=0.0 value_sum=0 value_total=0.0 method=xml
-checksum,0001398739-14-000006,entry total counts distinct CUSIPs not rows,rows=974 entry_total=975.0 value_sum=7603429 value_total=7603399.0 method=xml
 checksum,0001505791-14-000003,"entry count off by >2, unexplained",rows=117 entry_total=40.0 value_sum=177292 value_total=576115.0 method=xml
+checksum,0001398739-14-000006,entry total counts distinct CUSIPs not rows,rows=974 entry_total=975.0 value_sum=7603429 value_total=7603399.0 method=xml
 checksum,0001344717-14-000004,"value off >1%, unexplained",rows=469 entry_total=469.0 value_sum=982340812 value_total=982.0 method=xml
 checksum,0001116247-14-000002,entry off by <=2 and value off >1%,rows=145 entry_total=146.0 value_sum=212307 value_total=288438.0 method=xml
 checksum,0000950123-14-005970,entry count off by <=2,rows=578 entry_total=577.0 value_sum=20984440 value_total=20984425.0 method=xml
@@ -120,9 +120,9 @@ checksum,0001006407-14-000004,value scale x1000 (dollars vs thousands),rows=93 e
 checksum,0000712534-14-000106,"entry count off by >2, unexplained",rows=242 entry_total=246.0 value_sum=310052 value_total=310052.0 method=xml
 checksum,0000872732-14-000005,entry off by <=2 and value within 1%,rows=649 entry_total=650.0 value_sum=613563 value_total=617402.0 method=xml
 checksum,0000950123-14-005684,entry total counts distinct CUSIPs not rows,rows=405 entry_total=228.0 value_sum=500911 value_total=500919.0 method=xml
-checksum,0001010873-14-000002,value within 1% (rounding),rows=313 entry_total=313.0 value_sum=499271 value_total=499955.0 method=xml
 checksum,0000919574-14-003139,"entry count off by >2, unexplained",rows=305 entry_total=286.0 value_sum=302507 value_total=314905.0 method=xml
 checksum,0001217541-14-000012,value scale x1000 (dollars vs thousands),rows=149 entry_total=149.0 value_sum=11685871 value_total=11686.0 method=xml
+checksum,0001010873-14-000002,value within 1% (rounding),rows=313 entry_total=313.0 value_sum=499271 value_total=499955.0 method=xml
 checksum,0001104659-14-039038,entry total counts distinct CUSIPs not rows,rows=718 entry_total=607.0 value_sum=20175376 value_total=20175376.0 method=xml
 checksum,0000950123-14-004579,value scale x1000 (dollars vs thousands),rows=348 entry_total=348.0 value_sum=13818150 value_total=13818156370.0 method=xml
 checksum,0001588539-14-000010,"entry count off by >2, unexplained",rows=2130 entry_total=863.0 value_sum=713656 value_total=416946.0 method=xml
@@ -151,23 +151,23 @@ checksum,0001573767-14-000004,entry total counts distinct CUSIPs not rows,rows=7
 checksum,0001128074-14-000003,"entry count off by >2, unexplained",rows=258 entry_total=233.0 value_sum=157730 value_total=160205.0 method=xml
 checksum,0000860486-14-000004,entry total counts distinct CUSIPs not rows,rows=135 entry_total=136.0 value_sum=514018 value_total=514018.0 method=xml
 checksum,0001276845-14-000004,"empty filing (single placeholder row, totals zero)",rows=1 entry_total=0.0 value_sum=0 value_total=0.0 method=xml
+checksum,0000909012-14-000213,value scale x1000 (dollars vs thousands),rows=43 entry_total=43.0 value_sum=219503 value_total=219503000.0 method=xml
 checksum,0000740272-14-000002,value scale x1000 (dollars vs thousands),rows=139 entry_total=139.0 value_sum=2638888 value_total=2640178000.0 method=xml
 checksum,0001156185-14-000004,entry total counts distinct CUSIPs not rows,rows=546 entry_total=409.0 value_sum=306744 value_total=306740.0 method=xml
 checksum,0001598177-14-000003,entry total counts distinct CUSIPs not rows,rows=90 entry_total=91.0 value_sum=127414 value_total=129056.0 method=xml
-checksum,0000909012-14-000213,value scale x1000 (dollars vs thousands),rows=43 entry_total=43.0 value_sum=219503 value_total=219503000.0 method=xml
-checksum,0001140361-14-020983,"empty filing (single placeholder row, totals zero)",rows=1 entry_total=0.0 value_sum=0 value_total=0.0 method=xml
 checksum,0001393944-14-000002,value scale x1000 (dollars vs thousands),rows=424 entry_total=424.0 value_sum=212258 value_total=212.0 method=xml
+checksum,0001140361-14-020983,"empty filing (single placeholder row, totals zero)",rows=1 entry_total=0.0 value_sum=0 value_total=0.0 method=xml
 checksum,0001140361-14-020433,"empty filing (single placeholder row, totals zero)",rows=1 entry_total=0.0 value_sum=0 value_total=0.0 method=xml
 checksum,0000919574-14-003223,entry off by <=2 and value off >1%,rows=52 entry_total=53.0 value_sum=87023 value_total=87965.0 method=xml
-checksum,0000950123-14-005161,entry total counts distinct CUSIPs not rows,rows=84 entry_total=85.0 value_sum=265294 value_total=266102.0 method=xml
 checksum,0001519113-14-000002,entry total counts distinct CUSIPs not rows,rows=844 entry_total=845.0 value_sum=106525622 value_total=138515.0 method=xml
 checksum,0001606152-14-000005,"value off >1%, unexplained",rows=48 entry_total=48.0 value_sum=820788 value_total=637615.0 method=xml
 checksum,0001423673-14-000004,value scale x1000 (dollars vs thousands),rows=39 entry_total=39.0 value_sum=595592 value_total=596.0 method=xml
+checksum,0000950123-14-005161,entry total counts distinct CUSIPs not rows,rows=84 entry_total=85.0 value_sum=265294 value_total=266102.0 method=xml
 checksum,0001602237-14-000001,"value off >1%, unexplained",rows=56 entry_total=56.0 value_sum=187570926 value_total=172270627.0 method=xml
-checksum,0001513137-14-000003,"entry count off by >2, unexplained",rows=11 entry_total=799329.0 value_sum=206215 value_total=206215.0 method=xml
-checksum,0001428948-14-000006,value within 1% (rounding),rows=41 entry_total=41.0 value_sum=1103378 value_total=1104944.0 method=xml
 checksum,0000950123-14-005259,"entry count off by >2, unexplained",rows=150 entry_total=141.0 value_sum=162095 value_total=153138.0 method=xml
 checksum,0001018825-14-000002,"entry count off by >2, unexplained",rows=1017 entry_total=502963.0 value_sum=5029639 value_total=1018.0 method=xml
+checksum,0001513137-14-000003,"entry count off by >2, unexplained",rows=11 entry_total=799329.0 value_sum=206215 value_total=206215.0 method=xml
+checksum,0001428948-14-000006,value within 1% (rounding),rows=41 entry_total=41.0 value_sum=1103378 value_total=1104944.0 method=xml
 checksum,0001356407-14-000011,entry total counts distinct CUSIPs not rows,rows=167 entry_total=118.0 value_sum=160942 value_total=160942.0 method=xml
 checksum,0001546967-14-000002,entry total counts distinct CUSIPs not rows,rows=74 entry_total=73.0 value_sum=140284 value_total=140284.0 method=xml
 checksum,0001568068-14-000004,value scale x1000 (dollars vs thousands),rows=112 entry_total=112.0 value_sum=180504474 value_total=180504.0 method=xml
@@ -208,13 +208,13 @@ checksum,0000314986-14-000002,"empty filing (single placeholder row, totals zero
 checksum,0001120927-14-000019,"value off >1%, unexplained",rows=121 entry_total=121.0 value_sum=169417 value_total=239983400.0 method=xml
 checksum,0001120927-14-000021,"value off >1%, unexplained",rows=110 entry_total=110.0 value_sum=132780 value_total=229042000.0 method=xml
 checksum,0001120927-14-000023,"value off >1%, unexplained",rows=103 entry_total=103.0 value_sum=115503 value_total=231647700.0 method=xml
+checksum,0000950123-14-005611,value scale x1000 (dollars vs thousands),rows=2436 entry_total=2436.0 value_sum=182889007023 value_total=182889007.0 method=xml
+checksum,0000919574-14-003214,"value off >1%, unexplained",rows=149 entry_total=149.0 value_sum=2996590 value_total=2943374.0 method=xml
+checksum,0001427351-14-000006,"value off >1%, unexplained",rows=142 entry_total=142.0 value_sum=117536 value_total=129880.0 method=xml
 checksum,0001120927-14-000024,"value off >1%, unexplained",rows=101 entry_total=101.0 value_sum=109078 value_total=214144200.0 method=xml
 checksum,0001120927-14-000025,entry total counts distinct CUSIPs not rows,rows=113 entry_total=114.0 value_sum=141950 value_total=240440400.0 method=xml
 checksum,0001120927-14-000026,"value off >1%, unexplained",rows=116 entry_total=116.0 value_sum=151767 value_total=239695700.0 method=xml
 checksum,0001120927-14-000027,"value off >1%, unexplained",rows=125 entry_total=125.0 value_sum=165965 value_total=234582800.0 method=xml
-checksum,0000950123-14-005611,value scale x1000 (dollars vs thousands),rows=2436 entry_total=2436.0 value_sum=182889007023 value_total=182889007.0 method=xml
-checksum,0001427351-14-000006,"value off >1%, unexplained",rows=142 entry_total=142.0 value_sum=117536 value_total=129880.0 method=xml
-checksum,0000919574-14-003214,"value off >1%, unexplained",rows=149 entry_total=149.0 value_sum=2996590 value_total=2943374.0 method=xml
 checksum,0000019617-14-000357,value scale x1000 (dollars vs thousands),rows=24079 entry_total=24079.0 value_sum=362466766 value_total=362466811351.0 method=xml
 checksum,0001140361-14-021690,value within 1% (rounding),rows=459 entry_total=459.0 value_sum=1469657 value_total=1456240.0 method=xml
 checksum,0001536105-14-000003,entry total counts distinct CUSIPs not rows,rows=67 entry_total=66.0 value_sum=12715051 value_total=12715051.0 method=xml
@@ -258,18 +258,18 @@ checksum,0001388443-14-000004,entry count off by <=2,rows=86 entry_total=87.0 va
 checksum,0001140334-14-000002,"entry count off by >2, unexplained",rows=195 entry_total=181.0 value_sum=839976 value_total=698804.0 method=xml
 checksum,0001277557-14-000003,summary totals zero but holdings present (filer omitted totals),rows=1887 entry_total=0.0 value_sum=265186 value_total=0.0 method=xml
 checksum,0001398344-14-002030,entry count off by <=2,rows=413 entry_total=412.0 value_sum=159619 value_total=159619.0 method=xml
-checksum,0000910472-14-002105,"entry count off by >2, unexplained",rows=1109 entry_total=1201.0 value_sum=223345 value_total=222902.0 method=xml
 checksum,0001381055-14-000005,"entry count off by >2, unexplained",rows=140 entry_total=136.0 value_sum=103054 value_total=105751.0 method=xml
-checksum,0001356783-14-000005,value scale x1000 (dollars vs thousands),rows=224 entry_total=224.0 value_sum=1039493 value_total=1040.0 method=xml
+checksum,0000910472-14-002105,"entry count off by >2, unexplained",rows=1109 entry_total=1201.0 value_sum=223345 value_total=222902.0 method=xml
 checksum,0001571669-14-000006,entry total counts distinct CUSIPs not rows,rows=87 entry_total=88.0 value_sum=444298 value_total=444299.0 method=xml
+checksum,0001356783-14-000005,value scale x1000 (dollars vs thousands),rows=224 entry_total=224.0 value_sum=1039493 value_total=1040.0 method=xml
 checksum,0000950123-14-006189,"empty filing (single placeholder row, totals zero)",rows=1 entry_total=0.0 value_sum=0 value_total=0.0 method=xml
 checksum,0000950123-14-005241,entry total counts distinct CUSIPs not rows,rows=12083 entry_total=3850.0 value_sum=76037653 value_total=57382470.0 method=xml
-checksum,0001104659-14-039166,"empty filing (single placeholder row, totals zero)",rows=1 entry_total=0.0 value_sum=0 value_total=0.0 method=xml
 checksum,0001504404-14-000004,entry total counts distinct CUSIPs not rows,rows=106 entry_total=107.0 value_sum=1002944 value_total=1002944.0 method=xml
 checksum,0001411784-14-000006,value scale x1000 (dollars vs thousands),rows=206 entry_total=206.0 value_sum=361030025 value_total=361030.0 method=xml
+checksum,0001104659-14-039166,"empty filing (single placeholder row, totals zero)",rows=1 entry_total=0.0 value_sum=0 value_total=0.0 method=xml
+checksum,0001177018-14-000002,"entry count off by >2, unexplained",rows=61 entry_total=64.0 value_sum=440093 value_total=498304.0 method=xml
 checksum,0001603905-14-000002,value within 1% (rounding),rows=22 entry_total=22.0 value_sum=122433 value_total=122620.0 method=xml
 checksum,0001512991-14-000004,value within 1% (rounding),rows=1066 entry_total=1066.0 value_sum=423970 value_total=424510.0 method=xml
-checksum,0001177018-14-000002,"entry count off by >2, unexplained",rows=61 entry_total=64.0 value_sum=440093 value_total=498304.0 method=xml
 checksum,0001089710-14-000002,entry total counts distinct CUSIPs not rows,rows=117 entry_total=118.0 value_sum=226841 value_total=226840.0 method=xml
 checksum,0000869878-14-000010,"entry count off by >2, unexplained",rows=750 entry_total=4617.0 value_sum=4617111 value_total=512.0 method=xml
 checksum,0001049050-14-000002,"empty filing (single placeholder row, totals zero)",rows=1 entry_total=0.0 value_sum=0 value_total=0.0 method=xml
@@ -307,32 +307,32 @@ checksum,0001085936-14-000027,value scale x1000 (dollars vs thousands),rows=670 
 checksum,0001242972-14-000006,entry count off by <=2,rows=543 entry_total=544.0 value_sum=1372332 value_total=1372332.0 method=xml
 checksum,0001020617-14-000010,entry total counts distinct CUSIPs not rows,rows=222 entry_total=223.0 value_sum=2160245449 value_total=2160.0 method=xml
 checksum,0000844150-14-000008,value scale x1000 (dollars vs thousands),rows=1112 entry_total=1112.0 value_sum=2258426 value_total=2258415782.0 method=xml
-checksum,0000950123-14-005789,"empty filing (single placeholder row, totals zero)",rows=1 entry_total=0.0 value_sum=0 value_total=0.0 method=xml
-checksum,0001095449-14-000057,"entry count off by >2, unexplained",rows=54 entry_total=57.0 value_sum=981398 value_total=971398.0 method=xml
 checksum,0001316617-14-000006,value scale x1000 (dollars vs thousands),rows=366 entry_total=366.0 value_sum=3803116 value_total=3803.0 method=xml
 checksum,0001596800-14-000005,value scale x1000 (dollars vs thousands),rows=24 entry_total=24.0 value_sum=3890521 value_total=3890.0 method=xml
+checksum,0000950123-14-005789,"empty filing (single placeholder row, totals zero)",rows=1 entry_total=0.0 value_sum=0 value_total=0.0 method=xml
+checksum,0001095449-14-000057,"entry count off by >2, unexplained",rows=54 entry_total=57.0 value_sum=981398 value_total=971398.0 method=xml
 checksum,0001600636-14-000002,entry total counts distinct CUSIPs not rows,rows=37 entry_total=38.0 value_sum=106722 value_total=107020.0 method=xml
 checksum,0001592643-14-000004,value scale x1000 (dollars vs thousands),rows=106 entry_total=106.0 value_sum=9156547077 value_total=9156547.0 method=xml
 checksum,0001333792-14-000004,"entry count off by >2, unexplained",rows=76 entry_total=180856.0 value_sum=180856 value_total=3026175.0 method=xml
 checksum,0001455289-14-000002,entry total counts distinct CUSIPs not rows,rows=45 entry_total=47.0 value_sum=253209 value_total=253209.0 method=xml
 checksum,0001399706-14-000002,value scale x1000 (dollars vs thousands),rows=56 entry_total=55.0 value_sum=239155 value_total=265172470.0 method=xml
 checksum,0000816788-14-000002,entry total counts distinct CUSIPs not rows,rows=34 entry_total=33.0 value_sum=32919 value_total=32919.0 method=xml
+checksum,0001055980-14-000003,entry off by <=2 and value off >1%,rows=1295 entry_total=1296.0 value_sum=1269057 value_total=1305194.0 method=xml
 checksum,0001290668-14-000002,"entry count off by >2, unexplained",rows=70 entry_total=56.0 value_sum=4749104 value_total=1887086.0 method=xml
 checksum,0001591505-14-000003,value scale x1000 (dollars vs thousands),rows=11 entry_total=11.0 value_sum=995633599 value_total=995634.0 method=xml
-checksum,0001055980-14-000003,entry off by <=2 and value off >1%,rows=1295 entry_total=1296.0 value_sum=1269057 value_total=1305194.0 method=xml
 checksum,0001421412-14-000002,entry count off by <=2,rows=1632 entry_total=1633.0 value_sum=19412 value_total=19412.0 method=xml
 checksum,0001176347-14-000002,"entry count off by >2, unexplained",rows=4 entry_total=75.0 value_sum=92854 value_total=23213.0 method=xml
 checksum,0000714142-14-000002,entry count off by <=2,rows=2139 entry_total=2140.0 value_sum=8483350 value_total=8483350.0 method=xml
 checksum,0001590491-14-000004,"entry count off by >2, unexplained",rows=130 entry_total=1.0 value_sum=363690 value_total=369739.0 method=xml
-checksum,0000914317-14-000485,"value off >1%, unexplained",rows=253 entry_total=253.0 value_sum=311310 value_total=316529.0 method=xml
 checksum,0000897423-14-000023,"empty filing (single placeholder row, totals zero)",rows=1 entry_total=0.0 value_sum=0 value_total=0.0 method=xml
+checksum,0000914317-14-000485,"value off >1%, unexplained",rows=253 entry_total=253.0 value_sum=311310 value_total=316529.0 method=xml
 checksum,0001062993-14-002048,entry count off by <=2,rows=200 entry_total=201.0 value_sum=243034 value_total=243034.0 method=xml
 checksum,0001527488-14-000002,entry total counts distinct CUSIPs not rows,rows=239 entry_total=84.0 value_sum=2006418 value_total=2006415.0 method=xml
-checksum,0001140361-14-020625,value scale x1000 (dollars vs thousands),rows=45 entry_total=45.0 value_sum=396674543 value_total=396675.0 method=xml
 checksum,0001083323-14-000002,value scale x1000 (dollars vs thousands),rows=154 entry_total=154.0 value_sum=154186798 value_total=154186.0 method=xml
 checksum,0001008937-14-000002,entry total counts distinct CUSIPs not rows,rows=321 entry_total=182.0 value_sum=330077 value_total=330077.0 method=xml
 checksum,0001134008-14-000002,value scale x1000 (dollars vs thousands),rows=1055 entry_total=759.0 value_sum=610576 value_total=610567608.0 method=xml
 checksum,0001082849-14-000002,entry total counts distinct CUSIPs not rows,rows=564 entry_total=422.0 value_sum=725576 value_total=725567.0 method=xml
+checksum,0001140361-14-020625,value scale x1000 (dollars vs thousands),rows=45 entry_total=45.0 value_sum=396674543 value_total=396675.0 method=xml
 checksum,0001381954-14-000005,value within 1% (rounding),rows=27 entry_total=27.0 value_sum=160481 value_total=160181.0 method=xml
 checksum,0000950123-14-006246,entry count off by <=2,rows=1173 entry_total=1172.0 value_sum=2360570 value_total=2360570.0 method=xml
 checksum,0001140361-14-019648,"empty filing (single placeholder row, totals zero)",rows=1 entry_total=0.0 value_sum=0 value_total=0.0 method=xml
@@ -349,9 +349,9 @@ checksum,0001406585-14-000004,entry total counts distinct CUSIPs not rows,rows=2
 checksum,0001449689-14-000009,"entry count off by >2, unexplained",rows=572 entry_total=577.0 value_sum=708503 value_total=708503.0 method=xml
 checksum,0000920440-14-000003,value scale x1000 (dollars vs thousands),rows=68 entry_total=68.0 value_sum=825881000 value_total=825881.0 method=xml
 checksum,0000814133-14-000045,"value off >1%, unexplained",rows=387 entry_total=387.0 value_sum=10313042 value_total=10466277.0 method=xml
-checksum,0001468686-14-000005,"entry count off by >2, unexplained",rows=31 entry_total=1.0 value_sum=259306 value_total=259306.0 method=xml
 checksum,0001556785-14-000004,value within 1% (rounding),rows=61 entry_total=61.0 value_sum=5653972 value_total=5661845.0 method=xml
 checksum,0000950123-14-006331,"entry count off by >2, unexplained",rows=1016 entry_total=1299.0 value_sum=65858993 value_total=65858993.0 method=xml
+checksum,0001468686-14-000005,"entry count off by >2, unexplained",rows=31 entry_total=1.0 value_sum=259306 value_total=259306.0 method=xml
 checksum,0000934745-14-000002,entry total counts distinct CUSIPs not rows,rows=138 entry_total=139.0 value_sum=215493 value_total=215493.0 method=xml
 checksum,0001142495-14-000004,"entry count off by >2, unexplained",rows=626 entry_total=10019.0 value_sum=570587 value_total=570587.0 method=xml
 checksum,0001063571-14-000002,"value off >1%, unexplained",rows=152 entry_total=152.0 value_sum=1600001 value_total=29074.0 method=xml
@@ -376,8 +376,8 @@ checksum,0001584087-14-000004,"entry count off by >2, unexplained",rows=134 entr
 checksum,0000950123-14-006563,"entry count off by >2, unexplained",rows=3553 entry_total=3142.0 value_sum=83201883 value_total=83201883.0 method=xml
 checksum,0001116247-14-000003,entry off by <=2 and value off >1%,rows=145 entry_total=146.0 value_sum=212307 value_total=288438.0 method=xml
 checksum,0001050442-14-000005,entry total counts distinct CUSIPs not rows,rows=87 entry_total=89.0 value_sum=3932051 value_total=3932468.0 method=xml
-checksum,0001166588-14-000004,value scale x1000 (dollars vs thousands),rows=4236 entry_total=4236.0 value_sum=137150320674 value_total=137150321.0 method=xml
 checksum,0001128074-14-000004,"value off >1%, unexplained",rows=233 entry_total=233.0 value_sum=3318912 value_total=160205.0 method=xml
+checksum,0001166588-14-000004,value scale x1000 (dollars vs thousands),rows=4236 entry_total=4236.0 value_sum=137150320674 value_total=137150321.0 method=xml
 checksum,0001056488-14-000005,"entry count off by >2, unexplained",rows=111 entry_total=134.0 value_sum=103821 value_total=118278.0 method=xml
 checksum,0001042063-14-000003,value scale x1000 (dollars vs thousands),rows=36 entry_total=36.0 value_sum=280806 value_total=280.0 method=xml
 checksum,0001177018-14-000003,entry off by <=2 and value within 1%,rows=63 entry_total=64.0 value_sum=496813 value_total=498304.0 method=xml

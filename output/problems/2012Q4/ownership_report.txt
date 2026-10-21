@@ -1,13 +1,13 @@
 2012Q4 ownership, quarter end 2012-12-31, period_of_report 20121231; shares outstanding: XBRL + regex fallback (11 companies)
-filings for the period: 3,573; after amendment/duplicate resolution: 3,420 ({'13F-HR': 3267, '13F-HR/A': 153}); notes: 36 (first 5 below)
+filings for the period: 3,573; after amendment/duplicate resolution: 3,422 ({'13F-HR': 3269, '13F-HR/A': 153}); notes: 29 (first 5 below)
   manager 897378: amendment 0000897378-13-000002 has no amendment type; treated as RESTATEMENT
   manager 948046: amendment 0000948046-13-000048 has no amendment type; treated as RESTATEMENT
   manager 948046: amendment 0000948046-13-000051 has no amendment type; treated as RESTATEMENT
-  manager 1009022: amendment 0001009022-13-000005 has no amendment type; treated as RESTATEMENT
   manager 1047644: amendment 0001047469-13-001598 has no amendment type; treated as RESTATEMENT
-holdings rows used: 1,196,181 (SH, no put/call, resolved CUSIP, shares > 0)
+  manager 1056825: amendment 0001056825-13-000005 has no amendment type; treated as RESTATEMENT
+holdings rows used: 1,196,479 (SH, no put/call, resolved CUSIP, shares > 0)
 
-FUNDS EXCLUDED (decision 2): 1,775 CUSIPs on 554 CIKs, 73,369 manager-CUSIP rows, $1,112.6bn of 13F value = 1.9% of the selected filings' value
+FUNDS EXCLUDED (decision 2): 1,775 CUSIPs on 554 CIKs, 73,372 manager-CUSIP rows, $1,112.6bn of 13F value = 1.9% of the selected filings' value
         cusips  value_bn
 reason                  
 F1        1457     673.3
@@ -28,13 +28,13 @@ largest excluded:
 464287200    1159508.0 DEUTSCHE BANK AKTIENGESELLSCHAFT F3 13(f) list ETF/ETN/unit (CORE S&P5...      14.2
 81369Y308    1064641.0         SELECT SECTOR SPDR TRUST          F1 1940-Act/UIT forms (485BPOS)      12.2
 
-GRAIN (decision 12): collapsed to one row per manager x security. Exact duplicate reports dropped: 947; rows summed across a manager's multiple filings: 0; final rows 747,663
+GRAIN: one row per manager x security. Where a manager filed the same security more than once the latest filing wins, never summed: 2,256 rows superseded; final rows 747,685
 
-FIXES (Luke 2026-10-12): debt-pattern CUSIPs excluded from ownership (rows kept): 2,432 rows / 773 CUSIPs / $22.8bn; ADR/ADS excluded from the main figure: 36,849 rows / 381 CUSIPs on 274 companies / $869.1bn; NEW HOLDINGS amendments duplicating >= 90% of the original treated as restatements: 7 amendments, 7 original filings / 4,027 rows dropped
+FIXES (Luke 2026-10-12): debt-pattern CUSIPs excluded from ownership (rows kept): 2,432 rows / 773 CUSIPs / $22.8bn; ADR/ADS excluded from the main figure: 36,853 rows / 381 CUSIPs on 274 companies / $869.2bn; NEW HOLDINGS amendments duplicating >= 90% of the original treated as restatements: 7 amendments, 7 original filings / 4,027 rows dropped
 
-PLAUSIBILITY GATES (decision 12): shares outstanding outside [1,000, 100,000,000,000] nulled: 101 companies / 3,244 rows; single holdings exceeding shares outstanding excluded: 391 rows / 15 companies
+PLAUSIBILITY GATES (decision 12): shares outstanding outside [1,000, 35,000,000,000] nulled: 106 companies / 3,188 rows; single holdings exceeding shares outstanding excluded: 469 rows / 19 companies
 
-OWNERSHIP CEILING (decision 12): figures above 300% suppressed as denominator errors: 5 companies (2 multi-CUSIP, 3 scale-suspect)
+OWNERSHIP CEILING (decision 12): figures above 300% suppressed as denominator errors: 8 companies (2 multi-CUSIP, 6 scale-suspect)
 
 SHARE CLASSES (never summed): multi-class companies (class-dimensioned facts only) 264; their CUSIPs: matched to a class 200 ($3,123.6bn), unmatched 139 ($875.6bn); company-level pct is null for all 264
 largest per-class figures:
@@ -49,31 +49,31 @@ WILEY JOHN & SONS, INC. 968223206      CL A         42111863.0                49
       Hyatt Hotels Corp 448579102  COM CL A         47678546.0                46631778.0                102.2     120.4
 
 CUSIP->CIK coverage among OPERATING companies (6-char issuers, funds removed: 697 incl. 106 unmapped by name token only): 4,918 / 11,553 = 42.6%; by value 93.5%; by map source: {'SC 13G': 3973, 'name_exact': 538, 'SC 13D': 407}
-shares outstanding (XBRL + regex fallback (11 companies)): companies with a figure 3,904 / 4,612 = 84.6%; by 13F value 89.9%; gap > 100 days flagged: 22; multi-class null: 264
+shares outstanding (XBRL + regex fallback (11 companies)): companies with a figure 3,904 / 4,612 = 84.6%; by 13F value 90.0%; gap > 100 days flagged: 23; multi-class null: 264
 
-ownership pct distribution (n=3,899): {'count': 3899.0, 'mean': 56.4, 'std': 34.3, 'min': 0.0, '5%': 1.0, '25%': 26.0, '50%': 61.6, '75%': 85.2, '95%': 100.9, 'max': 269.6}
-histogram: {'0': 0, '0-5': 362, '5-25': 582, '25-50': 657, '50-75': 818, '75-90': 796, '90-100': 466, '100-150': 205, '>150': 13}
-companies over 100%: 218 / 3,899 = 5.6%
-large companies (top 500 by 13F value) with a pct: 434; over 100%: 36 = 8.3%  [stop condition at 5%]
+ownership pct distribution (n=3,896): {'count': 3896.0, 'mean': 56.8, 'std': 34.2, 'min': 0.0, '5%': 1.3, '25%': 26.6, '50%': 62.1, '75%': 85.3, '95%': 101.1, 'max': 269.6}
+histogram: {'0': 0, '0-5': 344, '5-25': 582, '25-50': 657, '50-75': 825, '75-90': 799, '90-100': 466, '100-150': 209, '>150': 14}
+companies over 100%: 223 / 3,896 = 5.7%
+large companies (top 500 by 13F value) with a pct: 436; over 100%: 36 = 8.3%  [stop condition at 5%]
 Note: companies with 'no identified data cause' can still exceed 100% through securities lending (the lender and the
 borrower's buyer both report the same shares on 13F); that is a possible explanation, not a measured cause.
 over-100% causes (combinations; [..] = annotation):
 no identified data cause                                                      82
-manager-CUSIP in >1 filing                                                    68
+manager-CUSIP in >1 filing                                                    70
 multiple CUSIPs summed (classes/units)                                        28
-manager-CUSIP in >1 filing; multiple CUSIPs summed (classes/units)            13
+manager-CUSIP in >1 filing; multiple CUSIPs summed (classes/units)            14
 CUSIP->CIK conflict                                                            8
+single holding > 50% of shares out                                             6
 manager-CUSIP in >1 filing; CUSIP->CIK conflict                                6
-single holding > 50% of shares out                                             4
 CUSIP->CIK conflict; multiple CUSIPs summed (classes/units)                    4
 single holding > 50% of shares out; multiple CUSIPs summed (classes/units)     2
 manager-CUSIP in >1 filing; single holding > 50% of shares out                 2
 manager-CUSIP in >1 filing; shares outstanding gap >100d                       1
-  with the as-of date after quarter end: 57 of 218
+  with the as-of date after quarter end: 60 of 223
 largest over-100% companies:
  company_cik                   company_name  n_managers  shares_held_total  shares_outstanding  institutional_ownership_pct  value_bn                                               over_100_cause
    1270400.0              VIRGIN MEDIA INC.         257          310233242         269300000.0                        115.2     211.8                                   manager-CUSIP in >1 filing
-   1441849.0         CLOUD PEAK ENERGY INC.         187           62388006          61114157.0                        102.1     190.5                                   manager-CUSIP in >1 filing
+   1441849.0         CLOUD PEAK ENERGY INC.         187           62388006          61114157.0                        102.1     190.5 manager-CUSIP in >1 filing; [as-of 31d after quarter end:...
    1168195.0                 SOURCEFIRE INC         207           34285781          30346395.0                        113.0     184.9                                   manager-CUSIP in >1 filing
    1045450.0                 EPR PROPERTIES         213           52405802          46819177.0                        111.9     184.8 multiple CUSIPs summed (classes/units); [as-of 59d after ...
     353230.0                   OMNICARE INC         287          111945793         104638271.0                        107.0     177.9 manager-CUSIP in >1 filing; [as-of 31d after quarter end:...
@@ -93,7 +93,7 @@ largest over-100% companies:
     933036.0           RENT A CENTER INC DE         226           61095280          58210812.0                        105.0      95.7 manager-CUSIP in >1 filing; [as-of 59d after quarter end:...
    1468516.0                       AOL Inc.         292           78603581          76600000.0                        102.6      91.7                                     no identified data cause
 
-NO COMPANY-LEVEL FIGURE: 708 companies carrying $5,289.8bn = 10.1% of mapped operating value; causes:
+NO COMPANY-LEVEL FIGURE: 708 companies carrying $5,289.8bn = 10.0% of mapped operating value; causes:
                                                                                                    companies  value_bn
 cause                                                                                                                 
 class-dimensioned facts only: company pct null by rule, per-class pct given (class_ownership_pct)        264    4000.6

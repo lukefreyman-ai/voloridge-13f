@@ -25,43 +25,43 @@ largest excluded:
 464287507     930667.0            iSHARES INC          F1 1940-Act/UIT forms (485APOS)      10.2
 73935A104          NaN                    NaN  F3 13(f) list ETF/ETN/unit (UNIT SER 1)       9.9
 
-GRAIN (decision 12): collapsed to one row per manager x security. Exact duplicate reports dropped: 52; rows summed across a manager's multiple filings: 368; final rows 781,509
+GRAIN: one row per manager x security. Where a manager filed the same security more than once the latest filing wins, never summed: 472 rows superseded; final rows 781,509
 
 FIXES (Luke 2026-10-12): debt-pattern CUSIPs excluded from ownership (rows kept): 1,654 rows / 524 CUSIPs / $59.9bn; ADR/ADS excluded from the main figure: 36,773 rows / 376 CUSIPs on 258 companies / $502.2bn; NEW HOLDINGS amendments duplicating >= 90% of the original treated as restatements: 6 amendments, 6 original filings / 2,929 rows dropped
 
-PLAUSIBILITY GATES (decision 12): shares outstanding outside [1,000, 100,000,000,000] nulled: 87 companies / 464 rows; single holdings exceeding shares outstanding excluded: 12 rows / 6 companies
+PLAUSIBILITY GATES (decision 12): shares outstanding outside [1,000, 35,000,000,000] nulled: 92 companies / 2,311 rows; single holdings exceeding shares outstanding excluded: 135 rows / 10 companies
 
-OWNERSHIP CEILING (decision 12): figures above 300% suppressed as denominator errors: 8 companies (7 multi-CUSIP, 1 scale-suspect)
+OWNERSHIP CEILING (decision 12): figures above 300% suppressed as denominator errors: 11 companies (7 multi-CUSIP, 4 scale-suspect)
 
 SHARE CLASSES (never summed): multi-class companies (class-dimensioned facts only) 246; their CUSIPs: matched to a class 191 ($659.7bn), unmatched 115 ($209.9bn); company-level pct is null for all 246
 largest per-class figures:
              company_name     cusip list_desc  cusip_shares_held  class_shares_outstanding  class_ownership_pct  value_bn
                 VISA INC. 92826C839  COM CL A        432890885.0               515000000.0                 84.1      82.0
-   BERKSHIRE HATHAWAY INC 084670702  CL B NEW        721405866.0              1139203921.0                 63.3      81.4
-             COMCAST CORP 20030N101      CL A       1741053090.0              2133605012.0                 81.6      73.7
+   BERKSHIRE HATHAWAY INC 084670702  CL B NEW        721132817.0              1139203921.0                 63.3      81.4
+             COMCAST CORP 20030N101      CL A       1741043308.0              2133605012.0                 81.6      73.7
            MASTERCARD INC 57636Q104      CL A         92991529.0               116280684.0                 80.0      56.7
-UNITED PARCEL SERVICE INC 911312106      CL B        501964728.0               721546655.0                 69.6      44.7
+UNITED PARCEL SERVICE INC 911312106      CL B        501444142.0               721546655.0                 69.5      44.7
    BERKSHIRE HATHAWAY INC 084670108      CL A           178866.0                  884274.0                 20.2      25.9
               Viacom Inc. 92553P201      CL B        372957010.0               427100000.0                 87.3      25.6
                  CBS CORP 124857202      CL B        474759540.0               565520041.0                 84.0      23.2
 
 CUSIP->CIK coverage among OPERATING companies (6-char issuers, funds removed: 493 incl. 229 unmapped by name token only): 4,333 / 11,548 = 37.5%; by value 88.2%; by map source: {'name_exact': 2421, 'SC 13G': 1254, 'SC 13D': 658}
-shares outstanding (XBRL + regex fallback (9 companies)): companies with a figure 3,404 / 4,048 = 84.1%; by 13F value 89.8%; gap > 100 days flagged: 20; multi-class null: 246
+shares outstanding (XBRL + regex fallback (9 companies)): companies with a figure 3,401 / 4,045 = 84.1%; by 13F value 89.7%; gap > 100 days flagged: 20; multi-class null: 246
 
-ownership pct distribution (n=3,396): {'count': 3396.0, 'mean': 58.9, 'std': 33.9, 'min': 0.0, '5%': 1.8, '25%': 29.9, '50%': 65.8, '75%': 86.6, '95%': 101.2, 'max': 296.1}
-histogram: {'0': 0, '0-5': 269, '5-25': 465, '25-50': 559, '50-75': 685, '75-90': 752, '90-100': 460, '100-150': 196, '>150': 10}
-companies over 100%: 206 / 3,396 = 6.1%
-large companies (top 500 by 13F value) with a pct: 414; over 100%: 31 = 7.5%  [stop condition at 5%]
+ownership pct distribution (n=3,390): {'count': 3390.0, 'mean': 59.1, 'std': 33.7, 'min': 0.0, '5%': 2.3, '25%': 30.4, '50%': 66.0, '75%': 86.7, '95%': 101.3, 'max': 296.1}
+histogram: {'0': 0, '0-5': 254, '5-25': 466, '25-50': 560, '50-75': 690, '75-90': 752, '90-100': 461, '100-150': 197, '>150': 10}
+companies over 100%: 207 / 3,390 = 6.1%
+large companies (top 500 by 13F value) with a pct: 412; over 100%: 31 = 7.5%  [stop condition at 5%]
 Note: companies with 'no identified data cause' can still exceed 100% through securities lending (the lender and the
 borrower's buyer both report the same shares on 13F); that is a possible explanation, not a measured cause.
 over-100% causes (combinations; [..] = annotation):
-no identified data cause                                                      162
+no identified data cause                                                      163
 multiple CUSIPs summed (classes/units)                                         37
 single holding > 50% of shares out                                              3
 single holding > 50% of shares out; multiple CUSIPs summed (classes/units)      2
 shares outstanding gap >100d; single holding > 50% of shares out                1
 CUSIP->CIK conflict; multiple CUSIPs summed (classes/units)                     1
-  with the as-of date after quarter end: 60 of 206
+  with the as-of date after quarter end: 60 of 207
 largest over-100% companies:
  company_cik                             company_name  n_managers  shares_held_total  shares_outstanding  institutional_ownership_pct  value_bn                                               over_100_cause
    1075531.0                        PRICELINE COM INC         609           59799254          51500530.0                        116.1      46.4 multiple CUSIPs summed (classes/units); [as-of 31d after ...
@@ -85,7 +85,7 @@ largest over-100% companies:
    1040971.0                     SL GREEN REALTY CORP         266           95762519          95376000.0                        100.4       8.6                       multiple CUSIPs summed (classes/units)
    1048477.0              BIOMARIN PHARMACEUTICAL INC         273          141839079         140050009.0                        101.3       8.1                                     no identified data cause
 
-NO COMPANY-LEVEL FIGURE: 644 companies carrying $1,418.6bn = 10.2% of mapped operating value; causes:
+NO COMPANY-LEVEL FIGURE: 644 companies carrying $1,418.6bn = 10.3% of mapped operating value; causes:
                                                                                                    companies  value_bn
 cause                                                                                                                 
 class-dimensioned facts only: company pct null by rule, per-class pct given (class_ownership_pct)        246     871.0

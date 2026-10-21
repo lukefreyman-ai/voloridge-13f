@@ -107,7 +107,7 @@ company_cik,shares_held_total,n_managers,n_cusips,company_name,shares_outstandin
 1040593.0,40311837,162,1,CARRIZO OIL & GAS INC,39563000.0,False,101.89277102343097,,False,no identified data cause
 1040971.0,92897541,270,3,SL GREEN REALTY CORP,89210000.0,False,104.13355117139334,,False,multiple CUSIPs summed (classes/units)
 1041859.0,28392670,167,1,CHILDRENS PLACE RETAIL STORES INC,24697000.0,False,114.96404421589668,,False,manager-CUSIP in >1 filing; [as-of 31d after quarter end: buybacks lower the denominator]
-1045450.0,55686576,202,4,ENTERTAINMENT PROPERTIES TRUST,46654779.0,False,119.35878208746846,,False,multiple CUSIPs summed (classes/units); [as-of 60d after quarter end: buybacks lower the denominator]
+1045450.0,55686576,202,4,ENTERTAINMENT PROPERTIES TRUST,46654779.0,False,119.35878208746846,,False,manager-CUSIP in >1 filing; multiple CUSIPs summed (classes/units); [as-of 60d after quarter end: buybacks lower the denominator]
 1045609.0,467088731,328,6,"Prologis, Inc.",458597000.0,False,101.85167609033638,,False,manager-CUSIP in >1 filing; multiple CUSIPs summed (classes/units)
 1048477.0,119617220,205,1,BIOMARIN PHARMACEUTICAL INC,114789732.0,False,104.20550507078454,,False,no identified data cause
 1049108.0,31510326,136,1,DOLLAR THRIFTY AUTOMOTIVE GROUP INC,29556887.0,False,106.60908234348226,,False,no identified data cause
@@ -123,6 +123,7 @@ company_cik,shares_held_total,n_managers,n_cusips,company_name,shares_outstandin
 1068717.0,33632652,141,1,RTI INTERNATIONAL METALS INC,30198780.0,False,111.37089644018732,,False,no identified data cause
 1070750.0,709375621,332,1,"HOST HOTELS & RESORTS, INC.",705100000.0,False,100.60638505176571,,False,no identified data cause
 1076195.0,42499522,154,1,"LIFE TIME FITNESS, INC.",42428265.0,False,100.16794700419638,,False,no identified data cause
+1077370.0,9328,5,1,Internet Patents Corp,6607.0,False,141.183593158771,,False,single holding > 50% of shares out
 1077428.0,39548397,162,2,TEXAS CAPITAL BANCSHARES INC/TX,37774773.0,False,104.69526051155886,,False,multiple CUSIPs summed (classes/units)
 1084048.0,53068963,168,2,"J2 GLOBAL, INC.",46709068.0,False,113.61597495372845,,False,manager-CUSIP in >1 filing; multiple CUSIPs summed (classes/units)
 1086909.0,29603692,137,1,"BROADSOFT, INC.",27106393.0,False,109.21295208846121,,False,no identified data cause
@@ -152,7 +153,7 @@ company_cik,shares_held_total,n_managers,n_cusips,company_name,shares_outstandin
 1170991.0,248918170,142,1,DCT Industrial Trust Inc.,245943100.0,False,101.20965784362316,,False,no identified data cause
 1171500.0,36649964,124,1,PLATINUM UNDERWRITERS HOLDINGS LTD,35526400.0,False,103.16261709601872,,False,no identified data cause
 1172139.0,50374529,185,1,BILL BARRETT CORP,47809903.0,False,105.36421502465714,,False,no identified data cause
-1173489.0,24474002,124,1,CEVA INC,23543746.0,False,103.95118092082714,,False,no identified data cause
+1173489.0,24515887,125,1,CEVA INC,23543746.0,False,104.1290837915088,,False,no identified data cause
 1182129.0,50575438,130,1,AUXILIUM PHARMACEUTICALS INC,48308956.0,False,104.69163937221082,,False,no identified data cause; [as-of 60d after quarter end: buybacks lower the denominator]
 1206264.0,71428517,252,1,TEMPUR PEDIC INTERNATIONAL INC,63803592.0,False,111.95062027228812,,False,manager-CUSIP in >1 filing; [as-of 31d after quarter end: buybacks lower the denominator]
 1224608.0,242905318,169,1,"CNO Financial Group, Inc.",241304503.0,False,100.66340038420252,,False,no identified data cause
@@ -193,5 +194,6 @@ company_cik,shares_held_total,n_managers,n_cusips,company_name,shares_outstandin
 1471261.0,412047188,121,1,"Cobalt International Energy, Inc.",387531630.0,False,106.32607924158346,,False,no identified data cause
 1477294.0,182892335,113,1,Sensata Technologies Holding N.V.,176454876.0,False,103.64821825609398,,False,single holding > 50% of shares out
 1487730.0,53449472,86,1,"Spectrum Brands Holdings, Inc.",51942000.0,False,102.90222170882907,,False,single holding > 50% of shares out
+1507385.0,1600,2,1,"American Realty Capital Properties, Inc.",1000.0,False,160.0,,False,single holding > 50% of shares out
 1507986.0,10036681,13,3,Universal Business Payment Solutions Acquisition Corp,3825699.0,False,262.348945905049,,False,multiple CUSIPs summed (classes/units)
 1512077.0,28597780,24,3,Global Eagle Acquisition Corp.,23161585.0,False,123.47073829360124,,False,multiple CUSIPs summed (classes/units)

@@ -5,3 +5,4 @@ __pycache__/
 .env
 .virtual_documents/
 anaconda_projects/
+data/*_cusip_cik_map_v1.csv

@@ -1,8 +1,8 @@
 2011Q3 shares outstanding (quarter end 2011-09-30) from 2011q4_notes, 2012q1_notes
 facts loaded 45,446 on 7,739 CIKs | selected 9,982 rows on 7,739 CIKs
 CIKs with class-dimensioned facts (multi-class): 1,585; undimensioned-only: 6,154
-gap > 100 days flagged: 319 rows; gap distribution (days): {'min': -3560.0, '25%': 0.0, '50%': 0.0, '75%': 31.0, 'max': 458.0}
-by form: {'10-Q': 7998, '10-K': 1186, '10-Q/A': 613, '20-F': 99, '10-K/A': 59, '40-F': 16, '10-KT': 10, '10-QT': 1}
-by XBRL tag (decision 11): {'CommonStockSharesOutstanding': 7383, 'EntityCommonStockSharesOutstanding': 2599}
-dated exactly at quarter end: 6,381 of 9,982 (63.9%)
-scale-corrected (fact tagged in thousands, cross-checked against the other tag): 107
+gap > 100 days flagged: 322 rows; gap distribution (days): {'min': -3560.0, '25%': 0.0, '50%': 0.0, '75%': 31.0, 'max': 458.0}
+by form: {'10-Q': 7991, '10-K': 1193, '10-Q/A': 613, '20-F': 99, '10-K/A': 59, '40-F': 16, '10-KT': 10, '10-QT': 1}
+by XBRL tag (decision 11): {'CommonStockSharesOutstanding': 7295, 'EntityCommonStockSharesOutstanding': 2687}
+dated exactly at quarter end: 6,307 of 9,982 (63.2%)
+scale-corrected (fact tagged in thousands, cross-checked against the other tag): 104

@@ -24,7 +24,7 @@ company_cik,shares_held_total,n_managers,n_cusips,company_name,shares_outstandin
 828750.0,67181919.0,145,1,GSI COMMERCE INC,66984000.0,False,100.29547205302758,,False,no identified data cause
 833640.0,30248642.0,150,1,POWER INTEGRATIONS INC,28375363.0,False,106.60177986093076,,False,no identified data cause
 837173.0,53571910.0,285,1,"Walter Energy, Inc.",53140768.0,False,100.81132060417343,,False,no identified data cause; [as-of 31d after quarter end: buybacks lower the denominator]
-873364.0,86104396.0,373,1,CEPHALON INC,75722274.0,False,113.71079003781634,,False,no identified data cause
+873364.0,86111824.0,374,1,CEPHALON INC,75722274.0,False,113.72059956889302,,False,no identified data cause
 874214.0,57591074.0,181,1,ANNTAYLOR STORES CORP,54324666.0,False,106.01275302824686,,False,no identified data cause; [as-of 59d after quarter end: buybacks lower the denominator]
 874716.0,59887402.0,250,1,IDEXX LABORATORIES INC /DE,57335339.0,False,104.45111696296065,,False,no identified data cause; [as-of 31d after quarter end: buybacks lower the denominator]
 879169.0,126607353.0,195,1,INCYTE CORP,123280474.0,False,102.69862606141504,,False,no identified data cause
@@ -54,7 +54,7 @@ company_cik,shares_held_total,n_managers,n_cusips,company_name,shares_outstandin
 1009356.0,59552394.0,204,1,SALIX PHARMACEUTICALS LTD,58139941.0,False,102.42940219013983,,False,no identified data cause
 1012019.0,36907758.0,105,2,RUSH ENTERPRISES INC \TX\,26923258.0,False,137.08503629092735,,False,multiple CUSIPs summed (classes/units); [as-of 68d after quarter end: buybacks lower the denominator]
 1013934.0,15043578.0,195,1,STRAYER EDUCATION INC,13316822.0,False,112.96672734680993,,False,no identified data cause
-1014473.0,174718552.0,307,2,VERISIGN INC/CA,172736281.0,False,101.14757072950992,,False,multiple CUSIPs summed (classes/units)
+1014473.0,174748906.0,308,2,VERISIGN INC/CA,172736281.0,False,101.16514318147212,,False,multiple CUSIPs summed (classes/units)
 1015328.0,35023345.0,148,2,WINTRUST FINANCIAL CORP,34939523.0,False,100.23990596551646,,False,multiple CUSIPs summed (classes/units); [as-of 59d after quarter end: buybacks lower the denominator]
 1017480.0,29855477.0,152,1,HIBBETT SPORTS INC,27344943.0,False,109.1809809221398,,False,no identified data cause; [as-of 90d after quarter end: buybacks lower the denominator]
 1020416.0,125853600.0,249,1,MONSTER WORLDWIDE INC,121113000.0,False,103.91419583364296,,False,manager-CUSIP in >1 filing; CUSIP->CIK conflict
@@ -64,7 +64,7 @@ company_cik,shares_held_total,n_managers,n_cusips,company_name,shares_outstandin
 1034054.0,126030326.0,245,1,SBA COMMUNICATIONS CORP,114832000.0,False,109.75192106729833,,False,no identified data cause
 1035443.0,58797158.0,229,3,ALEXANDRIA REAL ESTATE EQUITIES INC,54966925.0,False,106.96825045243116,,False,multiple CUSIPs summed (classes/units)
 1039889.0,26043430.0,152,1,P F CHANGS CHINA BISTRO INC,22832874.0,False,114.06111206149518,,False,no identified data cause; [as-of 42d after quarter end: buybacks lower the denominator]
-1041859.0,26926829.0,165,1,CHILDRENS PLACE RETAIL STORES INC,26136000.0,False,103.0258226201408,,False,no identified data cause; [as-of 31d after quarter end: buybacks lower the denominator]
+1041859.0,27030029.0,166,1,CHILDRENS PLACE RETAIL STORES INC,26136000.0,False,103.42068028772576,,False,no identified data cause; [as-of 31d after quarter end: buybacks lower the denominator]
 1045450.0,52424804.0,215,5,ENTERTAINMENT PROPERTIES TRUST,46478917.0,False,112.79265392521947,,False,multiple CUSIPs summed (classes/units); [as-of 59d after quarter end: buybacks lower the denominator]
 1048477.0,113747285.0,186,1,BIOMARIN PHARMACEUTICAL INC,110634465.0,False,102.8136078571899,,False,no identified data cause
 1049108.0,28928821.0,124,1,DOLLAR THRIFTY AUTOMOTIVE GROUP INC,28763452.0,False,100.57492751565424,,False,no identified data cause
@@ -109,7 +109,7 @@ company_cik,shares_held_total,n_managers,n_cusips,company_name,shares_outstandin
 1309108.0,39506859.0,151,1,Wright Express CORP,38437000.0,False,102.78340921507922,,False,no identified data cause
 1320695.0,36360630.0,170,1,"TreeHouse Foods, Inc.",35440000.0,False,102.59771444695261,,False,no identified data cause
 1320947.0,22826448.0,162,1,Diamond Foods Inc,21868820.0,False,104.3789651202031,,True,shares outstanding gap >100d
-1326380.0,172478401.0,350,2,GameStop Corp.,146000000.0,False,118.13589109589043,,False,multiple CUSIPs summed (classes/units); [as-of 31d after quarter end: buybacks lower the denominator]
+1326380.0,173478401.0,351,2,GameStop Corp.,146000000.0,False,118.82082260273972,,False,multiple CUSIPs summed (classes/units); [as-of 31d after quarter end: buybacks lower the denominator]
 1354217.0,53588787.0,156,1,Volcano Corp,51366000.0,False,104.32735077677842,,False,no identified data cause
 1402305.0,78989858.0,184,1,"SuccessFactors, Inc.",77137000.0,False,102.40203533972023,,False,no identified data cause
 1407739.0,71670321.0,183,2,"DUPONT FABROS TECHNOLOGY, INC.",59827005.0,False,119.79593663430083,,False,multiple CUSIPs summed (classes/units)

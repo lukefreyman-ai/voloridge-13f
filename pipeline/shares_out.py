@@ -29,6 +29,12 @@ COVER_TAG = "EntityCommonStockSharesOutstanding"      # dei, cover page, dated n
 BALANCE_TAG = "CommonStockSharesOutstanding"          # us-gaap, balance sheet, dated at period end
 TAGS = (BALANCE_TAG, COVER_TAG)
 TAG_PRIORITY = {BALANCE_TAG: 0, COVER_TAG: 1}         # lower wins when the as-of date ties
+# A thousands-tagging error shows up as a ratio near 1,000. A reverse split or a dilution shows up
+# as 10-30x, and must NOT trigger a correction. No US listed company in 2010-2014 had more than
+# about 2.9e10 shares (Citigroup pre-split), so 1e11 is a generous ceiling on a possible result.
+SCALE_RATIO_LO, SCALE_RATIO_HI = 900.0, 1100.0
+# Citigroup pre-split, about 2.9e10, is the largest real US share count in 2010-2014.
+MAX_PLAUSIBLE_SHARES = 35_000_000_000
 FORMS = ("10-K", "10-Q", "10-K/A", "10-Q/A", "20-F", "40-F", "10-KT", "10-QT")
 
 
@@ -68,22 +74,46 @@ def select(f: pd.DataFrame, qend: str, max_gap: int = 100) -> pd.DataFrame:
                       ascending=[True, True, True, True, False])
     pick = f.drop_duplicates(["cik", "class_axis"]).copy()
 
-    # Scale cross-check (2026-10-18, found reviewing decision 11). Some filers tag the balance-sheet
-    # share count in THOUSANDS and the SEC data set stores it verbatim: Apple 2014Q1 carries
-    # CommonStockSharesOutstanding = 861,745 against a cover-page 861,381,000. Preferring the
-    # balance-sheet fact therefore made the denominator 1000x too small for those companies and
-    # published Apple at 11,687% institutional ownership. Measured on 2014Q1: 42 of 6,216
-    # (cik, class) pairs are affected, 97.2% agree within 2x.
-    # A listed company's share count cannot genuinely move by more than 10x in a quarter, so a gap
-    # that large is a units error and the LARGER value is the one in shares.
-    near = f.sort_values("abs_gap")
-    alt = {t: near[near["tag"] == t].drop_duplicates(["cik", "class_axis"])
-                .set_index(["cik", "class_axis"])["shares"] for t in TAGS}
+    # Scale cross-check. Some filers tag a share count in THOUSANDS and the SEC data set stores it
+    # verbatim: Apple 2014Q1 carries CommonStockSharesOutstanding = 861,745 against a cover-page
+    # 861,381,000, which published Apple at 11,687% institutional ownership.
+    #
+    # The first version of this rule took the LARGER of the two tags whenever they differed by 10x.
+    # Verification on 2026-10-19 showed that was wrong twice over: it fired on genuine 10-30x
+    # reverse splits and dilution (17 of 173 in 2012Q2), and when the OTHER fact was the broken one
+    # it took the broken one, publishing Oracle 2012Q2 with 4.819e15 shares and leaving 313
+    # impossible denominators across the 20 quarters.
+    #
+    # So a correction now requires BOTH:
+    #   - a ratio consistent with a thousands-tagging error, not a corporate action, and
+    #   - a result that is physically possible for a US listed company.
+    # The replacement also carries the ALTERNATE fact's own accession, form, tag and as-of date, so
+    # shares_outstanding_source and shares_outstanding_date describe the value actually published.
+    near = f.sort_values(["abs_gap", "filed"], ascending=[True, False])
     key = pd.MultiIndex.from_arrays([pick["cik"], pick["class_axis"]])
-    other = pd.concat([pd.Series(key.map(a), index=pick.index) for a in alt.values()], axis=1).max(axis=1)
-    rescale = other.notna() & (pick["shares"] * 10 < other)
-    pick["scale_corrected"] = rescale
-    pick.loc[rescale, "shares"] = other[rescale]
+    pick["scale_corrected"] = False
+    for tag in TAGS:
+        altf = near[near["tag"] == tag].drop_duplicates(["cik", "class_axis"]).set_index(["cik", "class_axis"])
+        if altf.empty:
+            continue
+        cand = pd.Series(key.map(altf["shares"]), index=pick.index)
+        ratio = cand / pick["shares"]
+        # Both directions. The picked fact can be 1000x too SMALL (tagged in thousands, Apple) or
+        # 1000x too LARGE (Pentair published 9.84e10 shares against a real ~1e8, reporting 0.078%
+        # ownership instead of ~78%). The first version only looked for too-small, which left 41
+        # published companies with a denominator above any real US share count.
+        too_small = ratio.between(SCALE_RATIO_LO, SCALE_RATIO_HI)
+        too_large = (1 / ratio).between(SCALE_RATIO_LO, SCALE_RATIO_HI)
+        ok = ((pick["tag"] != tag) & cand.notna() & (too_small | too_large)
+              & (cand <= MAX_PLAUSIBLE_SHARES))
+        if not ok.any():
+            continue
+        for col in ("shares", "adsh", "form", "tag", "asof", "filed"):
+            pick.loc[ok, col] = pd.Series(key.map(altf[col]), index=pick.index)[ok]
+        pick.loc[ok, "scale_corrected"] = True
+    # recompute the vintage AFTER any correction, so the published date is the published value's
+    pick["gap_days"] = (pick["asof"] - qe).dt.days
+    pick["abs_gap"] = pick["gap_days"].abs()
     pick["gap_flag"] = pick["abs_gap"] > max_gap
     # the tag goes into the source string: the spec requires shares_outstanding_source, and which
     # XBRL fact was used is the single most important thing about a denominator

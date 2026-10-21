@@ -5,16 +5,16 @@ company_cik,shares_held_total,n_managers,n_cusips,company_name,shares_outstandin
 16058.0,30597968.0,204,1,CACI INTERNATIONAL INC /DE/,26424829.0,False,115.79249197790458,,False,no identified data cause; [as-of 31d after quarter end: buybacks lower the denominator]
 19411.0,28951330.0,175,1,MAGELLAN HEALTH SERVICES INC,28468410.0,False,101.69633639532381,,False,no identified data cause
 23194.0,49832608.0,175,1,COMSTOCK RESOURCES INC,47645226.0,False,104.59097832802809,,False,no identified data cause
-23197.0,20801239.0,155,1,COMTECH TELECOMMUNICATIONS CORP /DE/,20344330.0,False,102.24587882717199,,False,no identified data cause; [as-of 61d after quarter end: buybacks lower the denominator]
+23197.0,21662339.0,156,1,COMTECH TELECOMMUNICATIONS CORP /DE/,20344330.0,False,106.47850777096124,,False,no identified data cause; [as-of 61d after quarter end: buybacks lower the denominator]
 31978.0,41533057.0,148,1,EL PASO ELECTRIC CO /TX/,40250233.0,False,103.18712192299608,,False,no identified data cause; [as-of 31d after quarter end: buybacks lower the denominator]
 46619.0,32926797.0,145,2,HEICO CORP,17054000.0,False,193.07374809428873,,False,multiple CUSIPs summed (classes/units); [as-of 31d after quarter end: buybacks lower the denominator]
 67472.0,128851817.0,294,2,MOLEX INC,95560076.0,False,134.83854596348374,,False,multiple CUSIPs summed (classes/units); [as-of 31d after quarter end: buybacks lower the denominator]
 73887.0,37220920.0,153,1,Bristow Group Inc,36160047.0,False,102.93382638578983,,False,no identified data cause
 77776.0,62619090.0,136,1,PHH CORP,56340713.0,False,111.1435881189505,,False,no identified data cause
 77877.0,24221552.0,112,1,PETROLEUM DEVELOPMENT CORP,23611160.0,False,102.58518429420664,,False,no identified data cause; [as-of 31d after quarter end: buybacks lower the denominator]
-78890.0,47020095.0,172,1,BRINKS CO,46830971.0,False,100.40384385794606,,False,no identified data cause; [as-of 31d after quarter end: buybacks lower the denominator]
+78890.0,47055495.0,173,1,BRINKS CO,46830971.0,False,100.47943485946512,,False,no identified data cause; [as-of 31d after quarter end: buybacks lower the denominator]
 85974.0,46734148.0,136,1,RYLAND GROUP INC,44413594.0,False,105.22487326740546,,False,no identified data cause; [as-of 31d after quarter end: buybacks lower the denominator]
-97210.0,197044380.0,280,1,"TERADYNE, INC",184056173.0,False,107.05665384012957,,False,no identified data cause
+97210.0,197044380.0,280,1,"TERADYNE, INC",184056173.0,False,107.05665384012957,,False,no identified data cause; [as-of 31d after quarter end: buybacks lower the denominator]
 103145.0,44090450.0,200,1,VEECO INSTRUMENTS INC,38717199.0,False,113.8782017779747,,False,no identified data cause; [as-of 31d after quarter end: buybacks lower the denominator]
 108385.0,15685018.0,150,1,WORLD ACCEPTANCE CORP,14636365.0,False,107.16470927036869,,False,no identified data cause
 109758.0,27465467.0,126,1,ARBITRON INC,27253784.0,False,100.77671049275212,,False,no identified data cause; [as-of 31d after quarter end: buybacks lower the denominator]
@@ -90,6 +90,7 @@ company_cik,shares_held_total,n_managers,n_cusips,company_name,shares_outstandin
 1014473.0,163508578.0,283,1,VERISIGN INC/CA,159032000.0,False,102.81489134262287,,False,no identified data cause
 1015328.0,40430054.0,151,3,WINTRUST FINANCIAL CORP,35934784.0,False,112.50952280664886,,False,multiple CUSIPs summed (classes/units); [as-of 31d after quarter end: buybacks lower the denominator]
 1016125.0,26085026.0,137,1,ULTIMATE SOFTWARE GROUP INC,26029076.0,False,100.21495192530077,,False,no identified data cause; [as-of 31d after quarter end: buybacks lower the denominator]
+1016178.0,354869.0,7,1,CARVER BANCORP INC,166013.0,False,213.75976580147338,,False,single holding > 50% of shares out
 1017480.0,29043415.0,153,1,HIBBETT SPORTS INC,26461265.0,False,109.75822584445605,,False,no identified data cause; [as-of 61d after quarter end: buybacks lower the denominator]
 1018840.0,86916090.0,304,1,ABERCROMBIE & FITCH CO /DE/,85432668.0,False,101.7363638930251,,False,no identified data cause; [as-of 61d after quarter end: buybacks lower the denominator]
 1018979.0,18747251.0,95,1,AMERISAFE INC,18062272.0,False,103.79231915010469,,False,no identified data cause

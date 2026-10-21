@@ -42,7 +42,7 @@ REQUIRED = ["quarter_end", "company_name", "company_cik", "cusip", "manager_cik"
 TRACEABILITY = ["shares_outstanding_evidence", "cusip_issuer", "map_source", "list_desc", "excluded_from_ownership",
                 "class_shares_outstanding", "class_ownership_pct", "class_match", "multi_class_flag", "map_conflict",
                 "map_conflict_two_sided", "multi_filing_flag", "dup_amendment_flag", "debt_cusip_flag", "adr_flag",
-                "over_100_flag", "over_100_cause", "n_rows", "pct_suppressed_cause"]
+                "over_100_flag", "over_100_cause", "n_rows", "pct_suppressed_cause", "n_source_filings"]
 OUTPUT_COLUMNS = REQUIRED + TRACEABILITY
 
 
@@ -72,7 +72,10 @@ def write_output(mc: pd.DataFrame, label: str) -> Path:
 # decision 12 thresholds: a US listed company with 13F holders has more than a thousand shares
 # outstanding and fewer than a hundred billion. Outside that the XBRL fact is a unit error.
 MIN_SHARES_OUT = 1_000
-MAX_SHARES_OUT = 100_000_000_000
+# Citigroup pre-split (~2.9e10) is the largest real US share count in this window. The old
+# 1e11 gate let 41 published companies through with a denominator 1000x too large, e.g.
+# Pentair at 9.84e10 shares reporting 0.078% ownership instead of about 78%.
+MAX_SHARES_OUT = 35_000_000_000
 # Relative ceiling (2026-10-18). An absolute floor cannot catch a denominator tagged in THOUSANDS:
 # Simon Property shows 8,000 shares outstanding and Abercrombie 87,846, both above the floor and
 # both 1000x too small, giving 7,249% and 4,672%. The cross-check in shares_out.py only fires when
@@ -81,6 +84,31 @@ MAX_SHARES_OUT = 100_000_000_000
 # this ceiling the denominator is wrong, so the figure is suppressed with a recorded cause rather
 # than published. 135 company-quarters (0.199%) are affected.
 MAX_OWNERSHIP_PCT = 300.0
+
+
+def collapse_to_grain(mc: pd.DataFrame) -> tuple[pd.DataFrame, int]:
+    """One row per (manager_cik, cusip): the latest filing's report of a security wins.
+
+    A manager CIK can have more than one selected filing. An earlier version summed the share
+    counts where they differed, on the theory that separate filings covered different sub-advisers.
+    Verification on 2026-10-19 showed that theory is never true in this data: across all 20
+    quarters every manager with multiple selected filings is an original plus amendment(s), never
+    two independent originals. So a security appearing in two of one manager's filings always means
+    the later filing RESTATED that holding, and summing shipped the old number plus the corrected
+    one. Aristotle Capital 2014Q4 was published at 376m shares against a corrected book of 194m,
+    because the filer labelled a full restatement "NEW HOLDINGS".
+
+    Filer labels cannot be trusted, but filing order can. Securities present only in the earlier
+    filing are kept, so a genuinely additive amendment still adds.
+
+    Returns the collapsed frame and the number of rows superseded.
+    """
+    mc = mc.sort_values(["manager_cik", "cusip", "filed_date", "accession"])
+    g = mc.groupby(["manager_cik", "cusip"])
+    n_superseded = int((g["accession"].transform("nunique") > 1).sum())
+    mc = mc.copy()
+    mc["n_source_filings"] = g["accession"].transform("nunique")
+    return mc.drop_duplicates(["manager_cik", "cusip"], keep="last").copy(), n_superseded
 
 
 def select_filings(f: pd.DataFrame, period: str) -> tuple[pd.DataFrame, list[str]]:
@@ -213,25 +241,10 @@ def run(label: str, qend: str, period: str):
     mc = mc[~drop_orig].copy()
     dup = mc.groupby(["manager_cik", "cusip"])["accession"].nunique()
     mc["multi_filing_flag"] = mc.set_index(["manager_cik", "cusip"]).index.map(dup).values > 1
-    # ---- decision 12 (2026-10-18): enforce the spec grain, one row per manager x security x quarter.
-    # A manager CIK can have more than one selected filing: additive NEW HOLDINGS amendments, or
-    # separate filings covering different sub-advisers. The old output carried one row per ACCESSION
-    # x CUSIP, so 9,886 rows across 10 quarters double counted holdings, including byte-identical
-    # duplicate filings. Exact repeats are dropped; genuinely different reports are summed, which is
-    # what "total shares reported by institutional investors" means.
-    mc = mc.sort_values(["manager_cik", "cusip", "filed_date", "accession"])
-    exact = mc.duplicated(["manager_cik", "cusip", "shares_held"], keep="first")
-    n_exact = int(exact.sum())
-    mc = mc[~exact].copy()
-    g = mc.groupby(["manager_cik", "cusip"])
-    n_summed = int((g["accession"].transform("nunique") > 1).sum())
-    mc["shares_held"] = g["shares_held"].transform("sum")
-    mc["n_rows"] = g["n_rows"].transform("sum")
-    mc["n_source_filings"] = g["accession"].transform("nunique")
-    mc = mc.drop_duplicates(["manager_cik", "cusip"], keep="last").copy()
-    out.append(f"\nGRAIN (decision 12): collapsed to one row per manager x security. Exact duplicate "
-               f"reports dropped: {n_exact:,}; rows summed across a manager's multiple filings: "
-               f"{n_summed:,}; final rows {len(mc):,}")
+    mc, n_superseded = collapse_to_grain(mc)
+    out.append(f"\nGRAIN: one row per manager x security. Where a manager filed the same security "
+               f"more than once the latest filing wins, never summed: {n_superseded:,} rows "
+               f"superseded; final rows {len(mc):,}")
     # (i) + (iii) exclusions from the ownership figure; rows are kept in the output
     mc["excluded_from_ownership"] = np.where(mc["debt_cusip_flag"], "debt_cusip",
                                     np.where(mc["derivative_cusip_flag"], "derivative_cusip",

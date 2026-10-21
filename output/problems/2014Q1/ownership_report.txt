@@ -23,13 +23,13 @@ largest excluded:
 921943858          NaN                      NaN F3 13(f) list ETF/ETN/unit (FTSE DEV ...      12.5
 81369Y605    1064641.0 SELECT SECTOR SPDR TRUST          F1 1940-Act/UIT forms (485BPOS)      12.0
 
-GRAIN (decision 12): collapsed to one row per manager x security. Exact duplicate reports dropped: 42; rows summed across a manager's multiple filings: 104; final rows 846,120
+GRAIN: one row per manager x security. Where a manager filed the same security more than once the latest filing wins, never summed: 188 rows superseded; final rows 846,120
 
 FIXES (Luke 2026-10-12): debt-pattern CUSIPs excluded from ownership (rows kept): 2,059 rows / 1,013 CUSIPs / $73.2bn; ADR/ADS excluded from the main figure: 39,810 rows / 374 CUSIPs on 281 companies / $580.1bn; NEW HOLDINGS amendments duplicating >= 90% of the original treated as restatements: 7 amendments, 7 original filings / 3,726 rows dropped
 
-PLAUSIBILITY GATES (decision 12): shares outstanding outside [1,000, 100,000,000,000] nulled: 88 companies / 393 rows; single holdings exceeding shares outstanding excluded: 7 rows / 6 companies
+PLAUSIBILITY GATES (decision 12): shares outstanding outside [1,000, 35,000,000,000] nulled: 92 companies / 1,039 rows; single holdings exceeding shares outstanding excluded: 33 rows / 7 companies
 
-OWNERSHIP CEILING (decision 12): figures above 300% suppressed as denominator errors: 9 companies (7 multi-CUSIP, 2 scale-suspect)
+OWNERSHIP CEILING (decision 12): figures above 300% suppressed as denominator errors: 11 companies (8 multi-CUSIP, 3 scale-suspect)
 
 SHARE CLASSES (never summed): multi-class companies (class-dimensioned facts only) 290; their CUSIPs: matched to a class 222 ($968.7bn), unmatched 135 ($350.1bn); company-level pct is null for all 290
 largest per-class figures:
@@ -44,19 +44,19 @@ TWENTY-FIRST CENTURY FOX,... 90130A101        CL A       1352317226.0           
                Accenture plc G1151C101 SHS CLASS A        472500766.0               783626735.0                 60.3      38.1
 
 CUSIP->CIK coverage among OPERATING companies (6-char issuers, funds removed: 717 incl. 109 unmapped by name token only): 4,981 / 11,325 = 44.0%; by value 97.9%; by map source: {'SC 13G': 3825, 'SC 13D': 638, 'name_exact': 518}
-shares outstanding (XBRL + regex fallback (17 companies)): companies with a figure 3,962 / 4,673 = 84.8%; by 13F value 88.8%; gap > 100 days flagged: 15; multi-class null: 290
+shares outstanding (XBRL + regex fallback (17 companies)): companies with a figure 3,960 / 4,671 = 84.8%; by 13F value 88.8%; gap > 100 days flagged: 15; multi-class null: 290
 
-ownership pct distribution (n=3,953): {'count': 3953.0, 'mean': 59.1, 'std': 34.8, 'min': 0.0, '5%': 1.3, '25%': 29.1, '50%': 66.1, '75%': 87.3, '95%': 102.3, 'max': 296.8}
-histogram: {'0': 0, '0-5': 346, '5-25': 529, '25-50': 631, '50-75': 821, '75-90': 812, '90-100': 553, '100-150': 247, '>150': 14}
-companies over 100%: 261 / 3,953 = 6.6%
-large companies (top 500 by 13F value) with a pct: 411; over 100%: 23 = 5.6%  [stop condition at 5%]
+ownership pct distribution (n=3,949): {'count': 3949.0, 'mean': 59.3, 'std': 34.9, 'min': 0.0, '5%': 1.5, '25%': 29.5, '50%': 66.2, '75%': 87.3, '95%': 102.3, 'max': 296.8}
+histogram: {'0': 0, '0-5': 338, '5-25': 532, '25-50': 630, '50-75': 821, '75-90': 812, '90-100': 554, '100-150': 247, '>150': 15}
+companies over 100%: 262 / 3,949 = 6.6%
+large companies (top 500 by 13F value) with a pct: 410; over 100%: 23 = 5.6%  [stop condition at 5%]
 Note: companies with 'no identified data cause' can still exceed 100% through securities lending (the lender and the
 borrower's buyer both report the same shares on 13F); that is a possible explanation, not a measured cause.
 over-100% causes (combinations; [..] = annotation):
 no identified data cause                                                                           191
 multiple CUSIPs summed (classes/units)                                                              46
 CUSIP->CIK conflict                                                                                  8
-single holding > 50% of shares out                                                                   5
+single holding > 50% of shares out                                                                   6
 manager-CUSIP in >1 filing                                                                           3
 single holding > 50% of shares out; CUSIP->CIK conflict                                              2
 single holding > 50% of shares out; multiple CUSIPs summed (classes/units)                           2
@@ -64,7 +64,7 @@ shares outstanding gap >100d; single holding > 50% of shares out                
 manager-CUSIP in >1 filing; CUSIP->CIK conflict                                                      1
 CUSIP->CIK conflict; multiple CUSIPs summed (classes/units)                                          1
 single holding > 50% of shares out; CUSIP->CIK conflict; multiple CUSIPs summed (classes/units)      1
-  with the as-of date after quarter end: 69 of 261
+  with the as-of date after quarter end: 71 of 262
 largest over-100% companies:
  company_cik                             company_name  n_managers  shares_held_total  shares_outstanding  institutional_ownership_pct  value_bn                                               over_100_cause
     103379.0                                 V F CORP         668          443667723         433166874.0                        102.4      27.5                                     no identified data cause
