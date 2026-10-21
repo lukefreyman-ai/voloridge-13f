@@ -30,43 +30,49 @@ largest excluded:
 
 GRAIN: one row per manager x security. Where a manager filed the same security more than once the latest filing wins, never summed: 1,098 rows superseded; final rows 738,662
 
-FIXES (Luke 2026-10-12): debt-pattern CUSIPs excluded from ownership (rows kept): 7,796 rows / 6,014 CUSIPs / $26.4bn; ADR/ADS excluded from the main figure: 36,700 rows / 385 CUSIPs on 257 companies / $669.6bn; NEW HOLDINGS amendments duplicating >= 90% of the original treated as restatements: 6 amendments, 6 original filings / 2,807 rows dropped
+FIXES (Luke 2026-10-12): debt-pattern CUSIPs excluded from ownership (rows kept): 7,796 rows / 6,014 CUSIPs / $26.4bn; ADR/ADS excluded from the main figure: 36,700 rows / 385 CUSIPs on 257 companies / $669.6bn; warrants/rights excluded: 1,885 rows / 88 CUSIPs; dated (SPAC) units excluded: 562 rows / 31 CUSIPs; preferred excluded: 3,345 rows / 74 CUSIPs; NEW HOLDINGS amendments duplicating >= 90% of the original treated as restatements: 6 amendments, 6 original filings / 2,807 rows dropped
 
 PLAUSIBILITY GATES (decision 12): shares outstanding outside [1,000, 35,000,000,000] nulled: 114 companies / 1,939 rows; single holdings exceeding shares outstanding excluded: 232 rows / 20 companies
 
-OWNERSHIP CEILING (decision 12): figures above 300% suppressed as denominator errors: 7 companies (2 multi-CUSIP, 5 scale-suspect)
+CLASS COVERAGE (decision 15): the denominator must cover the classes the numerator sums. Companies by basis: {'single_class_held': 3886, 'single_class_matched': 125, 'incomplete': 30, 'classes_combined': 24, 'undimensioned_total': 3}; combined-class denominators 24; withheld for incomplete class counts 30; withheld as ambiguous 0
 
-SHARE CLASSES (never summed): multi-class companies (class-dimensioned facts only) 222; their CUSIPs: matched to a class 181 ($2,486.0bn), unmatched 101 ($1,011.2bn); company-level pct is null for all 222
+OWNERSHIP CEILING (decision 12): figures above 300% suppressed as denominator errors: 5 companies (1 multi-CUSIP, 4 scale-suspect)
+
+SHARE CLASSES (never summed): multi-class companies (class-dimensioned facts only) 83; their CUSIPs: matched to a class 21 ($160.5bn), unmatched 98 ($1,009.3bn); company-level pct is null for all 83
 largest per-class figures:
-                company_name     cusip    list_desc  cusip_shares_held  class_shares_outstanding  class_ownership_pct  value_bn
-                  EZCORP INC 302301106 CL A NON VTG         41326475.0                48223698.0                 85.7     199.1
-     WILEY JOHN & SONS, INC. 968223206         CL A         42460612.0                50527188.0                 84.0     189.4
-               HUB GROUP INC 443320106         CL A         35705747.0                37111252.0                 96.2     187.2
-                   GREIF INC 397624107         CL A         20683712.0                25212598.0                 82.0     170.7
-           LENNAR CORP /NEW/ 526057104         CL A        171958925.0               158014450.0                108.8     157.8
-               LINKEDIN CORP 53578A108     COM CL A         69575683.0                79744503.0                 87.2     154.2
-          Under Armour, Inc. 904311107         CL A         38887970.0                82662728.0                 47.0     153.1
-Scripps Networks Interact... 811065101     CL A COM         77783037.0               114675475.0                 67.8     112.3
+               company_name     cusip list_desc  cusip_shares_held  class_shares_outstanding  class_ownership_pct  value_bn
+               COMCAST CORP 20030N101      CL A       1728444265.0              2.114859e+09                 81.7      65.1
+     BERKSHIRE HATHAWAY INC 084670702  CL B NEW        632783936.0              1.084186e+09                 58.4      52.7
+     BERKSHIRE HATHAWAY INC 084670108      CL A           207917.0              9.291310e+05                 22.4      37.3
+FOREST CITY ENTERPRISES INC 345550107      CL A        134527923.0              1.486421e+08                 90.5       1.9
+          BROWN FORMAN CORP 115637100      CL A         11598812.0              8.444600e+07                 13.7       1.1
+                 HEICO CORP 422806208      CL A         24051132.0              3.137920e+10                  0.1       0.8
+       NACCO INDUSTRIES INC 629579103      CL A          4657759.0              6.799142e+06                 68.5       0.5
+         BGC Partners, Inc. 05541T101      CL A         44746138.0              1.083810e+08                 41.3       0.3
+
+IMPOSSIBLE HOLDINGS, second pass against the published denominator (decision 15): 1 rows excluded on 1 companies, whose figures were recomputed without them
 
 CUSIP->CIK coverage among OPERATING companies (6-char issuers, funds removed: 559 incl. 220 unmapped by name token only): 4,377 / 14,308 = 30.6%; by value 84.7%; by map source: {'name_exact': 2555, 'SC 13G': 1222, 'SC 13D': 600}
-shares outstanding (XBRL + regex fallback (13 companies)): companies with a figure 3,451 / 4,070 = 84.8%; by 13F value 88.3%; gap > 100 days flagged: 19; multi-class null: 222
+shares outstanding (XBRL + regex fallback (13 companies)): companies with a figure 3,581 / 4,067 = 88.1%; by 13F value 92.7%; gap > 100 days flagged: 19; multi-class null: 83
 
-ownership pct distribution (n=3,444): {'count': 3444.0, 'mean': 57.8, 'std': 33.9, 'min': 0.0, '5%': 2.6, '25%': 28.4, '50%': 63.4, '75%': 85.3, '95%': 101.3, 'max': 288.4}
-histogram: {'0': 0, '0-5': 259, '5-25': 524, '25-50': 574, '50-75': 732, '75-90': 739, '90-100': 411, '100-150': 193, '>150': 12}
-companies over 100%: 205 / 3,444 = 6.0%
-large companies (top 500 by 13F value) with a pct: 429; over 100%: 40 = 9.3%  [stop condition at 5%]
+ownership pct distribution (n=3,576): {'count': 3576.0, 'mean': 58.0, 'std': 33.3, 'min': 0.0, '5%': 2.6, '25%': 29.1, '50%': 63.9, '75%': 85.4, '95%': 100.7, 'max': 236.3}
+histogram: {'0': 0, '0-5': 265, '5-25': 529, '25-50': 597, '50-75': 769, '75-90': 775, '90-100': 439, '100-150': 194, '>150': 8}
+companies over 100%: 202 / 3,576 = 5.6%
+large companies (top 500 by 13F value) with a pct: 450; over 100%: 39 = 8.7%  [stop condition at 5%]
 Note: companies with 'no identified data cause' can still exceed 100% through securities lending (the lender and the
 borrower's buyer both report the same shares on 13F); that is a possible explanation, not a measured cause.
 over-100% causes (combinations; [..] = annotation):
 no identified data cause                                                      143
-multiple CUSIPs summed (classes/units)                                         34
+multiple CUSIPs summed (classes/units)                                         25
 manager-CUSIP in >1 filing                                                     14
 single holding > 50% of shares out                                              7
+shares outstanding gap >100d                                                    5
 manager-CUSIP in >1 filing; multiple CUSIPs summed (classes/units)              3
 single holding > 50% of shares out; multiple CUSIPs summed (classes/units)      2
 CUSIP->CIK conflict; multiple CUSIPs summed (classes/units)                     1
+shares outstanding gap >100d; multiple CUSIPs summed (classes/units)            1
 manager-CUSIP in >1 filing; single holding > 50% of shares out                  1
-  with the as-of date after quarter end: 69 of 205
+  with the as-of date after quarter end: 65 of 202
 largest over-100% companies:
  company_cik                   company_name  n_managers  shares_held_total  shares_outstanding  institutional_ownership_pct  value_bn                                               over_100_cause
    1289308.0                        EnerSys         215           49222128          48017521.0                        102.5     194.5                                     no identified data cause
@@ -90,23 +96,24 @@ largest over-100% companies:
      16058.0    CACI INTERNATIONAL INC /DE/         210           28469023          22666506.0                        125.6     111.5 no identified data cause; [as-of 62d after quarter end: b...
    1309108.0            Wright Express CORP         186           40640094          38774000.0                        104.8     110.6                                     no identified data cause
 
-NO COMPANY-LEVEL FIGURE: 619 companies carrying $5,541.2bn = 11.7% of mapped operating value; causes:
+NO COMPANY-LEVEL FIGURE: 486 companies carrying $3,437.6bn = 7.3% of mapped operating value; causes:
                                                                                                    companies  value_bn
 cause                                                                                                                 
-class-dimensioned facts only: company pct null by rule, per-class pct given (class_ownership_pct)        222    3498.2
-regex fallback tried: no 10-K filed within the window                                                    384    2042.2
+regex fallback tried: no 10-K filed within the window                                                    382    2033.7
+class-dimensioned facts only: company pct null by rule, per-class pct given (class_ownership_pct)         83    1171.7
+files 10-K/10-Q but no XBRL cover fact (XBRL phase-in / small filer)                                       8     231.3
 regex fallback tried: no match                                                                            13       0.8
 largest without shares outstanding:
- company_cik                    company_name  n_managers  value_bn                                    cause
-    876523.0                      EZCORP INC         179    199.14 class-dimensioned facts only: company...
-    107140.0         WILEY JOHN & SONS, INC.         234    189.43 class-dimensioned facts only: company...
-     63754.0              MCCORMICK & CO INC         514    188.34 class-dimensioned facts only: company...
-    940942.0                   HUB GROUP INC         159    187.24 class-dimensioned facts only: company...
-    943003.0                      AGRIUM INC         299    182.98 regex fallback tried: no 10-K filed w...
-   1131383.0                     STANTEC INC          64    180.11 regex fallback tried: no 10-K filed w...
-     43920.0                       GREIF INC         174    170.80 class-dimensioned facts only: company...
-    891103.0             IAC/INTERACTIVECORP         288    170.70 class-dimensioned facts only: company...
-   1090403.0 CATALYST HEALTH SOLUTIONS, INC.         229    167.02 regex fallback tried: no 10-K filed w...
-    920760.0               LENNAR CORP /NEW/         329    158.31 class-dimensioned facts only: company...
-   1271024.0                   LINKEDIN CORP         296    154.24 class-dimensioned facts only: company...
-   1336917.0              Under Armour, Inc.         271    153.06 class-dimensioned facts only: company...
+ company_cik                      company_name  n_managers  value_bn                                    cause
+     63754.0                MCCORMICK & CO INC         514    188.34 class-dimensioned facts only: company...
+    943003.0                        AGRIUM INC         299    182.98 regex fallback tried: no 10-K filed w...
+   1131383.0                       STANTEC INC          64    180.11 regex fallback tried: no 10-K filed w...
+    891103.0               IAC/INTERACTIVECORP         288    170.70 class-dimensioned facts only: company...
+   1090403.0   CATALYST HEALTH SOLUTIONS, INC.         229    167.02 regex fallback tried: no 10-K filed w...
+   1043533.0                      ABOVENET INC         136    152.99 regex fallback tried: no 10-K filed w...
+   1138118.0                  CBRE GROUP, INC.         312    124.76 files 10-K/10-Q but no XBRL cover fac...
+   1135017.0      KINDER MORGAN MANAGEMENT LLC         320    123.97 class-dimensioned facts only: company...
+   1074772.0 HISTORIC LIFEPOINT HOSPITALS, INC         196    104.06 regex fallback tried: no 10-K filed w...
+   1039889.0       P F CHANGS CHINA BISTRO INC         123    103.69 regex fallback tried: no 10-K filed w...
+   1324424.0                     Expedia, Inc.         340     99.50 class-dimensioned facts only: company...
+   1096788.0                       KNOLOGY INC         105     99.07 regex fallback tried: no 10-K filed w...

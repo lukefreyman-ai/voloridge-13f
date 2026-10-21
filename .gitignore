@@ -6,3 +6,4 @@ __pycache__/
 .virtual_documents/
 anaconda_projects/
 data/*_cusip_cik_map_v1.csv
+output/problems/continuity_shares_out.csv

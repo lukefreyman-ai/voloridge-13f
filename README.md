@@ -69,15 +69,15 @@ The other six available quarters have not been compared yet.
 
 | | 2010 Q1 | 2013 Q4 |
 |---|---|---|
-| Holdings rows used | 1,040,762 | 1,289,567 |
+| Holdings rows used | 1,040,801 | 1,289,567 |
 | CUSIP to company, by value | 95.6% | 97.9% |
-| Companies with shares outstanding | 2,480 / 4,918 = 50.4% | 3,979 / 4,619 = 86.1% |
-| Same, weighted by 13F value | 85.6% | 89.4% |
-| Companies over 100% | 132 / 2,471 = 5.3% | 252 / 3,972 = 6.3% |
-| Top 500 by value, over 100% | 15 / 396 = 3.8% | 25 / 418 = 6.0% |
+| Companies with shares outstanding | 2,495 / 4,916 = 50.8% | 4,148 / 4,617 = 89.8% |
+| Same, weighted by 13F value | 87.7% | 93.9% |
+| Companies over 100% | 125 / 2,487 = 5.0% | 256 / 4,143 = 6.2% |
+| Top 500 by value, over 100% | 16 / 407 = 3.9% | 25 / 433 = 5.8% |
 | Fund CUSIPs excluded | 1,491 | 1,883 |
 
-The top-500 denominator is the top-500 companies that *have* a percentage (396 and 418), not 500.
+The top-500 denominator is the top-500 companies that *have* a percentage (407 and 433), not 500.
 Across all 20 quarters that rate runs 1.7% to 9.4% and exceeds the project's own 5% review
 threshold in 8 quarters.
 
@@ -90,24 +90,33 @@ the 13G/13D map thins. `CAVEATS.md` section 2 has the four reasons the panel shi
 **Ownership above 100% is reported, never capped.** Causes are annotated per company in
 `output/problems/<quarter>/over_100_companies.csv`: securities lending (lent shares can be reported
 by both the lender and the borrower's buyer, a real market mechanism, not quantified here), timing,
-and multiple classes or units mapped to one company. A residual carries no identified cause and is
-labelled that way. Correcting the denominator's vintage did not reduce the rate, which is evidence
+and two CUSIPs of one share class mapped to one company. A residual carries no identified cause and
+is labelled that way. Correcting the denominator's vintage did not reduce the rate, which is evidence
 the residual is not a vintage artifact.
 
 ## Decisions
 
 - **ETFs and investment funds are excluded as securities**, since their shares outstanding are not
   comparable to an operating company's. Fund managers are correctly retained as holders.
-- **Share classes are measured separately** where class-dimensioned XBRL facts exist. The
-  company-level figure sums the CUSIPs mapped to an issuer against one undimensioned denominator, so
-  6,684 of 67,537 published company figures (9.9%, median 72.7%) combine classes. `n_cusips` in the
-  company file identifies them. This is a documented open decision, not a silent defect.
+- **The denominator must cover the same share classes the numerator sums.** Which classes a
+  company's institutions hold is read from the SEC's own 13(f) list description (`COM`, `CL A`,
+  `CL B`), so coverage is checked against the filing universe rather than assumed. Where holdings
+  span two classes with a count each, the counts are combined; where a held class has no count, no
+  figure is published and the cause names the class (621 company-quarters); where a company total
+  is known it stays the denominator even if only one class is held, because the figure is ownership
+  of the company. `denominator_basis` records which applied on every row. 5,631 of 69,984 published
+  figures (8.0%) still have `n_cusips > 1`: two CUSIPs of the *same* class key, usually a second
+  common line or a CUSIP absent from that quarter's 13(f) list. `CAVEATS.md` section 5 has the
+  measured residual.
 - **CUSIP to company mapping is evidence-first**: Schedule 13G and 13D, then exact name matching
   against the SEC 13(f) list. Conflicts are flagged and resolved by a documented rule, the majority
   CIK by filing count with ties going to the CIK whose 10-K/10-Q filed nearest the quarter end.
   CIKs are never merged.
+- **Warrants, dated (SPAC) units and preferred are not common stock** and do not enter the
+  numerator; their rows stay in the output, flagged, as ADR and debt rows do. `CAVEATS.md` section 6
+  lists every exclusion.
 - **Every parser rule is backed by a real filing kept as a test fixture**, so a fix for one filer's
-  layout cannot silently break another's. `tests/` holds 62 tests over 36 fixtures.
+  layout cannot silently break another's. `tests/` holds 117 tests over 36 fixtures.
   `tests/FIXTURE_REVIEW.md` is generated from the parser's own output: it is a readable record of
   what the parser produced, not independent corroboration of it.
 - **Denominator guards**: XBRL counts tagged in thousands are cross-checked against the other tag

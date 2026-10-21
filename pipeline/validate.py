@@ -171,6 +171,47 @@ def check_manifest(r: Result):
           f"{len(stale)} files newer than the manifest: {stale[:3]}")
 
 
+def check_continuity(r: Result) -> dict:
+    """Properties of the cross-quarter denominator check (pipeline/continuity.py).
+
+    These are not checks on the published CSVs; they are checks on the rule that judges them, and
+    each one names a mistake that was actually made while writing that rule. The two files are
+    written by `python3 -m pipeline.continuity`; when they are absent the checks are skipped rather
+    than failed, because the continuity report is a diagnostic, not part of the deliverable."""
+    parq, met_path = "cache/parsed/shares_out_continuity.parquet", "output/problems/continuity_metrics.json"
+    if not (os.path.exists(parq) and os.path.exists(met_path)):
+        print("continuity: not run, 0 checks (python3 -m pipeline.continuity)")
+        return {}
+    c = pd.read_parquet(parq)
+    met = json.load(open(met_path))
+    rep = c[c["shares_repaired"].notna()]
+    r.add("continuity", "covers 20 quarters", met.get("quarters") == 20, f"{met.get('quarters')}")
+    r.add("continuity", f"every proposed denominator is in [{MIN_SHARES_OUT:,}, {MAX_SHARES_OUT:,}]",
+          bool(((rep["shares_repaired"] >= MIN_SHARES_OUT)
+                & (rep["shares_repaired"] <= MAX_SHARES_OUT)).all()),
+          f"{int(((rep['shares_repaired'] < MIN_SHARES_OUT) | (rep['shares_repaired'] > MAX_SHARES_OUT)).sum()):,} outside")
+    # a split is not an error: the ownership figure must never be "fixed" by undoing a corporate action
+    r.add("continuity", "no repair proposed on a level shift the series kept",
+          not (c["continuity_label"].eq("level_shift") & c["shares_repaired"].notna()).any(),
+          "a corporate action was treated as a units error")
+    # the defect this check exists for: the correction threshold was compared against the raw
+    # factor, so 0.001 (a value tagged in thousands, Apple 2014Q1) failed it and only the
+    # too-large direction was ever repaired
+    corr = pd.concat([rep["scale_factor"], 1 / rep["scale_factor"]], axis=1).max(axis=1)
+    r.add("continuity", "every correction is at least 100x in whichever direction it goes",
+          bool((corr >= 100).all()), f"{int((corr < 100).sum()):,} below 100x")
+    r.add("continuity", "both directions of scale error are represented",
+          bool((rep["scale_factor"] < 1).any() and (rep["scale_factor"] > 1).any()),
+          "one direction is missing entirely, which is how the first version shipped")
+    r.add("continuity", "every repair has at least 3 possible quarters of history behind it",
+          bool((rep["level_confidence"] >= 3).all()),
+          f"{int((rep['level_confidence'] < 3).sum()):,} repairs rest on fewer")
+    r.add("continuity", "the panel is newer than the company file it is compared against",
+          os.path.getmtime(parq) >= os.path.getmtime("output/company_ownership_by_quarter.csv") - 1,
+          "the continuity report describes an older build; re-run pipeline.continuity")
+    return {"continuity": {k: met[k] for k in sorted(met)}}
+
+
 def check_regression(metrics: dict, r: Result, write: bool):
     """Compare this build with the last one. Every defect found in this project moved a number in
     the wrong direction, so a build-over-build comparison catches them without naming them."""
@@ -211,6 +252,7 @@ def main() -> int:
             metrics[label] = m
     check_company_file(r)
     check_manifest(r)
+    check_continuity(r)
     check_regression(metrics, r, write_baseline)
     n = r.report()
     print("PASS" if n == 0 else "FAIL")

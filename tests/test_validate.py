@@ -107,3 +107,77 @@ def test_spec_column_order_is_enforced(tmp_path):
     check_quarter("unit", r)
     res = {name: ok for _, name, ok, _ in r.rows}
     assert res["first 12 columns are the spec columns in order"] is False
+
+
+# --------------------------------------------------------------------------------------------
+# The continuity checks (pipeline/validate.check_continuity, added 2026-10-21) must fail too.
+# Each case below injects a defect that the continuity rule could plausibly develop, and the
+# first one actually did: the repair threshold compared the raw factor against 100x, so the
+# too-small direction was never repaired and the check that both directions are represented is
+# the one that would have caught it.
+
+def _continuity_files(tmp_path, rows, metrics=None):
+    import json
+    import os
+    os.chdir(tmp_path)
+    (tmp_path / "output/problems").mkdir(parents=True, exist_ok=True)
+    (tmp_path / "cache/parsed").mkdir(parents=True, exist_ok=True)
+    pd.DataFrame(rows).to_parquet("cache/parsed/shares_out_continuity.parquet", index=False)
+    met = {"quarters": 20}
+    met.update(metrics or {})
+    json.dump(met, open("output/problems/continuity_metrics.json", "w"))
+    pd.DataFrame([{"quarter_end": "2013-12-31", "company_cik": 1800}]).to_csv(
+        "output/company_ownership_by_quarter.csv", index=False)
+    from pipeline.validate import Result, check_continuity
+    r = Result()
+    check_continuity(r)
+    return {name: ok for _, name, ok, _ in r.rows}
+
+
+def _row(**kw):
+    base = dict(cik=1800, continuity_label="isolated_scale", scale_factor=1000.0,
+                shares_repaired=9.0e8, level_confidence=6)
+    base.update(kw)
+    return base
+
+
+def test_continuity_clean_input_passes(tmp_path):
+    res = _continuity_files(tmp_path, [_row(), _row(scale_factor=0.001, shares_repaired=8.6e8)])
+    assert all(res.values()), [k for k, v in res.items() if not v]
+
+
+def test_continuity_catches_a_repair_outside_the_possible_range(tmp_path):
+    res = _continuity_files(tmp_path, [_row(shares_repaired=4.8e15),
+                                       _row(scale_factor=0.001, shares_repaired=8.6e8)])
+    assert any("every proposed denominator" in k and not v for k, v in res.items())
+
+
+def test_continuity_catches_a_repaired_corporate_action(tmp_path):
+    res = _continuity_files(tmp_path, [_row(continuity_label="level_shift"),
+                                       _row(scale_factor=0.001, shares_repaired=8.6e8)])
+    assert any("level shift" in k and not v for k, v in res.items())
+
+
+def test_continuity_catches_a_correction_below_the_threshold(tmp_path):
+    res = _continuity_files(tmp_path, [_row(scale_factor=10.0),
+                                       _row(scale_factor=0.001, shares_repaired=8.6e8)])
+    assert any("at least 100x" in k and not v for k, v in res.items())
+
+
+def test_continuity_catches_a_one_directional_repair_rule(tmp_path):
+    """The defect that shipped: every repair in the same direction means the rule only looks one
+    way. Two 1,000x-too-large repairs and not one too-small is the signature."""
+    res = _continuity_files(tmp_path, [_row(), _row()])
+    assert any("both directions" in k and not v for k, v in res.items())
+
+
+def test_continuity_catches_a_repair_with_no_history_behind_it(tmp_path):
+    res = _continuity_files(tmp_path, [_row(level_confidence=1),
+                                       _row(scale_factor=0.001, shares_repaired=8.6e8)])
+    assert any("quarters of history" in k and not v for k, v in res.items())
+
+
+def test_continuity_catches_a_panel_that_does_not_cover_the_quarters(tmp_path):
+    res = _continuity_files(tmp_path, [_row(), _row(scale_factor=0.001, shares_repaired=8.6e8)],
+                            metrics={"quarters": 12})
+    assert any("covers 20 quarters" in k and not v for k, v in res.items())

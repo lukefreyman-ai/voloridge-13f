@@ -7,9 +7,8 @@ Rules: SH rows only, no put/call, resolved CUSIPs only;
 period_of_report == the pilot period; 13F-HR/A RESTATEMENT replaces the manager's original for the
 period, NEW HOLDINGS appends, unknown amendment type -> treated as RESTATEMENT when an original exists
 (logged); duplicate filings by the same manager for the same period: latest filed wins; duplicate CUSIP
-rows within a filing are summed. Company pct = sum of shares across the issuer's CUSIPs / sum of the
-company's class share counts (undimensioned fact when present, else the sum of class facts); null +
-multi_class_flag when the XBRL facts are class-dimensioned and more than one class is held.
+rows within a filing are summed. Company pct = sum of shares across the issuer's CUSIPs / a denominator that covers
+exactly those CUSIPs' share classes (decision 15 below), null with a stated cause when no such denominator exists.
 Decision 2 (2026-10-11): ETFs, closed-end funds and unit trusts are EXCLUDED from the ownership output
 (pipeline/funds.py: F1 1940-Act/UIT forms, F2 SIC 6221 commodity trusts, F3 13(f) list ETF/ETN rows); the removed
 CUSIPs and value are reported, and issuer coverage is reported among operating companies only.
@@ -20,11 +19,22 @@ flagged and EXCLUDED from the ownership figure, rows kept (excluded_from_ownersh
 excluded from the main figure (excluded_from_ownership='adr'), count and value reported. Remaining over-100% companies
 are reported with causes and flagged in the output (over_100_flag, over_100_cause; 'no identified data cause' when none
 applies, with securities lending named in the write-up only); no further tuning toward 5%.
-Share classes (Luke 2026-10-12, decision 3): NEVER summed. institutional_ownership_pct (company level) only where the
-company reports an undimensioned share count; companies with class-dimensioned facts only get null + multi_class_flag,
-and each CUSIP gets class_ownership_pct against its own class's share count when the 13(f) list class (CL A/B/C) matches
-an XBRL class member (class_match='matched'); 'unmatched' otherwise. Single-class companies get class_ownership_pct per
-CUSIP against the company count (class_match='single-class').
+Share classes (Luke 2026-10-12, decision 3): class share counts are NEVER summed into a denominator that does not
+cover them. Each CUSIP gets class_ownership_pct against its own class's share count when the 13(f) list class (CL A/B/C)
+matches an XBRL class member.
+Decision 15 (2026-10-21), after pipeline/continuity.py measured 133 published figures between 100% and 296% whose
+denominator covered one class while the numerator summed two: the company figure now rests on a denominator that covers
+exactly the classes held, and company_denominator() records which basis on every row (denominator_basis):
+  single_class_held     one class held and the company total is known: the company total is the denominator, which is
+                        the definition the spec asks for (Nike 2013Q3 is 67.6% of all shares, not 84.4% of its CL B)
+  single_class_matched  one class held and the undimensioned count is SMALLER than that class, so it cannot be the
+                        total (Triple-S Management 2013Q3), or there is no undimensioned count at all
+  classes_combined      more than one class held and every one has a count: they are summed (Central Garden & Pet)
+  undimensioned_total   the undimensioned count agrees with the class facts' sum, so it already includes them
+  incomplete/ambiguous  no figure, and pct_suppressed_cause names which class is missing or that coverage cannot be read
+Decision 15b: three security types that are not the common stock they were divided by leave the figure (rows kept and
+flagged, as with ADR and debt): warrants and rights, dated SPAC units ("UNIT 99/99/9999"), and preferred. Undated units
+("COM UNIT LP", "UNIT LTD PARTN") are the equity of a partnership or trust and stay in.
 Value is never used for the metric; value_scale_flag is carried as information only."""
 from __future__ import annotations
 
@@ -41,6 +51,7 @@ REQUIRED = ["quarter_end", "company_name", "company_cik", "cusip", "manager_cik"
             "shares_outstanding_source", "shares_outstanding_date"]
 TRACEABILITY = ["shares_outstanding_evidence", "cusip_issuer", "map_source", "list_desc", "excluded_from_ownership",
                 "class_shares_outstanding", "class_ownership_pct", "class_match", "multi_class_flag", "map_conflict",
+                "company_shares_outstanding", "denominator_basis",
                 "map_conflict_two_sided", "multi_filing_flag", "dup_amendment_flag", "debt_cusip_flag", "adr_flag",
                 "over_100_flag", "over_100_cause", "n_rows", "pct_suppressed_cause", "n_source_filings"]
 OUTPUT_COLUMNS = REQUIRED + TRACEABILITY
@@ -50,13 +61,79 @@ def output_path(label: str) -> Path:
     return Path("output") / f"{label}_institutional_ownership.csv"
 
 
+# Decision 15 (2026-10-21): the numerator and the denominator must cover the SAME share classes.
+# The defect this fixes, found by pipeline/continuity.py: decision 3 nulls the company figure when a
+# company reports class-dimensioned facts ONLY. A filer that reports an undimensioned count AND
+# class-dimensioned counts failed that test, so its figure was published - with holdings summed
+# across every class the institutions held, over a denominator covering one of them. Central Garden
+# & Pet 2013Q2 published 296.1%: holdings of 36,257,911 across its COM and CL A CUSIPs over an
+# undimensioned count of 12,246,751, while its own Class A fact that quarter was 35,321,862.
+# 133 published figures between 100% and 296% were this, on 60 companies.
+#
+# The classes a company's institutions actually hold are known from the SEC's own 13(f) list
+# (issuer_desc: COM, CL A, CL B), so coverage is checkable rather than assumed.
+CLASS_TOTAL_TOL = 0.95     # an undimensioned count within 5% of the class facts' sum IS the total
+
+
+def company_denominator(und, held_keys, class_counts, class_facts_sum):
+    """The denominator for one company-quarter, and the basis it rests on.
+
+    und            the undimensioned share count, or None
+    held_keys      the distinct 13(f) classes the institutions hold: 'COM' plus letters, e.g. {'COM','A'}
+    class_counts   letter -> that class's XBRL share count
+    class_facts_sum  the company's class-dimensioned facts, deduplicated (one per letter, plus the
+                     largest unlettered one), summed. Used only to ask whether `und` is the total.
+
+    Returns (denominator, basis, cause). A null denominator always carries a cause.
+    """
+    if len(held_keys) <= 1:
+        # One class held, and the question is only whether the undimensioned count can be the
+        # company total. It cannot be if it is SMALLER than the single class being held.
+        key = next(iter(held_keys), "COM")
+        own_class = class_counts.get(key) if key != "COM" else None
+        if own_class is not None and (und is None or und < own_class):
+            # The undimensioned count is SMALLER than the single class being held, so it cannot be
+            # the company total. The held class's own count is then the only denominator that
+            # covers the numerator.
+            return (own_class, "single_class_matched", "")
+        # Otherwise keep the undimensioned count. This is deliberate and it is a definition, not a
+        # fallback: institutional ownership here is of the COMPANY, so when a company's total is
+        # known it stays the denominator even though institutions only hold one of its classes.
+        # Nike is the case: institutions hold its CL B (654106103), and 2013Q3 gives 67.6% of all
+        # 889,555,117 shares or 84.4% of the 711,597,241 Class B shares. Both are true statements;
+        # the spec asks for ownership per company, so the company total wins, and the per-class
+        # figure is published alongside it in class_ownership_pct.
+        return (und, "single_class_held", "" if und is not None else "no_shares_outstanding")
+    counts = {k: (und if k == "COM" else class_counts.get(k)) for k in held_keys}
+    missing = sorted(k for k, v in counts.items() if v is None)
+    if missing:
+        # no count for a class whose holdings are in the numerator: nothing honest to divide by
+        return (None, "incomplete", "class_denominator_missing:" + ",".join(missing))
+    # Is `und` already the total of the classes? Only if it AGREES with their sum, which is a
+    # two-sided test. Written one-sided (und >= 0.95 * sum) it was satisfied by any count merely
+    # larger than the class facts, so a company reporting 80m undimensioned against a single 20m
+    # Class A fact was called a total when it is just as likely to be one untagged class.
+    if und is not None and class_facts_sum and \
+            CLASS_TOTAL_TOL * class_facts_sum <= und <= class_facts_sum / CLASS_TOTAL_TOL:
+        # the filer tagged the total as well as the classes, so the classes are already inside it
+        return (und, "undimensioned_total", "")
+    letters = sum(v for k, v in counts.items() if k != "COM")
+    if und is not None and letters and und >= letters and not (class_facts_sum and class_facts_sum > und):
+        # und exceeds every class fact we have, and the class facts do not account for it: it could
+        # be the company total or it could be one large class, and the data cannot say which.
+        # Publishing either reading would be a guess, so this is reported, not published.
+        return (None, "ambiguous", "denominator_coverage_ambiguous")
+    return (sum(counts.values()), "classes_combined", "")
+
+
 def write_output(mc: pd.DataFrame, label: str) -> Path:
     """Write the per-quarter deliverable: the 12 spec columns first, then the traceability columns."""
     Path("output").mkdir(exist_ok=True)
     # the stated grain is one row per manager x security x quarter: enforce it rather than claim it
     # CIKs and share counts are integers: "732717.0" breaks every join a consumer attempts
     for col, typ in (("company_cik", "Int64"), ("manager_cik", "Int64"),
-                     ("shares_held", "Int64"), ("shares_outstanding", "Int64")):
+                     ("shares_held", "Int64"), ("shares_outstanding", "Int64"),
+                     ("company_shares_outstanding", "Int64")):
         if col in mc:
             mc[col] = pd.to_numeric(mc[col], errors="coerce").round().astype(typ)
     dup = mc.duplicated(["cusip", "manager_cik"], keep=False)
@@ -215,6 +292,23 @@ def run(label: str, qend: str, period: str):
     sl9 = seclist.drop_duplicates("cusip").set_index("cusip")["issuer_desc"]
     mc["list_desc"] = mc["cusip"].map(sl9).fillna("")
     mc["adr_flag"] = mc["list_desc"].str.contains(r"\bADR|\bADS|SPON ADR|SP ADR", regex=True)
+    # Decision 15b (2026-10-21): three more security types that are not the common stock they were
+    # being divided by. Same treatment as ADR and debt: the row stays in the output, flagged, and
+    # leaves the ownership figure. All three are read from the SEC's own 13(f) list description, so
+    # nothing is inferred from a CUSIP's shape.
+    #   warrants and rights  "*W EXP 12/19/201", "RIGHT 99/99/9999". A warrant is not a share.
+    #   dated units          "UNIT 99/99/9999" is a SPAC unit, one share bundled with a warrant.
+    #                        Undated units are NOT caught: "COM UNIT LP", "UNIT LTD PARTN" and
+    #                        "SH BEN INT" are the actual equity of a partnership or trust.
+    #   preferred            "6.50% PFD CUM CO", "CV PFD-E 7.25%". A different security with its
+    #                        own share count, and never part of common shares outstanding.
+    # Chart Acquisition Corp 2014Q1 is the case: 571,003 common shares held of 3,566,447
+    # outstanding is 16%, but 250,000 units and 403,498 warrants were added to the numerator and
+    # published it at 296.8%, the highest figure left in the build after decision 15.
+    _ud = mc["list_desc"].str.upper()
+    mc["warrant_flag"] = _ud.str.contains(r"(?:^\*?W\b)|\bW EXP\b|\bWTS?\b|WARRANT|\bRTS?\b|\bRIGHT", regex=True)
+    mc["unit_bundle_flag"] = _ud.str.contains(r"\b(?:UNIT|UT)\b.*\d{1,2}/\d{1,2}/\d{2,4}", regex=True)
+    mc["preferred_flag"] = _ud.str.contains(r"\bPFD\b|PREFERRED|\bPRF\b|\bPREF\b", regex=True)
     dup_amend = set()
     selx = sel.set_index("accession")
     multi_mgr = mc.groupby("manager_cik")["accession"].nunique()
@@ -248,7 +342,10 @@ def run(label: str, qend: str, period: str):
     # (i) + (iii) exclusions from the ownership figure; rows are kept in the output
     mc["excluded_from_ownership"] = np.where(mc["debt_cusip_flag"], "debt_cusip",
                                     np.where(mc["derivative_cusip_flag"], "derivative_cusip",
-                                    np.where(mc["adr_flag"], "adr", "")))
+                                    np.where(mc["adr_flag"], "adr",
+                                    np.where(mc["warrant_flag"], "warrant_or_right",
+                                    np.where(mc["unit_bundle_flag"], "dated_unit",
+                                    np.where(mc["preferred_flag"], "preferred", ""))))))
     own = mc[mc["excluded_from_ownership"] == ""]
     dv = v9.reindex(mc.loc[mc["debt_cusip_flag"]].drop_duplicates("cusip")["cusip"]).fillna(0).sum()
     av = v9.reindex(mc.loc[mc["adr_flag"]].drop_duplicates("cusip")["cusip"]).fillna(0).sum()
@@ -256,11 +353,20 @@ def run(label: str, qend: str, period: str):
                f"{mc.loc[mc['debt_cusip_flag'], 'cusip'].nunique():,} CUSIPs / ${dv / 1e6:,.1f}bn; "
                f"ADR/ADS excluded from the main figure: {int(mc['adr_flag'].sum()):,} rows / {mc.loc[mc['adr_flag'], 'cusip'].nunique():,} CUSIPs on "
                f"{mc.loc[mc['adr_flag'], 'company_cik'].nunique():,} companies / ${av / 1e6:,.1f}bn; "
+               f"warrants/rights excluded: {int(mc['warrant_flag'].sum()):,} rows / {mc.loc[mc['warrant_flag'], 'cusip'].nunique():,} CUSIPs; "
+               f"dated (SPAC) units excluded: {int(mc['unit_bundle_flag'].sum()):,} rows / {mc.loc[mc['unit_bundle_flag'], 'cusip'].nunique():,} CUSIPs; "
+               f"preferred excluded: {int(mc['preferred_flag'].sum()):,} rows / {mc.loc[mc['preferred_flag'], 'cusip'].nunique():,} CUSIPs; "
                f"NEW HOLDINGS amendments duplicating >= 90% of the original treated as restatements: {len(dup_amend):,} amendments, "
                f"{n_orig_filings:,} original filings / {n_orig_rows:,} rows dropped")
     # shares outstanding per company: undimensioned fact only (classes are never summed)
     und = so[so["class_axis"] == ""].drop_duplicates("cik").set_index("cik")
     cls = so[so["class_axis"] != ""].copy()
+    # Decision 12's plausibility range applies to CLASS counts too. It was written against the
+    # undimensioned count only, which was enough while class counts were used for a side figure;
+    # decision 15 made them real denominators, and the first build after it shipped 146 rows in
+    # 2014Q4 with a class count outside [MIN_SHARES_OUT, MAX_SHARES_OUT] and one holding larger
+    # than its own denominator. The gate caught it before the data went anywhere.
+    cls = cls[(cls["shares"] >= MIN_SHARES_OUT) & (cls["shares"] <= MAX_SHARES_OUT)]
     cls["letter"] = cls["class_axis"].str.extract(r"Class\s*([A-C])\b|Class([A-C])Member|([A-C])Member", expand=True).bfill(axis=1).iloc[:, 0]
     cls_n = cls.groupby("cik")["class_axis"].nunique()
     cls1 = cls[cls["letter"].notna()].drop_duplicates(["cik", "letter"]).set_index(["cik", "letter"])
@@ -286,33 +392,86 @@ def run(label: str, qend: str, period: str):
                f"{int(mc['so_implausible_flag'].sum()):,} rows; single holdings exceeding shares "
                f"outstanding excluded: {int(mc['impossible_holding_flag'].sum()):,} rows / "
                f"{mc.loc[mc['impossible_holding_flag'], 'company_cik'].nunique():,} companies")
+    # ---- which 13(f) class each held CUSIP is, from the SEC's own list description (decision 15).
+    # Computed before the company roll-up because the roll-up now depends on it.
+    desc = mc["list_desc"].fillna("").str.upper()
+    mc["class_letter"] = desc.str.extract(r"\bCL(?:ASS)?\s*([A-C])\b", expand=False)
+    mc.loc[desc.str.contains(r"\bSPL\b|SPECIAL|\bSER\b|SERIES", regex=True), "class_letter"] = np.nan   # special / series classes never match a plain class member
+    mc["class_key"] = mc["class_letter"].fillna("COM")
+    held_keys = own.index.to_series().map(mc["class_key"]).groupby(own["company_cik"]).apply(
+        lambda s: frozenset(s.dropna()))
+    # the class facts, deduplicated: one per letter, plus the largest unlettered one. Summing the raw
+    # class_axis rows triple counts - Central Garden & Pet's common stock appears undimensioned, as
+    # CommonStock and as CommonClassOne, all about 12.2m - and an inflated sum would make every
+    # undimensioned count look too small to be a total.
+    cls_let = cls[cls["letter"].notna()].drop_duplicates(["cik", "letter"]).groupby("cik")["shares"].sum()
+    cls_unlet = cls[cls["letter"].isna()].groupby("cik")["shares"].max()
+    cls_facts_sum = cls_let.add(cls_unlet, fill_value=0.0)
+
     # company level
     comp = own.groupby("company_cik", dropna=False).agg(shares_held_total=("shares_held", "sum"), n_managers=("manager_cik", "nunique"), n_cusips=("cusip", "nunique"), company_name=("company_name", "first")).reset_index()
-    comp["shares_outstanding"] = comp["company_cik"].map(so_shares)
+    cls_by_cik = {cik: g.set_index("letter")["shares"].to_dict()
+                  for cik, g in cls1.reset_index().groupby("cik")}
+
+    def _denom(cik):
+        und_v = so_shares.get(cik)
+        return company_denominator(None if pd.isna(und_v) else und_v,
+                                   held_keys.get(cik, frozenset()),
+                                   cls_by_cik.get(cik, {}),
+                                   cls_facts_sum.get(cik, 0.0))
+
+    _d = comp["company_cik"].map(_denom)
+    comp["shares_outstanding"] = [d[0] for d in _d]
+    comp["denominator_basis"] = [d[1] for d in _d]
+    _cause = pd.Series([d[2] for d in _d], index=comp.index)
     comp["multi_class_flag"] = comp["shares_outstanding"].isna() & comp["company_cik"].isin(cls_n.index)
-    comp["institutional_ownership_pct"] = np.where(comp["multi_class_flag"], np.nan, comp["shares_held_total"] / comp["shares_outstanding"] * 100)
+    comp["institutional_ownership_pct"] = np.where(
+        comp["shares_outstanding"].isna(), np.nan,
+        comp["shares_held_total"] / comp["shares_outstanding"] * 100)
     # relative ceiling: suppress, do not publish, a figure whose denominator must be wrong
     _imp = comp["institutional_ownership_pct"] > MAX_OWNERSHIP_PCT
     comp["pct_suppressed_cause"] = np.where(~_imp, "",
                                    np.where(comp["n_cusips"] > 1, "multi_cusip_classes_summed",
                                             "shares_outstanding_scale_suspect"))
+    # a class-coverage cause is the more specific statement of why there is no figure, so it wins
+    comp["pct_suppressed_cause"] = np.where(_cause.ne("") & _cause.ne("no_shares_outstanding"),
+                                            _cause, comp["pct_suppressed_cause"])
     comp.loc[_imp, "institutional_ownership_pct"] = np.nan
+    _basis_n = comp["denominator_basis"].value_counts().to_dict()
+    out.append(f"\nCLASS COVERAGE (decision 15): the denominator must cover the classes the "
+               f"numerator sums. Companies by basis: {_basis_n}; combined-class denominators "
+               f"{int((comp['denominator_basis'] == 'classes_combined').sum()):,}; withheld for "
+               f"incomplete class counts {int((comp['denominator_basis'] == 'incomplete').sum()):,}; "
+               f"withheld as ambiguous {int((comp['denominator_basis'] == 'ambiguous').sum()):,}")
     out.append(f"\nOWNERSHIP CEILING (decision 12): figures above {MAX_OWNERSHIP_PCT:.0f}% suppressed "
                f"as denominator errors: {int(_imp.sum()):,} companies "
                f"({int((comp['pct_suppressed_cause'] == 'multi_cusip_classes_summed').sum()):,} multi-CUSIP, "
                f"{int((comp['pct_suppressed_cause'] == 'shares_outstanding_scale_suspect').sum()):,} scale-suspect)")
     comp["so_gap_flag"] = comp["company_cik"].map(so_gap)
-    # per-class figure per CUSIP
-    mc["class_letter"] = mc["list_desc"].str.upper().str.extract(r"\bCL(?:ASS)?\s*([A-C])\b", expand=False)
-    mc.loc[mc["list_desc"].str.upper().str.contains(r"\bSPL\b|SPECIAL|\bSER\b|SERIES", regex=True), "class_letter"] = np.nan   # special / series classes never match a plain class member
+    # per-class figure per CUSIP (class_letter / class_key were set before the company roll-up)
     cu_held = own.groupby("cusip")["shares_held"].sum()
     mc["cusip_shares_held"] = mc["cusip"].map(cu_held)
     is_multi = mc["company_cik"].isin(comp.loc[comp["multi_class_flag"], "company_cik"])
+    # a company whose figure rests on classes combined reports per CLASS at row level too: the
+    # spec's shares_outstanding column is the count for that row's CUSIP, and for a dual-class
+    # company the COM row and the CL A row do not share a denominator
+    is_combined = mc["company_cik"].isin(
+        comp.loc[comp["denominator_basis"].isin(["classes_combined", "single_class_matched"]),
+                 "company_cik"])
     key = pd.MultiIndex.from_arrays([mc["company_cik"], mc["class_letter"]])
     cls_sh = pd.Series(key.map(cls1["shares"]), index=mc.index)
     cls_src = pd.Series(key.map(cls1["shares_outstanding_source"]), index=mc.index); cls_dt = pd.Series(key.map(cls1["shares_outstanding_date"]), index=mc.index)
-    mc["class_shares_outstanding"] = np.where(is_multi, cls_sh, mc["company_cik"].map(so_shares))
-    mc["class_match"] = np.where(~is_multi & mc["company_cik"].map(so_shares).notna(), "single-class", np.where(is_multi & cls_sh.notna(), "matched", np.where(is_multi, "unmatched", "")))
+    # the COM class of a combined company is the undimensioned count; its letter classes are the
+    # class-dimensioned ones
+    und_sh = mc["company_cik"].map(so_shares)
+    row_class_sh = cls_sh.where(mc["class_letter"].notna(), und_sh)
+    cls_src = cls_src.where(mc["class_letter"].notna(), mc["company_cik"].map(so_src))
+    cls_dt = cls_dt.where(mc["class_letter"].notna(), mc["company_cik"].map(so_date))
+    mc["class_shares_outstanding"] = np.where(is_multi | is_combined, row_class_sh, und_sh)
+    mc["class_match"] = np.where(is_combined, "class-combined",
+                        np.where(~is_multi & und_sh.notna(), "single-class",
+                        np.where(is_multi & cls_sh.notna(), "matched",
+                        np.where(is_multi, "unmatched", ""))))
     mc["class_ownership_pct"] = mc["cusip_shares_held"] / mc["class_shares_outstanding"] * 100
     mc.loc[mc["excluded_from_ownership"] != "", ["class_ownership_pct"]] = np.nan
     nm = comp["multi_class_flag"].sum(); mrows = mc[is_multi & (mc["excluded_from_ownership"] == "")]
@@ -324,10 +483,42 @@ def run(label: str, qend: str, period: str):
     # row-level output
     mc["quarter_end"] = qend
     mc["shares_outstanding"] = mc["company_cik"].map(so_shares)
-    mc["shares_outstanding_source"] = mc["company_cik"].map(so_src).where(~is_multi, cls_src); mc["shares_outstanding_date"] = mc["company_cik"].map(so_date).where(~is_multi, cls_dt)
+    _per_class = is_multi | is_combined
+    mc["shares_outstanding_source"] = mc["company_cik"].map(so_src).where(~_per_class, cls_src); mc["shares_outstanding_date"] = mc["company_cik"].map(so_date).where(~_per_class, cls_dt)
     mc["shares_outstanding_evidence"] = mc["company_cik"].map(so_ev)
-    mc["shares_outstanding"] = mc["shares_outstanding"].where(~is_multi, mc["class_shares_outstanding"])
+    mc["shares_outstanding"] = mc["shares_outstanding"].where(~_per_class, mc["class_shares_outstanding"])
+    # Decision 12's "a single manager cannot hold more of a company than exists" was tested against
+    # the company's undimensioned count. Since decision 15 the denominator PUBLISHED on a row can be
+    # that row's class count, which is smaller, so the test has to run again against the number
+    # actually published or it is not testing the published figure. Nine rows, one in each of nine
+    # quarters, survived the first gate and failed the second; pipeline/validate.py caught them.
+    _late = ((mc["excluded_from_ownership"] == "") & mc["shares_outstanding"].notna()
+             & (mc["shares_held"] > mc["shares_outstanding"]))
+    if _late.any():
+        mc.loc[_late, "excluded_from_ownership"] = "holding_exceeds_shares_outstanding"
+        mc.loc[_late, "class_ownership_pct"] = np.nan
+        aff = mc.loc[_late, "company_cik"].unique()
+        own = mc[mc["excluded_from_ownership"] == ""]
+        ci = comp.set_index("company_cik")
+        g = own[own["company_cik"].isin(aff)].groupby("company_cik")
+        ci.loc[aff, "shares_held_total"] = g["shares_held"].sum().reindex(aff).fillna(0).values
+        ci.loc[aff, "n_managers"] = g["manager_cik"].nunique().reindex(aff).fillna(0).values
+        ci.loc[aff, "n_cusips"] = g["cusip"].nunique().reindex(aff).fillna(0).values
+        pct = ci.loc[aff, "shares_held_total"] / ci.loc[aff, "shares_outstanding"] * 100
+        ci.loc[aff, "institutional_ownership_pct"] = pct.where(ci.loc[aff, "shares_outstanding"].notna())
+        over = ci.loc[aff, "institutional_ownership_pct"] > MAX_OWNERSHIP_PCT
+        ci.loc[aff[over.fillna(False).to_numpy()], "pct_suppressed_cause"] = "shares_outstanding_scale_suspect"
+        ci.loc[aff[over.fillna(False).to_numpy()], "institutional_ownership_pct"] = np.nan
+        comp = ci.reset_index()
+        out.append(f"\nIMPOSSIBLE HOLDINGS, second pass against the published denominator "
+                   f"(decision 15): {int(_late.sum()):,} rows excluded on "
+                   f"{len(aff):,} companies, whose figures were recomputed without them")
     mc["institutional_ownership_pct"] = mc["company_cik"].map(comp.set_index("company_cik")["institutional_ownership_pct"])
+    # the company-level denominator, carried on every row so the company-grain file does not have to
+    # guess which class count to use: a combined company's rows each carry their OWN class count in
+    # shares_outstanding, and the two are different numbers on purpose (decision 15)
+    mc["company_shares_outstanding"] = mc["company_cik"].map(comp.set_index("company_cik")["shares_outstanding"])
+    mc["denominator_basis"] = mc["company_cik"].map(comp.set_index("company_cik")["denominator_basis"]).fillna("")
     mc.loc[mc["excluded_from_ownership"] != "", "institutional_ownership_pct"] = np.nan
     mc["multi_class_flag"] = mc["company_cik"].map(comp.set_index("company_cik")["multi_class_flag"]).fillna(False)
     mc["pct_suppressed_cause"] = mc["company_cik"].map(comp.set_index("company_cik")["pct_suppressed_cause"]).fillna("")

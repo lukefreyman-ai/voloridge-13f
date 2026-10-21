@@ -104,7 +104,7 @@ MANIFEST = "output/deliverable_manifest.json"
 
 COMPANY_COLS = ["quarter_end", "company_cik", "company_name", "n_managers", "n_cusips",
                 "shares_held_total", "shares_outstanding", "institutional_ownership_pct",
-                "shares_outstanding_source", "shares_outstanding_date",
+                "denominator_basis", "shares_outstanding_source", "shares_outstanding_date",
                 "over_100_flag", "over_100_cause", "pct_suppressed_cause",
                 "multi_class_flag", "map_conflict", "rows_excluded_from_figure"]
 
@@ -126,7 +126,8 @@ def build_company(verbose: bool = True) -> int:
             n_managers=("manager_cik", "nunique"),
             n_cusips=("cusip", "nunique"),
             shares_held_total=("shares_held", "sum"),
-            shares_outstanding=("shares_outstanding", "first"),
+            shares_outstanding=("company_shares_outstanding", "first"),
+            denominator_basis=("denominator_basis", "first"),
             institutional_ownership_pct=("institutional_ownership_pct", "first"),
             shares_outstanding_source=("shares_outstanding_source", "first"),
             shares_outstanding_date=("shares_outstanding_date", "first"),

@@ -25,45 +25,52 @@ largest excluded:
 
 GRAIN: one row per manager x security. Where a manager filed the same security more than once the latest filing wins, never summed: 2,846 rows superseded; final rows 901,077
 
-FIXES (Luke 2026-10-12): debt-pattern CUSIPs excluded from ownership (rows kept): 2,708 rows / 1,471 CUSIPs / $43.6bn; ADR/ADS excluded from the main figure: 41,432 rows / 375 CUSIPs on 278 companies / $611.9bn; NEW HOLDINGS amendments duplicating >= 90% of the original treated as restatements: 9 amendments, 9 original filings / 1,042 rows dropped
+FIXES (Luke 2026-10-12): debt-pattern CUSIPs excluded from ownership (rows kept): 2,708 rows / 1,471 CUSIPs / $43.6bn; ADR/ADS excluded from the main figure: 41,432 rows / 375 CUSIPs on 278 companies / $611.9bn; warrants/rights excluded: 2,252 rows / 110 CUSIPs; dated (SPAC) units excluded: 893 rows / 37 CUSIPs; preferred excluded: 3,276 rows / 72 CUSIPs; NEW HOLDINGS amendments duplicating >= 90% of the original treated as restatements: 9 amendments, 9 original filings / 1,042 rows dropped
 
 PLAUSIBILITY GATES (decision 12): shares outstanding outside [1,000, 35,000,000,000] nulled: 80 companies / 2,621 rows; single holdings exceeding shares outstanding excluded: 7 rows / 7 companies
 
-OWNERSHIP CEILING (decision 12): figures above 300% suppressed as denominator errors: 18 companies (13 multi-CUSIP, 5 scale-suspect)
+CLASS COVERAGE (decision 15): the denominator must cover the classes the numerator sums. Companies by basis: {'single_class_held': 4579, 'single_class_matched': 173, 'classes_combined': 28, 'incomplete': 23, 'undimensioned_total': 4}; combined-class denominators 28; withheld for incomplete class counts 23; withheld as ambiguous 0
 
-SHARE CLASSES (never summed): multi-class companies (class-dimensioned facts only) 307; their CUSIPs: matched to a class 232 ($1,378.9bn), unmatched 159 ($375.0bn); company-level pct is null for all 307
+OWNERSHIP CEILING (decision 12): figures above 300% suppressed as denominator errors: 11 companies (3 multi-CUSIP, 8 scale-suspect)
+
+SHARE CLASSES (never summed): multi-class companies (class-dimensioned facts only) 123; their CUSIPs: matched to a class 21 ($272.4bn), unmatched 156 ($396.6bn); company-level pct is null for all 123
 largest per-class figures:
-             company_name     cusip list_desc  cusip_shares_held  class_shares_outstanding  class_ownership_pct  value_bn
-              Google Inc. 38259P508      CL A        230756999.0               286560000.0                 80.5     123.2
-              Google Inc. 38259P706      CL C        232145584.0               340665532.0                 68.1     122.3
-                VISA INC. 92826C839  COM CL A        455994724.0               495000000.0                 92.1     120.0
-   BERKSHIRE HATHAWAY INC 084670702  CL B NEW        793815589.0              1224855488.0                 64.8     119.5
-             Facebook Inc 30303M102      CL A       1472491956.0              2234000000.0                 65.9     115.4
-             COMCAST CORP 20030N101      CL A       1900591447.0              2131137862.0                 89.2     111.0
-           MASTERCARD INC 57636Q104      CL A        867569246.0              1115369640.0                 77.8      75.0
-UNITED PARCEL SERVICE INC 911312106      CL B        490362542.0               702058256.0                 69.8      55.2
+                company_name     cusip list_desc  cusip_shares_held  class_shares_outstanding  class_ownership_pct  value_bn
+      BERKSHIRE HATHAWAY INC 084670702  CL B NEW        793815589.0              1224855488.0                 64.8     119.5
+                COMCAST CORP 20030N101      CL A       1900591447.0              2131137862.0                 89.2     111.0
+      BERKSHIRE HATHAWAY INC 084670108      CL A           198437.0                  826339.0                 24.0      34.1
+          Liberty Media Corp 531229102      CL A         84260472.0               104505449.0                 80.6       3.0
+           BROWN FORMAN CORP 115637100      CL A         16692027.0                84489246.0                 19.8       1.5
+                Belmond Ltd. G1154H107      CL A         81025494.0               104096747.0                 77.8       1.0
+          BGC Partners, Inc. 05541T101      CL A         77319608.0               185108000.0                 41.8       0.7
+HYSTER-YALE MATERIALS HAN... 449172105      CL A          9001731.0                12277148.0                 73.3       0.7
+
+IMPOSSIBLE HOLDINGS, second pass against the published denominator (decision 15): 26 rows excluded on 4 companies, whose figures were recomputed without them
 
 CUSIP->CIK coverage among OPERATING companies (6-char issuers, funds removed: 736 incl. 99 unmapped by name token only): 5,128 / 11,819 = 43.4%; by value 98.0%; by map source: {'SC 13G': 4179, 'name_exact': 527, 'SC 13D': 422}
-shares outstanding (XBRL + regex fallback (6 companies)): companies with a figure 4,124 / 4,812 = 85.7%; by 13F value 88.1%; gap > 100 days flagged: 24; multi-class null: 307
+shares outstanding (XBRL + regex fallback (6 companies)): companies with a figure 4,304 / 4,806 = 89.6%; by 13F value 93.7%; gap > 100 days flagged: 24; multi-class null: 123
 
-ownership pct distribution (n=4,106): {'count': 4106.0, 'mean': 59.7, 'std': 34.5, 'min': 0.0, '5%': 1.8, '25%': 29.9, '50%': 66.7, '75%': 88.4, '95%': 102.7, 'max': 286.6}
-histogram: {'0': 0, '0-5': 329, '5-25': 569, '25-50': 639, '50-75': 831, '75-90': 816, '90-100': 620, '100-150': 290, '>150': 12}
-companies over 100%: 302 / 4,106 = 7.4%
-large companies (top 500 by 13F value) with a pct: 417; over 100%: 15 = 3.6%  [stop condition at 5%]
+ownership pct distribution (n=4,294): {'count': 4294.0, 'mean': 60.2, 'std': 34.1, 'min': 0.0, '5%': 2.0, '25%': 30.7, '50%': 67.3, '75%': 88.7, '95%': 102.7, 'max': 262.3}
+histogram: {'0': 0, '0-5': 329, '5-25': 584, '25-50': 663, '50-75': 894, '75-90': 846, '90-100': 657, '100-150': 308, '>150': 13}
+companies over 100%: 321 / 4,294 = 7.5%
+large companies (top 500 by 13F value) with a pct: 436; over 100%: 15 = 3.4%  [stop condition at 5%]
 Note: companies with 'no identified data cause' can still exceed 100% through securities lending (the lender and the
 borrower's buyer both report the same shares on 13F); that is a possible explanation, not a measured cause.
 over-100% causes (combinations; [..] = annotation):
-no identified data cause                                                                   194
+no identified data cause                                                                   209
 manager-CUSIP in >1 filing                                                                  46
-multiple CUSIPs summed (classes/units)                                                      32
+shares outstanding gap >100d                                                                17
+multiple CUSIPs summed (classes/units)                                                      16
 single holding > 50% of shares out                                                          13
 manager-CUSIP in >1 filing; multiple CUSIPs summed (classes/units)                           7
 CUSIP->CIK conflict                                                                          6
+shares outstanding gap >100d; CUSIP->CIK conflict                                            2
 manager-CUSIP in >1 filing; CUSIP->CIK conflict                                              1
+shares outstanding gap >100d; multiple CUSIPs summed (classes/units)                         1
 manager-CUSIP in >1 filing; CUSIP->CIK conflict; multiple CUSIPs summed (classes/units)      1
 single holding > 50% of shares out; CUSIP->CIK conflict                                      1
-single holding > 50% of shares out; multiple CUSIPs summed (classes/units)                   1
-  with the as-of date after quarter end: 88 of 302
+shares outstanding gap >100d; single holding > 50% of shares out                             1
+  with the as-of date after quarter end: 88 of 321
 largest over-100% companies:
  company_cik                        company_name  n_managers  shares_held_total  shares_outstanding  institutional_ownership_pct  value_bn                                               over_100_cause
     103379.0                            V F CORP         752          450115189         432859891.0                        104.0      33.8                                   manager-CUSIP in >1 filing
@@ -87,24 +94,25 @@ largest over-100% companies:
    1014473.0                     VERISIGN INC/CA         365          135016623         118452000.0                        114.0       7.7                                   manager-CUSIP in >1 filing
     723612.0             AVIS BUDGET GROUP, INC.         262          114151053         106354430.0                        107.3       7.6 no identified data cause; [as-of 31d after quarter end: b...
 
-NO COMPANY-LEVEL FIGURE: 688 companies carrying $2,330.1bn = 11.9% of mapped operating value; causes:
+NO COMPANY-LEVEL FIGURE: 502 companies carrying $1,238.6bn = 6.3% of mapped operating value; causes:
                                                                                                    companies  value_bn
 cause                                                                                                                 
-class-dimensioned facts only: company pct null by rule, per-class pct given (class_ownership_pct)        307    1755.4
-regex fallback tried: no 10-K filed within the window                                                    363     549.2
+class-dimensioned facts only: company pct null by rule, per-class pct given (class_ownership_pct)        123     670.4
+regex fallback tried: no 10-K filed within the window                                                    360     536.6
 regex fallback tried: as-of more than 45 days from filing date                                             3      19.7
+files 10-K/10-Q but no XBRL cover fact (XBRL phase-in / small filer)                                       1       6.2
 regex fallback tried: no match                                                                            15       5.8
 largest without shares outstanding:
- company_cik                   company_name  n_managers  value_bn                                    cause
-   1288776.0                    Google Inc.        1767    245.52 class-dimensioned facts only: company...
-   1067983.0         BERKSHIRE HATHAWAY INC        1612    153.77 class-dimensioned facts only: company...
-   1166691.0                   COMCAST CORP        1267    131.73 class-dimensioned facts only: company...
-   1403161.0                      VISA INC.        1239    119.97 class-dimensioned facts only: company...
-   1326801.0                   Facebook Inc        1178    115.45 class-dimensioned facts only: company...
-   1141391.0                 MASTERCARD INC        1052     75.08 class-dimensioned facts only: company...
-   1308161.0 TWENTY-FIRST CENTURY FOX, INC.         739     63.47 class-dimensioned facts only: company...
-   1063761.0  SIMON PROPERTY GROUP INC /DE/         661     55.28 class-dimensioned facts only: company...
-   1090727.0      UNITED PARCEL SERVICE INC        1132     55.21 class-dimensioned facts only: company...
-   1467373.0                  Accenture plc         838     42.21 class-dimensioned facts only: company...
-     37996.0                  FORD MOTOR CO        1012     35.90 class-dimensioned facts only: company...
-   1570585.0             Liberty Global plc         501     35.80 class-dimensioned facts only: company...
+ company_cik                             company_name  n_managers  value_bn                                    cause
+   1067983.0                   BERKSHIRE HATHAWAY INC        1612    153.77 class-dimensioned facts only: company...
+   1166691.0                             COMCAST CORP        1267    131.73 class-dimensioned facts only: company...
+   1063761.0            SIMON PROPERTY GROUP INC /DE/         661     55.28 class-dimensioned facts only: company...
+     37996.0                            FORD MOTOR CO        1012     35.90 class-dimensioned facts only: company...
+   1570585.0                       Liberty Global plc         501     35.80 class-dimensioned facts only: company...
+     16868.0             CANADIAN NATIONAL RAILWAY CO         522     30.53 regex fallback tried: no 10-K filed w...
+    872589.0            REGENERON PHARMACEUTICALS INC         505     29.66 class-dimensioned facts only: company...
+    311337.0                        SUNCOR ENERGY INC         489     28.58 regex fallback tried: no 10-K filed w...
+   1156375.0                           CME GROUP INC.         567     23.01 class-dimensioned facts only: company...
+   1017413.0           CANADIAN NATURAL RESOURCES LTD         357     22.08 regex fallback tried: no 10-K filed w...
+    855931.0          POTASH CORP OF SASKATCHEWAN INC         563     19.02 regex fallback tried: as-of more than...
+   1045520.0 CANADIAN IMPERIAL BANK OF COMMERCE /CAN/         231     18.16 regex fallback tried: no 10-K filed w...
